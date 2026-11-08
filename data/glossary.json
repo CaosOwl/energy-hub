@@ -1,0 +1,718 @@
+{
+  "_about": "Your energy glossary. Add, edit or remove entries freely. level: 1 basics, 2 intermediate, 3 expert. category: nuclear | markets | transition | tech. Edits made in the app are stored on your phone; use Export there to copy them back into this file.",
+  "terms": [
+    {
+      "term": "SMR",
+      "full": "Small Modular Reactor",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "A reactor of up to roughly 300 MWe per unit, designed so major parts are built in a factory and shipped, aiming for lower upfront cost and faster construction than large plants.",
+      "related": [
+        "Microreactor",
+        "Gen IV",
+        "LCOE"
+      ]
+    },
+    {
+      "term": "Microreactor",
+      "full": "",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "A very small reactor (typically under ~20 MWe) that can be transported largely whole, intended for remote sites, military bases, data centers or industrial heat.",
+      "related": [
+        "SMR"
+      ]
+    },
+    {
+      "term": "Gen III+",
+      "full": "Generation III+ reactors",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Evolutionary light-water reactor designs (e.g. AP1000, EPR, APR1400) with improved passive safety, longer design life and standardized licensing compared with earlier plants.",
+      "related": [
+        "Gen IV",
+        "Passive safety",
+        "LWR"
+      ]
+    },
+    {
+      "term": "Gen IV",
+      "full": "Generation IV reactors",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Advanced reactor families that move away from conventional water cooling: sodium- and lead-cooled fast reactors, molten salt, high-temperature gas and supercritical water reactors. Goals include higher temperatures, better fuel use and less long-lived waste.",
+      "related": [
+        "Fast reactor",
+        "MSR",
+        "HTGR"
+      ]
+    },
+    {
+      "term": "LWR",
+      "full": "Light-Water Reactor",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "The dominant reactor type worldwide, using ordinary water as both coolant and moderator. Includes PWRs and BWRs.",
+      "related": [
+        "PWR",
+        "BWR"
+      ]
+    },
+    {
+      "term": "PWR",
+      "full": "Pressurized Water Reactor",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "An LWR where water is kept under high pressure so it doesn't boil in the core; heat passes to a secondary loop that makes steam. Gösgen is a Swiss example.",
+      "related": [
+        "LWR",
+        "BWR"
+      ]
+    },
+    {
+      "term": "BWR",
+      "full": "Boiling Water Reactor",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "An LWR where water boils directly in the core and the steam drives the turbine. Leibstadt is a Swiss example.",
+      "related": [
+        "LWR",
+        "PWR"
+      ]
+    },
+    {
+      "term": "Fast reactor",
+      "full": "Fast neutron reactor",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "A reactor without a moderator, so fission is driven by high-energy neutrons. It can breed new fuel and burn long-lived actinides, usually cooled by sodium, lead or molten salt.",
+      "related": [
+        "Gen IV",
+        "Breeder reactor",
+        "Actinides"
+      ]
+    },
+    {
+      "term": "MSR",
+      "full": "Molten Salt Reactor",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "A reactor using molten fluoride or chloride salt as coolant, and sometimes with fuel dissolved in the salt. Operates at low pressure and high temperature.",
+      "related": [
+        "Gen IV",
+        "Thorium"
+      ]
+    },
+    {
+      "term": "HTGR",
+      "full": "High-Temperature Gas-cooled Reactor",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "A helium-cooled, graphite-moderated reactor reaching outlet temperatures around 750°C or more, useful for industrial heat and hydrogen. Usually fuelled with TRISO particles.",
+      "related": [
+        "TRISO",
+        "Gen IV"
+      ]
+    },
+    {
+      "term": "TRISO",
+      "full": "TRi-structural ISOtropic fuel",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Tiny uranium kernels coated in layers of carbon and silicon carbide that retain fission products even at very high temperatures. Used in HTGRs and several microreactors.",
+      "related": [
+        "HTGR",
+        "HALEU"
+      ]
+    },
+    {
+      "term": "HALEU",
+      "full": "High-Assay Low-Enriched Uranium",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Uranium enriched to between 5% and 20% U-235. Many advanced reactors need it; commercial supply outside Russia is still being built up.",
+      "related": [
+        "Enrichment",
+        "LEU"
+      ]
+    },
+    {
+      "term": "Enrichment",
+      "full": "",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Raising the share of fissile U-235 above its natural 0.7%. Most power reactors use 3–5%.",
+      "related": [
+        "HALEU",
+        "SWU"
+      ]
+    },
+    {
+      "term": "SWU",
+      "full": "Separative Work Unit",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "The standard measure of the effort needed to enrich uranium; enrichment services are priced per SWU.",
+      "related": [
+        "Enrichment"
+      ]
+    },
+    {
+      "term": "Fuel cycle",
+      "full": "Nuclear fuel cycle",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "The chain from uranium mining, conversion, enrichment and fuel fabrication through reactor use to storage, reprocessing or disposal of spent fuel.",
+      "related": [
+        "Reprocessing",
+        "MOX",
+        "Spent fuel"
+      ]
+    },
+    {
+      "term": "Burnup",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "How much energy has been extracted from fuel, usually in GWd per tonne of heavy metal. Higher burnup means more energy per tonne and less spent fuel volume.",
+      "related": [
+        "Fuel cycle"
+      ]
+    },
+    {
+      "term": "MOX",
+      "full": "Mixed Oxide fuel",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Fuel made from a blend of plutonium and uranium oxides, typically using plutonium recovered by reprocessing.",
+      "related": [
+        "Reprocessing",
+        "Fuel cycle"
+      ]
+    },
+    {
+      "term": "Reprocessing",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Chemically separating usable uranium and plutonium from spent fuel. Practiced in France; Switzerland's 2018 energy law ended reprocessing of Swiss spent fuel.",
+      "related": [
+        "MOX",
+        "Spent fuel"
+      ]
+    },
+    {
+      "term": "Spent fuel",
+      "full": "Used nuclear fuel",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Fuel removed from a reactor after use. Highly radioactive and hot; stored in pools, then dry casks, pending reprocessing or deep geological disposal.",
+      "related": [
+        "Deep geological repository"
+      ]
+    },
+    {
+      "term": "Deep geological repository",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Permanent disposal of high-level waste hundreds of meters underground in stable rock. Finland's Onkalo is the first; Switzerland's Nagra proposed Nördlich Lägern as its site.",
+      "related": [
+        "Spent fuel"
+      ]
+    },
+    {
+      "term": "Actinides",
+      "full": "Minor actinides",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "Heavy elements like neptunium, americium and curium formed in reactors. They dominate the long-term radiotoxicity of spent fuel; fast reactors and accelerator-driven systems can transmute them.",
+      "related": [
+        "Fast reactor",
+        "Transmutation"
+      ]
+    },
+    {
+      "term": "Transmutation",
+      "full": "",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "Converting long-lived radioactive isotopes into shorter-lived or stable ones by neutron irradiation, to shrink the waste burden.",
+      "related": [
+        "Actinides",
+        "ADS"
+      ]
+    },
+    {
+      "term": "ADS",
+      "full": "Accelerator-Driven System",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "A subcritical reactor kept running by neutrons from a particle accelerator; switching off the beam stops the reaction. Studied for waste transmutation.",
+      "related": [
+        "Transmutation"
+      ]
+    },
+    {
+      "term": "Passive safety",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Safety functions that rely on physics (gravity, natural circulation, convection) rather than pumps, power or operator action to cool the reactor in an emergency.",
+      "related": [
+        "Gen III+"
+      ]
+    },
+    {
+      "term": "Capacity factor",
+      "full": "",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Actual energy produced over a period divided by what the plant would produce at full power all the time. Nuclear typically runs 85–93%, solar 10–25%, onshore wind 25–40%.",
+      "related": [
+        "Baseload"
+      ]
+    },
+    {
+      "term": "Thorium",
+      "full": "Thorium fuel cycle",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Thorium-232 is not fissile but can be converted into fissile U-233 in a reactor. More abundant than uranium; used in some MSR and HWR concepts.",
+      "related": [
+        "MSR",
+        "Breeder reactor"
+      ]
+    },
+    {
+      "term": "Breeder reactor",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "A reactor that produces more fissile material than it consumes, usually a fast reactor turning U-238 into plutonium.",
+      "related": [
+        "Fast reactor",
+        "Thorium"
+      ]
+    },
+    {
+      "term": "Fusion",
+      "full": "Nuclear fusion",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Joining light nuclei (usually deuterium and tritium) to release energy. Main approaches are magnetic confinement (tokamaks, stellarators) and inertial confinement (lasers). Not yet producing net electricity.",
+      "related": [
+        "Tokamak",
+        "Stellarator",
+        "Q factor"
+      ]
+    },
+    {
+      "term": "Tokamak",
+      "full": "",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "A doughnut-shaped device confining plasma with magnetic fields and a current driven in the plasma. ITER and SPARC are tokamaks.",
+      "related": [
+        "Fusion",
+        "Stellarator"
+      ]
+    },
+    {
+      "term": "Stellarator",
+      "full": "",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "A fusion device using twisted external magnets to confine plasma without a large plasma current, allowing steady-state operation. Wendelstein 7-X is the leading example.",
+      "related": [
+        "Fusion",
+        "Tokamak"
+      ]
+    },
+    {
+      "term": "Q factor",
+      "full": "Fusion energy gain",
+      "category": "nuclear",
+      "level": 3,
+      "definition": "Fusion power out divided by heating power put into the plasma. Q > 1 is scientific breakeven; a power plant needs much higher Q plus efficient conversion to electricity.",
+      "related": [
+        "Fusion"
+      ]
+    },
+    {
+      "term": "LTO",
+      "full": "Long-Term Operation",
+      "category": "nuclear",
+      "level": 2,
+      "definition": "Running existing reactors beyond their original design life (often 40 → 60 or 80 years) after safety reviews and upgrades. Switzerland has no fixed operating limit; plants run as long as ENSI deems them safe.",
+      "related": [
+        "Decommissioning"
+      ]
+    },
+    {
+      "term": "Decommissioning",
+      "full": "",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Shutting down, decontaminating and dismantling a nuclear plant. Mühleberg (shut down 2019) is Switzerland's first.",
+      "related": [
+        "LTO"
+      ]
+    },
+    {
+      "term": "LCOE",
+      "full": "Levelized Cost of Electricity",
+      "category": "markets",
+      "level": 1,
+      "definition": "The average lifetime cost per MWh of building and running a plant. Useful for rough comparison, but ignores system costs like backup, storage and grid.",
+      "related": [
+        "System costs",
+        "WACC"
+      ]
+    },
+    {
+      "term": "WACC",
+      "full": "Weighted Average Cost of Capital",
+      "category": "markets",
+      "level": 3,
+      "definition": "The blended cost of a project's debt and equity. For capital-heavy nuclear projects, financing cost is often the biggest driver of LCOE.",
+      "related": [
+        "LCOE",
+        "CfD"
+      ]
+    },
+    {
+      "term": "System costs",
+      "full": "",
+      "category": "markets",
+      "level": 3,
+      "definition": "Costs beyond the plant itself: grid connection, balancing, backup capacity and storage needed to integrate a technology into the power system.",
+      "related": [
+        "LCOE",
+        "Intermittency"
+      ]
+    },
+    {
+      "term": "Merit order",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "Ranking power plants by marginal cost; the cheapest run first, and the last plant needed to meet demand sets the market price.",
+      "related": [
+        "Marginal pricing",
+        "Negative prices"
+      ]
+    },
+    {
+      "term": "Marginal pricing",
+      "full": "Pay-as-clear",
+      "category": "markets",
+      "level": 2,
+      "definition": "In most European power markets every producer receives the price of the most expensive unit needed, which is why gas prices often set electricity prices.",
+      "related": [
+        "Merit order"
+      ]
+    },
+    {
+      "term": "Baseload",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "The minimum level of demand over a day, and plants that run continuously to cover it. Also a product traded in power markets (constant delivery 24/7).",
+      "related": [
+        "Dispatchable",
+        "Peak load"
+      ]
+    },
+    {
+      "term": "Dispatchable",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "Generation that can be turned up or down on demand (gas, hydro, nuclear to a degree), as opposed to weather-dependent wind and solar.",
+      "related": [
+        "Baseload",
+        "Intermittency"
+      ]
+    },
+    {
+      "term": "Peak load",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "The highest demand periods, and the delivery product covering weekday daytime hours.",
+      "related": [
+        "Baseload"
+      ]
+    },
+    {
+      "term": "Capacity market",
+      "full": "",
+      "category": "markets",
+      "level": 2,
+      "definition": "A mechanism paying plants for being available to generate when needed, not just for energy delivered, to secure supply in tight hours.",
+      "related": [
+        "Dispatchable"
+      ]
+    },
+    {
+      "term": "PPA",
+      "full": "Power Purchase Agreement",
+      "category": "markets",
+      "level": 1,
+      "definition": "A long-term contract to buy electricity from a specific generator at agreed terms. Tech companies increasingly sign PPAs with nuclear plants and developers.",
+      "related": [
+        "CfD"
+      ]
+    },
+    {
+      "term": "CfD",
+      "full": "Contract for Difference",
+      "category": "markets",
+      "level": 2,
+      "definition": "A contract guaranteeing a strike price: when the market is below it the generator is topped up, when above it pays back. Used in the UK for Hinkley Point C and offshore wind.",
+      "related": [
+        "PPA",
+        "WACC"
+      ]
+    },
+    {
+      "term": "Negative prices",
+      "full": "",
+      "category": "markets",
+      "level": 2,
+      "definition": "Hours when generators pay to deliver power, typically when high solar or wind output meets low demand and inflexible plants can't ramp down.",
+      "related": [
+        "Curtailment",
+        "Merit order"
+      ]
+    },
+    {
+      "term": "Spot market",
+      "full": "Day-ahead and intraday",
+      "category": "markets",
+      "level": 1,
+      "definition": "Short-term power trading: the day-ahead auction sets hourly (now 15-minute in Europe) prices for tomorrow; intraday trading adjusts closer to delivery.",
+      "related": [
+        "Forward market"
+      ]
+    },
+    {
+      "term": "Forward market",
+      "full": "Futures",
+      "category": "markets",
+      "level": 2,
+      "definition": "Trading electricity for delivery months or years ahead, used by utilities and large consumers to hedge price risk (e.g. on EEX).",
+      "related": [
+        "Spot market"
+      ]
+    },
+    {
+      "term": "ETS",
+      "full": "Emissions Trading System",
+      "category": "markets",
+      "level": 1,
+      "definition": "A cap-and-trade market where emitters must hold allowances for each tonne of CO₂. The EU ETS is linked with the Swiss ETS.",
+      "related": [
+        "Carbon price"
+      ]
+    },
+    {
+      "term": "Carbon price",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "A cost on CO₂ emissions, via a tax or an ETS, making fossil generation more expensive relative to low-carbon sources.",
+      "related": [
+        "ETS"
+      ]
+    },
+    {
+      "term": "Net zero",
+      "full": "",
+      "category": "transition",
+      "level": 1,
+      "definition": "Balancing remaining greenhouse gas emissions with removals so net emissions are zero. Switzerland's legal target is 2050.",
+      "related": [
+        "Decarbonization"
+      ]
+    },
+    {
+      "term": "Decarbonization",
+      "full": "",
+      "category": "transition",
+      "level": 1,
+      "definition": "Reducing the CO₂ intensity of an economy or sector, e.g. by replacing fossil power with nuclear and renewables.",
+      "related": [
+        "Net zero",
+        "Electrification"
+      ]
+    },
+    {
+      "term": "Electrification",
+      "full": "",
+      "category": "transition",
+      "level": 1,
+      "definition": "Switching end uses like heating, transport and industry from fossil fuels to electricity, which raises total power demand.",
+      "related": [
+        "Decarbonization"
+      ]
+    },
+    {
+      "term": "Intermittency",
+      "full": "Variability",
+      "category": "transition",
+      "level": 1,
+      "definition": "The weather-driven, partly predictable fluctuation of wind and solar output.",
+      "related": [
+        "Dispatchable",
+        "Storage"
+      ]
+    },
+    {
+      "term": "Curtailment",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "Deliberately reducing renewable output because the grid can't absorb or transport it.",
+      "related": [
+        "Negative prices",
+        "Grid congestion"
+      ]
+    },
+    {
+      "term": "Grid inertia",
+      "full": "",
+      "category": "transition",
+      "level": 3,
+      "definition": "The stabilizing effect of large spinning turbines on grid frequency. Inverter-based solar and wind provide little unless grid-forming inverters are used.",
+      "related": [
+        "Frequency control"
+      ]
+    },
+    {
+      "term": "Frequency control",
+      "full": "Ancillary services",
+      "category": "transition",
+      "level": 3,
+      "definition": "Services that keep grid frequency at 50 Hz by adding or removing power within seconds to minutes; procured by TSOs like Swissgrid.",
+      "related": [
+        "Grid inertia",
+        "TSO"
+      ]
+    },
+    {
+      "term": "TSO",
+      "full": "Transmission System Operator",
+      "category": "transition",
+      "level": 2,
+      "definition": "The company running the high-voltage grid and keeping supply and demand balanced. Swissgrid in Switzerland.",
+      "related": [
+        "Frequency control"
+      ]
+    },
+    {
+      "term": "Grid congestion",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "When transmission lines can't carry all the power that markets want to move, forcing redispatch and creating price differences between zones.",
+      "related": [
+        "Curtailment"
+      ]
+    },
+    {
+      "term": "Storage",
+      "full": "Energy storage",
+      "category": "transition",
+      "level": 1,
+      "definition": "Shifting energy in time: batteries (hours), pumped hydro (hours to days, big in Switzerland), and hydrogen or seasonal storage (weeks to months).",
+      "related": [
+        "BESS",
+        "Pumped hydro"
+      ]
+    },
+    {
+      "term": "BESS",
+      "full": "Battery Energy Storage System",
+      "category": "transition",
+      "level": 1,
+      "definition": "Grid-scale batteries, usually lithium-ion, used for short-duration shifting and frequency services.",
+      "related": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "Pumped hydro",
+      "full": "Pumped-storage hydropower",
+      "category": "transition",
+      "level": 1,
+      "definition": "Pumping water uphill when power is cheap and releasing it through turbines when needed. Nant de Drance in Valais is a large Swiss example.",
+      "related": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "Winter gap",
+      "full": "Winterstromlücke",
+      "category": "transition",
+      "level": 2,
+      "definition": "Switzerland's structural shortfall of domestic electricity in winter, when solar is low and demand high, currently covered by imports.",
+      "related": [
+        "Storage",
+        "Dispatchable"
+      ]
+    },
+    {
+      "term": "Hydrogen colors",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "Shorthand for how hydrogen is made: green (renewable electrolysis), pink/purple (nuclear-powered electrolysis), blue (gas with carbon capture), grey (gas without capture).",
+      "related": [
+        "Electrolysis"
+      ]
+    },
+    {
+      "term": "Electrolysis",
+      "full": "",
+      "category": "tech",
+      "level": 2,
+      "definition": "Splitting water into hydrogen and oxygen with electricity. High-temperature electrolysis can use reactor heat to improve efficiency.",
+      "related": [
+        "Hydrogen colors",
+        "HTGR"
+      ]
+    },
+    {
+      "term": "Heat pump",
+      "full": "",
+      "category": "tech",
+      "level": 1,
+      "definition": "A device moving heat from outside air or ground into buildings, delivering 3–4 units of heat per unit of electricity.",
+      "related": [
+        "Electrification"
+      ]
+    },
+    {
+      "term": "CCS",
+      "full": "Carbon Capture and Storage",
+      "category": "tech",
+      "level": 2,
+      "definition": "Capturing CO₂ from plants or industry and storing it underground.",
+      "related": [
+        "Net zero"
+      ]
+    },
+    {
+      "term": "Grid-forming inverter",
+      "full": "",
+      "category": "tech",
+      "level": 3,
+      "definition": "An inverter that sets voltage and frequency itself, like a synchronous generator, helping stabilize grids with high shares of solar, wind and batteries.",
+      "related": [
+        "Grid inertia"
+      ]
+    }
+  ]
+}

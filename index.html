@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Energy Hub</title>
+  <meta name="description" content="Personal energy news, nuclear focus, glossary and reactor company tracker.">
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3.2"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none" transform="rotate(120 16 16)"/></svg>
+      <h1 id="view-title">Feed</h1>
+    </div>
+    <div class="top-actions">
+      <span id="updated" class="muted small"></span>
+      <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- FEED -->
+    <section id="view-feed" class="view" data-title="Feed">
+      <div class="toolbar">
+        <input id="feed-search" class="search" type="search" placeholder="Search headlines…" autocomplete="off">
+        <div class="chips" id="feed-chips"></div>
+        <div class="row">
+          <div class="seg" role="tablist" id="feed-sort">
+            <button data-sort="score" class="on">Top</button>
+            <button data-sort="date">Latest</button>
+            <button data-sort="saved">Saved</button>
+          </div>
+          <button id="health-btn" class="link small"></button>
+        </div>
+      </div>
+      <div id="health-panel" class="panel hidden"></div>
+      <ul id="feed-list" class="cards"></ul>
+    </section>
+
+    <!-- COMPANIES -->
+    <section id="view-companies" class="view hidden" data-title="Reactor builders">
+      <div class="toolbar">
+        <input id="co-search" class="search" type="search" placeholder="Search companies, designs, tech…" autocomplete="off">
+        <div class="chips" id="co-kind"></div>
+        <div class="chips" id="co-stage"></div>
+      </div>
+      <p class="muted small" id="co-note"></p>
+      <ul id="co-list" class="cards"></ul>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="view-glossary" class="view hidden" data-title="Glossary">
+      <div class="toolbar">
+        <input id="gl-search" class="search" type="search" placeholder="Search terms…" autocomplete="off">
+        <div class="chips" id="gl-cat"></div>
+        <div class="row">
+          <div class="seg" id="gl-level">
+            <button data-level="0" class="on">All</button>
+            <button data-level="1">Basics</button>
+            <button data-level="2">Mid</button>
+            <button data-level="3">Expert</button>
+          </div>
+          <div class="row gap">
+            <button id="gl-cards" class="btn ghost">Flashcards</button>
+            <button id="gl-add" class="btn">+ Term</button>
+          </div>
+        </div>
+        <div class="row small muted">
+          <span id="gl-progress"></span>
+          <span class="row gap"><button id="gl-unlearned" class="link">Hide learned</button><button id="gl-export" class="link">Export</button></span>
+        </div>
+      </div>
+      <ul id="gl-list" class="cards"></ul>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="view-sources" class="view hidden" data-title="Sources">
+      <p class="muted small intro">What the feed reads. Open sources are fetched; partial ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change.</p>
+      <div id="src-groups"></div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Sections">
+    <button data-view="feed" class="on"><span class="ti">▤</span>Feed</button>
+    <button data-view="companies"><span class="ti">⚛</span>Builders</button>
+    <button data-view="glossary"><span class="ti">Aa</span>Glossary</button>
+    <button data-view="sources"><span class="ti">⌘</span>Sources</button>
+  </nav>
+
+  <!-- Term popover / editor / flashcards -->
+  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true">
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-body" id="sheet-body"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

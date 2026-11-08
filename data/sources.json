@@ -1,0 +1,39 @@
+{
+  "_about": "Sources the fetcher reads. Edit freely: set enabled=false to mute, weight 0.5–2.0 to rank lower/higher. access: open | partial (headlines only) | paid (link only, never fetched).",
+  "sources": [
+    { "id": "wnn", "name": "World Nuclear News", "url": "https://www.world-nuclear-news.org", "feed": "https://www.world-nuclear-news.org/rss", "topic": "nuclear", "region": "global", "access": "open", "weight": 1.5, "enabled": true },
+    { "id": "ans", "name": "ANS Nuclear Newswire", "url": "https://www.ans.org/news/", "feed": "https://www.ans.org/news/feed/", "topic": "nuclear", "region": "us", "access": "open", "weight": 1.3, "enabled": true },
+    { "id": "iaea", "name": "IAEA News", "url": "https://www.iaea.org/newscenter", "feed": "https://www.iaea.org/feeds/topnews", "topic": "nuclear", "region": "global", "access": "open", "weight": 1.3, "enabled": true },
+    { "id": "nrc", "name": "US NRC News Releases", "url": "https://www.nrc.gov/reading-rm/doc-collections/news/", "feed": "https://www.nrc.gov/public-involve/rss?feed=news", "topic": "nuclear", "region": "us", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "nei", "name": "Nuclear Energy Institute", "url": "https://www.nei.org/news", "feed": "https://www.nei.org/rss", "topic": "nuclear", "region": "us", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "nei-mag", "name": "Nuclear Engineering International", "url": "https://www.neimagazine.com", "feed": "https://www.neimagazine.com/feed/", "topic": "nuclear", "region": "global", "access": "partial", "weight": 1.1, "enabled": true },
+    { "id": "ensi", "name": "ENSI (Swiss nuclear regulator)", "url": "https://www.ensi.ch/en/", "feed": "https://www.ensi.ch/en/feed/", "topic": "nuclear", "region": "ch", "access": "open", "weight": 1.2, "enabled": true },
+    { "id": "oecd-nea", "name": "OECD Nuclear Energy Agency", "url": "https://www.oecd-nea.org/jcms/c_5048/news", "feed": null, "topic": "nuclear", "region": "global", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "swissnuclear", "name": "swissnuclear", "url": "https://www.swissnuclear.ch", "feed": null, "topic": "nuclear", "region": "ch", "access": "open", "weight": 1.0, "enabled": true },
+
+    { "id": "carbonbrief", "name": "Carbon Brief", "url": "https://www.carbonbrief.org", "feed": "https://www.carbonbrief.org/feed", "topic": "transition", "region": "global", "access": "open", "weight": 1.2, "enabled": true },
+    { "id": "canary", "name": "Canary Media", "url": "https://www.canarymedia.com", "feed": "https://www.canarymedia.com/rss.rss", "topic": "transition", "region": "us", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "energymonitor", "name": "Energy Monitor", "url": "https://www.energymonitor.ai", "feed": "https://www.energymonitor.ai/feed", "topic": "transition", "region": "global", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "ember", "name": "Ember", "url": "https://ember-energy.org", "feed": "https://ember-energy.org/feed/", "topic": "transition", "region": "global", "access": "open", "weight": 1.2, "enabled": true },
+    { "id": "pvmag", "name": "pv magazine", "url": "https://www.pv-magazine.com", "feed": "https://www.pv-magazine.com/feed/", "topic": "tech", "region": "global", "access": "open", "weight": 0.8, "enabled": true },
+    { "id": "powermag", "name": "POWER Magazine", "url": "https://www.powermag.com", "feed": "https://www.powermag.com/feed/", "topic": "tech", "region": "global", "access": "open", "weight": 1.0, "enabled": true },
+
+    { "id": "utilitydive", "name": "Utility Dive", "url": "https://www.utilitydive.com", "feed": "https://www.utilitydive.com/feeds/news/", "topic": "markets", "region": "us", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "eia", "name": "EIA – Today in Energy", "url": "https://www.eia.gov/todayinenergy/", "feed": "https://www.eia.gov/rss/todayinenergy.xml", "topic": "markets", "region": "us", "access": "open", "weight": 1.1, "enabled": true },
+    { "id": "euractiv", "name": "Euractiv – Energy & Environment", "url": "https://www.euractiv.com/sections/energy-environment/", "feed": "https://www.euractiv.com/sections/energy-environment/feed/", "topic": "markets", "region": "eu", "access": "partial", "weight": 1.0, "enabled": true },
+    { "id": "iea", "name": "IEA News", "url": "https://www.iea.org/news", "feed": "https://www.iea.org/api/rss/news", "topic": "markets", "region": "global", "access": "open", "weight": 1.2, "enabled": true },
+    { "id": "bfe", "name": "Swiss Federal Office of Energy (BFE/SFOE)", "url": "https://www.bfe.admin.ch/bfe/en/home/news-and-media/press-releases.html", "feed": null, "topic": "markets", "region": "ch", "access": "open", "weight": 1.1, "enabled": true },
+    { "id": "swissgrid", "name": "Swissgrid", "url": "https://www.swissgrid.ch/en/home/newsroom.html", "feed": null, "topic": "markets", "region": "ch", "access": "open", "weight": 0.9, "enabled": true },
+    { "id": "acer", "name": "ACER (EU energy regulators)", "url": "https://www.acer.europa.eu/news-and-events/news", "feed": null, "topic": "markets", "region": "eu", "access": "open", "weight": 0.9, "enabled": true },
+
+    { "id": "entsoe", "name": "ENTSO-E Transparency Platform", "url": "https://transparency.entsoe.eu", "feed": null, "topic": "data", "region": "eu", "access": "open", "weight": 1.0, "enabled": true, "note": "Free API token; power prices and generation. Planned for a data panel." },
+    { "id": "energycharts", "name": "Energy-Charts (Fraunhofer ISE)", "url": "https://www.energy-charts.info", "feed": null, "topic": "data", "region": "eu", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "pris", "name": "IAEA PRIS reactor database", "url": "https://pris.iaea.org", "feed": null, "topic": "data", "region": "global", "access": "open", "weight": 1.0, "enabled": true },
+    { "id": "owid", "name": "Our World in Data – Energy", "url": "https://ourworldindata.org/energy", "feed": null, "topic": "learning", "region": "global", "access": "open", "weight": 1.0, "enabled": true },
+
+    { "id": "platts", "name": "Nucleonics Week (S&P Global Platts)", "url": "https://www.spglobal.com/commodityinsights/", "feed": null, "topic": "nuclear", "region": "global", "access": "paid", "weight": 1.0, "enabled": true, "note": "Best nuclear trade intelligence. Subscription." },
+    { "id": "montel", "name": "Montel", "url": "https://montelnews.com", "feed": null, "topic": "markets", "region": "eu", "access": "paid", "weight": 1.0, "enabled": true, "note": "European power & gas markets. Subscription." },
+    { "id": "bnef", "name": "BloombergNEF", "url": "https://about.bnef.com", "feed": null, "topic": "transition", "region": "global", "access": "paid", "weight": 1.0, "enabled": true, "note": "Transition analysis. Subscription." },
+    { "id": "ft-energy", "name": "Financial Times – Energy", "url": "https://www.ft.com/energy", "feed": null, "topic": "markets", "region": "global", "access": "paid", "weight": 1.0, "enabled": true, "note": "Hard paywall." }
+  ]
+}
