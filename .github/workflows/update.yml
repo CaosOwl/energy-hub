@@ -14,33 +14,39 @@ permissions:
 
 concurrency:
   group: energy-hub
-  cancel-in-progress: false
+  cancel-in-progress: false   # runs queue instead of overlapping
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main          # always start from the latest main, not the triggering commit
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Fetch feeds
-        run: python scripts/fetch_feeds.py
-
-      - name: Commit updated data
+      - name: Fetch feeds and push (retry if another run pushed first)
         run: |
           git config user.name "energy-hub-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
+          for attempt in 1 2 3; do
+            python scripts/fetch_feeds.py
+            git add data/
+            if git diff --cached --quiet; then
+              echo "No changes"; break
+            fi
             git commit -m "Update feed $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin HEAD:main; then
+              break
+            fi
+            echo "Push rejected (attempt $attempt): resetting to latest main and re-fetching"
+            git fetch origin main
+            git reset --hard origin/main
+            if [ "$attempt" = 3 ]; then echo "Giving up after 3 attempts"; exit 1; fi
+          done
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
