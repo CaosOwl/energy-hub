@@ -1,5 +1,3072 @@
 {
- "generated": null,
- "health": [],
- "items": []
+ "generated": "2026-11-08T12:11+00:00",
+ "health": [
+  {
+   "id": "wnn",
+   "name": "World Nuclear News",
+   "ok": true,
+   "count": 40,
+   "error": null
+  },
+  {
+   "id": "ans",
+   "name": "ANS Nuclear Newswire",
+   "ok": true,
+   "count": 40,
+   "error": null
+  },
+  {
+   "id": "iaea",
+   "name": "IAEA News",
+   "ok": true,
+   "count": 15,
+   "error": null
+  },
+  {
+   "id": "nrc",
+   "name": "US NRC News Releases",
+   "ok": true,
+   "count": 40,
+   "error": null
+  },
+  {
+   "id": "nei",
+   "name": "Nuclear Energy Institute",
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+   "id": "nei-mag",
+   "name": "Nuclear Engineering International",
+   "ok": true,
+   "count": 10,
+   "error": null
+  },
+  {
+   "id": "ensi",
+   "name": "ENSI (Swiss nuclear regulator)",
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1011)>"
+  },
+  {
+   "id": "carbonbrief",
+   "name": "Carbon Brief",
+   "ok": true,
+   "count": 12,
+   "error": null
+  },
+  {
+   "id": "canary",
+   "name": "Canary Media",
+   "ok": true,
+   "count": 40,
+   "error": null
+  },
+  {
+   "id": "energymonitor",
+   "name": "Energy Monitor",
+   "ok": true,
+   "count": 10,
+   "error": null
+  },
+  {
+   "id": "ember",
+   "name": "Ember",
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+   "id": "pvmag",
+   "name": "pv magazine",
+   "ok": true,
+   "count": 10,
+   "error": null
+  },
+  {
+   "id": "powermag",
+   "name": "POWER Magazine",
+   "ok": true,
+   "count": 10,
+   "error": null
+  },
+  {
+   "id": "utilitydive",
+   "name": "Utility Dive",
+   "ok": true,
+   "count": 10,
+   "error": null
+  },
+  {
+   "id": "eia",
+   "name": "EIA – Today in Energy",
+   "ok": true,
+   "count": 25,
+   "error": null
+  },
+  {
+   "id": "euractiv",
+   "name": "Euractiv – Energy & Environment",
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+   "id": "iea",
+   "name": "IEA News",
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
+  }
+ ],
+ "items": [
+  {
+   "title": "IAEA Mission Finds Kenya Committed to Safe Management of Radioactive Waste as it Develops a Nuclear Power Programme",
+   "link": "http://www.iaea.org/newscenter/pressreleases/iaea-mission-finds-kenya-committed-to-safe-management-of-radioactive-waste-as-it-develops-a-nuclear-power-programme",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 227.43
+  },
+  {
+   "title": "IAEA Mission Reviews the Russian Federation’s Regulatory Framework for Nuclear and Radiation Safety",
+   "link": "http://www.iaea.org/newscenter/pressreleases/iaea-mission-reviews-the-russian-federations-regulatory-framework-for-nuclear-and-radiation-safety",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 194.94
+  },
+  {
+   "title": "The Lise Meitner Programme Explores the Nuclear Fuel Cycle in France and IAEA HQ",
+   "link": "http://www.iaea.org/newscenter/news/the-lise-meitner-programme-explores-the-nuclear-fuel-cycle-in-france-and-iaea-hq",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 194.94
+  },
+  {
+   "title": "IAEA’s Grossi Calls for Progress in Deploying Nuclear Power as Ministerial Conference Opens",
+   "link": "http://www.iaea.org/newscenter/news/iaeas-grossi-calls-for-progress-in-deploying-nuclear-power-as-ministerial-conference-opens",
+   "summary": "IAEA Director General Rafael Mariano Grossi called on countries to turn growing support for nuclear power into concrete results as the International Ministerial Conference on Nuclear Power opened in the Republic of…",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 194.94
+  },
+  {
+   "title": "Update 374 – IAEA Director General Statement on Situation in Ukraine",
+   "link": "http://www.iaea.org/newscenter/pressreleases/update-374-iaea-director-general-statement-on-situation-in-ukraine",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "Impact of Heatwaves on Nuclear Power Plants",
+   "link": "http://www.iaea.org/newscenter/news/impact-of-heatwaves-on-nuclear-power-plants",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "IAEA Report Confirms Japanese Monitoring Data of ALPS-Treated Water Prior to Discharge under Additional Measures",
+   "link": "http://www.iaea.org/newscenter/pressreleases/iaea-report-confirms-japanese-monitoring-data-of-alps-treated-water-prior-to-discharge-under-additional-measures",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "IAEA Launches Global Network to Help Countries Monitor and Protect the World’s Lakes",
+   "link": "http://www.iaea.org/newscenter/pressreleases/iaea-launches-global-network-to-help-countries-monitor-and-protect-the-worlds-lakes",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "Update 373 – IAEA Director General Statement on Situation in Ukraine",
+   "link": "http://www.iaea.org/newscenter/pressreleases/update-373-iaea-director-general-statement-on-situation-in-ukraine",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "How Nuclear Technology Is Helping Cities Become More Sustainable",
+   "link": "http://www.iaea.org/newscenter/news/how-nuclear-technology-is-helping-cities-become-more-sustainable",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "IAEA and International Laboratories Confirm Japanese Marine Monitoring Data for ALPS-Treated Water Discharge under Additional Measures",
+   "link": "http://www.iaea.org/newscenter/pressreleases/iaea-and-international-laboratories-confirm-japanese-marine-monitoring-data-for-alps-treated-water-discharge-under-additional-measures",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "Tritium Level Far Below Japan’s Operational Limit in 25th Batch of ALPS Treated Water, IAEA Confirms",
+   "link": "http://www.iaea.org/newscenter/pressreleases/tritium-level-far-below-japans-operational-limit-in-25th-batch-of-alps-treated-water-iaea-confirms",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "Update 372 – IAEA Director General Statement on Situation in Ukraine",
+   "link": "http://www.iaea.org/newscenter/pressreleases/update-372-iaea-director-general-statement-on-situation-in-ukraine",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "What is Nuclear Fuel?",
+   "link": "http://www.iaea.org/newscenter/news/what-is-nuclear-fuel",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 162.45
+  },
+  {
+   "title": "Atoms4Food: Protecting Biodiversity",
+   "link": "http://www.iaea.org/newscenter/multimedia/videos/atoms4food-protecting-biodiversity",
+   "summary": "",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "iaea",
+   "sourceName": "IAEA News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 129.96
+  },
+  {
+   "title": "Calogena awarded EU funding for SMR deployment",
+   "link": "https://www.world-nuclear-news.org/articles/calogena-awarded-eu-funding-for-smr-deployment",
+   "summary": "French small modular reactor developer Calogena has been awarded EUR40 million (USD44.6 million) through the European Commission's Innovation Fund to support the potential construction of its first commercial nuclear…",
+   "date": "2026-11-06T12:31+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 129.07
+  },
+  {
+   "title": "Category 2 Hurricane Isaias nears landfall, leading to production shut-ins",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68284",
+   "summary": "As of 4:00 a.m. central time on October 9, the National Oceanic and Atmospheric Administration expects Hurricane Isaias to make landfall on the Gulf Coast late Friday or early Saturday, creating the potential for…",
+   "date": "2026-11-08T12:11+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 109.97
+  },
+  {
+   "title": "Construction of Chinese HTGR begins",
+   "link": "https://www.world-nuclear-news.org/articles/construction-of-chinese-htgr-begins",
+   "summary": "The first batch of concrete has been poured for the nuclear island of the high-temperature gas-cooled reactor that forms part of the initial phase of the Jiangsu Xuwei Nuclear Heating and Power Plant, China National…",
+   "date": "2026-11-06T12:47+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 97.11
+  },
+  {
+   "title": "Reactor components completed for El Dabaa 1",
+   "link": "https://www.world-nuclear-news.org/articles/reactor-components-completed-for-el-dabaa-1",
+   "summary": "All the key components have now been manufactured for the first unit’s reactor at Egypt's El Dabaa Nuclear Power Plant.",
+   "date": "2026-11-06T11:35+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 95.73
+  },
+  {
+   "title": "IAEA launches network to monitor isotopes in lakes",
+   "link": "https://www.ans.org/news/2026-11-06/article-8565/iaea-launches-network-to-monitor-isotopes-in-lakes/",
+   "summary": "The International Atomic Energy Agency has launched the Global Network of Isotopes in Lakes (GNIL), which aims to help countries monitor changes in their lakes and share the data to protect freshwater resources.",
+   "date": "2026-11-06T21:28+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 93.94
+  },
+  {
+   "title": "Thea Energy, MIT collaborate on testing stellarator magnet technology",
+   "link": "https://www.ans.org/news/2026-11-06/article-8563/thea-energy-mit-collaborate-on-testing-stellarator-magnet-technology/",
+   "summary": "Stellarator developer Thea Energy has announced that it is collaborating with the Massachusetts Institute of Technology on the testing and validation of an encircling magnet coil for the fusion firm’s Eos stellarator.…",
+   "date": "2026-11-06T16:13+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 87.78
+  },
+  {
+   "title": "FANCO expands cooperation with Hyundai E&C on EAGL-1",
+   "link": "https://www.world-nuclear-news.org/articles/fanco-expands-cooperation-with-hyundai-ec-on-eagl-1",
+   "summary": "US small modular reactor developer First American Nuclear Co has signed a comprehensive master service agreement with South Korea's Hyundai Engineering & Construction.",
+   "date": "2026-11-04T11:41+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 81.5
+  },
+  {
+   "title": "X-energy selects Fluor for second Xe-100 project",
+   "link": "https://www.world-nuclear-news.org/articles/x-energy-selects-fluor-for-second-xe-100-project",
+   "summary": "Fluor Corporation is to provide design and engineering services to support the second-of-a-kind US project featuring X-energy's Xe-100, at Energy Northwest's proposed Cascade Advanced Energy Facility near Richland,…",
+   "date": "2026-11-06T11:49+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 80.0
+  },
+  {
+   "title": "Nuclear News 40 under 40 2026: Supporting deployment",
+   "link": "https://www.ans.org/news/2026-11-06/article-8541/inuclear-newsi-40-under-40-2026-supporting-deployment/",
+   "summary": "Welcome to the third annual Nuclear News 40 Under 40. What started out as a gamble in 2024 has taken root in our community, and we now have recognized 120 young professionals. One thing remains the same from year to…",
+   "date": "2026-11-06T22:34+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 79.45
+  },
+  {
+   "title": "NRC workshop addresses “bridge” between DOE authorization and NRC licensing",
+   "link": "https://www.ans.org/news/2026-11-04/article-8557/nrc-workshop-addresses-bridge-between-doe-authorization-and-nrc-licensing/",
+   "summary": "The Nuclear Regulatory Commission’s Office of Advanced Reactors recently launched a series of workshops aimed at those who want to learn more about or will need to navigate the NRC’s licensing process. Dubbed “License…",
+   "date": "2026-11-04T23:10+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 77.34
+  },
+  {
+   "title": "Belgian nuclear power plant negotiations extended",
+   "link": "https://www.world-nuclear-news.org/articles/belgian-nuclear-power-plant-negotiations-extended",
+   "summary": "The Belgian state, Engie and Electrabel have agreed to postpone to 12 December the target date for the conclusion of the heads of terms for the potential acquisition of Belgium's seven nuclear power reactors by the…",
+   "date": "2026-11-05T12:24+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 75.14
+  },
+  {
+   "title": "U.K. energy bill proposes changes to waste transport regulation",
+   "link": "https://www.ans.org/news/2026-11-06/article-8564/uk-energy-bill-proposes-changes-to-waste-transport-regulation/",
+   "summary": "A bill introduced in the U.K. Parliament on November 4 includes a provision that potentially would streamline the government’s process for updating rules regarding the transportation of used fuel and radioactive waste.…",
+   "date": "2026-11-06T18:11+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 74.99
+  },
+  {
+   "title": "Helen to assess environmental impacts of SMR in Helsinki",
+   "link": "https://www.world-nuclear-news.org/articles/helen-to-assess-environmental-impacts-of-smr-in-helsinki",
+   "summary": "Finland's Helen Ydinvoima Oy has launched an environmental impact assessment on the construction of a small nuclear power plant at one of three potential sites in Helsinki.",
+   "date": "2026-11-05T10:40+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 73.95
+  },
+  {
+   "title": "Korean companies partner with U.S. start-ups",
+   "link": "https://www.ans.org/news/2026-11-06/article-8562/korean-companies-partner-with-us-startups/",
+   "summary": "In recent months, much attention has been paid to the deal between the United States and South Korea involving the potential construction of eight new gigawatt-scale reactors. Outside of that spotlight, however,…",
+   "date": "2026-11-06T13:18+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 70.57
+  },
+  {
+   "title": "IHI to supply components for first Polish AP1000",
+   "link": "https://www.world-nuclear-news.org/articles/ihi-to-supply-components-for-first-polish-ap1000",
+   "summary": "Japanese engineering firm IHI Corporation has received an order from Westinghouse covering engineering and procurement activities for long-lead items for one containment vessel and an associated large steel module for…",
+   "date": "2026-11-05T15:02+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 64.19
+  },
+  {
+   "title": "Salem power plant planning 200-MW uprate",
+   "link": "https://www.ans.org/news/2026-11-05/article-8561/salem-power-plant-planning-200mw-uprate/",
+   "summary": "The Salem nuclear power plant is expected to get a 200-MW uprate, executives from PSEG, the co-owners and operators of the Hancocks Bridge, N.J., facility, said in the utility’s recent third quarter earnings call. The…",
+   "date": "2026-11-05T21:32+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 59.29
+  },
+  {
+   "title": "Algae early-warning system aims to offer safety, operational benefits",
+   "link": "https://www.world-nuclear-news.org/articles/algae-early-warning-system-aims-to-offer-safety-operational-benefits",
+   "summary": "An AI-based system has been developed to anticipate the arrival of floating vegetation masses at the cooling system of the Ascó Nuclear Power Plant in Spain, and is a significant advance on traditional visual inspection…",
+   "date": "2026-11-05T06:17+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 59.26
+  },
+  {
+   "title": "3D-printed tungsten tiles tested at DIII-D",
+   "link": "https://www.ans.org/news/2026-11-05/article-8560/3dprinted-tungsten-tiles-tested-at-diiid/",
+   "summary": "A team from North Carolina State University, Oak Ridge National Laboratory, and JEOL has 3D-printed tungsten tiles for the inside wall of the DIII-D tokamak and tested them under plasma discharges with significant heat…",
+   "date": "2026-11-05T19:49+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 58.28
+  },
+  {
+   "title": "Candidates announced for the 2027 ANS national election",
+   "link": "https://www.ans.org/news/2026-11-05/article-8559/candidates-announced-for-the-2027-ans-national-election/",
+   "summary": "Candidates have been announced to fill eight leadership positions in the American Nuclear Society. Following the ANS national election, terms for each of these positions will begin in June 2027. The new vice…",
+   "date": "2026-11-05T18:08+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 57.32
+  },
+  {
+   "title": "PNNL is developing a new approach for creating alloys",
+   "link": "https://www.ans.org/news/2026-11-04/article-8554/pnnl-is-developing-a-new-approach-for-creating-alloys/",
+   "summary": "Researchers at Pacific Northwest National Laboratory are designing new types of metallic alloys that can better withstand the extreme conditions of heat, radiation, and mechanical stress inside nuclear reactors. Led by…",
+   "date": "2026-11-04T14:01+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 53.93
+  },
+  {
+   "title": "Texas SMR plant moves to final permitting stage",
+   "link": "https://www.world-nuclear-news.org/articles/texas-smr-plant-moves-to-final-permitting-stage",
+   "summary": "The US Nuclear Regulatory Commission says there will soon be a construction permit announcement after it finished its safety review for the Xe-100 reactor, which is proposed for deployment at the Long Mott Generating…",
+   "date": "2026-11-02T14:18+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 53.12
+  },
+  {
+   "title": "Saltfoss targets US licensing for floating power plant",
+   "link": "https://www.world-nuclear-news.org/articles/saltfoss-targets-us-licensing-for-floating-power-plant",
+   "summary": "Molten Salt Power Barge developer Saltfoss has notified the US Nuclear Regulatory Commission of its intent to begin pre-application engagement.",
+   "date": "2026-11-03T14:01+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 52.54
+  },
+  {
+   "title": "Initial fuel loading completed at second San'ao unit",
+   "link": "https://www.world-nuclear-news.org/articles/initial-fuel-loading-completed-at-second-sanao-unit",
+   "summary": "The loading of fuel assemblies into the core of unit 2 at the San'ao nuclear power plant in China's Zhejiang province has been completed ahead of its start up. The unit is the second of six HPR1000s (Hualong Ones)…",
+   "date": "2026-11-04T13:24+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 51.61
+  },
+  {
+   "title": "‘Simply staggering’: Rapidly developing ‘super El Niño’ on track to peak in December",
+   "link": "https://www.carbonbrief.org/simply-staggering-rapidly-developing-super-el-nino-on-track-to-peak-in-december",
+   "summary": "The ongoing “super El Niño” is likely to peak at the end of 2026 and push average global temperatures to… The post ‘Simply staggering’: Rapidly developing ‘super El Niño’ on track to peak in December appeared first on…",
+   "date": "2026-11-06T09:12+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 49.66
+  },
+  {
+   "title": "U.S. crude oil imports from Venezuela in July were highest since 2017",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68425",
+   "summary": "In July 2026, U.S. imports of crude oil from Venezuela averaged 701,000 barrels per day (b/d), the most since May 2017, before decreasing to 655,000 b/d in August, according to data published in our Petroleum Supply…",
+   "date": "2026-11-06T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 48.18
+  },
+  {
+   "title": "U.S. solar developers navigate policy stack as Section 232 deadline nears",
+   "link": "https://www.pv-magazine.com/2026/11/07/u-s-solar-developers-navigate-policy-stack-as-section-232-deadline-nears/",
+   "summary": "With national inventory surging 126% in the second quarter of 2026 ahead of shifting trade cutoffs, utility-scale developers are altering procurement strategies and contracts to manage multi-layered regulatory…",
+   "date": "2026-11-07T10:50+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition",
+    "tech"
+   ],
+   "score": 46.94
+  },
+  {
+   "title": "How the Solar+ industries can make better decisions for the energy transition",
+   "link": "https://www.pv-magazine.com/2026/11/07/how-the-solar-industries-can-make-better-decisions-for-the-energy-transition/",
+   "summary": "This week, Women in Solar+ Europe (WiSEu) shares the lessons from its Solar & Storage Live European tour: why silence puts projects at risk, what turns representation into real influence, and how leaders can make room…",
+   "date": "2026-11-07T10:30+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 46.68
+  },
+  {
+   "title": "Urenco touts first cylinder of LEU+ for commercial use",
+   "link": "https://www.ans.org/news/2026-11-04/article-8556/urenco-touts-first-cylinder-of-leu-for-commercial-use/",
+   "summary": "Urenco USA has produced its first cylinder of uranium hexafluoride enriched to levels of uranium-235 between 5 and 10 percent, or LEU+. The company said that this is the first instance of commercial LEU+ production in…",
+   "date": "2026-11-04T18:41+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 46.61
+  },
+  {
+   "title": "Duke Energy to stay course on data center-fueled growth plan after ‘historic’ election",
+   "link": "https://www.utilitydive.com/news/historic-election-night-wont-change-growth-focus-at-duke-energy-executi/873965/",
+   "summary": "The company’s large-load pipeline of 15.4 GW has remained virtually unchanged since the first quarter of 2026 as it pursues a $103 billion spending plan heavily focused on new natural gas generation.",
+   "date": "2026-11-06T18:00+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "markets"
+   ],
+   "score": 46.04
+  },
+  {
+   "title": "Ecuador’s largest PV plant goes online",
+   "link": "https://www.pv-magazine.com/2026/11/07/ecuadors-largest-pv-plant-goes-online/",
+   "summary": "Lighthouse, a subsidiary of Ecuador's Difare Group, has inaugurated an 82 MW solar plant in Santa Elena province. The post Ecuador’s largest PV plant goes online appeared first on pv magazine Global .",
+   "date": "2026-11-07T09:30+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 45.94
+  },
+  {
+   "title": "Voters gave a big middle finger to data centers",
+   "link": "https://www.canarymedia.com/articles/data-centers/data-center-voters-election-day",
+   "summary": "This analysis and news roundup come from the Canary Media Weekly newsletter. Sign up to get it every Friday. Americans aren’t happy about the data center boom, and they made their displeasure pretty clear this Election…",
+   "date": "2026-11-06T17:19+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "transition"
+   ],
+   "score": 45.64
+  },
+  {
+   "title": "First concrete poured for unit 5 at Haiyang plant",
+   "link": "https://www.world-nuclear-news.org/articles/first-concrete-poured-unit-5-haiyang-plant",
+   "summary": "The first safety-related concrete has been poured for the reactor building of unit 5 at the Haiyang nuclear power plant. It is the fifth of six large pressurised water reactors planned for the site in China's Shandong…",
+   "date": "2026-11-02T14:37+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 45.61
+  },
+  {
+   "title": "Maintaining trust in new tech",
+   "link": "https://www.pv-magazine.com/2026/11/07/maintaining-trust-in-new-tech/",
+   "summary": "Rapid technological advances, particularly in AI, are challenging traditional approaches to conformity assessment and standardization. International standards bodies are adapting their frameworks to ensure products…",
+   "date": "2026-11-07T09:00+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "tech"
+   ],
+   "score": 45.57
+  },
+  {
+   "title": "NSUF awards 18 Super Rapid Turnaround Experiments",
+   "link": "https://www.ans.org/news/2026-11-04/article-8555/nsuf-awards-18-super-rapid-turnaround-experiments/",
+   "summary": "The Department of Energy’s Office of Nuclear Energy has awarded National Science User Facilities (NSUF) access to 18 Super Rapid Turnaround Experiment (Super RTE) projects. The awarded facility access is valued at…",
+   "date": "2026-11-04T15:46+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 45.55
+  },
+  {
+   "title": "Portable solar-powered system produces 1.64 liters of drinking water in 8 hours",
+   "link": "https://www.pv-magazine.com/2026/11/07/portable-solar-powered-system-produces-1-64-liters-of-drinking-water-in-8-hours/",
+   "summary": "Researchers at Soochow University in China have developed a portable solar-powered system that converts saline, turbid and contaminated water into drinking water using an electrothermal evaporator and concentrated…",
+   "date": "2026-11-07T08:30+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 45.22
+  },
+  {
+   "title": "Sempra expects 20% increase to Oncor’s capex plan, driven by load growth",
+   "link": "https://www.utilitydive.com/news/sempra-expects-20-increase-oncors-capex-plan-load-growth/874010/",
+   "summary": "“It's too soon to tell exactly” how the results of the midterm elections will impact Oncor, said CEO Allen Nye. “We continue to believe that both parties want a strong and growing Texas.”",
+   "date": "2026-11-06T16:10+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 44.98
+  },
+  {
+   "title": "Analysis: China’s quarterly CO2 falls 3% in largest drop since Covid",
+   "link": "https://www.carbonbrief.org/analysis-chinas-quarterly-co2-falls-3-in-largest-drop-since-covid",
+   "summary": "China’s carbon dioxide (CO2) emissions fell by 3.1% in the third quarter of 2026, as the Hormuz crisis continued to… The post Analysis: China’s quarterly CO2 falls 3% in largest drop since Covid appeared first on Carbon…",
+   "date": "2026-11-06T00:01+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 44.92
+  },
+  {
+   "title": "Researchers develop 10.56 kW solar-powered pleasure boat",
+   "link": "https://www.pv-magazine.com/2026/11/07/researchers-unveil-10-56-kw-solar-powered-pleasure-boat/",
+   "summary": "Researchers in Canada have designed a solar-powered pleasure boat featuring a 10.56 kW PV array and a 19.68 kWh battery system. Simulations under solar conditions in Cyprus showed that the system could meet propulsion…",
+   "date": "2026-11-07T08:00+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 44.86
+  },
+  {
+   "title": "When Commercial Demand Takes the Lead: Rethinking Grid Planning for a New Load Era",
+   "link": "https://www.powermag.com/when-commercial-demand-takes-the-lead-rethinking-grid-planning-for-a-new-load-era/",
+   "summary": "For decades, electric utilities have planned around a relatively predictable relationship between population growth, economic activity, weather and electricity consumption. Demand increased gradually, infrastructure…",
+   "date": "2026-11-06T15:47+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "tech"
+   ],
+   "score": 44.77
+  },
+  {
+   "title": "Unleash Your Organizational Superpower Through Talent Development",
+   "link": "https://www.ans.org/news/2026-11-04/article-8499/unleash-your-organizational-superpower-through-talent-development/",
+   "summary": "Looking at the nuclear industry from a demand, policy support, and investment perspective, it is primed for unprecedented growth not seen since the 1970s. Utilities are exploring new builds and capacity expansion…",
+   "date": "2026-11-04T13:14+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 44.67
+  },
+  {
+   "title": "Data centers don’t need special treatment to get power faster",
+   "link": "https://www.utilitydive.com/news/data-centers-grid-flexibility-tariffs-ercot-spp-pjm/833678/",
+   "summary": "Projects that make their demand more predictable, controllable and financially secure should have a clearer path to service, writes Seyed Madaeni, CEO and co-founder of Verse.",
+   "date": "2026-11-06T15:27+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "markets"
+   ],
+   "score": 44.59
+  },
+  {
+   "title": "Study finds 0.5-meter spacing between solar module rows improves cooling in floating PV systems",
+   "link": "https://www.pv-magazine.com/2026/11/07/study-finds-0-5-meter-spacing-between-solar-module-rows-improves-cooling-in-floating-pv-systems/",
+   "summary": "A study by Italian researchers has found that 0.5-meter spacing between module rows optimizes cooling in floating PV systems by improving airflow. The findings highlight the importance of row spacing in thermal…",
+   "date": "2026-11-07T07:30+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 44.52
+  },
+  {
+   "title": "Major Solar Power, Energy Storage Companies Merge in All-Stock Deal",
+   "link": "https://www.powermag.com/major-solar-power-energy-storage-companies-merge-in-all-stock-deal/",
+   "summary": "ARRAY Technologies, a provider of structural balance-of-system (SBOS) solutions for utility-scale solar, and Shoals Technologies Group, which supplies electrical balance-of-system (EBOS) equipment for utility-scale…",
+   "date": "2026-11-06T15:12+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 44.45
+  },
+  {
+   "title": "Eversource’s financial risk eases as Revolution Wind hits full commercial operations: CEO",
+   "link": "https://www.utilitydive.com/news/eversources-revolution-wind-rate-case-earnings/873983/",
+   "summary": "Eversource Energy’s third-quarter income fell 22% year over year to $346 million, partly driven by a lack of income from Aquarion, a water utility subsidiary the company sold in June.",
+   "date": "2026-11-06T14:44+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "markets"
+   ],
+   "score": 44.19
+  },
+  {
+   "title": "India’s installed solar PV capacity to exceed 350 GW by 2030, says IEA",
+   "link": "https://www.pv-magazine.com/2026/11/07/indias-installed-solar-pv-capacity-to-exceed-350-gw-by-2030-says-iea/",
+   "summary": "Growth will be supported by utility-scale projects, rooftop solar and corporate procurement, although grid and storage investments remain critical. The post India’s installed solar PV capacity to exceed 350 GW by 2030,…",
+   "date": "2026-11-07T07:00+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition",
+    "tech"
+   ],
+   "score": 44.18
+  },
+  {
+   "title": "Oak Ridge’s Transuranic Waste Processing Center gets upgrades",
+   "link": "https://www.ans.org/news/2026-11-05/article-8558/oak-ridges-transuranic-waste-processing-center-gets-upgrades/",
+   "summary": "The Department of Energy’s Office of Environmental Management has announced that part of the Transuranic Waste Processing Center (TWPC) at the Oak Ridge Reservation cleanup site has been remodeled and updated with new…",
+   "date": "2026-11-05T14:11+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 44.15
+  },
+  {
+   "title": "DTE expands investment plan 30%, will sell unregulated subsidiary to fund growth",
+   "link": "https://www.utilitydive.com/news/dte-expands-5-year-electric-investment-plan-sells-unregulated-vantage/873974/",
+   "summary": "After the $3 billion sale of DTE Vantage, DTE “becomes a higher growth premium utility” and “a simpler business,” CEO Joi Harris told analysts Thursday. The company is also anticipating a push in the state legislature…",
+   "date": "2026-11-06T14:15+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 43.93
+  },
+  {
+   "title": "Turkey and South Korea explore nuclear financing cooperation",
+   "link": "https://www.world-nuclear-news.org/articles/turkey-and-south-korea-agree-on-nuclear-financing-cooperation",
+   "summary": "A framework to evaluate potential cooperation on the financing of nuclear power projects was one of a number of energy-related initiatives agreed between Turkey and South Korea.",
+   "date": "2026-11-03T12:10+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 43.26
+  },
+  {
+   "title": "Beyond scale and hardware",
+   "link": "https://www.pv-magazine.com/2026/11/07/beyond-scale-and-hardware/",
+   "summary": "Solar and battery energy storage systems (BESS) have scaled dramatically since 2015, but demand growth is not necessarily translating into better economics for manufacturers, writes Susan Taylor of S&P Global Energy.…",
+   "date": "2026-11-07T05:00+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 42.86
+  },
+  {
+   "title": "Singapore enlists Finnish help in bolstering nuclear expertise",
+   "link": "https://www.world-nuclear-news.org/articles/singapore-enlists-finnish-help-in-bolstering-nuclear-expertise",
+   "summary": "The VTT Technical Research Centre of Finland and the Singapore Nuclear Research and Safety Institute have signed a five-year memorandum of understanding to deepen cooperation in nuclear safety and strengthen the…",
+   "date": "2026-11-03T10:23+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 42.77
+  },
+  {
+   "title": "Doosan to manufacture upper reactor vessel for NuScale SMR",
+   "link": "https://www.world-nuclear-news.org/articles/doosan-to-manufacture-upper-reactor-vessel-for-nuscale-smr",
+   "summary": "US small modular reactor developer NuScale Power has signed a contract with South Korea's Doosan Enerbility to manufacture an upper reactor coolant system for the NuScale Power Module.",
+   "date": "2026-10-30T10:16+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 42.53
+  },
+  {
+   "title": "A Syzygy in Nuclear Energy",
+   "link": "https://www.powermag.com/a-syzygy-in-nuclear-energy/",
+   "summary": "How do you know when you’re in a technological renaissance? When science, technology, and economics have lined up to produce something new. COMMENTARY In Europe it took artists, scientists, and craftspeople until 1550…",
+   "date": "2026-11-05T12:42+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "tech"
+   ],
+   "score": 41.86
+  },
+  {
+   "title": "Scout’s 183MW Nimbus Wind Farm begins operations in Arkansas",
+   "link": "https://www.energymonitor.ai/news/nimbus-wind-farm-begins-operations/",
+   "summary": "Scout Clean Energy’s 183MW Nimbus Wind Farm has entered commercial operation in Carroll County, Arkansas, US.",
+   "date": "2026-11-06T09:56+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 41.73
+  },
+  {
+   "title": "The wins and weak spots in America's solar supply chain",
+   "link": "https://www.canarymedia.com/articles/clean-energy-manufacturing/us-domestic-solar-supply-chain",
+   "summary": "See more from Canary Media’s ​“Chart of the Week” column . Now that solar has become America’s go-to choice for new power plants , the pressure is on to assemble a fully domestic supply chain for the technology. Data…",
+   "date": "2026-11-06T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 41.05
+  },
+  {
+   "title": "DTE Energy to divest DTE Vantage in $3bn deal",
+   "link": "https://www.energymonitor.ai/news/dte-energy-divest-dte-vantage/",
+   "summary": "DTE Energy has agreed to sell its non-utility DTE Vantage business to institutional investors in a deal valued at approximately $3bn.",
+   "date": "2026-11-06T08:05+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 40.86
+  },
+  {
+   "title": "Interactive: Tracking negotiating texts at the COP31 climate summit",
+   "link": "https://www.carbonbrief.org/interactive-tracking-negotiating-texts-at-the-cop31-climate-summit",
+   "summary": "The centrepiece of every UN climate summit is for countries to negotiate the wording of a large number of legal… The post Interactive: Tracking negotiating texts at the COP31 climate summit appeared first on Carbon…",
+   "date": "2026-11-05T14:13+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 40.76
+  },
+  {
+   "title": "DOE selects 28 projects for INFUSE awards",
+   "link": "https://www.ans.org/news/2026-11-03/article-8553/doe-selects-28-projects-for-infuse-awards/",
+   "summary": "Yesterday, the Department of Energy’s Office of Science announced $8.5 million in awards across 28 projects through the Innovation Network for Fusion Energy (INFUSE) program, which provides fusion companies with access…",
+   "date": "2026-11-03T22:13+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 40.07
+  },
+  {
+   "title": "Russia to work with Ghana on first power plant as involvement in Africa grows",
+   "link": "https://www.ans.org/news/2026-11-03/article-8552/russia-to-work-with-ghana-on-first-power-plant-as-involvement-in-africa-grows/",
+   "summary": "Russia has agreed to work with Ghana on the African country’s first nuclear power plant, Ghanaian Foreign Minister Samuel Okudzeto Ablakwa has announced. According to the Ministry of Foreign Affairs, Ghana has secured…",
+   "date": "2026-11-03T19:54+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 39.45
+  },
+  {
+   "title": "Riding with the changing tide",
+   "link": "https://www.ans.org/news/2026-11-03/article-8534/riding-with-the-changing-tide/",
+   "summary": "Mark Peterspresident@ans.org In the November issue of Nuclear News magazine, you will find the third annual cohort of 40 Under 40 honorees. I want to take this opportunity to congratulate each young professional who has…",
+   "date": "2026-11-03T18:36+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 39.11
+  },
+  {
+   "title": "Wyoming signs MOU for expedited permitting under FAST-41",
+   "link": "https://www.ans.org/news/2026-11-03/article-8551/wyoming-signs-mou-for-expedited-permitting-under-fast41/",
+   "summary": "Wyoming recently adopted a measure to accelerate federal and state permitting processes for its infrastructure projects, including uranium mining projects. On October 26, Wyoming Gov. Mark Gordon and Emily Domenich,…",
+   "date": "2026-11-03T15:19+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 38.27
+  },
+  {
+   "title": "PEJ applies for early works permit for nuclear power plant",
+   "link": "https://www.world-nuclear-news.org/articles/pej-applies-for-early-works-permit-for-nuclear-power-plant",
+   "summary": "Polskie Elektrownie Jądrowe has applied to the head of the Pomeranian Voivodeship for a permit to start early works required for the construction of Poland's first nuclear power plant at the Lubiatowo-Kopalino site in…",
+   "date": "2026-11-02T15:37+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 38.23
+  },
+  {
+   "title": "Fusion companies sign agreements during Japan-Germany meeting",
+   "link": "https://www.ans.org/news/2026-11-03/article-8550/fusion-companies-sign-agreements-during-japangermany-meeting/",
+   "summary": "Last week during a visit to Japan, German Chancellor Friedrich Merz met with Japanese Prime Minister Sanae Takaichi. The two leaders issued a joint declaration on advanced technology cooperation, including a commitment…",
+   "date": "2026-11-03T13:53+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 37.91
+  },
+  {
+   "title": "Uganda and Russia look to move ahead with nuclear project",
+   "link": "https://www.world-nuclear-news.org/articles/russia-and-uganda-look-to-move-head-with-nuclear-project",
+   "summary": "A roadmap setting out cooperation in the peaceful uses of nuclear energy, as part of work towards a nuclear power plant, has been signed by Russia and Uganda.",
+   "date": "2026-11-02T13:03+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 37.68
+  },
+  {
+   "title": "Democrats' state wins open the door for major clean energy progress",
+   "link": "https://www.canarymedia.com/articles/politics/democrat-state-wins-clean-energy-progress",
+   "summary": "Democrats' historic wins in Tuesday’s midterm elections will give them control of Congress and a chance to combat the Trump administration’s anti-climate agenda, but the president’s veto power will limit their options.…",
+   "date": "2026-11-06T00:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 37.62
+  },
+  {
+   "title": "Refineries have shifted production away from gasoline to middle distillates",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68424",
+   "summary": "Particularly high refinery margins for distillate fuel oil and jet fuel have contributed to shifts in the refinery yields of major products in 2026. Data from our latest Petroleum Supply Monthly—which includes data…",
+   "date": "2026-11-05T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 37.29
+  },
+  {
+   "title": "Hyundai Engineering agrees to cooperate with US SMR developers",
+   "link": "https://www.world-nuclear-news.org/articles/hyundai-engineering-agrees-to-cooperate-with-us-smr-developers",
+   "summary": "South Korea's Hyundai Engineering is aiming to establish a role in the global small modular reactor market by signing memorandums of understanding with US SMR developers NANO Nuclear Energy and ARC Clean Technology.",
+   "date": "2026-10-28T12:52+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 36.08
+  },
+  {
+   "title": "Bruce unit 5 refurbishment begins",
+   "link": "https://www.world-nuclear-news.org/articles/bruce-unit-5-refurbishment-begins",
+   "summary": "Bruce 5 was taken off-line to begin its Major Component Replacement outage on 1 November, the fourth unit to be refurbished under Bruce Power's plan to renew six of the eight units at the Ontario site.",
+   "date": "2026-11-03T15:44+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 35.42
+  },
+  {
+   "title": "Revolution Wind Offshore Wind Project Enters Commercial Operation",
+   "link": "https://www.powermag.com/revolution-wind-offshore-wind-project-enters-commercial-operation/",
+   "summary": "Denmark-headquartered offshore wind developer Orsted said its 704-MW Revolution Wind project off the coast of Rhode Island has reached full commercial operation. The company made the announcement in a Nov. 5 call with…",
+   "date": "2026-11-05T18:05+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 35.26
+  },
+  {
+   "title": "Eaton CEO: AC to DC migration for data centers ‘is real’",
+   "link": "https://www.utilitydive.com/news/eaton-ceo-ac-to-dc-migration-is-real-because-of-large-power-savings/873887/",
+   "summary": "The electrical equipment multinational says it’s poised to capitalize on the trend by investing in solid-state transformers. But the “timing of that transition is not under our control,” said CEO Paulo Ruiz.",
+   "date": "2026-11-05T17:05+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech",
+    "markets"
+   ],
+   "score": 34.91
+  },
+  {
+   "title": "Will PG&E’s $2B grid cutbacks derail California’s clean energy buildout?",
+   "link": "https://www.canarymedia.com/articles/utilities/pge-2b-cut-in-grid-investments",
+   "summary": "This is California Wire , a weekly newsletter from Jeff St. John on the state’s clean energy transition. Subscribe to get it every Thursday via Substack. Hello, everyone! We’ve got a lot of postelection news to cover…",
+   "date": "2026-11-05T17:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 34.89
+  },
+  {
+   "title": "Co-located solar, storage jumps to 16% of all installations, up from 2% in 2017: EIA",
+   "link": "https://www.utilitydive.com/news/storage-solar-colocation-eia-seia/873882/",
+   "summary": "The share of solar projects co-located with storage is projected to pass 30% over the next two years, based on planned additions, according to a report from the U.S. Energy Information Administration.",
+   "date": "2026-11-05T16:37+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech",
+    "markets"
+   ],
+   "score": 34.76
+  },
+  {
+   "title": "Entergy sees progress on Arkansas data center deal, strong Q3 sales",
+   "link": "https://www.utilitydive.com/news/entergy-makes-progress-on-arkansas-data-center-reports-strong-q3-sales/873873/",
+   "summary": "The New Orleans-based company separately inked firm pipeline contracts for enough natural gas to support 10 new combined-cycle power plants in Louisiana, CEO Drew Marsh said Monday.",
+   "date": "2026-11-05T15:51+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "tech"
+   ],
+   "score": 34.5
+  },
+  {
+   "title": "Sodium-ion batteries approach cost parity with LFP, with 70 GWh covered by supply agreements",
+   "link": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+   "summary": "Sodium-ion batteries are approaching cell-level cost parity with LFP technology, with supply agreements exceeding 70 GWh worldwide. Despite higher upfront costs, they could offer a 21% lower total cost of ownership over…",
+   "date": "2026-11-06T12:34+00:00",
+   "source": "pvmag",
+   "sourceName": "pv magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "tech"
+   ],
+   "score": 34.44
+  },
+  {
+   "title": "Antares, Last Energy, and Radiant hit DOE authorization milestones",
+   "link": "https://www.ans.org/news/2026-11-02/article-8549/antares-last-energy-and-radiant-hit-doe-authorization-milestones/",
+   "summary": "The month of October saw three of the original Reactor Pilot Program companies hit a handful of milestones as each pursues Department of Energy authorization for the operation of various reactor projects. Both Last…",
+   "date": "2026-11-02T21:25+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 34.26
+  },
+  {
+   "title": "Antares, BWXT in TRISO fuel procurement deal",
+   "link": "https://www.world-nuclear-news.org/articles/antares-bwxt-in-triso-procurement-deal",
+   "summary": "The commercial agreement covers an initial tonne of TRISO fuel for Antares Nuclear's microreactors, which could be increased as deployment requirements evolve to support Antares's advanced reactor programme.",
+   "date": "2026-10-29T12:17+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 34.25
+  },
+  {
+   "title": "Westinghouse to conduct key study for AP1000 in Slovakia",
+   "link": "https://www.world-nuclear-news.org/articles/westinghouse-to-conduct-key-study-to-prepare-for-ap1000-in-slovakia",
+   "summary": "Westinghouse is to carry out a Front-End Engineering and Design study for the potential deployment of an AP1000 reactor at the Bohunice Nuclear Power Plant in the Slovak Republic.",
+   "date": "2026-10-29T12:08+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 34.23
+  },
+  {
+   "title": "A third major US offshore wind farm is now fully operational",
+   "link": "https://www.canarymedia.com/articles/offshore-wind/revolution-wind-fully-operational",
+   "summary": "The offshore wind farm Revolution Wind is completely up and running — despite the Trump administration’s repeated and ongoing efforts to halt development of the $6.2 billion project. On Thursday, the Danish energy giant…",
+   "date": "2026-11-05T15:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 34.22
+  },
+  {
+   "title": "Turkish oil refiner to consider SMR deployment",
+   "link": "https://www.world-nuclear-news.org/articles/turkish-oil-refiner-to-consider-smr-deployment",
+   "summary": "TÜPRAŞ, Turkey's largest crude oil refiner, has signed an agreement with the US Trade and Development Agency to fund technical assistance to assess the potential of small modular reactors to supply electricity, heat and…",
+   "date": "2026-10-29T10:45+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 34.06
+  },
+  {
+   "title": "Exelon, Invenergy complaints at FERC seek capacity market changes",
+   "link": "https://www.utilitydive.com/news/exelon-invenergy-ferc-complaint-pjm-miso-capacity-market-/873845/",
+   "summary": "Exelon asked the Federal Energy Regulatory Commission to order PJM to adopt a “prompt” capacity auction, while Invenergy wants the Midcontinent grid operator to let HVDC merchant lines receive capacity payments.",
+   "date": "2026-11-05T14:27+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "tech"
+   ],
+   "score": 34.04
+  },
+  {
+   "title": "Q&A: What is the Brazil-led ‘deforestation roadmap’?",
+   "link": "https://www.carbonbrief.org/qa-what-is-the-brazil-led-deforestation-roadmap",
+   "summary": "On 3 November, the Brazilian presidency of the COP30 climate talks released its long-awaited “roadmap” on ending deforestation. Ahead of… The post Q&A: What is the Brazil-led ‘deforestation roadmap’? appeared first on…",
+   "date": "2026-11-04T15:39+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 33.61
+  },
+  {
+   "title": "Q&A: What is in the global ‘roadmap’ for transitioning away from fossil fuels?",
+   "link": "https://www.carbonbrief.org/qa-what-is-in-the-global-roadmap-for-transitioning-away-from-fossil-fuels",
+   "summary": "Transitioning away from fossil fuels is “urgent, inevitable and, yet, possible”, according to a first-of-its-kind global “roadmap” produced by Brazil.… The post Q&A: What is in the global ‘roadmap’ for transitioning…",
+   "date": "2026-11-04T15:23+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 33.54
+  },
+  {
+   "title": "UW-Madison breaks ground on new radioisotope cyclotron facility",
+   "link": "https://www.ans.org/news/2026-11-02/article-8547/uwmadison-breaks-ground-on-new-radioisotope-cyclotron-facility/",
+   "summary": "The University of Wisconsin–Madison School of Medicine and Public Health has broken ground on a project to add two cyclotrons to its existing medical research infrastructure, increasing the university’s radioisotope…",
+   "date": "2026-11-02T15:34+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 33.12
+  },
+  {
+   "title": "NRC eyes advanced reactor oversight program for new reactors",
+   "link": "https://www.ans.org/news/2026-10-30/article-8542/nrc-eyes-advanced-reactor-oversight-program-for-new-reactors/",
+   "summary": "For roughly 25 years, the Nuclear Regulatory Commission has used the Reactor Oversight Process (ROP) to inspect and evaluate the existing fleet of operating nuclear power plants. With the likelihood there will be new…",
+   "date": "2026-10-30T15:47+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 32.97
+  },
+  {
+   "title": "Centrus ships first centrifuge for Piketon plant expansion",
+   "link": "https://www.world-nuclear-news.org/articles/centrus-ships-first-centrifuge-for-piketon-plant-expansion",
+   "summary": "Centrus Energy's manufacturing plant in Oak Ridge, Tennessee, has despatched the first new centrifuge as part of the company's multibillion-dollar expansion of its uranium enrichment capacity in Piketon, Ohio.",
+   "date": "2026-10-30T16:13+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 32.66
+  },
+  {
+   "title": "NN announces the 2026 40 Under 40 honorees",
+   "link": "https://www.ans.org/news/2026-11-02/article-8544/inni-announces-the-2026-40-under-40-honorees/",
+   "summary": "The Nuclear News 40 Under 40 is back for a third year, and with this class the list has now recognized 120 young professionals who are helping shape the future of the nuclear enterprise. What began as an experiment in…",
+   "date": "2026-11-02T12:49+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 32.61
+  },
+  {
+   "title": "Panamint Capital closes $1.8bn loan for Big Rooter Power project",
+   "link": "https://www.energymonitor.ai/news/panamint-capital-loan-big-rooter-power/",
+   "summary": "Panamint Capital has reached financial close on the initial phase of a $1.8bn Green Loan to finance construction of Big Rooter Power.",
+   "date": "2026-11-05T09:40+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 32.57
+  },
+  {
+   "title": "CB Live: Carbon Brief’s team at COP17 on the nature talks’ key outcomes",
+   "link": "https://www.carbonbrief.org/cb-live-carbon-briefs-team-at-cop17-on-the-nature-talks-key-outcomes",
+   "summary": "Following this year’s UN COP17 biodiversity conference, Carbon Brief’s journalists hosted a livestream to explain what happened at the summit.… The post CB Live: Carbon Brief’s team at COP17 on the nature talks’ key…",
+   "date": "2026-11-04T10:40+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 32.35
+  },
+  {
+   "title": "NHPC and Essar announce $475m renewable project in Andhra Pradesh, India",
+   "link": "https://www.energymonitor.ai/news/nhpc-essar-475m-renewable-project/",
+   "summary": "Essar Renewables has entered into a PPA with NHPC to develop a 300MW renewable energy project in Andhra Pradesh, India.",
+   "date": "2026-11-05T08:08+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 32.13
+  },
+  {
+   "title": "Virtual power plants can help avoid overbuilt grid if AI boom goes bust",
+   "link": "https://www.canarymedia.com/articles/virtual-power-plants/virtual-power-plants-grid-ai-bust",
+   "summary": "Nobody really knows how much power the data center boom will need — and that’s putting utilities in a tough spot. If they underinvest in power plants and the grid, economic growth and energy reliability will suffer. But…",
+   "date": "2026-11-05T05:01+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "tech",
+    "transition"
+   ],
+   "score": 31.26
+  },
+  {
+   "title": "KHNP ends negotiations with construction consortium for Czech units",
+   "link": "https://www.world-nuclear-news.org/articles/khnp-ends-negotiations-with-construction-consortium-czech-units",
+   "summary": "Korea Hydro & Nuclear Power is to select a new contractor for the construction of two APR1000 reactors at the Czech Republic's Dukovany nuclear power plant following the collapse of contract negotiations with the…",
+   "date": "2026-10-29T16:15+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 29.79
+  },
+  {
+   "title": "Top clean energy wins from the midterm elections",
+   "link": "https://www.canarymedia.com/articles/politics/top-clean-energy-wins-midterms",
+   "summary": "The top story from Tuesday’s elections is clear: Democrats won big-time on the national level, dominating U.S. Senate and House races across the country. And on the state level, clean energy could get a jolt from…",
+   "date": "2026-11-04T22:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 29.58
+  },
+  {
+   "title": "Wisconsin, Vermont eye SMRs at former nuclear plant sites",
+   "link": "https://www.ans.org/news/2026-10-27/article-8522/wisconsin-vermont-eye-smrs-at-former-nuclear-plant-sites/",
+   "summary": "Within the last week, officials in Wisconsin and Vermont have openly discussed the possibility of deploying small modular reactors at sites that formerly housed traditional, large nuclear reactors.",
+   "date": "2026-10-27T17:48+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 29.4
+  },
+  {
+   "title": "NRC finalizes rule setting time limits for contested hearings",
+   "link": "https://www.ans.org/news/2026-10-30/article-8546/nrc-finalizes-rule-setting-time-limits-for-contested-hearings/",
+   "summary": "Contested hearings on license applications could be completed within six months under a rule the Nuclear Regulatory Commission finalized today.",
+   "date": "2026-10-30T21:00+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 28.87
+  },
+  {
+   "title": "A new current drive option for tokamak-based power plants",
+   "link": "https://www.ans.org/news/2026-10-30/article-8545/a-new-current-drive-option-for-tokamakbased-power-plants/",
+   "summary": "Researchers at the DIII-D National Fusion Facility published a Physical Review Letters (PRL) paper describing the first experimental confirmation of helicon current drive, a method that could be used to operate a steady…",
+   "date": "2026-10-30T19:13+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 28.66
+  },
+  {
+   "title": "UK climate minister Katie White: COP31 must respond to ‘really scary’ science",
+   "link": "https://www.carbonbrief.org/uk-climate-minister-katie-white-cop31-must-respond-to-really-scary-science",
+   "summary": "The upcoming COP31 climate talks in Antalya, Turkey need to respond to the latest science on global warming, which is… The post UK climate minister Katie White: COP31 must respond to ‘really scary’ science appeared…",
+   "date": "2026-11-03T16:50+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 28.54
+  },
+  {
+   "title": "APS expects sales to double by 2041, plans extending coal use to 2038",
+   "link": "https://www.utilitydive.com/news/aps-sales-double-by-2041-proposes-extending-coal-use-to-2038/873648/",
+   "summary": "Arizona Public Service expects peak demand will grow about 3.4% annually over the next 15 years, driven by industry and data centers, the utility said in an integrated resource plan filed Friday with regulators.",
+   "date": "2026-11-04T17:27+00:00",
+   "source": "utilitydive",
+   "sourceName": "Utility Dive",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "tech"
+   ],
+   "score": 28.4
+  },
+  {
+   "title": "State of the climate: 2026 likely to tie with 2024 as the warmest year on record",
+   "link": "https://www.carbonbrief.org/state-of-the-climate-2026-likely-to-tie-with-2024-as-the-warmest-year-on-record",
+   "summary": "With three-quarters of the year now past, it is virtually certain that 2026 will be the warmest or second-warmest year… The post State of the climate: 2026 likely to tie with 2024 as the warmest year on record appeared…",
+   "date": "2026-11-03T13:48+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 27.98
+  },
+  {
+   "title": "Saft Unveils EnerShift, an Integrated Solution Combining Battery Storage, Energy Trading, and Financing",
+   "link": "https://www.powermag.com/saft-unveils-enershift-an-integrated-solution-combining-battery-storage-energy-trading-and-financing/",
+   "summary": "A new integrated offering combining battery storage, energy trading and financing solutions for industrial sites A solution already deployed at Saft’s Bordeaux site, reducing annual electricity costs by approximately…",
+   "date": "2026-11-04T11:39+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "tech"
+   ],
+   "score": 27.16
+  },
+  {
+   "title": "Nuclear fuel delivered for Bangladesh's second unit",
+   "link": "https://www.world-nuclear-news.org/articles/nuclear-fuel-delivered-for-bangladeshs-second-unit",
+   "summary": "Russia's state nuclear corporation Rosatom says that the initial fuel load for Rooppur Nuclear Power Plant's second unit has been delivered.",
+   "date": "2026-10-28T13:17+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 27.1
+  },
+  {
+   "title": "Energix commissions 152MWdc Border Basin Solar project in Ohio",
+   "link": "https://www.energymonitor.ai/news/energix-commissions-border-basin-solar/",
+   "summary": "Energix US has commissioned the Border Basin Solar project, a utility-scale facility, to supply electricity to the PJM Interconnection market.",
+   "date": "2026-11-04T10:40+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 26.96
+  },
+  {
+   "title": "Centrus sends first new centrifuge built at Oak Ridge to Piketon plant",
+   "link": "https://www.ans.org/news/2026-11-02/article-8548/centrus-sends-first-new-centrifuge-built-at-oak-ridge-to-piketon-plant/",
+   "summary": "On October 29, representatives from Centrus Energy Corp. joined government officials for a press event to commemorate the completion and shipment of the first centrifuge built for the expansion of the company’s Piketon,…",
+   "date": "2026-11-02T18:17+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 26.91
+  },
+  {
+   "title": "Floating nuclear power plant 'has boosted air quality'",
+   "link": "https://www.world-nuclear-news.org/articles/floating-nuclear-power-plant-has-boosted-air-quality",
+   "summary": "An environmental monitoring report for Russia's floating nuclear power plant suggests that emissions have fallen almost 80% since it started supplying heating in the area in 2022.",
+   "date": "2026-10-30T11:42+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "transition"
+   ],
+   "score": 26.73
+  },
+  {
+   "title": "Togo signs nuclear energy MoU with Rosatom",
+   "link": "https://www.world-nuclear-news.org/articles/togo-signs-nuclear-energy-mou-with-rosatom",
+   "summary": "The Ministry of Energy of Togo has signed a memorandum of understanding with Russia's state nuclear corporation Rosatom to assess opportunities for implementing nuclear power projects.",
+   "date": "2026-10-28T08:33+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 26.68
+  },
+  {
+   "title": "Cernavoda units remain shut down due to Danube water levels",
+   "link": "https://www.world-nuclear-news.org/articles/cernavoda-units-remain-offline-due-to-danube-water-levels",
+   "summary": "Romania's Nuclearelectrica says that although there has been a recent rise in the local water level in the River Danube, current forecasts do not yet support a decision to restart the units.",
+   "date": "2026-10-30T11:12+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 26.68
+  },
+  {
+   "title": "Game of Thrones actor aims to highlight Chernobyl's need for international support",
+   "link": "https://www.world-nuclear-news.org/articles/game-of-thrones-actor-aims-to-highlight-chernobyls-need-for-international-support",
+   "summary": "Danish actor and United Nations Goodwill Ambassador Nikolaj Coster-Waldau has visited the Chernobyl nuclear power plant site, for a project which \"aims to draw international attention to the need for support in…",
+   "date": "2026-10-30T10:10+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 26.57
+  },
+  {
+   "title": "A Michigan utility’s iffy plan to trap CO2 from its new gas plants",
+   "link": "https://www.canarymedia.com/articles/carbon-capture/michigan-utility-gas-plants",
+   "summary": "Can a utility commit to building massive gas plants and still achieve zero carbon emissions? DTE Electric in southeast Michigan says yes, and it outlines how in a 20-year plan currently being considered by regulators.…",
+   "date": "2026-11-04T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 26.53
+  },
+  {
+   "title": "These cranberry bogs come with a side of solar",
+   "link": "https://www.canarymedia.com/articles/food-and-farms/cranberry-bogs-side-of-solar",
+   "summary": "It’s cranberry season in southeastern Massachusetts. At bogs throughout the region, growers are collecting the ruby-red berries destined for holiday cakes, juice bottles, and cans of jellied sauce. At two farms,…",
+   "date": "2026-11-04T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 26.53
+  },
+  {
+   "title": "RWE wins contract for three power station projects in Germany",
+   "link": "https://www.energymonitor.ai/news/rwe-wins-contract-power-station-germany/",
+   "summary": "RWE has been awarded contracts to construct three new hydrogen-compatible gas-fired power stations in North Rhine-Westphalia.",
+   "date": "2026-11-04T07:47+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 26.39
+  },
+  {
+   "title": "DOE’s ARPA-E selects eight transuranic fuel development projects",
+   "link": "https://www.ans.org/news/2026-10-29/article-8532/does-arpae-selects-eight-transuranic-fuel-development-projects/",
+   "summary": "The Department of Energy’s Advanced Research Projects Agency–Energy (ARPA-E) division has chosen eight research projects to receive funding as part of its High-Performance Optimized Recycled Nuclear Isotopes for Gen IV…",
+   "date": "2026-10-29T21:21+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 26.31
+  },
+  {
+   "title": "New nuclear builds, SMR developments in Canada, Turkey, Philippines, Thailand",
+   "link": "https://www.ans.org/news/2026-10-29/article-8529/new-nuclear-builds-smr-developments-in-canada-turkey-philippines-thailand/",
+   "summary": "News from the international nuclear stage continues to flow at a steady pace, with recent happenings in Canada, Turkey, the Philippines, and Thailand. Here is the latest from Nuclear News ’s international coverage.",
+   "date": "2026-10-29T15:50+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 25.77
+  },
+  {
+   "title": "Global refinery inputs fell sharply in the second quarter of 2026 before modest recovery",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68404",
+   "summary": "Global crude oil refinery inputs fell by 4.8 million barrels per day (b/d) in the second quarter of 2026 (2Q26), or 6%, following the start of conflict in late February in the Middle East, according to data from Kpler.…",
+   "date": "2026-11-03T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 25.68
+  },
+  {
+   "title": "Interactive: Who wants what at the COP31 climate change summit",
+   "link": "https://www.carbonbrief.org/interactive-who-wants-what-at-the-cop31-climate-change-summit",
+   "summary": "Delegates will soon gather in the Turkish resort city of Antalya for UN climate negotiations, against a backdrop of war,… The post Interactive: Who wants what at the COP31 climate change summit appeared first on Carbon…",
+   "date": "2026-11-02T16:57+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 24.65
+  },
+  {
+   "title": "How D.C. Cook built a culture of excellence and continuous improvement",
+   "link": "https://www.ans.org/news/2026-10-30/article-8414/how-dc-cook-built-a-culture-of-excellence-and-continuous-improvement/",
+   "summary": "When the D.C. Cook nuclear power plant received the Utilities Service Alliance (USA) Optimizer Award for the second year in a row at the 2026 USA Executive Summit, it served as validation of a broad transformation that…",
+   "date": "2026-10-30T22:01+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 24.16
+  },
+  {
+   "title": "Trusted Control Is the Foundation for AI in Power Generation",
+   "link": "https://www.powermag.com/trusted-control-is-the-foundation-for-ai-in-power-generation/",
+   "summary": "As fleets grow more diverse, reliable operational data—not algorithms—could decide how useful artificial intelligence (AI) becomes in the control room. “If a 1-GW offshore wind park unexpectedly goes offline, the impact…",
+   "date": "2026-11-03T18:44+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 24.09
+  },
+  {
+   "title": "New technology deployed as Fukushima cleanup progresses",
+   "link": "https://www.ans.org/news/2026-10-28/article-8527/new-technology-deployed-as-fukushima-cleanup-progresses/",
+   "summary": "More than 15 years after the March 11, 2011, accident at Fukushima Daiichi nuclear power plant, decommissioning of the plant and cleanup of the site and affected areas is progressing aided by new forms of treatment and…",
+   "date": "2026-10-28T17:22+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 23.81
+  },
+  {
+   "title": "Groups Cancel $1-Billion Gas-Fired Power Plant Project in Wisconsin",
+   "link": "https://www.powermag.com/groups-cancel-1-billion-gas-fired-power-plant-project-in-wisconsin/",
+   "summary": "Two groups behind construction of a proposed $1-billion natural gas-fired power plant in northern Wisconsin told state officials they are pulling the plug on the project. Dairyland Power Cooperative, headquartered in La…",
+   "date": "2026-11-03T16:05+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "tech"
+   ],
+   "score": 23.67
+  },
+  {
+   "title": "First reactor unit launched on Chukotka icebreaker",
+   "link": "https://www.world-nuclear-news.org/articles/first-reactor-unit-launched-on-chukotka-icebreaker",
+   "summary": "The starboard reactor unit on the new Chukotka nuclear-powered icebreaker has been brought to minimum controlled power level.",
+   "date": "2026-10-26T15:09+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 23.48
+  },
+  {
+   "title": "Reconductoring and Pipeline Integrity: Planning for the Shared Transmission Corridor",
+   "link": "https://www.powermag.com/reconductoring-and-pipeline-integrity-planning-for-the-shared-transmission-corridor/",
+   "summary": "Some of the most valuable real estate in the U.S. energy system is hidden in plain sight: the utility corridor. These narrow strips of land carry high-voltage alternating current (HVAC) transmission lines across…",
+   "date": "2026-11-03T14:37+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "tech"
+   ],
+   "score": 23.44
+  },
+  {
+   "title": "Deep Fission signs Kansas power agreement following market woes",
+   "link": "https://www.ans.org/news/2026-10-28/article-8524/deep-fission-signs-kansas-power-agreement-following-market-woes/",
+   "summary": "Last week, reactor developer Deep Fission announced that it had entered into a master energy purchase agreement with the Great Plains Development Authority in Kansas. This new milestone for the Department of…",
+   "date": "2026-10-28T12:15+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 23.4
+  },
+  {
+   "title": "Africa Finance Corp., Green Climate Fund Launch Effort to Advance Low-Carbon Infrastructure on Continent",
+   "link": "https://www.powermag.com/africa-finance-corp-green-climate-fund-launch-effort-to-advance-low-carbon-infrastructure-on-continent/",
+   "summary": "Infrastructure provider Africa Finance Corp. (AFC) has joined with the Green Climate Fund (GCF) to launch the Africa Sovereign Climate Facility (ASCF), a $690-million effort to support climate initiatives and speed…",
+   "date": "2026-11-03T13:38+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 23.29
+  },
+  {
+   "title": "Here’s how solar and wind developers can hold on to tax credits",
+   "link": "https://www.canarymedia.com/articles/sponsored/heres-how-solar-and-wind-developers-can-hold-onto-tax-credits",
+   "summary": "When Congress passed the Inflation Reduction Act (IRA) in August 2022, solar and wind developers celebrated something that had historically been elusive: long-term certainty about federal tax incentives. Companies…",
+   "date": "2026-11-03T13:35+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 23.28
+  },
+  {
+   "title": "ANS webinar gives an overview of nuclear structural engineering",
+   "link": "https://www.ans.org/news/2026-10-30/article-8530/ans-webinar-gives-an-overview-of-nuclear-structural-engineering/",
+   "summary": "The American Nuclear Society recently hosted the latest webinar in its ongoing Educator Training series. This newest installment featured Christine Roy, a structural engineer at Simpson, Gumpertz & Heger, who led a…",
+   "date": "2026-10-30T12:22+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 23.23
+  },
+  {
+   "title": "Coal’s Revival Part II: Turning Ash Chemistry into Measurable Boiler Performance",
+   "link": "https://www.powermag.com/coals-revival-part-ii-turning-ash-chemistry-into-measurable-boiler-performance/",
+   "summary": "A field demonstration on a 500-MW-class coal-fired unit shows how targeted fuel chemistry can mitigate severe slagging and fouling while delivering measurable operating benefits—including approximately 50% lower…",
+   "date": "2026-11-03T11:08+00:00",
+   "source": "powermag",
+   "sourceName": "POWER Magazine",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "tech"
+   ],
+   "score": 22.92
+  },
+  {
+   "title": "Fram Wind secures $209m grant for Norwegian floating wind project",
+   "link": "https://www.energymonitor.ai/news/fram-wind-secures-grant-wind-project/",
+   "summary": "Fram Wind Solutions has been granted $209m from Enova to support a new floating offshore wind project off the coast of Karmøy, Norway.",
+   "date": "2026-11-03T09:40+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 22.71
+  },
+  {
+   "title": "Why batteries, not gas plants, should be data centers' first choice",
+   "link": "https://www.canarymedia.com/articles/batteries/batteries-not-gas-plants-for-data-centers",
+   "summary": "Developers and utilities are building tons of gas generation to power the data center boom. It’s an expansion that could cost them and the rest of us dearly, both in terms of climate change and money that may end up…",
+   "date": "2026-11-03T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition",
+    "tech"
+   ],
+   "score": 22.54
+  },
+  {
+   "title": "Trump cuts have left tribes without millions of dollars for clean energy",
+   "link": "https://www.canarymedia.com/articles/climate-justice/trump-cuts-tribes-funds-clean-energy",
+   "summary": "This story was originally published by Grist . Sign up for Grist's weekly newsletter . Every year, Kotzebue, a small city in northwest Alaska, has a three-month window to receive all the diesel fuel it will use…",
+   "date": "2026-11-03T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 22.54
+  },
+  {
+   "title": "US government loan to support Constellation uprates",
+   "link": "https://www.world-nuclear-news.org/articles/us-government-loan-to-support-constellation-uprates",
+   "summary": "US utility Constellation has secured a conditional loan commitment of up to USD5 billion from the Department of Energy's Office of Energy Dominance Financing towards uprates and modernisation projects across its nuclear…",
+   "date": "2026-10-28T12:08+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 22.5
+  },
+  {
+   "title": "Nuclear is Ethiopia's next chapter, PM says",
+   "link": "https://www.world-nuclear-news.org/articles/nuclear-is-ethiopias-next-chapter-pm-says",
+   "summary": "Ethiopia's next chapter is about transforming its immense potential and abundant natural resources into tangible development, technological advancement, and shared prosperity, the country's Prime Minister Abiy Ahmed Ali…",
+   "date": "2026-10-28T10:29+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 22.37
+  },
+  {
+   "title": "Frontier Energy secures $195m debt facility for Waroona project",
+   "link": "https://www.energymonitor.ai/news/frontier-energy-195m-debt-facility-waroona/",
+   "summary": "Frontier Energy has signed a Syndicated Facility Agreement (SFA) for debt facilities to support the Stage One of its Waroona project.",
+   "date": "2026-11-03T07:17+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 22.37
+  },
+  {
+   "title": "GLE and Silex announce final EIS for Paducah enrichment facility",
+   "link": "https://www.ans.org/news/2026-10-27/article-8521/gle-and-silex-announce-final-eis-for-paducah-enrichment-facility/",
+   "summary": "The Nuclear Regulatory Commission has released a final environmental impact statement for Global Laser Enrichment’s proposed Paducah Laser Enrichment Facility (PLEF) near Paducah, Ky. GLE and Silex Systems—the…",
+   "date": "2026-10-27T14:36+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 21.83
+  },
+  {
+   "title": "Walsh, industry reps discuss “American energy hub” at Oak Ridge cleanup site",
+   "link": "https://www.ans.org/news/2026-10-29/article-8531/walsh-industry-reps-discuss-american-energy-hub-at-oak-ridge-cleanup-site/",
+   "summary": "On October 27, Tim Walsh, assistant secretary for the Department of Energy’s Office of Environmental Management, gathered with industry representatives at the former site of the Oak Ridge Gaseous Diffusion Plant to…",
+   "date": "2026-10-29T17:36+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 21.62
+  },
+  {
+   "title": "Korea's Kori 3 and 4 set for restarts in 2027",
+   "link": "https://www.world-nuclear-news.org/articles/koreas-kori-3-and-4-get-go-ahead-to-restart",
+   "summary": "Korea Hydro & Nuclear Power has been given approval by South Korea's Nuclear Safety and Security Commission to continue operating Kori Nuclear Power Plant’s unit 3 and 4 for a further 10 years.",
+   "date": "2026-10-27T14:18+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 20.97
+  },
+  {
+   "title": "NVIDIA to consider data centres at former German nuclear sites",
+   "link": "https://www.world-nuclear-news.org/articles/nvidia-to-consider-data-centres-at-former-german-nuclear-sites",
+   "summary": "Germany's PreussenElektra and multinational technology company NVIDIA are to explore whether PreussenElektra's former nuclear power plant sites are suitable for the construction of so-called AI factories.",
+   "date": "2026-10-27T12:14+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "tech"
+   ],
+   "score": 20.84
+  },
+  {
+   "title": "Singapore looks to develop nuclear energy expertise",
+   "link": "https://www.world-nuclear-news.org/articles/singapore-looks-to-develop-nuclear-energy-workforce",
+   "summary": "The Ministry of Energy, Trade and Industry and the Energy Market Authority of Singapore have launched schemes to develop \"a strong pipeline of local expertise in nuclear energy\".",
+   "date": "2026-10-27T11:54+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 20.81
+  },
+  {
+   "title": "Cross-party interest in Australian nuclear future, poll suggests",
+   "link": "https://www.world-nuclear-news.org/articles/cross-party-interest-in-australian-nuclear-future-poll-suggests",
+   "summary": "A YouGov poll commissioned by grassroots organisation Nuclear for Australia suggests that almost two-thirds of Australians believe nuclear should be considered as part of the nation's energy future.",
+   "date": "2026-10-27T08:59+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 20.63
+  },
+  {
+   "title": "Fusion companies sign LOIs for federal R&D awards",
+   "link": "https://www.ans.org/news/2026-10-28/article-8526/fusion-companies-sign-lois-for-federal-rd-awards/",
+   "summary": "The Department of Commerce announced the signing of four letters of intent for federal research and development awards under the CHIPS and Science Act focused on semiconductors and power electronics, including awards…",
+   "date": "2026-10-28T20:37+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 20.06
+  },
+  {
+   "title": "Polenergia secures financing for 276MW wind portfolio in Poland",
+   "link": "https://www.energymonitor.ai/news/polenergia-secures-financing-wind-portfolio/",
+   "summary": "Polenergia has signed a $342m financing agreement to support a portfolio of five onshore wind farms with a total capacity of 276MW.",
+   "date": "2026-11-02T10:05+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 19.77
+  },
+  {
+   "title": "Boise plans to tap its geothermal network to heat 300 affordable homes",
+   "link": "https://www.canarymedia.com/articles/geothermal/boise-geothermal-network-affordable-homes",
+   "summary": "Boise already knows how to tap the carbon-free heat beneath our feet. The city operates the country’s largest geothermal heating system, which pipes naturally warmed, 177-degree-Fahrenheit water from underground to…",
+   "date": "2026-11-02T08:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 19.6
+  },
+  {
+   "title": "Regulatory milestone for US laser enrichment plant",
+   "link": "https://www.world-nuclear-news.org/articles/regulatory-milestone-for-us-laser-enrichment-plant",
+   "summary": "The US regulator has issued its Final Environmental Impact Statement for Global Laser Enrichment's Paducah Laser Enrichment Facility, recommending that a construction and operation licence is issued for the proposed…",
+   "date": "2026-10-26T15:39+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 19.59
+  },
+  {
+   "title": "Preparations for advanced nuclear at ports should begin now, study concludes",
+   "link": "https://www.world-nuclear-news.org/articles/preparations-for-advanced-nuclear-at-ports-should-begin-now-study-concludes",
+   "summary": "Ports should begin structured planning for advanced nuclear technology now, treating it as a long-term infrastructure and operating-model question rather than a new marine fuel, according to a new joint paper from the…",
+   "date": "2026-10-26T14:50+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 19.54
+  },
+  {
+   "title": "COP17: Key outcomes agreed at the UN biodiversity conference in Yerevan",
+   "link": "https://www.carbonbrief.org/cop17-key-outcomes-agreed-at-the-un-biodiversity-conference-in-yerevan",
+   "summary": "Countries have completed the first “global review” of their progress towards reversing nature loss by 2030 at the COP17 biodiversity… The post COP17: Key outcomes agreed at the UN biodiversity conference in Yerevan…",
+   "date": "2026-10-31T13:30+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 19.06
+  },
+  {
+   "title": "Constellation to get up to $5B DOE loan for planned uprates",
+   "link": "https://www.ans.org/news/2026-10-27/article-8523/constellation-to-get-up-to-5b-doe-loan-for-planned-uprates/",
+   "summary": "Constellation has a conditional loan agreement of up to $5 billion in place with the Department of Energy’s Office of Energy Dominance Financing to support uprate projects at eight nuclear power plants in Illinois,…",
+   "date": "2026-10-28T00:02+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 18.74
+  },
+  {
+   "title": "Group14 Technologies secures $167m for global and European expansion",
+   "link": "https://www.energymonitor.ai/news/group14-technologies-series-d/",
+   "summary": "Group14 Technologies has closed a €150m ($167m) Series D equity extension to support its international manufacturing expansion.",
+   "date": "2026-10-30T09:53+00:00",
+   "source": "energymonitor",
+   "sourceName": "Energy Monitor",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear",
+    "transition"
+   ],
+   "score": 17.69
+  },
+  {
+   "title": "NN asks: What is the role of online monitoring in plant maintenance?",
+   "link": "https://www.ans.org/news/2026-10-29/article-8408/what-is-the-role-of-online-monitoring-in-plant-maintenance/",
+   "summary": "Adam Deatherage The role of online monitoring in plant maintenance is not simply to collect more data. It’s also to provide the information needed to make better maintenance decisions and more efficiently allocate…",
+   "date": "2026-10-29T12:12+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 16.96
+  },
+  {
+   "title": "From zoos to craft brews, Michigan looks to spur decarbonization",
+   "link": "https://www.canarymedia.com/articles/clean-industry/zoos-brews-michigan-decarbonization",
+   "summary": "Re-creating polar habitats in Michigan is no small feat. Just ask the Detroit Zoo, where the polar bear and penguin centers require producing industrial levels of cooling from energy-intensive equipment. For the zoo,…",
+   "date": "2026-10-29T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "transition"
+   ],
+   "score": 16.03
+  },
+  {
+   "title": "The share of solar generation with co-located battery storage is increasing",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68384",
+   "summary": "Utility-scale solar developers are increasingly co-locating battery storage with new solar photovoltaic capacity. As of September 2026, over 16% of new utility-scale solar capacity added this year is co-located with…",
+   "date": "2026-10-30T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition",
+    "tech"
+   ],
+   "score": 15.83
+  },
+  {
+   "title": "Study finds silicon in unirradiated TRISO particles",
+   "link": "https://www.ans.org/news/2026-10-28/article-8525/study-finds-silicon-in-unirradiated-triso-particles/",
+   "summary": "Researchers at the University of Western Ontario in Canada analyzed TRISO particles and found small regions of silicon in the unirradiated fuel, raising questions about its impact on fuel performance. TRISO particles…",
+   "date": "2026-10-28T15:32+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 15.78
+  },
+  {
+   "title": "Experts: What China wants from the COP31 climate talks",
+   "link": "https://www.carbonbrief.org/experts-what-china-wants-from-the-cop31-climate-talks",
+   "summary": "With the COP31 climate summit in Turkey looming, all eyes are on China to see what the country will push… The post Experts: What China wants from the COP31 climate talks appeared first on Carbon Brief .",
+   "date": "2026-10-29T14:25+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 15.78
+  },
+  {
+   "title": "Tilted fuel assembly retrieved from Palisades plant",
+   "link": "https://www.world-nuclear-news.org/articles/tilted-fuel-assembly-retrieved-from-palisades-plant",
+   "summary": "Holtec International's operation to retrieve the fuel assembly from the plant in Michigan was completed using a purpose-built machine that was conceived, engineered, manufactured and delivered in just two weeks.",
+   "date": "2026-10-26T16:24+00:00",
+   "source": "wnn",
+   "sourceName": "World Nuclear News",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "nuclear"
+   ],
+   "score": 15.71
+  },
+  {
+   "title": "Analysis: China’s clean-tech exports in 2026 to avoid as much CO2 as Brazil emits in a year",
+   "link": "https://www.carbonbrief.org/analysis-chinas-clean-tech-exports-in-2026-to-avoid-as-much-co2-as-brazil-emits-in-a-year",
+   "summary": "China’s exports in 2026 of clean-energy technologies, such as solar panels, batteries and electric vehicles, are on track to cut… The post Analysis: China’s clean-tech exports in 2026 to avoid as much CO2 as Brazil…",
+   "date": "2026-10-29T07:51+00:00",
+   "source": "carbonbrief",
+   "sourceName": "Carbon Brief",
+   "access": "open",
+   "region": "global",
+   "tags": [
+    "transition"
+   ],
+   "score": 15.41
+  },
+  {
+   "title": "The DOE announces $5B loan to Constellation for nuclear uprates",
+   "link": "https://www.canarymedia.com/articles/nuclear/doe-5b-loan-constellation-energy",
+   "summary": "The pro-nuclear Trump administration continues to put its money where its mouth is. On Tuesday, the U.S. Department of Energy announced a conditional loan commitment of up to $5 billion to boost the output of 15…",
+   "date": "2026-10-28T19:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "transition"
+   ],
+   "score": 15.35
+  },
+  {
+   "title": "Meta strikes deal to help bring a low-carbon cement plant to Missouri",
+   "link": "https://www.canarymedia.com/articles/clean-industry/meta-fortera-deal-cement-plant-missouri",
+   "summary": "Tech companies say they're seeking low-carbon construction materials to limit the climate impact of their data centers. But very little clean cement or green steel is actually being produced in the U.S. today, and only…",
+   "date": "2026-10-30T20:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 14.74
+  },
+  {
+   "title": "5 ballot proposals that could drive or derail clean energy",
+   "link": "https://www.canarymedia.com/articles/politics/ballot-proposals-clean-energy",
+   "summary": "This analysis and news roundup come from the Canary Media Weekly newsletter. Sign up to get it every Friday. The midterm elections are upon us. While most of the country has its eyes on who will control Congress,…",
+   "date": "2026-10-30T15:52+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 14.5
+  },
+  {
+   "title": "Legacy cleanup supports modernization and economic development in Oak Ridge",
+   "link": "https://www.ans.org/news/2026-10-27/article-8426/legacy-cleanup-supports-modernization-and-economic-development-in-oak-ridge/",
+   "summary": "Cleanup across the Department of Energy’s Oak Ridge Reservation is bringing economic opportunities to the region while also making land available for continuing DOE missions. DOE cleanup contractor United Cleanup Oak…",
+   "date": "2026-10-27T12:19+00:00",
+   "source": "ans",
+   "sourceName": "ANS Nuclear Newswire",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets"
+   ],
+   "score": 14.45
+  },
+  {
+   "title": "LNG imports make up increasing share of Colombia's natural gas supply",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
+   "summary": "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's…",
+   "date": "2026-10-29T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 14.44
+  },
+  {
+   "title": "Here's how much Trump's Iran war has added to Americans' fuel costs",
+   "link": "https://www.canarymedia.com/articles/fossil-fuels/trump-iran-war-american-fuel-costs",
+   "summary": "See more from Canary Media’s ​“Chart of the Week” column . Donald Trump ran for his second term promising to “make America affordable again.” Two years later, the president’s war with Iran has his constituents paying…",
+   "date": "2026-10-30T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 14.02
+  },
+  {
+   "title": "Ford’s new EV pickup will come with more affordable home-power backup",
+   "link": "https://www.canarymedia.com/articles/electric-vehicles/ford-fathom-ev-pickup-home-power-backup",
+   "summary": "Electric vehicles can serve as home backup batteries. But so far, most EVs have needed expensive bidirectional chargers to do that — a tough sell for customers. Ford aims to remove this cost obstacle with its…",
+   "date": "2026-10-27T13:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "nuclear",
+    "markets",
+    "transition"
+   ],
+   "score": 13.92
+  },
+  {
+   "title": "California’s long road to make EV charging more reliable",
+   "link": "https://www.canarymedia.com/articles/ev-charging/california-ev-charging-reliable",
+   "summary": "This is California Wire , a weekly newsletter from Jeff St. John on the state’s clean energy transition. Subscribe to get it every Thursday via Substack. Welcome back to California Wire! Today’s topic is public EV…",
+   "date": "2026-10-29T17:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 13.27
+  },
+  {
+   "title": "PJM desperately needs grid batteries. Here’s a way it could get some.",
+   "link": "https://www.canarymedia.com/articles/transmission/pjm-desperately-needs-grid-batteries-is-it-finally-about-to-act",
+   "summary": "PJM Interconnection is finally taking steps that could let a lot of new battery capacity connect to its grid without eons of delay. PJM is the biggest grid operator in the U.S., serving customers across 13 mid-Atlantic,…",
+   "date": "2026-10-29T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "tech",
+    "transition"
+   ],
+   "score": 12.83
+  },
+  {
+   "title": "How much are Trump’s pro-coal policies costing us?",
+   "link": "https://www.canarymedia.com/articles/fossil-fuels/trump-pro-coal-policies-costing-us",
+   "summary": "The Trump administration loves coal plants. The rest of us are paying the price in higher electricity bills, poorer health, and worsening climate change. That’s the takeaway of an analysis out today from the…",
+   "date": "2026-10-28T09:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 11.87
+  },
+  {
+   "title": "More heat pumps would actually be good for the grid, researchers find",
+   "link": "https://www.canarymedia.com/articles/heat-pumps/more-heat-pumps-good-for-grid",
+   "summary": "Heat pumps, superefficient sources of electric heating and cooling, are winners for the climate , air quality , and typically a household’s energy bills. But a common claim cautioning against their widespread adoption…",
+   "date": "2026-10-28T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 11.82
+  },
+  {
+   "title": "Price hikes aren’t all that’s at stake in FirstEnergy Ohio’s rate case",
+   "link": "https://www.canarymedia.com/articles/energy-equity/price-hikesfirstenergy-ohio-rate-case",
+   "summary": "Before a utility can raise electricity rates, it must get approval from regulators. In Ohio, some groups are looking to step into that process to make sure FirstEnergy, whose utilities supply power to over 2 million…",
+   "date": "2026-10-27T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 10.95
+  },
+  {
+   "title": "This group-buy campaign makes it easier to switch to induction cooking",
+   "link": "https://www.canarymedia.com/articles/electrification/group-buy-induction-cooking",
+   "summary": "Word is getting out about electric induction ranges. More and more chefs say the appliances cook just as well as or better than their gas counterparts. The stoves don’t burn climate-warming fossil fuels or release…",
+   "date": "2026-10-26T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 10.21
+  },
+  {
+   "title": "Massachusetts sets big battery goals — and the policies to back them up",
+   "link": "https://www.canarymedia.com/articles/batteries/massachusetts-sets-big-battery-goals",
+   "summary": "Just outside Boston, a developer is getting set to build a 700-megawatt storage facility that is expected to dwarf every other battery project in New England. One town over, another energy company just closed on $850…",
+   "date": "2026-10-26T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "transition"
+   ],
+   "score": 10.21
+  },
+  {
+   "title": "U.S. refineries have been running at very high rates in 2026",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+   "summary": "The U.S. refinery fleet has run at higher-than-normal rates this year, with refinery utilization averaging more than 95% of capacity between May and September, the highest for those months since 1998. Tight global…",
+   "date": "2026-10-22T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 8.96
+  },
+  {
+   "title": "The permitting deal collides with Trump’s war on offshore wind",
+   "link": "https://www.canarymedia.com/articles/politics/permitting-bill-offshore-wind",
+   "summary": "This analysis and news roundup come from the Canary Media Weekly newsletter. Sign up to get it every Friday. It’s been years in the making, but the U.S. Senate finally has a bipartisan permitting bill on the table that…",
+   "date": "2026-10-23T16:37+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 8.66
+  },
+  {
+   "title": "As US grid batteries surge, risk of fires plummets",
+   "link": "https://www.canarymedia.com/articles/batteries/us-grid-batteries-fire-risk",
+   "summary": "See more from Canary Media’s ​“Chart of the Week” column . Battery fires are like shark attacks: frightening events that loom cinematically large in the American psyche and almost never actually happen. As batteries…",
+   "date": "2026-10-23T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "transition"
+   ],
+   "score": 8.48
+  },
+  {
+   "title": "What kind of virtual power plant would you choose?",
+   "link": "https://www.canarymedia.com/articles/virtual-power-plants/what-virtual-power-plant-would-you-choose",
+   "summary": "This is California Wire , a weekly newsletter from Jeff St. John on the state’s clean energy transition. Subscribe to get it every Thursday via Substack. Hello, everybody! Welcome back to California Wire. This week, I’m…",
+   "date": "2026-10-22T16:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 8.19
+  },
+  {
+   "title": "Google plans big virtual power plant in energy-strapped PJM grid",
+   "link": "https://www.canarymedia.com/articles/virtual-power-plants/google-plans-big-virtual-power-plant-in-energy-strapped-pjm-grid",
+   "summary": "Google just upped the ante on its plans to leverage the energy use of thousands of homes and businesses to free up space on the grid for data centers. The tech giant and the California-based firm Voltus announced…",
+   "date": "2026-10-22T11:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "transition"
+   ],
+   "score": 8.1
+  },
+  {
+   "title": "Massachusetts bill could hinder push to weatherize lower-income homes",
+   "link": "https://www.canarymedia.com/articles/energy-efficiency/massachusetts-weatherize-lower-income-homes",
+   "summary": "Massachusetts has made meaningful strides in recent years to get its robust energy-efficiency incentives into the hands of lower-income households who need them most. Now, a provision tucked into a pending energy bill…",
+   "date": "2026-10-22T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 8.02
+  },
+  {
+   "title": "Balcony solar bill introduced in Congress for the first time",
+   "link": "https://www.canarymedia.com/articles/balcony-solar/balcony-solar-bill-introduced-in-congress-for-the-first-time",
+   "summary": "Balcony solar legislation has finally arrived on Capitol Hill. On Monday, U.S. Rep. Rob Menendez, Democrat of New Jersey, introduced the first federal bill aimed at legalizing solar panels that simply plug into an…",
+   "date": "2026-10-22T00:23+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 7.9
+  },
+  {
+   "title": "Trump admin finds yet another way to attack offshore wind",
+   "link": "https://www.canarymedia.com/articles/offshore-wind/trump-admin-another-attack-offshore-wind",
+   "summary": "The Trump administration is widening its attacks on U.S. offshore wind development, this time by siding with anti-wind groups that are seeking to strip projects of existing federal approvals. Its latest target is New…",
+   "date": "2026-10-21T23:11+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 7.88
+  },
+  {
+   "title": "Hybrid sales rise while battery electric sales remain lower after tax credit expiration",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68325",
+   "summary": "In the third quarter of 2026 (3Q26), 23% of new light-duty vehicles sold in the United States were hybrid electric, battery electric, or plug-in hybrid electric vehicles, down slightly from 24% in 3Q25. Between 3Q25 and…",
+   "date": "2026-10-19T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech",
+    "markets"
+   ],
+   "score": 7.7
+  },
+  {
+   "title": "New Mexico’s transition to clean energy is actually ahead of schedule",
+   "link": "https://www.canarymedia.com/articles/clean-energy/new-mexico-transition-ahead-of-schedule",
+   "summary": "New Mexico boasts stark landscapes unlike anywhere else, a clearly defined regional cuisine built around fiery Hatch chiles, and cultural centers that predate the United States by several centuries. It’s unusual in…",
+   "date": "2026-10-21T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 7.62
+  },
+  {
+   "title": "New York to build state’s first two utility-scale thermal networks",
+   "link": "https://www.canarymedia.com/articles/geothermal/new-york-first-utility-scale-thermal-network",
+   "summary": "For the past four years, the UpgradeNY coalition of clean energy, environmental, and labor groups has been pushing New York regulators to approve projects that could switch entire neighborhoods from fossil gas to clean…",
+   "date": "2026-10-21T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 7.62
+  },
+  {
+   "title": "Will a second US city tax billion-dollar firms to fund clean energy?",
+   "link": "https://www.canarymedia.com/articles/clean-energy/eugene-ballot-measure-tax-companies-climate-fund",
+   "summary": "Amy Winton doesn’t like that she has to depend on fossil gas for her restaurant, Mexican taquería Pandita in Eugene, Oregon. But she’s stuck with the gas-fueled burners, heaters, and outdoor fireplace that came with the…",
+   "date": "2026-10-20T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 7.25
+  },
+  {
+   "title": "Floating wind industry leans into global collaboration amid headwinds",
+   "link": "https://www.canarymedia.com/articles/offshore-wind/floating-turbine-global-collaboration-research",
+   "summary": "This article originally appeared on Inside Climate News , a nonprofit, non-partisan news organization that covers climate, energy, and the environment. Sign up for their newsletter here . Picture a buoyant triangular…",
+   "date": "2026-10-20T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition"
+   ],
+   "score": 7.25
+  },
+  {
+   "title": "This geothermal startup produced a tiny bit of power from the seafloor",
+   "link": "https://www.canarymedia.com/articles/geothermal/geothermal-startup-power-seafloor-drilling",
+   "summary": "A tiny power plant notched a big win last month off the coast of Oregon: For nearly 30 seconds, it generated electricity using the heat of an underwater volcano. The startup Endurance Energy deployed its test unit,…",
+   "date": "2026-10-19T16:00+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "transition"
+   ],
+   "score": 7.03
+  },
+  {
+   "title": "A cleaner solution to America’s aluminum crunch is hiding in landfills",
+   "link": "https://www.canarymedia.com/articles/clean-aluminum/how-to-recover-more-scrap-metal-us",
+   "summary": "A global supply shortage and U.S. tariffs have roiled the aluminum market this year, putting greater pressure on the United States to produce more of its own metal. Plans to build or reopen giant smelters are moving…",
+   "date": "2026-10-19T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 6.91
+  },
+  {
+   "title": "Illinois needs batteries. Will a new incentive program help?",
+   "link": "https://www.canarymedia.com/articles/batteries/illinois-storage-procurement-incentives-results",
+   "summary": "Illinois has built out large amounts of renewables in the past decade to reach its mandate of 100% clean energy by 2050 . So far, though, it has lagged on building battery storage, which advocates say is especially…",
+   "date": "2026-10-19T07:30+00:00",
+   "source": "canary",
+   "sourceName": "Canary Media",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "tech"
+   ],
+   "score": 6.91
+  },
+  {
+   "title": "U.S. small-scale solar generation has quadrupled in the last decade",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68324",
+   "summary": "We estimate that U.S. generation from small-scale or rooftop solar photovoltaic systems (smaller than 1 megawatt of capacity) has increased from 18,812 gigawatthours (GWh) to 92,979 GWh over the last decade. The four…",
+   "date": "2026-10-16T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets",
+    "transition"
+   ],
+   "score": 6.76
+  },
+  {
+   "title": "PJM, ERCOT, and SWPP all set peak load records this summer",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68305",
+   "summary": "Three regional transmission organizations (RTOs) set records for peak hourly load this past summer, according to data reported on Form EIA-930 and presented in the Hourly Electric Grid Monitor.",
+   "date": "2026-10-15T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "tech",
+    "markets"
+   ],
+   "score": 6.49
+  },
+  {
+   "title": "Monthly wind generation in ISO-NE is about 68% higher than last year",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68304",
+   "summary": "Monthly wind generation in the first nine months of 2026 was an average of 68% higher compared with the same period in 2025 in ISO New England (ISO-NE).",
+   "date": "2026-10-14T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "markets"
+   ],
+   "score": 6.24
+  },
+  {
+   "title": "Mixed outlook for energy expenditures this winter",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68264",
+   "summary": "We expect energy expenditures this winter to vary because of diverging trends in energy prices among fuels and regional variation in forecast temperatures. We expect that lower prices for natural gas and propane will…",
+   "date": "2026-10-07T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 4.94
+  },
+  {
+   "title": "Crude oil prices and refinery margins generally increased throughout the third quarter",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68245",
+   "summary": "Petroleum markets in the third quarter of 2026 (3Q26) were characterized by increasing prices for crude oil and petroleum products amid persistent conflict in the Middle East.",
+   "date": "2026-10-05T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 4.66
+  },
+  {
+   "title": "U.S. natural gas production reached a record high in July 2026",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225",
+   "summary": "U.S. natural gas production hit an all-time high in July 2026, driven primarily by increased output in the Permian Basin, according to our latest Natural Gas Monthly.",
+   "date": "2026-10-02T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 4.29
+  },
+  {
+   "title": "U.S. exports of propane reached records in the first half of 2026",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68244",
+   "summary": "U.S. propane exports increased to 2 million barrels per day (b/d) in the first half of 2026, 11% more than during the same period in 2025. Increased U.S. propane production and changing trade flows, particularly…",
+   "date": "2026-10-01T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 4.19
+  },
+  {
+   "title": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
+   "summary": "We estimate light-duty electric vehicles in the United States consumed 8% more electricity during the first six months of 2026 than in the last half of 2025 (2H25) in our Monthly Energy Review, down from the 13-24%…",
+   "date": "2026-09-30T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "transition",
+    "markets"
+   ],
+   "score": 4.08
+  },
+  {
+   "title": "Henry Hub natural gas prices this summer were 6% lower than last summer",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68204",
+   "summary": "The Henry Hub natural gas spot price averaged $2.93 per million British thermal units from June through August, 6% less than the same period last year. Prices were lower this summer despite exceptionally hot weather…",
+   "date": "2026-09-25T14:00+00:00",
+   "source": "eia",
+   "sourceName": "EIA – Today in Energy",
+   "access": "open",
+   "region": "us",
+   "tags": [
+    "markets"
+   ],
+   "score": 3.63
+  }
+ ]
 }
