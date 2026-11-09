@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news, nuclear focus, glossary and reactor company tracker.">
+  <meta name="description" content="Personal energy news, nuclear focus, glossary, reactor company tracker and energy-system modelling literature.">
   <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
@@ -81,6 +81,24 @@
       <ul id="gl-list" class="cards"></ul>
     </section>
 
+    <!-- LITERATURE -->
+    <section id="view-literature" class="view hidden" data-title="Literature">
+      <div class="toolbar">
+        <input id="lit-search" class="search" type="search" placeholder="Search title, author, finding…" autocomplete="off">
+        <div class="chips" id="lit-cat"></div>
+        <div class="row">
+          <div class="seg" id="lit-sort">
+            <button data-sort="category" class="on">By topic</button>
+            <button data-sort="newest">Newest</button>
+            <button data-sort="oldest">Oldest</button>
+          </div>
+          <button id="lit-nuc" class="chip">⚛ Nuclear only</button>
+        </div>
+      </div>
+      <p class="muted small" id="lit-note"></p>
+      <div id="lit-list"></div>
+    </section>
+
     <!-- SOURCES -->
     <section id="view-sources" class="view hidden" data-title="Sources">
       <p class="muted small intro">What the feed reads. Open sources are fetched; partial ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change.</p>
@@ -92,6 +110,7 @@
     <button data-view="feed" class="on"><span class="ti">▤</span>Feed</button>
     <button data-view="companies"><span class="ti">⚛</span>Builders</button>
     <button data-view="glossary"><span class="ti">Aa</span>Glossary</button>
+    <button data-view="literature"><span class="ti">❡</span>Studies</button>
     <button data-view="sources"><span class="ti">⌘</span>Sources</button>
   </nav>
 

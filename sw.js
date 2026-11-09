@@ -1,5 +1,5 @@
 // Offline support: app shell cache-first, data network-first (falls back to last copy).
-const VERSION = "eh-v1";
+const VERSION = "eh-v2";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "manifest.webmanifest", "assets/icon.svg", "assets/icon-192.png"];
 
 self.addEventListener("install", (e) => {

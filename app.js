@@ -26,6 +26,8 @@
     feed: { q: "", topic: "all", sort: "score" },
     co: { q: "", kind: "all", stage: "all" },
     gl: { q: "", cat: "all", level: 0, hideLearned: false },
+    literature: { categories: [], items: [], about: "", updated: "" },
+    lit: { q: "", cat: "all", sort: "category", nuclear: false },
   };
 
   const TOPICS = [["all", "All"], ["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"]];
@@ -437,19 +439,64 @@
     }).join("");
   }
 
+  // ---------- LITERATURE ----------
+  function litLink(i) {
+    if (i.doi) return "https://doi.org/" + i.doi;
+    if (i.url) return i.url;
+    return "https://scholar.google.com/scholar?q=" + encodeURIComponent(i.title);
+  }
+  function litCard(i) {
+    return `<li class="card${i.nuclear ? " lead-nuclear" : ""}">
+      <div class="meta"><span class="tag tech">${esc(i.type)}</span>${i.nuclear ? '<span class="tag nuclear">⚛ nuclear</span>' : ""}${i.perspective ? `<span class="tag general">${esc(i.perspective)}</span>` : ""}<span>${esc(i.year)}</span></div>
+      <h3><a href="${esc(litLink(i))}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
+      <div class="design">${esc(i.authors)} · ${esc(i.venue)}</div>
+      <p class="lit-finding">${highlight(esc(i.finding))}</p>
+      <p class="small"><strong>Why it matters:</strong> ${esc(i.why)}</p>
+    </li>`;
+  }
+  function renderLiterature() {
+    const L = state.literature, { q, cat, sort, nuclear } = state.lit;
+    const cats = L.categories || [], all = L.items || [];
+    $("#lit-cat").innerHTML = [`<button class="chip ${cat === "all" ? "on" : ""}" data-cat="all">All<span class="n">${all.length}</span></button>`]
+      .concat(cats.map((c) => `<button class="chip ${cat === c.id ? "on" : ""}" data-cat="${esc(c.id)}">${esc(c.label)}<span class="n">${all.filter((i) => i.category === c.id).length}</span></button>`)).join("");
+    $("#lit-nuc").classList.toggle("on", nuclear);
+    document.querySelectorAll("#lit-sort button").forEach((b) => b.classList.toggle("on", b.dataset.sort === sort));
+    $("#lit-note").textContent = L.about ? `${L.about} Last updated ${L.updated}.` : "";
+    const ql = q.toLowerCase();
+    const items = all.filter((i) => (cat === "all" || i.category === cat) && (!nuclear || i.nuclear) &&
+      (!ql || [i.title, i.authors, i.venue, i.finding, i.why, i.type, (i.tags || []).join(" ")].join(" ").toLowerCase().includes(ql)));
+    if (!items.length) { $("#lit-list").innerHTML = `<p class="empty">No matching studies.</p>`; return; }
+    if (sort === "category") {
+      $("#lit-list").innerHTML = cats.map((c) => {
+        const g = items.filter((i) => i.category === c.id);
+        return g.length ? `<div class="src-group"><h2>${esc(c.label)}</h2><p class="muted small lit-blurb">${esc(c.blurb)}</p><ul class="cards">${g.map(litCard).join("")}</ul></div>` : "";
+      }).join("");
+    } else {
+      const d = sort === "newest" ? -1 : 1;
+      $("#lit-list").innerHTML = `<ul class="cards">${items.slice().sort((a, b) => d * (a.year - b.year)).map(litCard).join("")}</ul>`;
+    }
+  }
+  $("#lit-search").addEventListener("input", (e) => { state.lit.q = e.target.value.trim(); renderLiterature(); });
+  $("#lit-cat").addEventListener("click", (e) => { const b = e.target.closest("[data-cat]"); if (b) { state.lit.cat = b.dataset.cat; renderLiterature(); } });
+  $("#lit-sort").addEventListener("click", (e) => { const b = e.target.closest("[data-sort]"); if (b) { state.lit.sort = b.dataset.sort; renderLiterature(); } });
+  $("#lit-nuc").addEventListener("click", () => { state.lit.nuclear = !state.lit.nuclear; renderLiterature(); });
+  $("#lit-list").addEventListener("click", (e) => { const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term); });
+
   // ---------- boot ----------
   async function boot() {
     applyTheme();
-    const [articles, sources, companies, gl] = await Promise.all([
+    const [articles, sources, companies, gl, lit] = await Promise.all([
       load("data/articles.json", state.articles),
       load("data/sources.json", { sources: [] }),
       load("data/companies.json", state.companies),
       load("data/glossary.json", state.glossaryBase),
+      load("data/literature.json", state.literature),
     ]);
+    state.literature = lit;
     state.articles = articles; state.sources = sources.sources || []; state.companies = companies; state.glossaryBase = gl;
     buildHighlighter();
     $("#updated").textContent = articles.generated ? "Updated " + relTime(articles.generated) : "";
-    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderSources();
+    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderLiterature(); renderSources();
     show(store.get("view", "feed"));
   }
   boot();
