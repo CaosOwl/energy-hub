@@ -713,6 +713,307 @@
       "related": [
         "Grid inertia"
       ]
+    },
+    {
+      "term": "STEPS",
+      "full": "Stated Policies Scenario",
+      "category": "transition",
+      "level": 2,
+      "definition": "IEA scenario that includes policies already in force plus those governments have announced and are judged likely to implement. Not a forecast, but the most-cited 'where we're heading' case; ~2.5 °C by 2100 in WEO 2025.",
+      "related": [
+        "CPS",
+        "NZE",
+        "Exploratory scenario"
+      ]
+    },
+    {
+      "term": "CPS",
+      "full": "Current Policies Scenario",
+      "category": "transition",
+      "level": 2,
+      "definition": "IEA scenario that assumes only policies already in force today, with no new ones. Reintroduced in WEO 2025; ~2.9 °C by 2100. Acts as a floor for ambition.",
+      "related": [
+        "STEPS",
+        "NZE"
+      ]
+    },
+    {
+      "term": "NZE",
+      "full": "Net Zero Emissions by 2050 Scenario",
+      "category": "transition",
+      "level": 2,
+      "definition": "IEA normative scenario that reaches net-zero energy CO₂ by 2050, consistent with ~1.5 °C after a small overshoot. Shows what would be required, not what is expected.",
+      "related": [
+        "Normative scenario",
+        "Net zero",
+        "Overshoot"
+      ]
+    },
+    {
+      "term": "Exploratory scenario",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "A scenario that asks 'what happens if…?' — e.g. current policies continue or costs keep falling — and lets the outcome (emissions, warming) emerge. Contrast with a normative scenario.",
+      "related": [
+        "Normative scenario",
+        "STEPS"
+      ]
+    },
+    {
+      "term": "Normative scenario",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "A scenario that starts from a target (e.g. net zero by 2050, 1.5 °C) and works backwards to find a pathway that meets it. It shows what is needed, not what is likely. Also called a back-casting scenario.",
+      "related": [
+        "Exploratory scenario",
+        "NZE"
+      ]
+    },
+    {
+      "term": "IAM",
+      "full": "Integrated Assessment Model",
+      "category": "transition",
+      "level": 2,
+      "definition": "A model that links the energy system, economy, land use and climate in one framework (e.g. MESSAGE, REMIND, IMAGE, GCAM). The IPCC's mitigation pathways come from IAMs. Broad in scope but coarse in time and space.",
+      "related": [
+        "ESOM",
+        "SSP",
+        "IPCC warming categories"
+      ]
+    },
+    {
+      "term": "ESOM",
+      "full": "Energy System Optimisation Model",
+      "category": "tech",
+      "level": 3,
+      "definition": "A bottom-up model that finds the least-cost mix of technologies to meet energy demand under constraints such as a CO₂ cap (e.g. TIMES, OSeMOSYS, PyPSA). Rich in technology detail; its 'optimal' answer is sensitive to cost assumptions.",
+      "related": [
+        "IAM",
+        "Perfect foresight",
+        "Near-optimal analysis"
+      ]
+    },
+    {
+      "term": "Overshoot",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "When global warming temporarily exceeds a target such as 1.5 °C and is later brought back down, which requires net-negative emissions (CO₂ removal). Most remaining 1.5 °C pathways now involve overshoot.",
+      "related": [
+        "CDR",
+        "Carbon budget"
+      ]
+    },
+    {
+      "term": "Carbon budget",
+      "full": "",
+      "category": "transition",
+      "level": 1,
+      "definition": "The total amount of CO₂ that can still be emitted while keeping warming below a given level with a given probability. Because warming tracks cumulative CO₂, what matters is the total, not the emission rate in any single year.",
+      "related": [
+        "Net zero",
+        "Overshoot"
+      ]
+    },
+    {
+      "term": "CDR",
+      "full": "Carbon Dioxide Removal",
+      "category": "tech",
+      "level": 2,
+      "definition": "Activities that take CO₂ out of the atmosphere and store it durably — afforestation, BECCS, direct air capture, enhanced weathering. Different from CCS, which only stops new emissions from a point source.",
+      "related": [
+        "BECCS",
+        "DAC",
+        "CCS",
+        "Overshoot"
+      ]
+    },
+    {
+      "term": "BECCS",
+      "full": "Bioenergy with Carbon Capture and Storage",
+      "category": "tech",
+      "level": 3,
+      "definition": "Burning or converting biomass for energy and capturing and storing the CO₂. Because plants absorbed that CO₂ while growing, it can give net-negative emissions. Heavily used in IAM pathways, but limited by land, water and biodiversity.",
+      "related": [
+        "CDR",
+        "CCS",
+        "IAM"
+      ]
+    },
+    {
+      "term": "DAC",
+      "full": "Direct Air Capture",
+      "category": "tech",
+      "level": 2,
+      "definition": "Machines that pull CO₂ directly from ambient air using chemical sorbents, for storage or use. Energy-hungry and currently expensive (hundreds of USD per tonne).",
+      "related": [
+        "CDR",
+        "CCS"
+      ]
+    },
+    {
+      "term": "NDC",
+      "full": "Nationally Determined Contribution",
+      "category": "transition",
+      "level": 1,
+      "definition": "A country's climate pledge under the Paris Agreement, updated every five years. UNEP estimates full implementation of current NDCs leads to ~2.3–2.5 °C of warming.",
+      "related": [
+        "Net zero",
+        "Carbon budget"
+      ]
+    },
+    {
+      "term": "IPCC warming categories",
+      "full": "C1–C8",
+      "category": "transition",
+      "level": 3,
+      "definition": "How IPCC AR6 groups model pathways by warming outcome: C1 = 1.5 °C with no or limited overshoot, C2 = 1.5 °C after high overshoot, C3 = likely below 2 °C, C4 = below 2 °C, up to C8 = above 4 °C.",
+      "related": [
+        "IAM",
+        "Overshoot",
+        "SSP"
+      ]
+    },
+    {
+      "term": "SSP",
+      "full": "Shared Socioeconomic Pathways",
+      "category": "transition",
+      "level": 3,
+      "definition": "Five storylines (SSP1–SSP5) about population, economic growth, inequality and technology that IAM teams use as common starting points for climate scenarios, e.g. SSP2 'middle of the road'.",
+      "related": [
+        "IAM",
+        "IPCC warming categories"
+      ]
+    },
+    {
+      "term": "Model intercomparison",
+      "full": "",
+      "category": "transition",
+      "level": 3,
+      "definition": "Running several independent models on the same question with harmonised assumptions. Findings shared across models are considered robust; disagreements show where structure or assumptions drive results.",
+      "related": [
+        "IAM",
+        "ESOM"
+      ]
+    },
+    {
+      "term": "Near-optimal analysis",
+      "full": "Modelling to Generate Alternatives (MGA)",
+      "category": "tech",
+      "level": 3,
+      "definition": "Searching for very different energy systems whose cost is only slightly above the least-cost optimum. Shows that many system designs cost about the same, so the choice can rest on other criteria.",
+      "related": [
+        "ESOM"
+      ]
+    },
+    {
+      "term": "Perfect foresight",
+      "full": "",
+      "category": "tech",
+      "level": 3,
+      "definition": "A modelling assumption that investors know all future costs, demand and policy when they decide. Common in optimisation models; it tends to make transitions look smoother and cheaper than in reality.",
+      "related": [
+        "ESOM"
+      ]
+    },
+    {
+      "term": "Primary energy",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "Energy in its raw form before conversion: crude oil, coal, gas, uranium, sunlight or wind captured as electricity, biomass. Fossil shares are usually quoted against total primary energy supply. Accounting methods for non-combustible sources differ between publishers, so shares aren't always comparable.",
+      "related": [
+        "Final energy",
+        "Exajoule"
+      ]
+    },
+    {
+      "term": "Final energy",
+      "full": "",
+      "category": "markets",
+      "level": 1,
+      "definition": "Energy as delivered to end users — electricity, fuels, heat — after conversion and transmission losses. Electrification is usually measured as electricity's share of final energy (about 21% today).",
+      "related": [
+        "Primary energy",
+        "Electrification"
+      ]
+    },
+    {
+      "term": "Sector coupling",
+      "full": "",
+      "category": "tech",
+      "level": 2,
+      "definition": "Linking the power sector with heat, transport and industry, e.g. through heat pumps, EVs and electrolysers, so that cheap clean electricity displaces fuels and these loads add flexibility to the grid.",
+      "related": [
+        "Electrification",
+        "Heat pump",
+        "Electrolysis"
+      ]
+    },
+    {
+      "term": "Firm low-carbon power",
+      "full": "",
+      "category": "tech",
+      "level": 2,
+      "definition": "Low-carbon generation that can run whenever needed, for as long as needed — nuclear, geothermal, hydro with reservoirs, gas or biomass with CCS. Studies find that including it lowers the cost of fully decarbonised grids.",
+      "related": [
+        "Dispatchable",
+        "Baseload",
+        "Intermittency"
+      ]
+    },
+    {
+      "term": "Learning rate",
+      "full": "Wright's law",
+      "category": "markets",
+      "level": 2,
+      "definition": "The percentage cost drop for each doubling of cumulative production. Solar PV has shown ~20%+ per doubling. Underestimating it is a main reason past outlooks undershot renewables.",
+      "related": [
+        "LCOE"
+      ]
+    },
+    {
+      "term": "Capex",
+      "full": "Capital expenditure",
+      "category": "markets",
+      "level": 1,
+      "definition": "Up-front investment to build an asset such as a power plant or grid line, as opposed to operating costs (opex). Nuclear, wind and solar are capex-heavy, so their costs depend strongly on interest rates.",
+      "related": [
+        "WACC",
+        "LCOE"
+      ]
+    },
+    {
+      "term": "mb/d",
+      "full": "million barrels per day",
+      "category": "markets",
+      "level": 1,
+      "definition": "The standard unit for oil demand and supply. The world uses roughly 104 mb/d today.",
+      "related": []
+    },
+    {
+      "term": "Exajoule",
+      "full": "EJ",
+      "category": "markets",
+      "level": 1,
+      "definition": "10¹⁸ joules, the usual unit for national and global energy totals. World primary energy is about 600–650 EJ per year; 1 EJ ≈ 278 TWh.",
+      "related": [
+        "Primary energy"
+      ]
+    },
+    {
+      "term": "LEU",
+      "full": "Low-Enriched Uranium",
+      "category": "nuclear",
+      "level": 1,
+      "definition": "Uranium enriched to below 20% U-235. Today's light-water reactors use about 3–5%; enrichment between 5% and 20% is called HALEU.",
+      "related": [
+        "HALEU",
+        "Enrichment",
+        "LWR"
+      ]
     }
   ]
 }

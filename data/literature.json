@@ -108,7 +108,6 @@
       "nuclear": true,
       "tags": ["Switzerland", "national"]
     },
-
     {
       "id": "jenkins-2018",
       "category": "meta",
@@ -234,7 +233,6 @@
       "nuclear": true,
       "tags": ["IAM", "assumptions", "transparency"]
     },
-
     {
       "id": "pfenninger-2014",
       "category": "reviews",
@@ -359,7 +357,6 @@
       "nuclear": false,
       "tags": ["open source", "tools"]
     },
-
     {
       "id": "decarolis-2017",
       "category": "methods",
@@ -492,7 +489,6 @@
       "nuclear": false,
       "tags": ["pathways", "foresight", "recent"]
     },
-
     {
       "id": "xiao-2021",
       "category": "accuracy",
@@ -549,7 +545,6 @@
       "nuclear": false,
       "tags": ["EIA", "track record", "USA"]
     },
-
     {
       "id": "sepulveda-2018",
       "category": "landmark",
@@ -666,6 +661,48 @@
       "why": "Key Swiss modelling framework used to study nuclear phase-out and net-zero options.",
       "nuclear": true,
       "tags": ["Switzerland", "ETH", "multi-model"]
+    },
+    {
+      "id": "rff-geo-2026",
+      "category": "assessments",
+      "type": "Outlook comparison",
+      "title": "Global Energy Outlook 2026: How the World Lost the Goal of 1.5°C",
+      "authors": "Resources for the Future",
+      "year": 2026,
+      "venue": "RFF Report 26-06",
+      "url": "https://www.rff.org/publications/reports/global-energy-outlook-2026/",
+      "finding": "Harmonises 15 scenarios from 8 organisations. Concludes 1.5 °C is no longer plausible; electricity demand surges, wind and solar lead growth, gas grows in most non-ambitious scenarios.",
+      "why": "The best single comparison of industry and agency outlooks on a common basis.",
+      "nuclear": true,
+      "tags": ["outlooks", "comparison", "recent"]
+    },
+    {
+      "id": "ief-2026",
+      "category": "assessments",
+      "type": "Outlook comparison",
+      "title": "IEF Outlooks Comparison Report 2026",
+      "authors": "International Energy Forum",
+      "year": 2026,
+      "venue": "IEF",
+      "url": "https://www.ief.org/_resources/files/reports/ief-outlooks-comparison-report-2026.pdf",
+      "finding": "Compares 30+ scenarios from IEA, OPEC, EIA, majors, IRENA and IPCC. 2050 primary energy ranges from ~274 mboe/d (IEA NZE) to ~400 mboe/d (IEA CPS); electricity averages ~40% of final energy across scenarios.",
+      "why": "Shows how far apart the main outlooks are and why.",
+      "nuclear": true,
+      "tags": ["outlooks", "comparison", "recent"]
+    },
+    {
+      "id": "unep-egr-2025",
+      "category": "assessments",
+      "type": "Assessment report",
+      "title": "Emissions Gap Report 2025: Off Target",
+      "authors": "UNEP",
+      "year": 2025,
+      "venue": "United Nations Environment Programme",
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025",
+      "finding": "Current policies lead to ~2.8 °C, conditional NDCs ~2.3 °C, and NDCs plus all net-zero pledges ~1.9 °C. 1.5 °C is likely to be exceeded within the next decade.",
+      "why": "The standard reference for where the world is heading versus the Paris goals.",
+      "nuclear": false,
+      "tags": ["policy", "warming", "consensus"]
     }
   ]
 }

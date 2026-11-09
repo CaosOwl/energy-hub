@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news, nuclear focus, glossary, reactor company tracker and energy-system modelling literature.">
+  <meta name="description" content="Personal energy news, nuclear focus, glossary, reactor company tracker, energy scenario comparison and energy-system modelling literature.">
   <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
@@ -81,6 +81,24 @@
       <ul id="gl-list" class="cards"></ul>
     </section>
 
+    <!-- SCENARIOS -->
+    <section id="view-scenarios" class="view hidden" data-title="Scenarios">
+      <div class="muted small intro" id="sc-about"></div>
+      <div class="sc-pickers" id="sc-pickers"></div>
+      <div class="seg sc-groups" id="sc-groups"></div>
+      <div id="sc-compare"></div>
+      <h2 class="sc-h">Electricity mix in 2050</h2>
+      <div id="sc-mix"></div>
+      <h2 class="sc-h">Achievability and likelihood</h2>
+      <div id="sc-scores"></div>
+      <h2 class="sc-h">Warming by 2100 — all scenarios</h2>
+      <div id="sc-strip"></div>
+      <h2 class="sc-h">All scenarios</h2>
+      <div class="chips" id="sc-type"></div>
+      <ul id="sc-list" class="cards"></ul>
+      <div id="sc-sources" class="small muted"></div>
+    </section>
+
     <!-- LITERATURE -->
     <section id="view-literature" class="view hidden" data-title="Literature">
       <div class="toolbar">
@@ -110,6 +128,7 @@
     <button data-view="feed" class="on"><span class="ti">▤</span>Feed</button>
     <button data-view="companies"><span class="ti">⚛</span>Builders</button>
     <button data-view="glossary"><span class="ti">Aa</span>Glossary</button>
+    <button data-view="scenarios"><span class="ti">⚖</span>Scenarios</button>
     <button data-view="literature"><span class="ti">❡</span>Studies</button>
     <button data-view="sources"><span class="ti">⌘</span>Sources</button>
   </nav>

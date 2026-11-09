@@ -1,0 +1,1186 @@
+{
+  "_about": "Major energy outlooks and pathways, compared on common 2050 metrics. Values come from each publisher's own public summaries (latest edition available). '~' marks approximate or derived values; null means the publisher does not report it publicly. Political achievability and likelihood are editorial judgements (Claude's suggested starting point), not data. Your own likelihood score is stored on your device. Edit this file to add scenarios or correct values.",
+  "updated": "2026-11-09",
+  "today": {
+    "label": "Today (2024–25)",
+    "temp2100": null,
+    "co2": 0,
+    "fossil": 80,
+    "elecFinal": 21,
+    "elecDemand": 0,
+    "renElec": 32,
+    "nuclearGW": 377,
+    "oil": 104,
+    "primary": 0,
+    "invest": 3.3,
+    "note": "Approximate current values: fossil share of primary energy ~79–80% (IEA), electricity ~21% of final energy (IEA WEO 2025), renewables ~32% of power, ~377 GW nuclear operable (IAEA PRIS), oil ~104 mb/d, total energy investment ~USD 3.3 trillion/yr (IEA World Energy Investment 2025)."
+  },
+  "metrics": [
+    {
+      "id": "temp2100",
+      "label": "Warming by 2100",
+      "unit": "°C",
+      "group": "Climate",
+      "better": "lower",
+      "max": 3.5,
+      "decimals": 1,
+      "desc": "Global temperature rise above pre-industrial in 2100, as stated by the publisher (median or 50% unless noted). Publishers that don't estimate it show 'not published'.",
+      "terms": [
+        "Overshoot",
+        "Carbon budget"
+      ]
+    },
+    {
+      "id": "co2",
+      "label": "Energy CO₂ in 2050 vs today",
+      "unit": "%",
+      "group": "Climate",
+      "better": "lower",
+      "min": -100,
+      "max": 10,
+      "decimals": 0,
+      "signed": true,
+      "desc": "Change in energy-related CO₂ emissions by 2050 relative to the base year of the outlook (2023–2025; IPCC uses 2019 and net CO₂).",
+      "terms": [
+        "Net zero"
+      ]
+    },
+    {
+      "id": "netzero",
+      "label": "Net-zero CO₂ year",
+      "unit": "",
+      "group": "Climate",
+      "better": "lower",
+      "decimals": 0,
+      "desc": "Year global (energy) CO₂ emissions reach net zero, where the outlook says so.",
+      "terms": [
+        "Net zero",
+        "CDR"
+      ],
+      "min": 2040,
+      "max": 2100
+    },
+    {
+      "id": "fossil",
+      "label": "Fossil share of primary energy, 2050",
+      "unit": "%",
+      "group": "Energy mix",
+      "better": "lower",
+      "max": 100,
+      "decimals": 0,
+      "desc": "Coal + oil + natural gas as a share of total primary energy supply in 2050. Today ~80%.",
+      "terms": [
+        "Primary energy"
+      ]
+    },
+    {
+      "id": "renElec",
+      "label": "Renewables share of electricity, 2050",
+      "unit": "%",
+      "group": "Energy mix",
+      "better": "higher",
+      "max": 100,
+      "decimals": 0,
+      "desc": "Share of electricity generation from renewables (solar, wind, hydro, bioenergy, geothermal) in 2050. Today ~32%.",
+      "terms": [
+        "Intermittency",
+        "Firm low-carbon power"
+      ]
+    },
+    {
+      "id": "nuclearGW",
+      "label": "Nuclear capacity, 2050",
+      "unit": "GW",
+      "group": "Energy mix",
+      "better": null,
+      "max": 1200,
+      "decimals": 0,
+      "desc": "Installed nuclear capacity in 2050. Today ~377 GW.",
+      "terms": [
+        "SMR",
+        "LTO"
+      ]
+    },
+    {
+      "id": "oil",
+      "label": "Oil demand, 2050",
+      "unit": "mb/d",
+      "group": "Energy mix",
+      "better": null,
+      "max": 130,
+      "decimals": 0,
+      "desc": "Global oil demand in 2050, million barrels per day. Today ~104 mb/d.",
+      "terms": [
+        "mb/d"
+      ]
+    },
+    {
+      "id": "elecFinal",
+      "label": "Electricity share of final energy, 2050",
+      "unit": "%",
+      "group": "Electrification",
+      "better": null,
+      "max": 100,
+      "decimals": 0,
+      "desc": "How much of the energy end users consume (buildings, industry, transport) arrives as electricity. Today ~21%. The main measure of electrification.",
+      "terms": [
+        "Electrification",
+        "Final energy",
+        "Sector coupling"
+      ]
+    },
+    {
+      "id": "elecDemand",
+      "label": "Electricity demand growth to 2050",
+      "unit": "%",
+      "group": "Electrification",
+      "better": null,
+      "max": 200,
+      "decimals": 0,
+      "signed": true,
+      "desc": "Growth in electricity demand (or generation) from the base year to 2050.",
+      "terms": [
+        "Electrification"
+      ]
+    },
+    {
+      "id": "primary",
+      "label": "Total energy demand 2050 vs today",
+      "unit": "%",
+      "group": "Demand",
+      "better": null,
+      "min": -30,
+      "max": 30,
+      "decimals": 0,
+      "signed": true,
+      "desc": "Change in total primary energy demand to 2050. Falling demand usually reflects efficiency and electrification, not less energy service.",
+      "terms": [
+        "Primary energy"
+      ]
+    },
+    {
+      "id": "invest",
+      "label": "Energy investment, 2030s",
+      "unit": "USD tn/yr",
+      "group": "Cost",
+      "better": null,
+      "max": 8,
+      "decimals": 1,
+      "desc": "Annual energy-sector investment the pathway implies, around 2030–2035. Today ~USD 3.3 tn/yr. Scope differs between publishers (total vs clean-only), so compare with care.",
+      "terms": [
+        "WACC",
+        "Capex"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "iea-cps",
+      "name": "IEA Current Policies (CPS)",
+      "short": "IEA CPS",
+      "publisher": "International Energy Agency",
+      "publisherType": "agency",
+      "edition": "World Energy Outlook 2025 (Nov 2025)",
+      "type": "exploratory",
+      "model": "Global Energy and Climate Model (GEC)",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025/current-policies-scenario",
+      "summary": "Only policies already in force; no new ones. Brought back in 2025 after US policy shifts. Oil and gas demand keep growing to 2050 and emissions plateau near today's level.",
+      "values": {
+        "temp2100": {
+          "v": 2.9
+        },
+        "co2": {
+          "v": 0,
+          "approx": true,
+          "note": "stays close to 2024 level (~38 Gt) through 2050"
+        },
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": {
+          "v": 728
+        },
+        "oil": {
+          "v": 113
+        },
+        "elecFinal": null,
+        "elecDemand": {
+          "text": "+40% by 2035",
+          "note": "2050 not stated in public summary"
+        },
+        "primary": {
+          "v": 28,
+          "approx": true,
+          "note": "~400 vs ~312 mboe/d (IEF comparison report 2026)"
+        },
+        "invest": {
+          "v": 3.3,
+          "approx": true,
+          "note": "investment stays broadly flat at today's level to 2035"
+        }
+      },
+      "mix": null,
+      "facts": [
+        "Gas demand rises to 5,600 bcm by 2050",
+        "Solar additions stall at ~540 GW/yr",
+        "Warming passes 2 °C around 2050"
+      ],
+      "political": {
+        "score": 5,
+        "why": "Needs no new policy at all: it is the 'do nothing more' baseline."
+      },
+      "likelihood": {
+        "score": 2,
+        "why": "A floor rather than a forecast. It freezes policy for 25 years, and ex-post studies show outlooks like this have consistently underestimated how fast solar, wind and batteries spread."
+      }
+    },
+    {
+      "id": "iea-steps",
+      "name": "IEA Stated Policies (STEPS)",
+      "short": "IEA STEPS",
+      "publisher": "International Energy Agency",
+      "publisherType": "agency",
+      "edition": "World Energy Outlook 2025 (Nov 2025)",
+      "type": "exploratory",
+      "model": "Global Energy and Climate Model (GEC)",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025/stated-policies-scenario",
+      "summary": "Policies in force plus those governments have formally announced and are likely to implement. The most-cited 'central' view of where the world is heading.",
+      "values": {
+        "temp2100": {
+          "v": 2.5
+        },
+        "co2": {
+          "v": -22,
+          "approx": true,
+          "note": "falls below 30 Gt by 2050 from ~38 Gt"
+        },
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": {
+          "v": 59
+        },
+        "renElec": {
+          "v": 67,
+          "note": "two-thirds of generation"
+        },
+        "nuclearGW": {
+          "v": 784
+        },
+        "oil": {
+          "text": "peaks ~102 (2030)",
+          "note": "2050 not stated in public summary"
+        },
+        "elecFinal": {
+          "v": 31
+        },
+        "elecDemand": {
+          "v": 80
+        },
+        "primary": {
+          "v": 14
+        },
+        "invest": null
+      },
+      "mix": {
+        "renewables": 67,
+        "nuclear": 12,
+        "fossil": 21,
+        "approx": true,
+        "note": "Fossil 21% and renewables ~two-thirds are stated; nuclear is the remainder."
+      },
+      "facts": [
+        "Coal and oil peak around 2030; gas plateaus mid-2030s",
+        "EVs >50% of car sales by 2035",
+        "Nuclear output roughly doubles to 2050"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Already announced by governments, though some measures (e.g. in the US) have since been rolled back."
+      },
+      "likelihood": {
+        "score": 4,
+        "why": "The closest thing to a consensus central case. Watch for slippage on announced policy and upside on clean-tech deployment."
+      }
+    },
+    {
+      "id": "iea-nze",
+      "name": "IEA Net Zero Emissions by 2050 (NZE)",
+      "short": "IEA NZE",
+      "publisher": "International Energy Agency",
+      "publisherType": "agency",
+      "edition": "World Energy Outlook 2025 (Nov 2025)",
+      "type": "normative",
+      "model": "Global Energy and Climate Model (GEC)",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025",
+      "summary": "Works backwards from net-zero energy CO₂ by 2050. Electrification, efficiency, renewables (tripled by 2030) and a doubling of nuclear, with carbon removal later in the century.",
+      "values": {
+        "temp2100": {
+          "v": 1.5,
+          "note": "peaks ~1.65 °C around 2050, back below 1.5 °C by 2100"
+        },
+        "co2": {
+          "v": -100
+        },
+        "netzero": {
+          "v": 2050
+        },
+        "fossil": {
+          "v": 16
+        },
+        "renElec": {
+          "v": 88,
+          "approx": true
+        },
+        "nuclearGW": {
+          "v": 1079
+        },
+        "oil": {
+          "v": 24,
+          "approx": true,
+          "note": "from the 2023 Net Zero Roadmap"
+        },
+        "elecFinal": {
+          "v": 55
+        },
+        "elecDemand": null,
+        "primary": {
+          "v": -11,
+          "approx": true,
+          "note": "~274 vs ~310 mboe/d (IEF 2026)"
+        },
+        "invest": {
+          "v": 4.5,
+          "note": "clean-energy investment by early 2030s (Net Zero Roadmap 2023)"
+        }
+      },
+      "mix": {
+        "renewables": 88,
+        "nuclear": 10,
+        "fossil": 2,
+        "approx": true,
+        "note": "Fossil ~1.5% stated; renewables/nuclear split approximate."
+      },
+      "facts": [
+        "Fossil fuel demand falls ~80% by 2050",
+        "Oil price ~USD 25/bbl in 2050",
+        "Relies on CO₂ removal to bring warming back down"
+      ],
+      "political": {
+        "score": 1,
+        "why": "Needs every major economy to act at once from now on. UNEP's 2025 Emissions Gap Report says the 1.5 °C limit will likely be breached within the decade."
+      },
+      "likelihood": {
+        "score": 1,
+        "why": "Useful as a benchmark of what 1.5 °C requires, not as a forecast."
+      }
+    },
+    {
+      "id": "bnef-ets",
+      "name": "BNEF Economic Transition Scenario",
+      "short": "BNEF ETS",
+      "publisher": "BloombergNEF",
+      "publisherType": "analyst",
+      "edition": "New Energy Outlook 2026 (May 2026)",
+      "type": "exploratory",
+      "model": "BNEF NEO model (least-cost, no new policy)",
+      "url": "https://about.bnef.com/insights/clean-energy/new-energy-outlook/",
+      "summary": "Technologies are deployed only where they're cheapest, with no new climate policy. Driven by falling solar, wind and battery costs.",
+      "values": {
+        "temp2100": {
+          "v": 2.4,
+          "note": "67th percentile"
+        },
+        "co2": {
+          "v": -21
+        },
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": null,
+        "oil": {
+          "text": "early-2000s levels"
+        },
+        "elecFinal": {
+          "text": "largest source by 2047"
+        },
+        "elecDemand": {
+          "v": 69
+        },
+        "primary": null,
+        "invest": {
+          "v": 3.4,
+          "range": [
+            3.1,
+            3.7
+          ],
+          "note": "3.1 (2026–30) → 3.7 (2031–35); 2025 actual 2.3 (BNEF's narrower scope)"
+        }
+      },
+      "mix": null,
+      "facts": [
+        "Solar becomes the largest power source of any kind by 2032",
+        "Gas overtakes oil as largest primary energy source by mid-2040s",
+        "Coal falls to ~8% of power"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Driven by economics, so it needs little new policy. It still needs permitting, grids and trade to keep working."
+      },
+      "likelihood": {
+        "score": 4,
+        "why": "Cost-driven and close to observed deployment trends. Its warming estimate is similar to IEA STEPS."
+      }
+    },
+    {
+      "id": "bnef-nzs",
+      "name": "BNEF Net Zero Scenario",
+      "short": "BNEF NZS",
+      "publisher": "BloombergNEF",
+      "publisherType": "analyst",
+      "edition": "New Energy Outlook 2026 (May 2026)",
+      "type": "normative",
+      "model": "BNEF NEO model",
+      "url": "https://about.bnef.com/insights/clean-energy/new-energy-outlook/",
+      "summary": "A net-zero-by-2050 pathway with a ~500 GtCO₂ budget for 2024–2050. Heavier on renewables and storage, with large-scale carbon capture.",
+      "values": {
+        "temp2100": {
+          "v": 1.73,
+          "note": "peak 1.81 °C in 2049 (67th percentile)"
+        },
+        "co2": {
+          "v": -100
+        },
+        "netzero": {
+          "v": 2050
+        },
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": null,
+        "oil": {
+          "text": "structural decline"
+        },
+        "elecFinal": {
+          "text": "largest source by 2037"
+        },
+        "elecDemand": null,
+        "primary": null,
+        "invest": {
+          "v": 6.3,
+          "range": [
+            4.8,
+            7.7
+          ],
+          "note": "4.8 (2026–30) → 7.7 (2031–35)"
+        }
+      },
+      "mix": null,
+      "facts": [
+        "~7 GtCO₂/yr carbon capture by 2050",
+        "Gas peaks in early 2030s"
+      ],
+      "political": {
+        "score": 1,
+        "why": "Investment would have to roughly triple within a decade."
+      },
+      "likelihood": {
+        "score": 1,
+        "why": "A normative benchmark. Note that it lands at ~1.7 °C, not 1.5 °C."
+      }
+    },
+    {
+      "id": "dnv-eto",
+      "name": "DNV Energy Transition Outlook",
+      "short": "DNV ETO",
+      "publisher": "DNV",
+      "publisherType": "analyst",
+      "edition": "ETO 2026 (Oct 2026)",
+      "type": "forecast",
+      "model": "DNV integrated system-dynamics model",
+      "url": "https://www.dnv.com/energy-transition-outlook/",
+      "summary": "A single 'most likely' forecast rather than a scenario set. Electrification and solar dominate; hydrogen and CCS scale more slowly and cost more than hoped.",
+      "values": {
+        "temp2100": {
+          "v": 2.3
+        },
+        "co2": {
+          "v": -44
+        },
+        "netzero": {
+          "v": 2098
+        },
+        "fossil": {
+          "v": 51
+        },
+        "renElec": {
+          "text": "solar 46% + wind 31% (2060)",
+          "note": "2050 share not stated"
+        },
+        "nuclearGW": null,
+        "oil": null,
+        "elecFinal": null,
+        "elecDemand": {
+          "v": 80
+        },
+        "primary": null,
+        "invest": null
+      },
+      "mix": {
+        "windsolar": 77,
+        "year": 2060,
+        "note": "DNV reports the mix for 2060: solar 46%, wind 31%."
+      },
+      "facts": [
+        "Wind+solar overtake fossil power by ~2033",
+        "1.5 °C budget exhausted 2029, 2 °C budget 2052",
+        "Gas peaks ~2035"
+      ],
+      "political": {
+        "score": 4,
+        "why": "It is DNV's best guess of what will actually happen, including political friction."
+      },
+      "likelihood": {
+        "score": 4,
+        "why": "A best-estimate forecast with a good track record on renewables. It is more pessimistic on hydrogen and CCS than the IEA."
+      }
+    },
+    {
+      "id": "exxon-go",
+      "name": "ExxonMobil Global Outlook",
+      "short": "ExxonMobil",
+      "publisher": "ExxonMobil",
+      "publisherType": "company",
+      "edition": "Global Outlook 2026 (Sep 2026)",
+      "type": "forecast",
+      "model": "In-house projection",
+      "url": "https://corporate.exxonmobil.com/publications/global-outlook",
+      "summary": "ExxonMobil's projection: oil stays above 100 mb/d and gas grows ~20%. Emissions fall only ~17%, which the company says is ~3× the IPCC 'likely below 2 °C' level for 2050.",
+      "values": {
+        "temp2100": null,
+        "co2": {
+          "v": -17,
+          "note": "36 Gt (2025) → ~30 Gt (2050)"
+        },
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": {
+          "text": "oil+gas >50%",
+          "note": "oil ~30%; coal falls ~30%"
+        },
+        "renElec": null,
+        "nuclearGW": null,
+        "oil": {
+          "v": 105
+        },
+        "elecFinal": {
+          "v": 30
+        },
+        "elecDemand": {
+          "v": 65
+        },
+        "primary": null,
+        "invest": null
+      },
+      "mix": null,
+      "facts": [
+        "Wind+solar rise from ~3% to >11% of primary energy",
+        "Gas demand ~520 bcf/d (+~20%)"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Assumes today's policy direction continues with modest tightening."
+      },
+      "likelihood": {
+        "score": 3,
+        "why": "Plausible on demand, but likely low on electrification and solar compared with recent trends. Read it with the publisher's interest in oil and gas in mind."
+      }
+    },
+    {
+      "id": "opec-woo",
+      "name": "OPEC World Oil Outlook (Reference)",
+      "short": "OPEC",
+      "publisher": "OPEC",
+      "publisherType": "company",
+      "edition": "WOO 2026 (Jun 2026)",
+      "type": "forecast",
+      "model": "OPEC World Energy Model (OWEM)",
+      "url": "https://woo.opec.org",
+      "summary": "Energy demand +23% to 2050, driven by India and other developing economies. Oil keeps a ~30% share, with no peak in sight.",
+      "values": {
+        "temp2100": null,
+        "co2": null,
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": {
+          "v": 68,
+          "approx": true,
+          "note": "derived: oil 30% + gas 24% + coal 14%"
+        },
+        "renElec": null,
+        "nuclearGW": null,
+        "oil": {
+          "v": 124
+        },
+        "elecFinal": null,
+        "elecDemand": null,
+        "primary": {
+          "v": 23
+        },
+        "invest": {
+          "text": "oil alone 0.7",
+          "note": "USD 17.7 tn upstream+downstream oil 2026–2050; total energy not stated"
+        }
+      },
+      "mix": null,
+      "facts": [
+        "Coal share falls from 26% to 14%",
+        "Gas share stable at ~24%"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Needs only continued investment and policy inertia."
+      },
+      "likelihood": {
+        "score": 2,
+        "why": "The highest oil path of all outlooks here. It is the producers' view and ignores most of the EV and efficiency trends other outlooks include."
+      }
+    },
+    {
+      "id": "bp-ct",
+      "name": "bp Current Trajectory",
+      "short": "bp CT",
+      "publisher": "bp",
+      "publisherType": "company",
+      "edition": "Energy Outlook 2025 (Sep 2025)",
+      "type": "exploratory",
+      "model": "bp Energy Outlook model",
+      "url": "https://www.bp.com/en/global/corporate/energy-economics/energy-outlook.html",
+      "summary": "Today's policies and technology trends continue. Energy security concerns slow the transition compared with earlier bp outlooks.",
+      "values": {
+        "temp2100": {
+          "text": "> 2 °C",
+          "note": "bp: not consistent with Paris goals"
+        },
+        "co2": {
+          "v": -25,
+          "note": "vs 2023"
+        },
+        "netzero": {
+          "text": "not reached"
+        },
+        "fossil": null,
+        "renElec": {
+          "text": "wind+solar >50%"
+        },
+        "nuclearGW": {
+          "text": "+30% by 2035"
+        },
+        "oil": {
+          "v": 84,
+          "approx": true,
+          "note": "'a little below 85 Mb/d'"
+        },
+        "elecFinal": {
+          "v": 33,
+          "approx": true,
+          "note": "'about a third'"
+        },
+        "elecDemand": {
+          "v": 95,
+          "approx": true,
+          "note": "'almost double' 2023"
+        },
+        "primary": {
+          "v": 8,
+          "approx": true,
+          "note": "+0.3%/yr"
+        },
+        "invest": null
+      },
+      "mix": {
+        "windsolar": 50,
+        "approx": true,
+        "note": "Wind+solar 'over half' of generation."
+      },
+      "facts": [
+        "Coal ~15%, gas ~25%, renewables ~25% of primary energy in 2050"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Continuation of current trends."
+      },
+      "likelihood": {
+        "score": 3,
+        "why": "Middle of the pack, close to IEA STEPS on emissions. bp itself says neither scenario is a forecast."
+      }
+    },
+    {
+      "id": "bp-b2",
+      "name": "bp Below 2°",
+      "short": "bp B2°",
+      "publisher": "bp",
+      "publisherType": "company",
+      "edition": "Energy Outlook 2025 (Sep 2025)",
+      "type": "normative",
+      "model": "bp Energy Outlook model",
+      "url": "https://www.bp.com/en/global/corporate/energy-economics/energy-outlook.html",
+      "summary": "Emissions cut ~90% by 2050, consistent with 'well below 2 °C'. Strong electrification, nuclear more than doubles, and gas with CCS.",
+      "values": {
+        "temp2100": {
+          "text": "well below 2 °C"
+        },
+        "co2": {
+          "v": -90,
+          "note": "net, vs 2023"
+        },
+        "netzero": {
+          "text": "~2050s"
+        },
+        "fossil": null,
+        "renElec": {
+          "text": "wind+solar ~70%"
+        },
+        "nuclearGW": {
+          "text": ">2× 2023 output"
+        },
+        "oil": {
+          "v": 34,
+          "approx": true,
+          "note": "'a little below 35 Mb/d'"
+        },
+        "elecFinal": {
+          "v": 52,
+          "approx": true,
+          "note": "'over 50%'"
+        },
+        "elecDemand": null,
+        "primary": {
+          "v": -24,
+          "approx": true,
+          "note": "−1%/yr"
+        },
+        "invest": null
+      },
+      "mix": {
+        "windsolar": 70,
+        "approx": true,
+        "note": "Wind+solar ~70% of generation."
+      },
+      "facts": [
+        "Coal ~5% of primary energy",
+        "Green hydrogen ~15% of electricity use",
+        "~60% of remaining gas paired with CCS"
+      ],
+      "political": {
+        "score": 2,
+        "why": "Needs coordinated policy across major economies, but less extreme than 1.5 °C pathways."
+      },
+      "likelihood": {
+        "score": 2,
+        "why": "Plausible only with a policy step-change in the late 2020s."
+      }
+    },
+    {
+      "id": "irena-15",
+      "name": "IRENA 1.5°C Scenario",
+      "short": "IRENA 1.5°C",
+      "publisher": "International Renewable Energy Agency",
+      "publisherType": "agency",
+      "edition": "World Energy Transitions Outlook 2024 (Nov 2024) — 2026 edition released Oct 2026",
+      "type": "normative",
+      "model": "IRENA REmap / 1.5°C pathway",
+      "url": "https://www.irena.org/Energy-Transition/Outlook",
+      "summary": "A renewables-led 1.5 °C pathway: tripled renewables by 2030, electricity over half of final energy, and green hydrogen for hard-to-abate sectors. Gives nuclear only a small role.",
+      "values": {
+        "temp2100": {
+          "v": 1.5
+        },
+        "co2": {
+          "v": -100,
+          "approx": true,
+          "note": "net zero by 2050"
+        },
+        "netzero": {
+          "v": 2050
+        },
+        "fossil": null,
+        "renElec": {
+          "v": 91
+        },
+        "nuclearGW": null,
+        "oil": null,
+        "elecFinal": {
+          "v": 52
+        },
+        "elecDemand": null,
+        "primary": null,
+        "invest": {
+          "v": 6.7,
+          "note": "average 2024–2030, total energy-transition investment"
+        }
+      },
+      "mix": {
+        "renewables": 91,
+        "approx": false,
+        "note": "Renewables 91%; the remaining 9% split between nuclear and gas/CCS is not detailed."
+      },
+      "facts": [
+        "Renewable capacity 38 TW by 2050",
+        "Storage ~6,900 GW by 2050",
+        "Grid investment ~USD 1 tn/yr 2026–35"
+      ],
+      "political": {
+        "score": 1,
+        "why": "Same problem as all 1.5 °C pathways, plus heavy reliance on rapid grid build-out."
+      },
+      "likelihood": {
+        "score": 1,
+        "why": "Normative benchmark. Its high renewables share is a design choice, not a forecast."
+      }
+    },
+    {
+      "id": "ipcc-c1",
+      "name": "IPCC AR6 — C1 (1.5 °C, limited overshoot)",
+      "short": "IPCC C1",
+      "publisher": "IPCC (97 model pathways)",
+      "publisherType": "science",
+      "edition": "AR6 Working Group III (2022)",
+      "type": "normative",
+      "model": "Ensemble of integrated assessment models (MESSAGE, REMIND, IMAGE, GCAM, WITCH, …)",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/",
+      "summary": "The median of 97 peer-reviewed model pathways that hold warming to 1.5 °C with no or limited overshoot. The scientific reference point, though now dated: emissions since 2019 have tracked well above it.",
+      "values": {
+        "temp2100": {
+          "v": 1.5,
+          "note": "peak <1.6 °C, ~1.3 °C by 2100 (median)"
+        },
+        "co2": {
+          "v": -99,
+          "approx": true,
+          "note": "net CO₂ vs 2019 (median)"
+        },
+        "netzero": {
+          "text": "early 2050s",
+          "note": "median 2050–55, range 2035–2070"
+        },
+        "fossil": null,
+        "renElec": {
+          "text": "wind+solar 40–80%"
+        },
+        "nuclearGW": {
+          "text": "+90% output vs 2019"
+        },
+        "oil": {
+          "text": "−60% vs 2019"
+        },
+        "elecFinal": {
+          "text": "~50–60%",
+          "approx": true
+        },
+        "elecDemand": {
+          "v": 100,
+          "approx": true,
+          "note": "generation roughly doubles"
+        },
+        "primary": null,
+        "invest": null
+      },
+      "mix": {
+        "windsolar": 60,
+        "nuclear": 10,
+        "approx": true,
+        "note": "Medians across all AR6 mitigation pathways: wind+solar 40–80%, nuclear ~10% (IQR 5–20%), CCS-equipped plants 5–10%."
+      },
+      "facts": [
+        "Coal −95%, oil −60%, gas −45% by 2050 vs 2019",
+        "Cumulative net-negative CO₂ ~220 Gt to 2100",
+        "GHG −84% by 2050"
+      ],
+      "political": {
+        "score": 1,
+        "why": "Emissions have kept rising since 2019, so these pathways now need faster cuts than when published."
+      },
+      "likelihood": {
+        "score": 1,
+        "why": "Practically out of reach without a large overshoot and CO₂ removal (UNEP 2025)."
+      }
+    },
+    {
+      "id": "ipcc-c3",
+      "name": "IPCC AR6 — C3 (likely below 2 °C)",
+      "short": "IPCC C3",
+      "publisher": "IPCC (311 model pathways)",
+      "publisherType": "science",
+      "edition": "AR6 Working Group III (2022)",
+      "type": "normative",
+      "model": "Ensemble of integrated assessment models",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/",
+      "summary": "The median of 311 pathways keeping warming likely (>67%) below 2 °C. Slower fossil phase-out, net-zero CO₂ in the 2070s.",
+      "values": {
+        "temp2100": {
+          "text": "likely < 2 °C"
+        },
+        "co2": {
+          "v": -73,
+          "approx": true,
+          "note": "net CO₂ vs 2019 (median)"
+        },
+        "netzero": {
+          "text": "early 2070s",
+          "note": "median 2070–75, range 2055 to after 2100"
+        },
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": {
+          "text": "+85% output vs 2019"
+        },
+        "oil": {
+          "text": "−30% vs 2019"
+        },
+        "elecFinal": null,
+        "elecDemand": null,
+        "primary": null,
+        "invest": null
+      },
+      "mix": null,
+      "facts": [
+        "Coal −85%, oil −30%, gas −10% by 2050 vs 2019",
+        "Cumulative CO₂ 2020–2100 ~800 Gt"
+      ],
+      "political": {
+        "score": 2,
+        "why": "UNEP 2025: full implementation of all net-zero pledges gives ~1.9 °C, so the political commitments exist on paper."
+      },
+      "likelihood": {
+        "score": 2,
+        "why": "Requires pledges to be fully delivered. Current policies point to ~2.8 °C."
+      }
+    },
+    {
+      "id": "lut-100re",
+      "name": "LUT 100% Renewable Energy",
+      "short": "LUT 100% RE",
+      "publisher": "LUT University (Bogdanov, Breyer et al.)",
+      "publisherType": "science",
+      "edition": "Energy 227, 2021 (peer-reviewed)",
+      "type": "normative",
+      "model": "LUT Energy System Transition Model (hourly, 145 regions)",
+      "url": "https://doi.org/10.1016/j.energy.2021.120467",
+      "summary": "A cost-optimised, fully renewable, sector-coupled global system by 2050, dominated by solar PV, with no nuclear or fossil fuels and no negative-emission technologies.",
+      "values": {
+        "temp2100": {
+          "v": 1.5
+        },
+        "co2": {
+          "v": -100
+        },
+        "netzero": {
+          "v": 2050
+        },
+        "fossil": {
+          "v": 0
+        },
+        "renElec": {
+          "v": 100
+        },
+        "nuclearGW": {
+          "v": 0,
+          "note": "phased out as uneconomic"
+        },
+        "oil": {
+          "v": 0
+        },
+        "elecFinal": {
+          "v": 90,
+          "approx": true,
+          "note": "'nearly 90% of total energy use'"
+        },
+        "elecDemand": {
+          "text": "~5.7× (incl. heat, transport, desalination)",
+          "note": "24 → 137 PWh"
+        },
+        "primary": {
+          "v": 20,
+          "approx": true,
+          "note": "vs 2015"
+        },
+        "invest": null
+      },
+      "mix": {
+        "windsolar": 96,
+        "renewables": 100,
+        "nuclear": 0,
+        "fossil": 0,
+        "approx": true,
+        "note": "Solar ~76% of total energy supply, wind ~20%."
+      },
+      "facts": [
+        "Solar PV ~76% of energy supply",
+        "Energy cost similar to or below today"
+      ],
+      "political": {
+        "score": 1,
+        "why": "Requires phasing out all fossil and nuclear generation within 25 years worldwide."
+      },
+      "likelihood": {
+        "score": 1,
+        "why": "An important 'proof of possibility' that anchors the 100% RE side of the debate (see the Heard vs Brown papers in Studies)."
+      }
+    },
+    {
+      "id": "iaea-low",
+      "name": "IAEA nuclear projection — Low case",
+      "short": "IAEA low",
+      "publisher": "International Atomic Energy Agency",
+      "publisherType": "agency",
+      "edition": "RDS-1, 46th edition (2026)",
+      "type": "exploratory",
+      "model": "Expert-based country-by-country projection",
+      "url": "https://www.iaea.org/publications/reference-data-series",
+      "summary": "Nuclear-only projection: conservative case assuming current trends continue. Useful to compare against the nuclear numbers in full-system scenarios.",
+      "values": {
+        "temp2100": null,
+        "co2": null,
+        "netzero": null,
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": {
+          "v": 641
+        },
+        "oil": null,
+        "elecFinal": null,
+        "elecDemand": null,
+        "primary": null,
+        "invest": null
+      },
+      "mix": null,
+      "facts": [
+        "'Essentially business as usual' (World Nuclear Association)"
+      ],
+      "political": {
+        "score": 4,
+        "why": "Projects already under construction or firmly planned."
+      },
+      "likelihood": {
+        "score": 3,
+        "why": "Comparable to the IEA CPS nuclear figure (728 GW)."
+      }
+    },
+    {
+      "id": "iaea-high",
+      "name": "IAEA nuclear projection — High case",
+      "short": "IAEA high",
+      "publisher": "International Atomic Energy Agency",
+      "publisherType": "agency",
+      "edition": "RDS-1, 46th edition (2026)",
+      "type": "exploratory",
+      "model": "Expert-based country-by-country projection",
+      "url": "https://www.iaea.org/publications/reference-data-series",
+      "summary": "Nuclear-only projection: the COP28 'tripling nuclear' ambition largely delivered, including SMRs. Close to the IEA NZE nuclear figure.",
+      "values": {
+        "temp2100": null,
+        "co2": null,
+        "netzero": null,
+        "fossil": null,
+        "renElec": null,
+        "nuclearGW": {
+          "v": 1045
+        },
+        "oil": null,
+        "elecFinal": null,
+        "elecDemand": null,
+        "primary": null,
+        "invest": null
+      },
+      "mix": null,
+      "facts": [
+        "Roughly 2.8× today's fleet"
+      ],
+      "political": {
+        "score": 3,
+        "why": "Strong political tailwinds (US, China, Japan, EU taxonomy, World Bank), but supply chains, financing and fuel (HALEU) are bottlenecks."
+      },
+      "likelihood": {
+        "score": 2,
+        "why": "History of construction delays and cost overruns argues for caution."
+      }
+    }
+  ],
+  "context": [
+    {
+      "label": "UNEP Emissions Gap 2025 — current policies",
+      "temp": 2.8,
+      "short": "UNEP: policies"
+    },
+    {
+      "label": "UNEP 2025 — conditional NDCs",
+      "temp": 2.3,
+      "short": "UNEP: NDCs"
+    },
+    {
+      "label": "UNEP 2025 — NDCs + all net-zero pledges",
+      "temp": 1.9,
+      "short": "UNEP: pledges"
+    }
+  ],
+  "sources": [
+    {
+      "title": "IEA World Energy Outlook 2025",
+      "url": "https://www.iea.org/reports/world-energy-outlook-2025"
+    },
+    {
+      "title": "BloombergNEF New Energy Outlook 2026 — executive summary",
+      "url": "https://about.bnef.com/insights/clean-energy/new-energy-outlook/"
+    },
+    {
+      "title": "DNV Energy Transition Outlook 2026",
+      "url": "https://www.dnv.com/energy-transition-outlook/"
+    },
+    {
+      "title": "ExxonMobil Global Outlook 2026",
+      "url": "https://corporate.exxonmobil.com/publications/global-outlook"
+    },
+    {
+      "title": "OPEC World Oil Outlook 2026",
+      "url": "https://www.opec.org/pr-detail/607-18-june-2026.html"
+    },
+    {
+      "title": "bp Energy Outlook 2025",
+      "url": "https://www.bp.com/en/global/corporate/energy-economics/energy-outlook.html"
+    },
+    {
+      "title": "IRENA World Energy Transitions Outlook 2024 — summary",
+      "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2024/Nov/IRENA_World_energy_transitions_outlook_2024_Summary.pdf"
+    },
+    {
+      "title": "IPCC AR6 WGIII",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/"
+    },
+    {
+      "title": "World Nuclear Association — World Energy Needs and Nuclear Power",
+      "url": "https://world-nuclear.org/information-library/current-and-future-generation/world-energy-needs-and-nuclear-power"
+    },
+    {
+      "title": "World Nuclear News — Nuclear power is making a comeback, says IEA",
+      "url": "https://www.world-nuclear-news.org/articles/nuclear-power-is-making-a-comeback-says-iea"
+    },
+    {
+      "title": "IEF Outlooks Comparison Report 2026",
+      "url": "https://www.ief.org/_resources/files/reports/ief-outlooks-comparison-report-2026.pdf"
+    },
+    {
+      "title": "RFF Global Energy Outlook 2026",
+      "url": "https://www.rff.org/publications/reports/global-energy-outlook-2026/"
+    },
+    {
+      "title": "UNEP Emissions Gap Report 2025 (Carbon Brief summary)",
+      "url": "https://www.carbonbrief.org/unep-new-country-climate-plans-barely-move-needle-on-expected-warming"
+    }
+  ]
+}

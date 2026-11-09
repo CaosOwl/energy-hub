@@ -28,6 +28,8 @@
     gl: { q: "", cat: "all", level: 0, hideLearned: false },
     literature: { categories: [], items: [], about: "", updated: "" },
     lit: { q: "", cat: "all", sort: "category", nuclear: false },
+    scen: { scenarios: [], metrics: [] },
+    sc: { sel: store.get("scSel", ["iea-steps", "iea-nze", "dnv-eto"]), mine: store.get("scMine", {}), group: "all", type: "all" },
   };
 
   const TOPICS = [["all", "All"], ["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"]];
@@ -439,6 +441,143 @@
     }).join("");
   }
 
+  // ---------- SCENARIOS ----------
+  const SC_GROUPS = [["all", "All metrics"], ["Climate", "Climate"], ["Energy mix", "Mix"], ["Electrification", "Electricity"], ["Demand", "Demand"], ["Cost", "Cost"]];
+  const SC_TYPE = { exploratory: "Exploratory", normative: "Normative", forecast: "Forecast" };
+  const SC_PUB = { agency: "Agencies", analyst: "Analysts", company: "Industry", science: "Science" };
+  function scById(id) { return (state.scen.scenarios || []).find((s) => s.id === id); }
+  function scFmt(m, cell) {
+    if (!cell) return `<span class="mval na">not published</span>`;
+    if (cell.v == null) return `<span class="mval txt">${esc(cell.text || "—")}</span>`;
+    const d = m.decimals ?? 0;
+    let n = Number(cell.v).toFixed(d);
+    if (m.signed && cell.v > 0) n = "+" + n;
+    if (cell.range) n = `${cell.range[0]}–${cell.range[1]}`;
+    const unit = m.unit === "%" ? "%" : m.unit ? " " + m.unit.replace("USD tn/yr", "tn") : "";
+    return `<span class="mval">${cell.approx ? '<span class="approx">~</span>' : ""}${esc(n)}${esc(unit)}</span>`;
+  }
+  function scBar(m, v, cls) {
+    const tv = state.scen.today?.[m.id];
+    const lo0 = m.min ?? 0, hi0 = m.max ?? 1;
+    const tick = tv != null && tv !== 0 ? `<div class="tick" style="left:${Math.max(0, Math.min(99, ((tv - lo0) / (hi0 - lo0)) * 100))}%"></div>` : "";
+    if (v == null) return `<div class="track">${tick}</div>`;
+    const lo = m.min ?? 0, hi = m.max ?? Math.max(v, 1);
+    const pos = (x) => Math.max(0, Math.min(100, ((x - lo) / (hi - lo)) * 100));
+    const zero = pos(Math.max(lo, 0)), p = pos(v);
+    const left = Math.min(zero, p), width = Math.max(Math.abs(p - zero), 1.5);
+    return `<div class="track"><div class="fill ${cls}" style="left:${left}%;width:${width}%"></div>${tick}</div>`;
+  }
+  function renderScenarios() {
+    const S = state.scen, all = S.scenarios || [];
+    if (!all.length) { $("#sc-compare").innerHTML = `<p class="empty">Scenario data not loaded.</p>`; return; }
+    const sel = state.sc.sel.filter((id) => id === "" || scById(id));
+    $("#sc-about").innerHTML = `Pick up to three outlooks to compare on 2050 metrics. Tap a metric name for its definition.
+      <details><summary>How to read this</summary><p>Values come from each publisher's public summaries, using the latest edition. <b>~</b> = approximate or derived. "Not published" means the publisher doesn't report it publicly, so no estimate is shown. The thin vertical line on each bar marks today's value. Political achievability and suggested likelihood are Claude's editorial judgements, not data. Data updated ${esc(S.updated)}.</p></details>`;
+
+    // pickers
+    const opts = (cur, allowNone) => (allowNone ? `<option value="">— none —</option>` : "") +
+      all.map((s) => `<option value="${esc(s.id)}" ${s.id === cur ? "selected" : ""}>${esc(s.name)}</option>`).join("");
+    $("#sc-pickers").innerHTML = [0, 1, 2].map((i) =>
+      `<label class="sc-pick"><span class="sw c${i}"></span><select data-i="${i}" aria-label="Scenario ${i + 1}">${opts(sel[i] || "", i > 0)}</select></label>`).join("");
+    $("#sc-groups").innerHTML = SC_GROUPS.map(([k, l]) => `<button data-g="${k}" class="${state.sc.group === k ? "on" : ""}">${l}</button>`).join("");
+
+    const chosen = sel.map((id, i) => ({ s: scById(id), i })).filter((x) => x.s);
+    const today = S.today || {};
+    const metrics = (S.metrics || []).filter((m) => state.sc.group === "all" || m.group === state.sc.group);
+    $("#sc-compare").innerHTML = metrics.map((m) => {
+      const tv = today[m.id];
+      const todayTxt = tv == null ? "" : `today ${m.signed && tv > 0 ? "+" : ""}${tv}${m.unit === "%" ? "%" : m.unit ? " " + m.unit : ""}`;
+      const rows = chosen.map(({ s, i }) => {
+        const cell = s.values?.[m.id];
+        return `<div class="mrow"><span class="who"><span class="sw c${i}"></span>${esc(s.short)}</span>${scBar(m, cell?.v, "c" + i)}${scFmt(m, cell)}</div>`;
+      }).join("");
+      return `<div class="metric"><div class="metric-head"><button data-metric="${esc(m.id)}">${esc(m.label)}</button><span class="today">${esc(todayTxt)}</span></div>${rows}</div>`;
+    }).join("");
+
+    // electricity mix
+    const legend = `<div class="mix-legend"><span><i class="seg-ws"></i>Wind + solar</span><span><i class="seg-ren"></i>Other / all renewables</span><span><i class="seg-nuc"></i>Nuclear</span><span><i class="seg-fos"></i>Fossil</span><span><i class="seg-unk"></i>Not specified</span></div>`;
+    const mixToday = `<div class="mix-row"><div class="mix-label">Today (approx.)</div><div class="mixbar"><span class="seg-ws" style="width:15%"></span><span class="seg-ren" style="width:17%"></span><span class="seg-nuc" style="width:9%"></span><span class="seg-fos" style="width:59%"></span></div></div>`;
+    $("#sc-mix").innerHTML = legend + mixToday + chosen.map(({ s, i }) => {
+      const x = s.mix;
+      if (!x) return `<div class="mix-row"><div class="mix-label"><span class="sw c${i}"></span>${esc(s.short)}</div><div class="mixbar"><span class="seg-unk" style="width:100%"></span></div><div class="mix-note">The publisher doesn't report a 2050 electricity mix publicly.</div></div>`;
+      const segs = [];
+      if (x.windsolar != null) { segs.push(["seg-ws", x.windsolar, "Wind+solar"]); if (x.renewables != null) segs.push(["seg-ren", x.renewables - x.windsolar, "Other renewables"]); }
+      else if (x.renewables != null) segs.push(["seg-ren", x.renewables, "Renewables"]);
+      if (x.nuclear != null) segs.push(["seg-nuc", x.nuclear, "Nuclear"]);
+      if (x.fossil != null) segs.push(["seg-fos", x.fossil, "Fossil"]);
+      const sum = segs.reduce((a, b) => a + b[1], 0);
+      if (sum < 99.5) segs.push(["seg-unk", 100 - sum, "Not specified"]);
+      const bar = segs.filter((g) => g[1] > 0).map(([c, w, l]) => `<span class="${c}" style="width:${w}%" title="${l} ${Math.round(w)}%"></span>`).join("");
+      const lab = segs.filter((g) => g[1] > 0 && g[0] !== "seg-unk").map(([, w, l]) => `${l} ${x.approx ? "~" : ""}${Math.round(w)}%`).join(" · ");
+      return `<div class="mix-row"><div class="mix-label"><span class="sw c${i}"></span>${esc(s.short)}${x.year && x.year !== 2050 ? ` <span class="muted small">(${x.year})</span>` : ""}</div><div class="mixbar">${bar}</div><div class="mix-note">${esc(lab)}${x.note ? " — " + esc(x.note) : ""}</div></div>`;
+    }).join("");
+
+    // scores
+    const dots = (n) => "●".repeat(n) + `<span style="opacity:.25">${"●".repeat(5 - n)}</span>`;
+    $("#sc-scores").innerHTML = `<p class="muted small" style="margin:0 0 8px">Political achievability and the suggested likelihood are Claude's editorial judgements. Tap the stars to set your own likelihood; it's saved on this device.</p>` +
+      chosen.map(({ s, i }) => {
+        const mine = state.sc.mine[s.id];
+        const val = mine ?? s.likelihood?.score ?? 0;
+        const stars = [1, 2, 3, 4, 5].map((n) => `<button data-star="${n}" data-sc="${esc(s.id)}" class="${n <= val ? "on" : ""}" aria-label="${n} of 5">★</button>`).join("");
+        return `<div class="score-card"><h3><span class="sw c${i}"></span>${esc(s.name)}</h3>
+          <div class="score-line"><span class="k">Political achievability</span><div><span class="dots">${dots(s.political?.score || 0)}</span><p class="why">${highlight(esc(s.political?.why || ""))}</p></div></div>
+          <div class="score-line"><span class="k">Your likelihood</span><div><span class="stars">${stars}</span>
+            <p class="why">${mine != null ? `Your score. Suggested: ${s.likelihood?.score}/5. <button class="link small" data-reset="${esc(s.id)}">Reset</button>` : `Suggested ${s.likelihood?.score}/5`} — ${highlight(esc(s.likelihood?.why || ""))}</p></div></div>
+        </div>`;
+      }).join("");
+
+    // warming strip
+    const lo = 1, hi = 3.5;
+    const rowsW = all.map((s) => ({ s, t: s.values?.temp2100?.v })).filter((x) => x.t != null)
+      .concat((S.context || []).map((c) => ({ ref: c, t: c.temp }))).sort((a, b) => b.t - a.t);
+    $("#sc-strip").innerHTML = rowsW.map((r) => {
+      const w = Math.max(2, ((r.t - lo) / (hi - lo)) * 100);
+      const hue = Math.round(140 - Math.max(0, Math.min(1, (r.t - 1.4) / 1.6)) * 135);
+      if (r.ref) return `<div class="strip-row ref"><span class="who" title="${esc(r.ref.label)}">${esc(r.ref.short || r.ref.label)}</span><div class="track"><div class="fill" style="width:${w}%"></div></div><span class="sval">${r.t.toFixed(1)}°</span></div>`;
+      return `<button class="strip-row" data-pick="${esc(r.s.id)}"><span class="who">${esc(r.s.short)}</span><div class="track"><div class="fill" style="width:${w}%;background:hsl(${hue} 65% 45%)"></div></div><span class="sval">${r.t.toFixed(1)}°</span></button>`;
+    }).join("") + `<div class="strip-axis"><span></span><div><span>1.0 °C</span><span>1.5</span><span>2.0</span><span>2.5</span><span>3.0</span><span>3.5</span></div><span></span></div><p class="muted small">Tap a scenario to load it as the first comparison. Grey rows are UNEP's 2025 estimates for where current policies, NDC pledges, and NDCs plus all net-zero pledges lead.</p>`;
+
+    // list
+    const tf = state.sc.type;
+    $("#sc-type").innerHTML = [["all", "All"]].concat(Object.entries(SC_TYPE), Object.entries(SC_PUB)).map(([k, l]) =>
+      `<button class="chip ${tf === k ? "on" : ""}" data-type="${k}">${l}</button>`).join("");
+    const list = all.filter((s) => tf === "all" || s.type === tf || s.publisherType === tf);
+    $("#sc-list").innerHTML = list.map((s) => `<li class="card">
+      <div class="meta"><span class="sc-type-badge t-${esc(s.type)}">${esc(SC_TYPE[s.type] || s.type)}</span><span>${esc(SC_PUB[s.publisherType] || "")}</span></div>
+      <h3><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></h3>
+      <div class="design">${esc(s.publisher)} · ${esc(s.edition)}</div>
+      <p>${highlight(esc(s.summary))}</p>
+      ${s.facts?.length ? `<ul class="facts-list">${s.facts.map((f) => `<li>${highlight(esc(f))}</li>`).join("")}</ul>` : ""}
+      <p class="small">Model: ${esc(s.model)}</p>
+      <div class="cmp-btns">${[0, 1, 2].map((i) => `<button data-set="${i}" data-sc="${esc(s.id)}"><span class="sw c${i}"></span>Compare as ${i + 1}</button>`).join("")}</div>
+    </li>`).join("");
+
+    $("#sc-sources").innerHTML = `<strong>Sources</strong><ul>${(S.sources || []).map((x) => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></li>`).join("")}</ul>
+      <p>Exploratory = "what if current trends/policies continue"; normative = works back from a goal; forecast = the publisher's best guess. Edit <code>data/scenarios.json</code> to add or correct entries.</p>`;
+  }
+  function scSave() { store.set("scSel", state.sc.sel); store.set("scMine", state.sc.mine); }
+  $("#sc-pickers").addEventListener("change", (e) => { const s = e.target.closest("select"); if (!s) return; state.sc.sel[+s.dataset.i] = s.value; scSave(); renderScenarios(); });
+  $("#sc-groups").addEventListener("click", (e) => { const b = e.target.closest("[data-g]"); if (b) { state.sc.group = b.dataset.g; renderScenarios(); } });
+  $("#sc-type").addEventListener("click", (e) => { const b = e.target.closest("[data-type]"); if (b) { state.sc.type = b.dataset.type; renderScenarios(); } });
+  $("#view-scenarios").addEventListener("click", (e) => {
+    const st = e.target.closest("[data-star]");
+    if (st) { state.sc.mine[st.dataset.sc] = +st.dataset.star; scSave(); renderScenarios(); return; }
+    const rs = e.target.closest("[data-reset]");
+    if (rs) { delete state.sc.mine[rs.dataset.reset]; scSave(); renderScenarios(); return; }
+    const pk = e.target.closest("[data-pick]");
+    if (pk) { state.sc.sel[0] = pk.dataset.pick; scSave(); renderScenarios(); $("#sc-pickers").scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    const set = e.target.closest("[data-set]");
+    if (set) { state.sc.sel[+set.dataset.set] = set.dataset.sc; scSave(); renderScenarios(); $("#sc-pickers").scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    const mt = e.target.closest("[data-metric]");
+    if (mt) {
+      const m = (state.scen.metrics || []).find((x) => x.id === mt.dataset.metric); if (!m) return;
+      const terms = (m.terms || []).filter((t) => findTerm(t));
+      openSheet(`<h2>${esc(m.label)}</h2><p>${esc(m.desc)}</p>${terms.length ? `<div class="related">${terms.map((t) => `<button data-term="${esc(t)}">${esc(t)}</button>`).join("")}</div>` : ""}<div class="sheet-actions"><span></span><button class="btn ghost" data-close>Close</button></div>`);
+      return;
+    }
+    const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term);
+  });
+
   // ---------- LITERATURE ----------
   function litLink(i) {
     if (i.doi) return "https://doi.org/" + i.doi;
@@ -485,18 +624,20 @@
   // ---------- boot ----------
   async function boot() {
     applyTheme();
-    const [articles, sources, companies, gl, lit] = await Promise.all([
+    const [articles, sources, companies, gl, lit, scen] = await Promise.all([
       load("data/articles.json", state.articles),
       load("data/sources.json", { sources: [] }),
       load("data/companies.json", state.companies),
       load("data/glossary.json", state.glossaryBase),
       load("data/literature.json", state.literature),
+      load("data/scenarios.json", state.scen),
     ]);
+    state.scen = scen;
     state.literature = lit;
     state.articles = articles; state.sources = sources.sources || []; state.companies = companies; state.glossaryBase = gl;
     buildHighlighter();
     $("#updated").textContent = articles.generated ? "Updated " + relTime(articles.generated) : "";
-    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderLiterature(); renderSources();
+    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderScenarios(); renderLiterature(); renderSources();
     show(store.get("view", "feed"));
   }
   boot();
