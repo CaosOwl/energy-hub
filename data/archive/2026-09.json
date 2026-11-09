@@ -209,5 +209,19 @@
    "markets"
   ],
   "score": 2.38
+ },
+ {
+  "title": "Henry Hub natural gas prices this summer were 6% lower than last summer",
+  "link": "https://www.eia.gov/todayinenergy/detail.php?id=68204",
+  "summary": "The Henry Hub natural gas spot price averaged $2.93 per million British thermal units from June through August, 6% less than the same period last year. Prices were lower this summer despite exceptionally hot weather…",
+  "date": "2026-09-25T14:00+00:00",
+  "source": "eia",
+  "sourceName": "EIA – Today in Energy",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "markets"
+  ],
+  "score": 3.53
  }
 ]
