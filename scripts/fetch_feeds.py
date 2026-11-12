@@ -13,6 +13,7 @@ import ssl
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -24,7 +25,7 @@ ARCHIVE = DATA / "archive"
 WINDOW_DAYS = 45
 MAX_PER_SOURCE = 40
 TEASER_CHARS = 220
-UA = "EnergyHubBot/1.0 (+personal news reader; https://github.com/)"
+UA = "EnergyHubBot/1.0 (+personal news reader; https://github.com/CaosOwl/energy-hub)"
 
 NUCLEAR_KW = [
     "nuclear", "reactor", "smr", "small modular", "microreactor", "uranium", "haleu",
@@ -124,6 +125,14 @@ def fetch(url):
         return r.read()
 
 
+def fetch_source(s):
+    """Returns (items, error). Never raises, so one bad feed cannot stop the run."""
+    try:
+        return parse_feed(fetch(s["feed"]))[:MAX_PER_SOURCE], None
+    except Exception as e:
+        return [], f"{type(e).__name__}: {e}"[:200]
+
+
 def classify(text, source_topic):
     t = " " + text.lower() + " "
     tags = []
@@ -168,25 +177,33 @@ def main():
         except (json.JSONDecodeError, KeyError):
             pass
 
+    active = [s for s in sources if s.get("enabled", True) and s.get("feed") and s.get("access") != "paid"]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        results = list(pool.map(fetch_source, active))
+
+    cutoff = now - timedelta(days=WINDOW_DAYS)
     fresh, health = [], []
-    for s in sources:
-        if not s.get("enabled", True) or not s.get("feed") or s.get("access") == "paid":
-            continue
-        entry = {"id": s["id"], "name": s["name"], "ok": False, "count": 0, "error": None}
-        try:
-            items = parse_feed(fetch(s["feed"]))[:MAX_PER_SOURCE]
-            for it in items:
-                tags, nh = classify(it["title"] + " " + it["summary"], s.get("topic", ""))
-                fresh.append({
-                    "title": it["title"], "link": it["link"], "summary": it["summary"],
-                    "date": (it["date"] or now).isoformat(timespec="minutes"),
-                    "source": s["id"], "sourceName": s["name"], "access": s.get("access", "open"),
-                    "region": s.get("region", ""), "tags": tags,
-                    "score": score(it, float(s.get("weight", 1.0)), nh, now),
-                })
-            entry.update(ok=True, count=len(items))
-        except Exception as e:  # keep going; report in health
-            entry["error"] = f"{type(e).__name__}: {e}"[:200]
+    for s, (items, error) in zip(active, results):
+        entry = {"id": s["id"], "name": s["name"], "ok": error is None, "count": len(items), "error": error}
+        if error is None and not items:
+            # A feed that parses but is empty is almost always a moved or blocked feed.
+            entry.update(ok=False, error="Feed returned no items")
+        for it in items:
+            seen = previous.get(it["link"])
+            # Undated items keep the date they were first seen, so they age like the rest.
+            date = it["date"] or (parse_date(seen["date"]) if seen else None) or now
+            if date > now:
+                date = now
+            if date < cutoff and not seen:
+                continue  # already older than the window: neither show nor archive
+            tags, _ = classify(it["title"] + " " + it["summary"], s.get("topic", ""))
+            fresh.append({
+                "title": it["title"], "link": it["link"], "summary": it["summary"],
+                "date": date.isoformat(timespec="minutes"),
+                "source": s["id"], "sourceName": s["name"], "access": s.get("access", "open"),
+                "region": s.get("region", ""), "tags": tags,
+                "score": 0,  # set below, together with older items
+            })
         health.append(entry)
         print(("OK  " if entry["ok"] else "ERR ") + s["id"], entry["count"], entry["error"] or "", file=sys.stderr)
 
@@ -200,7 +217,6 @@ def main():
         nh = sum(1 for k in NUCLEAR_KW if k in (it["title"] + " " + it["summary"]).lower())
         it["score"] = score({"date": d}, weight, nh, now)
 
-    cutoff = now - timedelta(days=WINDOW_DAYS)
     keep, old = [], []
     for it in merged.values():
         (keep if (parse_date(it["date"]) or now) >= cutoff else old).append(it)

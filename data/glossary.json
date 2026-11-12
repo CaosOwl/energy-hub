@@ -1,5 +1,5 @@
 {
-  "_about": "Your energy glossary. Add, edit or remove entries freely. level: 1 basics, 2 intermediate, 3 expert. category: nuclear | markets | transition | tech. Edits made in the app are stored on your phone; use Export there to copy them back into this file.",
+  "_about": "Your energy glossary. Add, edit or remove entries freely. level: 1 basics, 2 intermediate, 3 expert. category: nuclear | markets | transition | tech | modelling. Edits made in the app are stored on your phone; use Export there to copy them back into this file.",
   "terms": [
     {
       "term": "SMR",
@@ -752,7 +752,7 @@
     {
       "term": "Exploratory scenario",
       "full": "",
-      "category": "transition",
+      "category": "modelling",
       "level": 2,
       "definition": "A scenario that asks 'what happens if…?' — e.g. current policies continue or costs keep falling — and lets the outcome (emissions, warming) emerge. Contrast with a normative scenario.",
       "related": [
@@ -763,7 +763,7 @@
     {
       "term": "Normative scenario",
       "full": "",
-      "category": "transition",
+      "category": "modelling",
       "level": 2,
       "definition": "A scenario that starts from a target (e.g. net zero by 2050, 1.5 °C) and works backwards to find a pathway that meets it. It shows what is needed, not what is likely. Also called a back-casting scenario.",
       "related": [
@@ -774,7 +774,7 @@
     {
       "term": "IAM",
       "full": "Integrated Assessment Model",
-      "category": "transition",
+      "category": "modelling",
       "level": 2,
       "definition": "A model that links the energy system, economy, land use and climate in one framework (e.g. MESSAGE, REMIND, IMAGE, GCAM). The IPCC's mitigation pathways come from IAMs. Broad in scope but coarse in time and space.",
       "related": [
@@ -786,7 +786,7 @@
     {
       "term": "ESOM",
       "full": "Energy System Optimisation Model",
-      "category": "tech",
+      "category": "modelling",
       "level": 3,
       "definition": "A bottom-up model that finds the least-cost mix of technologies to meet energy demand under constraints such as a CO₂ cap (e.g. TIMES, OSeMOSYS, PyPSA). Rich in technology detail; its 'optimal' answer is sensitive to cost assumptions.",
       "related": [
@@ -879,7 +879,7 @@
     {
       "term": "SSP",
       "full": "Shared Socioeconomic Pathways",
-      "category": "transition",
+      "category": "modelling",
       "level": 3,
       "definition": "Five storylines (SSP1–SSP5) about population, economic growth, inequality and technology that IAM teams use as common starting points for climate scenarios, e.g. SSP2 'middle of the road'.",
       "related": [
@@ -890,7 +890,7 @@
     {
       "term": "Model intercomparison",
       "full": "",
-      "category": "transition",
+      "category": "modelling",
       "level": 3,
       "definition": "Running several independent models on the same question with harmonised assumptions. Findings shared across models are considered robust; disagreements show where structure or assumptions drive results.",
       "related": [
@@ -901,7 +901,7 @@
     {
       "term": "Near-optimal analysis",
       "full": "Modelling to Generate Alternatives (MGA)",
-      "category": "tech",
+      "category": "modelling",
       "level": 3,
       "definition": "Searching for very different energy systems whose cost is only slightly above the least-cost optimum. Shows that many system designs cost about the same, so the choice can rest on other criteria.",
       "related": [
@@ -911,7 +911,7 @@
     {
       "term": "Perfect foresight",
       "full": "",
-      "category": "tech",
+      "category": "modelling",
       "level": 3,
       "definition": "A modelling assumption that investors know all future costs, demand and policy when they decide. Common in optimisation models; it tends to make transitions look smoother and cheaper than in reality.",
       "related": [
@@ -1013,6 +1013,86 @@
         "HALEU",
         "Enrichment",
         "LWR"
+      ]
+    },
+    {
+      "term": "Scenario",
+      "full": "",
+      "category": "modelling",
+      "level": 1,
+      "definition": "An internally consistent 'what if' description of a possible future, not a forecast. Normative scenarios start from a target (e.g. 1.5 °C) and work backwards; exploratory ones follow assumptions forwards.",
+      "related": [
+        "IAM",
+        "Model intercomparison"
+      ]
+    },
+    {
+      "term": "MGA",
+      "full": "Modelling to Generate Alternatives",
+      "category": "modelling",
+      "level": 3,
+      "definition": "A technique that looks for very different system designs costing only slightly more than the optimum, showing how much freedom of choice hides behind a single 'least-cost' answer.",
+      "related": [
+        "ESOM",
+        "Near-optimal analysis"
+      ]
+    },
+    {
+      "term": "System LCOE",
+      "full": "",
+      "category": "modelling",
+      "level": 2,
+      "definition": "Plant-level LCOE plus the integration costs a technology causes in the system (profile, balancing, grid). Lets variable and firm technologies be compared on a like-for-like basis.",
+      "related": [
+        "LCOE",
+        "System costs",
+        "VRE"
+      ]
+    },
+    {
+      "term": "VRE",
+      "full": "Variable Renewable Energy",
+      "category": "modelling",
+      "level": 1,
+      "definition": "Wind and solar power, whose output follows the weather rather than demand. How well a model captures their variability largely determines its results for high-renewable systems.",
+      "related": [
+        "Intermittency",
+        "Curtailment",
+        "Market value"
+      ]
+    },
+    {
+      "term": "Market value",
+      "full": "",
+      "category": "markets",
+      "level": 2,
+      "definition": "The average price a technology earns for its output. For wind and solar it falls as their share grows, because they all produce at the same times (the 'cannibalisation' effect).",
+      "related": [
+        "VRE",
+        "Merit order",
+        "Negative prices"
+      ]
+    },
+    {
+      "term": "Soft-linking",
+      "full": "",
+      "category": "modelling",
+      "level": 3,
+      "definition": "Running two models in sequence and passing results between them, for example a long-term investment model and an hourly dispatch model, to capture detail neither holds alone.",
+      "related": [
+        "ESOM",
+        "Temporal resolution"
+      ]
+    },
+    {
+      "term": "Temporal resolution",
+      "full": "",
+      "category": "modelling",
+      "level": 2,
+      "definition": "How finely a model divides time. Coarse time steps hide the variability of wind, solar and demand and tend to undervalue flexibility and storage.",
+      "related": [
+        "Soft-linking",
+        "VRE"
       ]
     }
   ]

@@ -4,36 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news, nuclear focus, glossary, reactor company tracker, energy scenario comparison and energy-system modelling literature.">
-  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, glossary, scenario comparison and modelling literature.">
+  <meta name="theme-color" content="#04121f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f2f6f8" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { var t = JSON.parse(localStorage.getItem("eh.theme")); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
+  <a class="skip" href="#app">Skip to content</a>
+
   <header class="topbar">
     <div class="brand">
       <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3.2"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="13" ry="5" fill="none" transform="rotate(120 16 16)"/></svg>
+      <span class="brand-name">Energy Hub</span>
       <h1 id="view-title">Feed</h1>
     </div>
     <div class="top-actions">
-      <span id="updated" class="muted small"></span>
-      <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">◐</button>
+      <span id="updated" class="updated"></span>
+      <button id="theme-btn" class="icon-btn" aria-label="Change theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z"/></svg>
+      </button>
     </div>
   </header>
 
-  <main id="app">
+  <nav class="tabbar" aria-label="Sections">
+    <button data-view="feed" class="on">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Feed</button>
+    <button data-view="companies">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="1.6" class="fill"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/></svg>Builders</button>
+    <button data-view="glossary">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h10.5M9 8.5h5.5"/></svg>Glossary</button>
+    <button data-view="scenarios">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M7 16V9.5M12 16V5M17 16v-4"/></svg>Scenarios</button>
+    <button data-view="literature">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h8l4 4V20.5h-12zM14.5 3.5v4h4M9.5 12h6M9.5 16h6"/></svg>Literature</button>
+    <button data-view="sources">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14"/><circle cx="6" cy="18" r="1.4" class="fill"/></svg>Sources</button>
+  </nav>
+
+  <main id="app" tabindex="-1">
     <!-- FEED -->
     <section id="view-feed" class="view" data-title="Feed">
       <div class="toolbar">
-        <input id="feed-search" class="search" type="search" placeholder="Search headlines…" autocomplete="off">
+        <input id="feed-search" class="search" type="search" placeholder="Search headlines" aria-label="Search headlines" autocomplete="off">
+        <div id="feed-mix" class="mix" role="group" aria-label="Stories by topic"></div>
         <div class="chips" id="feed-chips"></div>
         <div class="row">
-          <div class="seg" role="tablist" id="feed-sort">
+          <div class="seg" id="feed-sort" role="group" aria-label="Sort stories">
             <button data-sort="score" class="on">Top</button>
             <button data-sort="date">Latest</button>
             <button data-sort="saved">Saved</button>
@@ -42,27 +69,29 @@
         </div>
       </div>
       <div id="health-panel" class="panel hidden"></div>
-      <ul id="feed-list" class="cards"></ul>
+      <div id="feed-lead"></div>
+      <ul id="feed-list" class="rows"></ul>
+      <div class="more"><button id="feed-more" class="btn ghost hidden">Show more stories</button></div>
     </section>
 
     <!-- COMPANIES -->
     <section id="view-companies" class="view hidden" data-title="Reactor builders">
       <div class="toolbar">
-        <input id="co-search" class="search" type="search" placeholder="Search companies, designs, tech…" autocomplete="off">
+        <input id="co-search" class="search" type="search" placeholder="Search companies, designs, technology" aria-label="Search companies" autocomplete="off">
         <div class="chips" id="co-kind"></div>
         <div class="chips" id="co-stage"></div>
       </div>
-      <p class="muted small" id="co-note"></p>
-      <ul id="co-list" class="cards"></ul>
+      <p class="note" id="co-note"></p>
+      <ul id="co-list" class="grid"></ul>
     </section>
 
     <!-- GLOSSARY -->
     <section id="view-glossary" class="view hidden" data-title="Glossary">
       <div class="toolbar">
-        <input id="gl-search" class="search" type="search" placeholder="Search terms…" autocomplete="off">
+        <input id="gl-search" class="search" type="search" placeholder="Search terms" aria-label="Search terms" autocomplete="off">
         <div class="chips" id="gl-cat"></div>
         <div class="row">
-          <div class="seg" id="gl-level">
+          <div class="seg" id="gl-level" role="group" aria-label="Level">
             <button data-level="0" class="on">All</button>
             <button data-level="1">Basics</button>
             <button data-level="2">Mid</button>
@@ -70,73 +99,66 @@
           </div>
           <div class="row gap">
             <button id="gl-cards" class="btn ghost">Flashcards</button>
-            <button id="gl-add" class="btn">+ Term</button>
+            <button id="gl-add" class="btn">Add term</button>
           </div>
         </div>
-        <div class="row small muted">
-          <span id="gl-progress"></span>
-          <span class="row gap"><button id="gl-unlearned" class="link">Hide learned</button><button id="gl-export" class="link">Export</button></span>
+        <div class="progress-row">
+          <div class="progress" aria-hidden="true"><span id="gl-bar"></span></div>
+          <span id="gl-progress" class="small muted"></span>
+          <button id="gl-unlearned" class="link small">Hide learned</button>
+          <button id="gl-export" class="link small">Export</button>
         </div>
       </div>
-      <ul id="gl-list" class="cards"></ul>
+      <ul id="gl-list" class="grid"></ul>
     </section>
 
     <!-- SCENARIOS -->
     <section id="view-scenarios" class="view hidden" data-title="Scenarios">
-      <div class="muted small intro" id="sc-about"></div>
+      <div class="note" id="sc-about"></div>
       <div class="sc-pickers" id="sc-pickers"></div>
-      <div class="seg sc-groups" id="sc-groups"></div>
-      <div id="sc-compare"></div>
+      <div class="chips"><div class="seg" id="sc-groups" role="group" aria-label="Metric group"></div></div>
+      <div id="sc-compare" class="sc-block"></div>
       <h2 class="sc-h">Electricity mix in 2050</h2>
-      <div id="sc-mix"></div>
+      <div id="sc-mix" class="sc-panel"></div>
       <h2 class="sc-h">Achievability and likelihood</h2>
       <div id="sc-scores"></div>
-      <h2 class="sc-h">Warming by 2100 — all scenarios</h2>
-      <div id="sc-strip"></div>
+      <h2 class="sc-h">Warming by 2100, all scenarios</h2>
+      <div id="sc-strip" class="sc-panel"></div>
       <h2 class="sc-h">All scenarios</h2>
-      <div class="chips" id="sc-type"></div>
-      <ul id="sc-list" class="cards"></ul>
-      <div id="sc-sources" class="small muted"></div>
+      <div class="chips" id="sc-type" style="margin-bottom:10px"></div>
+      <ul id="sc-list" class="grid"></ul>
+      <div id="sc-sources" class="note"></div>
     </section>
 
     <!-- LITERATURE -->
     <section id="view-literature" class="view hidden" data-title="Literature">
+      <p class="note" id="lit-about"></p>
       <div class="toolbar">
-        <input id="lit-search" class="search" type="search" placeholder="Search title, author, finding…" autocomplete="off">
+        <input id="lit-search" class="search" type="search" placeholder="Search title, author, finding" aria-label="Search literature" autocomplete="off">
         <div class="chips" id="lit-cat"></div>
         <div class="row">
-          <div class="seg" id="lit-sort">
-            <button data-sort="category" class="on">By topic</button>
+          <div class="seg" id="lit-sort" role="group" aria-label="Order">
+            <button data-sort="category" class="on">By theme</button>
             <button data-sort="newest">Newest</button>
             <button data-sort="oldest">Oldest</button>
           </div>
-          <button id="lit-nuc" class="chip">⚛ Nuclear only</button>
+          <label class="check"><input type="checkbox" id="lit-nuclear"> Nuclear-relevant only</label>
         </div>
       </div>
-      <p class="muted small" id="lit-note"></p>
       <div id="lit-list"></div>
     </section>
 
     <!-- SOURCES -->
     <section id="view-sources" class="view hidden" data-title="Sources">
-      <p class="muted small intro">What the feed reads. Open sources are fetched; partial ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change.</p>
+      <p class="note">What the feed reads. Open sources are fetched; partly paywalled ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change the list.</p>
       <div id="src-groups"></div>
     </section>
   </main>
 
-  <nav class="tabbar" aria-label="Sections">
-    <button data-view="feed" class="on"><span class="ti">▤</span>Feed</button>
-    <button data-view="companies"><span class="ti">⚛</span>Builders</button>
-    <button data-view="glossary"><span class="ti">Aa</span>Glossary</button>
-    <button data-view="scenarios"><span class="ti">⚖</span>Scenarios</button>
-    <button data-view="literature"><span class="ti">❡</span>Studies</button>
-    <button data-view="sources"><span class="ti">⌘</span>Sources</button>
-  </nav>
-
   <!-- Term popover / editor / flashcards -->
-  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true">
+  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Details">
     <div class="sheet-backdrop" data-close></div>
-    <div class="sheet-body" id="sheet-body"></div>
+    <div class="sheet-body" id="sheet-body" tabindex="-1"></div>
   </div>
 
   <script src="app.js"></script>

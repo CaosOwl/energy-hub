@@ -1,12 +1,12 @@
 {
   "name": "Energy Hub",
   "short_name": "Energy Hub",
-  "description": "Energy news with a nuclear focus, reactor builders and a personal glossary.",
+  "description": "Energy news with a nuclear focus, reactor builders, a personal glossary and modelling literature.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b1220",
-  "theme_color": "#0b1220",
+  "background_color": "#04121f",
+  "theme_color": "#04121f",
   "icons": [
     { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
