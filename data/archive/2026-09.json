@@ -223,5 +223,20 @@
    "markets"
   ],
   "score": 3.53
+ },
+ {
+  "title": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
+  "link": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
+  "summary": "We estimate light-duty electric vehicles in the United States consumed 8% more electricity during the first six months of 2026 than in the last half of 2025 (2H25) in our Monthly Energy Review, down from the 13-24%…",
+  "date": "2026-09-30T14:00+00:00",
+  "source": "eia",
+  "sourceName": "EIA – Today in Energy",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "transition",
+   "markets"
+  ],
+  "score": 3.54
  }
 ]
