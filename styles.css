@@ -261,6 +261,18 @@ main { max-width: 760px; margin: 0 auto; padding: 14px 16px 24px; outline: none;
 .paper .finding { margin: 9px 0 0; font: 400 .97rem/1.5 var(--read); max-width: 70ch; }
 .paper .why { margin: 6px 0 0; font-size: .85rem; color: var(--muted); max-width: 70ch; }
 
+.paper .card-actions { margin-top: 0; padding-top: 10px; flex-wrap: wrap; gap: 6px 18px; }
+.paper-title { font-size: 1.3rem !important; line-height: 1.18; }
+.sheet-tabs { display: flex; margin: 14px 0 4px; }
+.sheet-tabs button { flex: 1; }
+.paper-panel { min-height: 180px; }
+.assume { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.assume li { position: relative; padding-left: 16px; font: 400 .98rem/1.5 var(--read); }
+.assume li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--nuclear); }
+.sheet-body p.basis { font: 400 .8rem/1.4 var(--ui); color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; margin-top: 14px; }
+.sheet-actions a.btn { text-decoration: none; }
+@media (min-width: 700px) { .sheet-body { max-width: 640px; } }
+
 /* scenarios */
 .sc-h { font-size: 1.3rem; margin: 26px 0 10px; }
 .sc-pickers { display: grid; gap: 8px; margin-bottom: 12px; }

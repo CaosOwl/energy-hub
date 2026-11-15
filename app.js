@@ -522,6 +522,7 @@
       <div class="badges"><span class="badge type">${esc(p.type)}</span>${p.nuclear ? '<span class="badge nuc">Nuclear-relevant</span>' : ""}${p.perspective ? `<span class="badge">${esc(p.perspective)}</span>` : ""}</div>
       <p class="finding">${highlight(esc(p.finding))}</p>
       <p class="why">Why it matters: ${esc(p.why)}</p>
+      <div class="card-actions"><a href="${esc(paperLink(p))}" target="_blank" rel="noopener">Read the original</a><button class="link" data-paper="${esc(p.id)}" data-tab="assumptions">Assumptions</button><button class="link" data-paper="${esc(p.id)}" data-tab="authors">Authors</button></div>
     </article>`;
   }
   function renderLiterature() {
@@ -555,7 +556,35 @@
     state.lit.sort = b.dataset.sort; segOn($("#lit-sort"), b); renderLiterature();
   });
   $("#lit-nuclear").addEventListener("change", (e) => { state.lit.nuclear = e.target.checked; renderLiterature(); });
-  $("#lit-list").addEventListener("click", (e) => { const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term); });
+  $("#lit-list").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-paper]"); if (b) return openPaper(b.dataset.paper, b.dataset.tab);
+    const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term);
+  });
+
+  // Study details: summary, assumptions and authors, each on its own tab.
+  const CHECKED = {
+    full: "Checked against the full text of the study.",
+    summary: "Taken from the publisher's summary or abstract; the full text may state more.",
+    outline: "Outline only: not yet checked line by line against the original, so treat it as a guide to what to look for.",
+  };
+  function openPaper(id, tab = "summary") {
+    const p = state.literature.items.find((x) => x.id === id); if (!p) return;
+    const tabs = [["summary", "Summary"], ["assumptions", "Assumptions"], ["authors", "Authors"]];
+    const panel = {
+      summary: () => `<p>${highlight(esc(p.finding))}</p><p class="muted">Why it matters: ${esc(p.why)}</p>`,
+      assumptions: () => p.assumptions?.length
+        ? `<ul class="assume">${p.assumptions.map((a) => `<li>${highlight(esc(a))}</li>`).join("")}</ul><p class="basis">${esc(CHECKED[p.checked] || "")}</p>`
+        : `<p class="muted">No assumptions recorded for this study yet. Add an <code>assumptions</code> list to its entry in <code>data/literature.json</code>.</p>`,
+      authors: () => `<p class="muted">${esc(String(p.authors).replace(/\.$/, ""))}</p>${p.group ? `<p>${esc(p.group)}</p>` : `<p class="muted">No author note recorded yet.</p>`}`,
+    };
+    openSheet(`<h2 class="paper-title">${esc(p.title)}</h2>
+      <div class="cite"><em>${esc(p.year)}</em> ${esc(p.venue)}</div>
+      <div class="seg sheet-tabs" role="tablist">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${k === tab}" class="${k === tab ? "on" : ""}" data-ptab="${k}">${l}</button>`).join("")}</div>
+      <div class="paper-panel" role="tabpanel">${(panel[tab] || panel.summary)()}</div>
+      <div class="sheet-actions"><span class="row gap"><a class="btn ghost" href="${esc(paperLink(p))}" target="_blank" rel="noopener">Read the original</a>${p.open ? `<a class="link small" href="${esc(p.open)}" target="_blank" rel="noopener">Free version</a>` : ""}</span><button class="btn" data-close>Done</button></div>`);
+    $$("[data-ptab]", body).forEach((b) => (b.onclick = () => openPaper(id, b.dataset.ptab)));
+    $$("[data-term]", body).forEach((b) => (b.onclick = () => openTerm(b.dataset.term)));
+  }
 
   // ---------- sheet (popover / editor / export / flashcards) ----------
   const sheet = $("#sheet"), body = $("#sheet-body");

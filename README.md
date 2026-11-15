@@ -30,7 +30,7 @@ After that, the workflow runs every 3 hours and on every push.
 - **Sources:** edit `data/sources.json`. `enabled: false` mutes a source, `weight` (0.5–2.0) ranks it lower/higher. `access: "paid"` entries are listed but never fetched.
 - **Companies:** edit `data/companies.json`. `stage` is one of `concept`, `design`, `licensing`, `construction`, `critical`, `experiment`, `operating`. Add `"swiss": true` to tag a Swiss link.
 - **Glossary:** edit `data/glossary.json` directly, or edit in the app and use **Export** to download the merged file, then replace `data/glossary.json` with it.
-- **Literature:** edit `data/literature.json`. Each item needs `category` (one of the ids in `categories`), `type`, `title`, `authors`, `year`, `venue`, `finding`, `why`; `doi` or `url`, `nuclear: true` and `perspective` are optional.
+- **Literature:** edit `data/literature.json`. Each item needs `category` (one of the ids in `categories`), `type`, `title`, `authors`, `year`, `venue`, `finding`, `why`; always give a `doi` or `url` so the entry links to the original. `assumptions` (a list of sentences), `checked` (`full`, `summary` or `outline`: how closely the assumptions were checked against the study), `group` (a short note on the authors), `open` (link to a free version), `nuclear: true` and `perspective` are optional.
 - **Failing feeds:** the Feed tab shows "N of M feeds failing" and the Sources tab shows the error. Fix the address, or set `"feed": null` to list the source as visit-directly. A feed that answers but is empty also counts as failing.
 
 ## Run locally

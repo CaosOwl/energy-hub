@@ -1,14 +1,38 @@
 {
   "title": "Energy system modelling for the energy transition",
-  "updated": "2026-11-09",
-  "about": "Curated high-quality literature: assessment reports, meta-studies, systematic reviews, model intercomparisons, methodological standards and landmark modelling studies. Key findings are short paraphrases; read the originals before citing.",
+  "updated": "2026-11-15",
+  "about": "Curated high-quality literature: assessment reports, meta-studies, systematic reviews, model intercomparisons, methodological standards and landmark modelling studies. Key findings are short paraphrases; read the originals before citing. Each entry links to the original and lists its main assumptions and who wrote it.",
   "categories": [
-    { "id": "assessments", "label": "Assessments & scenario databases", "blurb": "Consensus reports and large scenario ensembles. Start here." },
-    { "id": "meta", "label": "Meta-studies & model intercomparisons", "blurb": "Studies that synthesise many studies or run many models on the same question." },
-    { "id": "reviews", "label": "Reviews of models & tools", "blurb": "Systematic and narrative reviews of the modelling landscape." },
-    { "id": "methods", "label": "Methods & good practice", "blurb": "How to model well: uncertainty, resolution, alternatives, openness." },
-    { "id": "accuracy", "label": "Track record & assumptions", "blurb": "Ex-post checks of how past projections performed and why." },
-    { "id": "landmark", "label": "Landmark modelling studies", "blurb": "Single studies that shaped the debate, from top journals." }
+    {
+      "id": "assessments",
+      "label": "Assessments & scenario databases",
+      "blurb": "Consensus reports and large scenario ensembles. Start here."
+    },
+    {
+      "id": "meta",
+      "label": "Meta-studies & model intercomparisons",
+      "blurb": "Studies that synthesise many studies or run many models on the same question."
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews of models & tools",
+      "blurb": "Systematic and narrative reviews of the modelling landscape."
+    },
+    {
+      "id": "methods",
+      "label": "Methods & good practice",
+      "blurb": "How to model well: uncertainty, resolution, alternatives, openness."
+    },
+    {
+      "id": "accuracy",
+      "label": "Track record & assumptions",
+      "blurb": "Ex-post checks of how past projections performed and why."
+    },
+    {
+      "id": "landmark",
+      "label": "Landmark modelling studies",
+      "blurb": "Single studies that shaped the debate, from top journals."
+    }
   ],
   "items": [
     {
@@ -23,7 +47,18 @@
       "finding": "Limiting warming to 1.5–2 °C requires energy-sector CO2 to reach net zero around mid-century, through electrification, efficiency, a rapid build-out of low-carbon supply and a phase-down of unabated fossil fuels. The roles of nuclear and CCS vary widely across pathways.",
       "why": "The broadest consensus assessment available, synthesising thousands of peer-reviewed studies.",
       "nuclear": true,
-      "tags": ["consensus", "global", "pathways"]
+      "tags": [
+        "consensus",
+        "global",
+        "pathways"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "An assessment of published literature, not a new model run: conclusions carry the IPCC's calibrated confidence language rather than a single set of input assumptions.",
+        "Pathway numbers come from the AR6 scenario ensemble (see Chapter 3 and the AR6 Scenarios Database), so they inherit those models' cost, technology and socio-economic assumptions.",
+        "Technology roles such as nuclear and CCS are reported as ranges across pathways, because the underlying models disagree."
+      ],
+      "group": "Written by an international author team nominated by governments and selected by the IPCC, led by coordinating lead authors Leon Clarke (USA) and Yi-Ming Wei (China). Drafts go through several rounds of expert and government review, and governments approve the Summary for Policymakers line by line."
     },
     {
       "id": "ipcc-ar6-wg3-ch3",
@@ -37,7 +72,23 @@
       "finding": "Assesses the full AR6 ensemble of integrated-assessment pathways by warming category, showing which system changes are robust across models and which depend on model choice.",
       "why": "The definitive meta-analysis of global integrated assessment model (IAM) scenarios.",
       "nuclear": true,
-      "tags": ["IAM", "scenarios", "consensus"]
+      "tags": [
+        "IAM",
+        "scenarios",
+        "consensus"
+      ],
+      "checked": "full",
+      "assumptions": [
+        "Built on the AR6 scenarios database: 3,131 submitted scenarios, of which 2,266 are global; 1,686 passed vetting and 1,202 had enough data to be given a temperature category.",
+        "The vetted scenarios come from over 50 model families (over 100 counting versions).",
+        "The ensemble is 'an ensemble of opportunity' with no designed statistical sampling, so simple statistics across it can mislead.",
+        "Warming outcomes are computed with climate emulators (FAIR, CICERO-SCM, MAGICC; MAGICC results are shown) and sorted into categories C1 to C8, e.g. C1 = limit warming to 1.5 °C (>50%) with no or limited overshoot, C3 = limit to 2 °C (>67%).",
+        "Most pathways assume cost-effective global action and make no additional equity assumptions.",
+        "Socio-economic drivers follow the Shared Socioeconomic Pathways (SSPs), published in 2017 and partly dated.",
+        "Carbon dioxide removal is mostly limited to BECCS, afforestation and direct air capture with storage.",
+        "The vast majority of pathways do not include climate impacts; social and institutional factors and demand-side measures are represented only roughly; policy assumptions are simplified."
+      ],
+      "group": "Coordinating lead authors are Keywan Riahi (Austria; he directs the energy and climate programme at IIASA, which hosts the scenario database) and Roberto Schaeffer (Brazil; Federal University of Rio de Janeiro). The wider author team is drawn from the integrated-assessment modelling community, so the chapter is in part that community assessing its own models."
     },
     {
       "id": "ar6-scenario-db",
@@ -52,7 +103,19 @@
       "finding": "Open, harmonised dataset of the model pathways behind AR6. You can pull your own ranges, e.g. nuclear, wind or solar shares by warming category.",
       "why": "Lets you check claims about 'what the models say' directly against the data.",
       "nuclear": true,
-      "tags": ["data", "open", "IAM"]
+      "tags": [
+        "data",
+        "open",
+        "IAM"
+      ],
+      "checked": "summary",
+      "assumptions": [
+        "A collection, not a model: each scenario keeps the assumptions of the model that produced it. Only the reporting format is harmonised, not the inputs.",
+        "3,131 scenarios were submitted; 1,686 global scenarios passed vetting against recent historical data and 1,202 could be assigned a temperature category (figures from IPCC AR6 WG3 Chapter 3).",
+        "Submission was voluntary, so the mix of models and scenario designs is uneven: some model families and study designs are heavily over-represented.",
+        "Temperature categories are assigned afterwards with a climate emulator, the same for all scenarios."
+      ],
+      "group": "Hosted by the International Institute for Applied Systems Analysis (IIASA, Laxenburg, Austria) on behalf of the Integrated Assessment Modeling Consortium (IAMC). The curators (Edward Byers, Volker Krey, Elmar Kriegler, Keywan Riahi and colleagues) work at IIASA and the Potsdam Institute for Climate Impact Research and were also AR6 authors."
     },
     {
       "id": "iea-nze-2023",
@@ -66,7 +129,20 @@
       "finding": "Normative 1.5 °C pathway built on tripling renewable capacity and doubling efficiency gains by 2030, with nuclear capacity also expanding substantially by 2050.",
       "why": "Highly influential and detailed, but a single-model pathway — compare it with the IPCC ranges.",
       "nuclear": true,
-      "tags": ["global", "normative", "IEA"]
+      "tags": [
+        "global",
+        "normative",
+        "IEA"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "A normative scenario: it starts from the 1.5 °C goal and works backwards, so it shows what would be needed, not what the IEA expects.",
+        "Run with the IEA's Global Energy and Climate Model, a single modelling framework.",
+        "Assumes rapid, coordinated policy action in all countries, with advanced economies reaching net zero earlier than emerging and developing economies.",
+        "Assumes no need for new long-lead-time oil and gas fields or new unabated coal plants, universal energy access by 2030, and limited reliance on bioenergy and on carbon removal compared with many IPCC pathways.",
+        "The IEA's public page could not be read while compiling this entry, so check the report's own scenario-design chapter for exact figures."
+      ],
+      "group": "The International Energy Agency is an intergovernmental body in Paris, founded in 1974 within the OECD framework and funded by its member governments. Its World Energy Outlook team produces the scenarios; they are the most widely used reference in energy policy, and the agency's past projections for renewables have been criticised as too cautious (see the track-record studies in this list)."
     },
     {
       "id": "nea-2019",
@@ -79,7 +155,24 @@
       "finding": "Plant-level costs understate the full cost of high variable-renewable systems; grid, balancing and profile costs rise with the VRE share. In the cases modelled, mixes keeping dispatchable low-carbon capacity had lower total system cost.",
       "why": "Clear, widely cited framework for system costs. Read with the publisher's nuclear mandate in mind.",
       "nuclear": true,
-      "tags": ["system costs", "OECD"]
+      "tags": [
+        "system costs",
+        "OECD"
+      ],
+      "url": "https://www.oecd-nea.org/jcms/pl_15000/the-costs-of-decarbonisation-system-costs-with-high-shares-of-nuclear-and-renewables",
+      "open": "https://cms.oecd-nea.org/upload/docs/application/pdf/2019-12/7335-system-costs-es.pdf",
+      "checked": "full",
+      "assumptions": [
+        "All scenarios must meet the same carbon limit of 50 gCO2 per kWh.",
+        "Eight scenarios: a base case with no wind or solar, then 10%, 30%, 50% and 75% wind-and-solar shares imposed from outside the model, plus three sensitivities (low renewables cost, no interconnections, no interconnections and no flexible hydro).",
+        "Models a 'representative OECD country': a mid-sized system with interconnections to neighbours and a relatively high share of flexible hydro. Installed capacity runs from about 98 GW (base) to more than 325 GW (75% case).",
+        "Greenfield: the system is optimised from a clean slate for 2050, ignoring today's plants; only hydro capacity is fixed in advance.",
+        "Renewable shares are set as inputs rather than chosen by the model, so the study measures what each share costs, not which share is cheapest.",
+        "Plant-level costs of about USD 60/MWh for onshore wind and up to about USD 130/MWh for solar PV; the low-cost sensitivity cuts wind and solar capital costs by one to two thirds.",
+        "Run with MIT's GenX model: hourly dispatch, ramping limits and reserve requirements.",
+        "The executive summary does not state the nuclear capital cost or the discount rate; these are in the full report."
+      ],
+      "group": "Published by the OECD Nuclear Energy Agency in Paris, an intergovernmental agency whose mission is to support its member countries' use of nuclear energy. The work was led by the agency's economics division with modelling by a team at MIT using the GenX model. The 2019 cost inputs for wind and solar are now dated, which matters for its conclusions."
     },
     {
       "id": "mit-2018",
@@ -93,7 +186,21 @@
       "finding": "Excluding nuclear raises the cost of deep power-sector decarbonisation in the regions modelled; construction cost is the central barrier, and the study focuses on how to cut it.",
       "why": "Major interdisciplinary study pairing system modelling with cost analysis of nuclear construction.",
       "nuclear": true,
-      "tags": ["nuclear", "costs", "power sector"]
+      "tags": [
+        "nuclear",
+        "costs",
+        "power sector"
+      ],
+      "checked": "summary",
+      "assumptions": [
+        "Uses MIT's GenX model to find the least-cost generation mix for the year 2050 in selected regional markets, including New England (USA) and the Tianjin-Beijing-Tangshan region of China.",
+        "Tests emission limits of 500, 100, 50, 10 and 1 gCO2 per kWh.",
+        "Three cases per region: no nuclear allowed, nominal nuclear cost, and improved nuclear cost.",
+        "Nuclear overnight cost: USD 5,500/kWe nominal and 4,100 improved for New England; USD 2,800 nominal and 2,100 improved for the Chinese region.",
+        "Competing options are wind and solar with battery storage, and fossil plants with and without carbon capture.",
+        "Inputs are hourly demand, hourly weather, and capital, operating and fuel costs. The summary read here does not state the discount rate; see the full report."
+      ],
+      "group": "An interdisciplinary study by the MIT Energy Initiative, the eighth in its 'Future of' series. Co-chaired by Jacopo Buongiorno (MIT Nuclear Science and Engineering) and John Parsons (MIT Sloan), with David Petti (Idaho National Laboratory) as executive director, and collaborators from the University of Wisconsin-Madison and Harvard. The team is drawn largely from nuclear engineering."
     },
     {
       "id": "ch-ep2050",
@@ -106,7 +213,20 @@
       "finding": "The Swiss government's reference scenarios for reaching net zero by 2050, covering demand, supply and the electricity system.",
       "why": "The official modelling basis for Swiss energy and climate policy.",
       "nuclear": true,
-      "tags": ["Switzerland", "national"]
+      "tags": [
+        "Switzerland",
+        "national"
+      ],
+      "url": "https://www.bfe.admin.ch/bfe/en/home/policy/energy-perspectives-2050-plus.html",
+      "checked": "summary",
+      "assumptions": [
+        "All ZERO scenarios are built to reach net-zero greenhouse gas emissions in Switzerland by 2050; a 'continue as before' scenario (WWB) serves as comparison.",
+        "ZERO Basis has variants (A, B, C) that differ in the technology mix and in how fast renewable electricity is expanded.",
+        "No new nuclear plants are assumed, in line with the Energy Act in force when the study was made; the existing plants are retired at the end of an assumed operating life.",
+        "Population, economic growth and energy prices are fixed inputs taken from federal framework data (documented in the report's 'Rahmendaten' annex).",
+        "The overview page read here does not give the numeric inputs; see the short report and the technical report."
+      ],
+      "group": "Commissioned by the Swiss Federal Office of Energy (BFE) and carried out by a consortium of four consultancies: Prognos (lead), TEP Energy, Infras and Ecoplan. These firms have produced the federal energy perspectives for many years, and the results are the official basis of Swiss energy and climate policy."
     },
     {
       "id": "jenkins-2018",
@@ -120,7 +240,19 @@
       "finding": "Across roughly 40 decarbonisation studies, cutting power-sector CO2 by half to two-thirds is relatively easy; getting to near zero is much harder and cheapest with a diverse portfolio that includes firm low-carbon resources (nuclear, CCS, geothermal, etc.).",
       "why": "The most cited synthesis on the 'last 10–20%' problem in power decarbonisation.",
       "nuclear": true,
-      "tags": ["firm power", "power sector", "synthesis"]
+      "tags": [
+        "firm power",
+        "power sector",
+        "synthesis"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Covers about 40 studies of deep power-sector decarbonisation, most of them using detailed power-system models.",
+        "Compares studies with very different regions, cost inputs and technology options, so its conclusions are about patterns across studies rather than a harmonised result.",
+        "Defines 'firm' resources by function (available on demand for as long as needed), which groups nuclear with gas-CCS, geothermal and reservoir hydro."
+      ],
+      "group": "Jesse Jenkins wrote this while finishing at MIT and moving to Harvard; he now leads the ZERO Lab at Princeton, which develops the GenX model and co-led the Net-Zero America study. Max Luke was at NERA Economic Consulting and Samuel Thernstrom leads the Energy Innovation Reform Project, a US non-profit that favours an 'all of the above' low-carbon mix."
     },
     {
       "id": "heard-2017",
@@ -134,7 +266,20 @@
       "why": "Sharpest critique of the 100%-RE literature. Read together with the Brown et al. (2018) response.",
       "nuclear": true,
       "perspective": "Critical of 100% RE",
-      "tags": ["100% RE", "debate", "feasibility"]
+      "tags": [
+        "100% RE",
+        "debate",
+        "feasibility"
+      ],
+      "doi": "10.1016/j.rser.2017.03.114",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Scores 24 published 100%-renewable scenarios against four feasibility criteria: realistic demand projections, simulation of supply at hourly or finer resolution including extreme weather, transmission and distribution needs, and ancillary services.",
+        "Treats a study as unproven if it does not demonstrate a criterion, even where the topic is covered in other literature. The Brown et al. response disputes exactly this.",
+        "Feasibility is judged technically; cost and social acceptance are discussed but not scored."
+      ],
+      "group": "Ben Heard (University of Adelaide), Barry Brook (University of Tasmania), Tom Wigley (University of Adelaide and the US National Center for Atmospheric Research) and Corey Bradshaw (Flinders University). Heard and Brook are publicly known advocates of nuclear power, which is worth knowing when reading a critique of 100%-renewable studies."
     },
     {
       "id": "brown-2018-response",
@@ -148,7 +293,20 @@
       "why": "The main counter-argument; together with Heard et al. it maps the core of the debate.",
       "nuclear": false,
       "perspective": "Supportive of 100% RE",
-      "tags": ["100% RE", "debate", "feasibility"]
+      "tags": [
+        "100% RE",
+        "debate",
+        "feasibility"
+      ],
+      "doi": "10.1016/j.rser.2018.04.113",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Answers the four Heard et al. criteria one by one, drawing on other published studies rather than new modelling.",
+        "Argues that feasibility should be judged on the literature as a whole, not on whether each single study covers every aspect.",
+        "Economic viability is argued mainly from cost-optimisation studies whose results depend on assumed future wind, solar and storage costs."
+      ],
+      "group": "The authors lead several of the main 100%-renewable modelling groups: Tom Brown (then Karlsruhe Institute of Technology, creator of PyPSA), Christian Breyer (LUT University, Finland), Henrik Lund and Brian Vad Mathiesen (Aalborg University, EnergyPLAN), Kornelis Blok (Ecofys and TU Delft) and Tobias Bischof-Niemz (then CSIR, South Africa). They are defending their own field."
     },
     {
       "id": "hansen-2019",
@@ -162,7 +320,19 @@
       "why": "Good map of the 100% RE research field and its main groups.",
       "nuclear": false,
       "perspective": "Supportive of 100% RE",
-      "tags": ["100% RE", "sector coupling"]
+      "tags": [
+        "100% RE",
+        "sector coupling"
+      ],
+      "doi": "10.1016/j.energy.2019.03.092",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Surveys peer-reviewed journal articles that analyse 100%-renewable energy systems, and counts them by region, sector coverage and method.",
+        "Takes the studies' own cost and feasibility conclusions at face value; it does not re-run or harmonise them.",
+        "Most reviewed studies use hourly simulation or optimisation with assumed future technology costs."
+      ],
+      "group": "Kenneth Hansen and Henrik Lund are at Aalborg University (Denmark), home of the EnergyPLAN tool and the 'smart energy systems' concept; Christian Breyer leads the solar-economy group at LUT University (Finland). Both groups are among the most prolific producers of 100%-renewable studies."
     },
     {
       "id": "breyer-2022",
@@ -176,7 +346,19 @@
       "why": "Most comprehensive history of the field, written by its core community.",
       "nuclear": false,
       "perspective": "Supportive of 100% RE",
-      "tags": ["100% RE", "history"]
+      "tags": [
+        "100% RE",
+        "history"
+      ],
+      "doi": "10.1109/ACCESS.2022.3193402",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A narrative and bibliometric history of 100%-renewable research written by people active in it; selection of what counts as the field is the authors' own.",
+        "Treats cost assumptions in the reviewed studies (falling solar, wind, battery and electrolyser costs) as broadly vindicated by recent price trends.",
+        "Excludes nuclear and fossil-CCS by definition of the field."
+      ],
+      "group": "Led by Christian Breyer (LUT University, Finland) with more than twenty co-authors from the main 100%-renewable groups, including Aalborg University, and others in Europe, the US and Australia. It is the field's own account of itself."
     },
     {
       "id": "bistline-2023-science",
@@ -190,7 +372,21 @@
       "finding": "Nine models project US economy-wide emissions 43–48% below 2005 by 2035 with the IRA, versus 27–35% without it.",
       "why": "Textbook example of a multi-model study separating robust from model-specific results.",
       "nuclear": false,
-      "tags": ["USA", "policy", "multi-model"]
+      "tags": [
+        "USA",
+        "policy",
+        "multi-model"
+      ],
+      "open": "https://arxiv.org/abs/2307.01443",
+      "checked": "summary",
+      "assumptions": [
+        "Nine independent models of the US energy system and economy each run a scenario with the Inflation Reduction Act and a reference scenario without it.",
+        "Results are reported for 2035 against a 2005 emissions baseline.",
+        "Models differ in which IRA provisions they can represent (clean-energy and carbon-management credits, electrification and efficiency measures, methane, supply chains), so coverage is uneven.",
+        "Each model keeps its own cost, fuel-price and technology inputs; only the policy definition is aligned.",
+        "The summary pages read here do not list the models or the reference-case details; see the paper's supplement."
+      ],
+      "group": "A 32-author team led by John Bistline (EPRI, the US utility-funded research institute) with modellers from NREL, Resources for the Future, Princeton (Jesse Jenkins), Rhodium Group, Energy Innovation, the US EPA, NRDC, Evolved Energy Research, MIT, Stanford (John Weyant), the University of Maryland and Lawrence Berkeley National Laboratory. It brings together government, industry, academic and advocacy models."
     },
     {
       "id": "bistline-2024-erl",
@@ -204,7 +400,18 @@
       "finding": "Across 11 models, US power-sector CO2 falls 66–87% below 2005 by 2035 with the IRA; the low-emitting share (renewables, nuclear, CCS) reaches 59–89%.",
       "why": "Power-sector deep dive with an unusually large model ensemble.",
       "nuclear": true,
-      "tags": ["USA", "power sector", "multi-model"]
+      "tags": [
+        "USA",
+        "power sector",
+        "multi-model"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "Eleven power-sector or economy-wide models each compare a scenario with the Inflation Reduction Act against one without it.",
+        "Each model keeps its own technology costs, fuel prices and demand growth; only the policy case is aligned, so the spread shows model and input uncertainty together.",
+        "Results are reported for 2035; real-world limits such as permitting, interconnection queues and supply chains are represented differently or not at all."
+      ],
+      "group": "Led by John Bistline (EPRI) with largely the same multi-institution team as the Science paper: NREL, Resources for the Future, Princeton, Rhodium Group, Energy Innovation, US EPA and others."
     },
     {
       "id": "bistline-2023-iscience",
@@ -218,7 +425,18 @@
       "finding": "Nuclear deployment in models is highest when stringent climate policy, nuclear cost reductions and limits on competing technologies coincide, so results hinge on those assumptions.",
       "why": "Key read for interpreting any model's nuclear result; written by EPRI, NREL, INL and other labs.",
       "nuclear": true,
-      "tags": ["nuclear", "modelling practice"]
+      "tags": [
+        "nuclear",
+        "modelling practice"
+      ],
+      "open": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9883176",
+      "checked": "outline",
+      "assumptions": [
+        "A perspective that compares how nuclear is represented across energy-system models; it does not run a new harmonised scenario.",
+        "Identifies the inputs that most drive nuclear results: assumed capital cost and financing, climate-policy stringency, and whether competing options (transmission, storage, CCS, land for renewables) are limited.",
+        "Notes that many models treat nuclear as inflexible baseload and omit non-electric uses, which can understate its value."
+      ],
+      "group": "Led by John Bistline (EPRI) with co-authors from US national laboratories (Idaho National Laboratory, NREL and others) and universities. Several authors work for organisations with a research interest in nuclear energy; the paper is about modelling practice rather than a case for or against nuclear."
     },
     {
       "id": "krey-2019",
@@ -231,7 +449,19 @@
       "finding": "Cost and performance assumptions differ widely between IAMs and are often poorly documented, which explains much of the divergence in their results.",
       "why": "Shows why you should always check the input assumptions behind a scenario.",
       "nuclear": true,
-      "tags": ["IAM", "assumptions", "transparency"]
+      "tags": [
+        "IAM",
+        "assumptions",
+        "transparency"
+      ],
+      "doi": "10.1016/j.energy.2018.12.131",
+      "checked": "outline",
+      "assumptions": [
+        "Collects the technology cost and performance inputs (capital cost, efficiency, lifetime) used by a set of global and national integrated assessment models and compares them side by side.",
+        "Compares inputs as reported by the modelling teams; differences in definitions (what is included in a capital cost, currency year) limit comparability.",
+        "Does not test how much each input changes results; it documents the spread."
+      ],
+      "group": "Led by Volker Krey at IIASA (Austria) with modelling teams from the EU-funded CD-LINKS project, including national teams from Brazil, China, India, Japan and others. These are the same teams whose models feed the IPCC scenarios."
     },
     {
       "id": "pfenninger-2014",
@@ -244,7 +474,18 @@
       "finding": "Classifies model families (optimisation, simulation, power-system/market, qualitative) and names the core challenges: time and space resolution, uncertainty and transparency, complexity, and human behaviour.",
       "why": "The standard entry point to the field; still widely cited.",
       "nuclear": false,
-      "tags": ["overview", "classic"]
+      "tags": [
+        "overview",
+        "classic"
+      ],
+      "doi": "10.1016/j.rser.2014.02.003",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A narrative review: the choice of models and the four-family classification (optimisation, simulation, power-system and market, qualitative) are the authors' own.",
+        "Written when high-renewable modelling was young; its challenges list reflects 2014 practice."
+      ],
+      "group": "Stefan Pfenninger, Adam Hawkes and James Keirstead were at Imperial College London. Pfenninger later created the open-source Calliope model and now leads an energy modelling group at TU Delft (as Stefan Pfenninger-Lee)."
     },
     {
       "id": "ringkjob-2018",
@@ -258,7 +499,17 @@
       "finding": "Compares 75 tools on how well they capture variable renewables; short-term variability and flexibility are often underrepresented in long-term models.",
       "why": "Best reference for choosing a tool for high-renewable systems.",
       "nuclear": false,
-      "tags": ["tools", "variable renewables"]
+      "tags": [
+        "tools",
+        "variable renewables"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Covers 75 modelling tools, described from their documentation and checked with developers where possible.",
+        "Classifies tools by purpose, method, time and space resolution and sector coverage; it does not benchmark them on a common case."
+      ],
+      "group": "Hans-Kristian Ringkjøb, Peter Haugan and Ida Marie Solbrekke, Geophysical Institute, University of Bergen (Norway)."
     },
     {
       "id": "lopion-2018",
@@ -271,7 +522,18 @@
       "finding": "Trends toward higher temporal and spatial resolution, sector coupling and open source, in tension with computational tractability.",
       "why": "Concise snapshot of where the field was heading.",
       "nuclear": false,
-      "tags": ["trends", "overview"]
+      "tags": [
+        "trends",
+        "overview"
+      ],
+      "doi": "10.1016/j.rser.2018.07.045",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Reviews national energy-system models and how their features changed over time; selection is by the authors.",
+        "Trends are read from model documentation and publications rather than from a survey."
+      ],
+      "group": "Peter Lopion, Peter Markewitz, Martin Robinius and Detlef Stolten at Forschungszentrum Jülich (Germany), the techno-economic systems analysis institute that develops its own open models (the FINE framework)."
     },
     {
       "id": "prina-2020",
@@ -285,7 +547,17 @@
       "finding": "Classifies bottom-up models by resolution (time, space, techno-economic detail, sector coupling) and maps the trade-offs between them.",
       "why": "Clear classification scheme useful for reading model descriptions.",
       "nuclear": false,
-      "tags": ["bottom-up", "classification"]
+      "tags": [
+        "bottom-up",
+        "classification"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Classifies bottom-up models along four resolution axes: time, space, techno-economic detail and sector coupling.",
+        "The assignment of each model to a class is the authors' reading of its documentation."
+      ],
+      "group": "Matteo Giacomo Prina, David Moser and Wolfram Sparber are at Eurac Research (Bolzano, Italy), with Giampaolo Manzolini (Politecnico di Milano) and Benedetto Nastasi."
     },
     {
       "id": "chang-2021",
@@ -299,7 +571,18 @@
       "finding": "Reviews earlier reviews and surveys 54 tools directly with their developers. Three trends: more cross-sector synergies, more open access, finer time detail for high-renewable futures.",
       "why": "Review of reviews — the best single map of the tool landscape.",
       "nuclear": false,
-      "tags": ["tools", "meta-review", "open source"]
+      "tags": [
+        "tools",
+        "meta-review",
+        "open source"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Combines a review of earlier reviews with a questionnaire answered by the developers of 54 tools.",
+        "Tool descriptions are self-reported by developers, so they reflect intended capability rather than tested performance."
+      ],
+      "group": "Led by Miguel Chang with Jakob Zinck Thellufsen, Henrik Lund and Poul Alberg Østergaard at Aalborg University (EnergyPLAN), with Behnam Zakeri (IIASA and Aalborg) and Bryn Pickering and Stefan Pfenninger (then ETH Zurich, Calliope)."
     },
     {
       "id": "plazas-nino-2022",
@@ -313,7 +596,18 @@
       "finding": "National optimisation models are mostly long-term, multi-sector, linear and assume perfect foresight; decarbonisation pathways are their main use.",
       "why": "Systematic (protocol-based) review focused on national planning models like TIMES and OSeMOSYS.",
       "nuclear": false,
-      "tags": ["optimisation", "national", "systematic"]
+      "tags": [
+        "optimisation",
+        "national",
+        "systematic"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A systematic review with a stated search-and-screening protocol, limited to national-scale optimisation models used for decarbonisation pathways.",
+        "Finds most such models assume linear costs, perfect foresight and a single cost-minimising planner; these are properties of the reviewed studies, not of the review."
+      ],
+      "group": "Fernando Plazas-Niño, Naydú Ortiz-Pimiento and Erik Montes-Páez, Universidad Industrial de Santander (Colombia). One of the few reviews written from a developing-country planning perspective."
     },
     {
       "id": "fodstad-2022",
@@ -327,7 +621,18 @@
       "finding": "Four open frontiers: time and space, uncertainty, multi-energy systems, and consumer behaviour. Long-term models still handle uncertainty poorly, especially for emerging technologies.",
       "why": "Up-to-date research agenda for the field.",
       "nuclear": false,
-      "tags": ["challenges", "uncertainty", "behaviour"]
+      "tags": [
+        "challenges",
+        "uncertainty",
+        "behaviour"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A narrative review organised around four challenge areas chosen by the authors: time and space, uncertainty, multi-energy systems and consumer behaviour.",
+        "Focuses on European modelling practice."
+      ],
+      "group": "Marte Fodstad, Pedro Crespo del Granado and colleagues from SINTEF Energy Research and the Norwegian University of Science and Technology (NTNU) with European partner institutes, written within a European energy-research collaboration."
     },
     {
       "id": "fattahi-2020",
@@ -337,11 +642,21 @@
       "authors": "Fattahi, A., Sijm, J., Faaij, A.",
       "year": 2020,
       "venue": "Renewable and Sustainable Energy Reviews 133",
-      "url": "https://ideas.repec.org/a/eee/rensus/v133y2020ics1364032120304858.html",
       "finding": "Assesses 19 integrated national models for their ability to represent a low-carbon transition and identifies gaps (flexibility, sector coupling, social factors).",
       "why": "Useful checklist of what a national transition model should capture.",
       "nuclear": false,
-      "tags": ["national", "integrated models"]
+      "tags": [
+        "national",
+        "integrated models"
+      ],
+      "doi": "10.1016/j.rser.2020.110195",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Assesses 19 integrated national energy-system models against a list of capabilities the authors consider necessary for low-carbon transition analysis.",
+        "Capability judgements are based on model documentation."
+      ],
+      "group": "Amirhossein Fattahi (University of Groningen), Jos Sijm (TNO, the Dutch applied-research organisation) and André Faaij (TNO and University of Groningen)."
     },
     {
       "id": "groissbock-2019",
@@ -355,7 +670,17 @@
       "finding": "Benchmarks open-source optimisation tools against commercial ones; several are capable, but gaps remain in some functionality.",
       "why": "Practical guide if you ever want to run models yourself.",
       "nuclear": false,
-      "tags": ["open source", "tools"]
+      "tags": [
+        "open source",
+        "tools"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Compares open-source optimisation frameworks with commercial tools on a checklist of functions.",
+        "Judges maturity from documented features, not from running the tools on a common test case."
+      ],
+      "group": "Markus Groissböck, a single author affiliated with the University of Innsbruck (Austria)."
     },
     {
       "id": "decarolis-2017",
@@ -369,7 +694,17 @@
       "finding": "Sets out best practice: clear research questions, transparent assumptions, systematic uncertainty analysis, and framing results as insight rather than prediction.",
       "why": "The reference checklist for judging study quality.",
       "nuclear": false,
-      "tags": ["quality", "best practice"]
+      "tags": [
+        "quality",
+        "best practice"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "A guidance paper, not a model run: it sets out steps the authors consider good practice.",
+        "Assumes the purpose of optimisation models is insight under uncertainty, not prediction.",
+        "Reflects the experience of teams using TIMES/MARKAL, OSeMOSYS and Temoa."
+      ],
+      "group": "Joseph DeCarolis (North Carolina State University) with co-authors from University College London, University College Cork and other groups in the IEA's ETSAP modelling network. DeCarolis later served as Administrator of the US Energy Information Administration."
     },
     {
       "id": "decarolis-2011",
@@ -382,7 +717,18 @@
       "finding": "Introduces MGA to energy models: search for very different systems that cost only slightly more than the optimum, since the single 'optimal' answer is fragile.",
       "why": "Foundational idea behind near-optimal analysis.",
       "nuclear": false,
-      "tags": ["uncertainty", "near-optimal"]
+      "tags": [
+        "uncertainty",
+        "near-optimal"
+      ],
+      "doi": "10.1016/j.eneco.2010.05.002",
+      "checked": "outline",
+      "assumptions": [
+        "Demonstrates the method on a simple, stylised electricity model rather than a full national system.",
+        "Assumes that real decisions include factors a cost model leaves out, so near-cost-optimal alternatives are worth mapping.",
+        "The allowed cost increase above the optimum (the 'slack') is chosen by the analyst."
+      ],
+      "group": "Joseph DeCarolis, North Carolina State University, founder of the open-source Temoa model. He later served as Administrator of the US Energy Information Administration."
     },
     {
       "id": "neumann-2021",
@@ -395,7 +741,21 @@
       "finding": "Within a few percent of minimum cost, very different European power systems are possible, so policy has wide room to choose based on non-cost criteria.",
       "why": "Shows how flat the cost landscape is — key for reading 'least-cost' claims.",
       "nuclear": false,
-      "tags": ["near-optimal", "Europe"]
+      "tags": [
+        "near-optimal",
+        "Europe"
+      ],
+      "doi": "10.1016/j.epsr.2020.106690",
+      "open": "https://export.arxiv.org/abs/1910.01891",
+      "checked": "summary",
+      "assumptions": [
+        "Studies a completely renewable European electricity system: no nuclear and no fossil generation by construction.",
+        "Electricity only; heat, transport and industry are outside the model.",
+        "Generation, storage and transmission are expanded together, with power flows on the grid represented in linearised form.",
+        "Explores systems whose total cost is within 0.5% to 10% of the least-cost solution.",
+        "Technology costs are fixed inputs; the paper varies the system design, not the cost assumptions."
+      ],
+      "group": "Fabian Neumann and Tom Brown, then at the Karlsruhe Institute of Technology (Institute for Automation and Applied Informatics), the group that develops the open-source PyPSA and PyPSA-Eur models. Both are now at TU Berlin."
     },
     {
       "id": "trutnevyte-2016",
@@ -408,7 +768,18 @@
       "finding": "Compared cost-optimal scenarios with the actual UK electricity transition and found large deviations; cost minimisation alone is a weak guide to real outcomes.",
       "why": "Rare empirical test of the core assumption behind optimisation models.",
       "nuclear": false,
-      "tags": ["validation", "UK"]
+      "tags": [
+        "validation",
+        "UK"
+      ],
+      "doi": "10.1016/j.energy.2016.03.038",
+      "checked": "outline",
+      "assumptions": [
+        "Looks back at the UK electricity system's actual development from 1990 to 2014 and compares it with what a cost-optimising model would have chosen.",
+        "Uses one bottom-up optimisation model (D-EXPANSE) with historical costs and demand as inputs.",
+        "One country and one sector, so the size of the gap may differ elsewhere."
+      ],
+      "group": "Evelina Trutnevyte, then at ETH Zurich; she now leads the Renewable Energy Systems group at the University of Geneva, which specialises in testing models against history."
     },
     {
       "id": "yue-2018",
@@ -421,7 +792,16 @@
       "finding": "Compares Monte Carlo, stochastic programming, robust optimisation and MGA, and when each fits.",
       "why": "The go-to overview of uncertainty methods.",
       "nuclear": false,
-      "tags": ["uncertainty"]
+      "tags": [
+        "uncertainty"
+      ],
+      "doi": "10.1016/j.esr.2018.06.003",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Classifies uncertainty methods used with optimisation models (Monte Carlo analysis, stochastic programming, robust optimisation, modelling to generate alternatives) from published applications."
+      ],
+      "group": "Xiufeng Yue, Fionn Rogan and Brian Ó Gallachóir at University College Cork (MaREI centre, Ireland), with Steve Pye and Francis Li (University College London) and Joseph DeCarolis (North Carolina State University)."
     },
     {
       "id": "kotzur-2021",
@@ -434,7 +814,17 @@
       "finding": "Reviews ways to keep models solvable (time-series aggregation, spatial clustering, decomposition) and how each affects accuracy.",
       "why": "Explains why model simplifications can change results.",
       "nuclear": false,
-      "tags": ["complexity", "resolution"]
+      "tags": [
+        "complexity",
+        "resolution"
+      ],
+      "doi": "10.1016/j.adapen.2021.100063",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A methods guide: explains simplifications (fewer time steps, fewer regions, decomposition) and their known effects on accuracy, drawing on published tests."
+      ],
+      "group": "Leander Kotzur and colleagues at Forschungszentrum Jülich (Germany) with co-authors from RWTH Aachen University and other German institutes."
     },
     {
       "id": "collins-2017",
@@ -447,7 +837,17 @@
       "finding": "Long-term models with coarse time steps undervalue flexibility and overvalue variable renewables; reviews methods (soft-linking, representative days) to fix this.",
       "why": "Core reference on the time-resolution problem.",
       "nuclear": false,
-      "tags": ["time resolution", "flexibility"]
+      "tags": [
+        "time resolution",
+        "flexibility"
+      ],
+      "doi": "10.1016/j.rser.2017.03.090",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Reviews methods for adding short-term power-system behaviour to long-term models; evidence comes from published comparisons, mostly for European systems."
+      ],
+      "group": "Seán Collins, Paul Deane and Brian Ó Gallachóir at University College Cork (MaREI), with Kris Poncelet (KU Leuven) and co-authors from other European energy-modelling groups."
     },
     {
       "id": "pietzcker-2017",
@@ -460,7 +860,18 @@
       "finding": "Evaluates how six IAMs represent variable renewables' integration challenges; newer approaches improved realism, with remaining gaps in storage and flexibility.",
       "why": "Shows how much IAM wind/solar results depend on integration modelling.",
       "nuclear": false,
-      "tags": ["IAM", "variable renewables"]
+      "tags": [
+        "IAM",
+        "variable renewables"
+      ],
+      "doi": "10.1016/j.eneco.2016.11.018",
+      "checked": "outline",
+      "assumptions": [
+        "Evaluates six global integrated assessment models after each had revised how it represents wind and solar integration.",
+        "Uses a common qualitative framework and a set of scenarios; technology costs remain model-specific.",
+        "Integrated assessment models work with coarse time resolution, so integration is represented by approximations such as residual-load curves and flexibility constraints."
+      ],
+      "group": "Led by Robert Pietzcker and Falko Ueckerdt at the Potsdam Institute for Climate Impact Research (PIK, home of the REMIND model), with the other modelling teams of the EU-funded ADVANCE project."
     },
     {
       "id": "pfenninger-2017-open",
@@ -473,21 +884,43 @@
       "finding": "Argues that closed models and data undermine trust and reproducibility in energy policy research, and sets out how to open them.",
       "why": "Why open models (PyPSA, OSeMOSYS, Calliope) deserve more trust.",
       "nuclear": false,
-      "tags": ["open source", "transparency"]
+      "tags": [
+        "open source",
+        "transparency"
+      ],
+      "doi": "10.1016/j.enpol.2016.11.046",
+      "checked": "outline",
+      "assumptions": [
+        "An argument paper, not an empirical study: it assumes transparency and reproducibility improve the quality of policy advice.",
+        "Evidence on how closed the field is comes from the authors' own survey of practice."
+      ],
+      "group": "Stefan Pfenninger (then ETH Zurich), Joseph DeCarolis (North Carolina State University), Lion Hirth (Neon and Hertie School, Berlin), Sylvain Quoilin (KU Leuven and University of Liège) and Iain Staffell (Imperial College London): founders and active members of the Open Energy Modelling Initiative."
     },
     {
       "id": "long-game-2025",
       "category": "methods",
       "type": "Systematic review (preprint)",
       "title": "Optimising for the long game: methodological challenges in energy system optimisation pathways",
-      "authors": "See preprint",
+      "authors": "Ruiz Manuel, I., Chen, M., Lombardi, F., Pfenninger-Lee, S.",
       "year": 2025,
       "venue": "arXiv 2512.12280",
       "url": "https://arxiv.org/abs/2512.12280",
       "finding": "Systematic review of national-and-above pathway studies, focused on foresight assumptions, end-of-horizon effects and resolution choices that can bias model outcomes.",
       "why": "Recent; not yet peer-reviewed.",
       "nuclear": false,
-      "tags": ["pathways", "foresight", "recent"]
+      "tags": [
+        "pathways",
+        "foresight",
+        "recent"
+      ],
+      "checked": "summary",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "Systematically reviews studies that optimise energy pathways at national level or above.",
+        "Organised around four issues: foresight (how much of the future the model 'knows'), end-of-horizon effects, resolution trade-offs and investment dynamics.",
+        "A preprint: it has not yet been through peer review."
+      ],
+      "group": "Ivan Ruiz Manuel, Meijun Chen, Francesco Lombardi and Stefan Pfenninger-Lee, from the energy-system modelling group at TU Delft (Netherlands) that develops the open-source Calliope model."
     },
     {
       "id": "xiao-2021",
@@ -501,7 +934,17 @@
       "finding": "Rapid declines in wind and solar costs have been structurally underestimated in nearly all scenario studies, so their future role tends to be underestimated too.",
       "why": "Quantifies a systematic bias in model inputs.",
       "nuclear": false,
-      "tags": ["costs", "bias", "renewables"]
+      "tags": [
+        "costs",
+        "bias",
+        "renewables"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "Compares wind and solar cost assumptions used in published scenario studies with costs actually observed.",
+        "Treats market prices and auction results as the benchmark for 'real' cost."
+      ],
+      "group": "Mengzhu Xiao, Tobias Junne, Jannik Haas and Martin Klein, German Aerospace Center (DLR), energy systems analysis department in Stuttgart."
     },
     {
       "id": "way-2022",
@@ -516,7 +959,23 @@
       "why": "Empirically validated alternative to standard cost assumptions; its nuclear conclusion depends on historical nuclear cost trends.",
       "nuclear": true,
       "perspective": "Critical of nuclear-led pathways",
-      "tags": ["learning curves", "costs", "forecasting"]
+      "tags": [
+        "learning curves",
+        "costs",
+        "forecasting"
+      ],
+      "open": "https://www.inet.ox.ac.uk/publications/no-2021-01-empirically-grounded-technology-forecasts-and-the-energy-transition/",
+      "checked": "summary",
+      "assumptions": [
+        "Forecasts technology costs with statistical methods fitted to past data and back-tested on more than 50 technologies, instead of the expert cost assumptions used in most models.",
+        "The fast-transition scenario assumes solar, wind, batteries and electrolysers keep their current exponential deployment growth for another decade.",
+        "Costs fall with cumulative deployment (experience curves) for those four technologies; fossil fuel prices follow their long-run historical behaviour.",
+        "Nuclear is given no cost decline, because its historical costs have risen rather than fallen.",
+        "The saving of at least USD 12 trillion is counted without climate damages or co-benefits.",
+        "The system model is deliberately simple: global, with no detailed grid, hourly balancing or regional detail.",
+        "Non-energy emissions (e.g. agriculture) are assumed to be brought under control separately for the 1.5 °C statement."
+      ],
+      "group": "Rupert Way, Matthew Ives, Penny Mealy and J. Doyne Farmer at the Institute for New Economic Thinking, Oxford Martin School, and the Smith School, University of Oxford. Farmer's complexity-economics group specialises in empirical technology forecasting."
     },
     {
       "id": "lopez-2025",
@@ -530,7 +989,17 @@
       "finding": "Across WEO editions from 1993 to 2022, total demand growth was projected well, but fossil and nuclear growth were overestimated and key renewables severely underestimated.",
       "why": "Longest ex-post check of the most influential outlook.",
       "nuclear": true,
-      "tags": ["IEA", "track record", "recent"]
+      "tags": [
+        "IEA",
+        "track record",
+        "recent"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "Compares projections in IEA World Energy Outlook editions from 1993 to 2022 with what later happened.",
+        "Uses the IEA's main policy scenario of each edition, which the IEA describes as conditional on stated policies rather than as a forecast."
+      ],
+      "group": "Gabriel Lopez, Yasmin Pourjamal and Christian Breyer, LUT University (Finland). Breyer's group is a leading producer of 100%-renewable studies and a long-standing critic of the IEA's renewables projections."
     },
     {
       "id": "gilbert-sovacool-2016",
@@ -543,7 +1012,18 @@
       "finding": "Twelve years of US EIA Annual Energy Outlook projections consistently under-projected most renewable technologies, mainly due to model limitations and missing state policies.",
       "why": "Shows the same bias in the main US outlook.",
       "nuclear": false,
-      "tags": ["EIA", "track record", "USA"]
+      "tags": [
+        "EIA",
+        "track record",
+        "USA"
+      ],
+      "doi": "10.1016/j.energy.2015.10.135",
+      "checked": "outline",
+      "assumptions": [
+        "Compares twelve years of US EIA Annual Energy Outlook reference-case projections for renewables with actual outcomes.",
+        "The reference case assumes current laws only, so some of the miss comes from policies adopted later."
+      ],
+      "group": "Alexander Gilbert and Benjamin Sovacool. Sovacool is a widely cited energy-policy scholar (University of Sussex and Aarhus University)."
     },
     {
       "id": "sepulveda-2018",
@@ -556,7 +1036,24 @@
       "finding": "Across over 1,000 scenarios, every least-cost zero-carbon system includes at least one firm low-carbon resource; without them, costs rise steeply as emissions approach zero.",
       "why": "Introduced the 'firm / fuel-saving / fast-burst' taxonomy now used across the field.",
       "nuclear": true,
-      "tags": ["firm power", "power sector"]
+      "tags": [
+        "firm power",
+        "power sector"
+      ],
+      "doi": "10.1016/j.joule.2018.08.006",
+      "checked": "full",
+      "assumptions": [
+        "Uses the GenX capacity-expansion model with hourly operation over a full year, including unit-commitment detail (start-up costs, minimum output, ramp limits).",
+        "Two test systems: a New England-like 'northern' system (34 GW peak) and a Texas-like 'southern' system (94 GW peak).",
+        "Seven emission limits from 200 gCO2/kWh down to zero.",
+        "912 scenarios: 19 technology cost cases × 2 systems × 7 limits, each with firm resources allowed or excluded, plus 380 sensitivity runs.",
+        "Options: onshore wind, solar PV, 4- and 6-hour lithium-ion batteries, light-water nuclear, gas with carbon capture, biomass, biogas, and flexible demand. Long-duration storage is tested only in robustness cases.",
+        "Nuclear cost cases: USD 7,000, 4,700 and 4,200 per kW. Solar: 1,800, 900 and 670 per kW. Wind: 1,455, 1,091 and 927 per kW. 4-hour batteries: 440, 220 and 110 per kWh.",
+        "Demand flexibility: 5% to 20% of hourly demand can be shifted by up to 6 hours.",
+        "Transmission between regions is fixed, not optimised.",
+        "The model year and discount rate are not stated in the main text read here."
+      ],
+      "group": "Nestor Sepulveda and Richard Lester (MIT Nuclear Science and Engineering), Jesse Jenkins (MIT Institute for Data, Systems, and Society) and Fernando de Sisternes (MIT Center for Energy and Environmental Policy Research). The same team built the GenX model, later used in the MIT and NEA nuclear studies."
     },
     {
       "id": "sepulveda-2021",
@@ -569,7 +1066,21 @@
       "finding": "Maps the cost and efficiency combinations at which long-duration storage could displace firm generation; very low energy-capacity costs are needed.",
       "why": "Defines the targets storage must hit to compete with firm power such as nuclear.",
       "nuclear": true,
-      "tags": ["storage", "firm power"]
+      "tags": [
+        "storage",
+        "firm power"
+      ],
+      "doi": "10.1038/s41560-021-00796-8",
+      "open": "https://dspace.mit.edu/handle/1721.1/138145",
+      "checked": "summary",
+      "assumptions": [
+        "Uses the GenX model on hypothetical power systems in northern and southern climates, with nearly 18,000 cases.",
+        "Describes any storage technology by a few generic parameters (energy capacity cost, charge and discharge power cost, efficiency) and scans across them, rather than modelling specific products.",
+        "Long-duration storage competes with firm low-carbon generation such as nuclear and gas with carbon capture; cases with extensive electrification are included.",
+        "Thresholds found: energy capacity cost below about USD 20/kWh for a 10% system-cost saving, below 10 to displace nuclear, below 1 to displace all firm options.",
+        "The press summary read here does not give the emission limit or discount rate; see the paper."
+      ],
+      "group": "Nestor Sepulveda, Aurora Edington, Dharik Mallapragada and Richard Lester at MIT (MIT Energy Initiative and Nuclear Science and Engineering), with Jesse Jenkins (Princeton). The same group as the 2018 firm-power paper."
     },
     {
       "id": "davis-2018",
@@ -582,7 +1093,19 @@
       "finding": "Identifies hard-to-decarbonise services (aviation, shipping, steel, cement, highly reliable electricity) and the technologies needed for them: firm power, storage, carbon-neutral fuels.",
       "why": "Framed the 'hard-to-abate' agenda.",
       "nuclear": true,
-      "tags": ["net zero", "hard to abate"]
+      "tags": [
+        "net zero",
+        "hard to abate"
+      ],
+      "doi": "10.1126/science.aas9793",
+      "checked": "outline",
+      "assumptions": [
+        "This is a review, so it makes no modelling assumptions of its own; what matters is which studies it covers and how it judges them.",
+        "A synthesis by a large expert group: it identifies hard-to-decarbonise services by judgement and reviews options for each.",
+        "Takes growing demand for these services (aviation, shipping, steel, cement, reliable electricity) as given.",
+        "Cost figures are taken from the literature at the time and are not harmonised."
+      ],
+      "group": "Led by Steven Davis (University of California, Irvine) with Nathan Lewis (Caltech), Ken Caldeira (Carnegie Institution) and about thirty co-authors from US universities and national laboratories, following an expert workshop at the Aspen Global Change Institute."
     },
     {
       "id": "ueckerdt-2013",
@@ -595,7 +1118,18 @@
       "finding": "Defines 'system LCOE', adding integration costs to plant-level LCOE; integration costs can be substantial at high wind and solar shares.",
       "why": "Standard concept for comparing variable and firm technologies fairly.",
       "nuclear": true,
-      "tags": ["LCOE", "system costs"]
+      "tags": [
+        "LCOE",
+        "system costs"
+      ],
+      "doi": "10.1016/j.energy.2013.10.072",
+      "checked": "outline",
+      "assumptions": [
+        "Defines integration costs as the extra cost a variable source causes in the rest of the system, relative to an ideal source delivering the same energy at constant output.",
+        "Quantifies them with a simple model of a thermal power system similar to Germany's.",
+        "Storage, demand response and long-distance transmission are limited or absent, which makes integration costs look larger than in a more flexible system."
+      ],
+      "group": "Falko Ueckerdt, Lion Hirth, Gunnar Luderer and Ottmar Edenhofer at the Potsdam Institute for Climate Impact Research (PIK). Edenhofer co-chaired IPCC Working Group III for the Fifth Assessment Report."
     },
     {
       "id": "hirth-2013",
@@ -608,7 +1142,19 @@
       "finding": "The market value of wind and solar falls as their share rises (the 'cannibalisation' effect), significantly at high penetration.",
       "why": "Foundational paper on value, not just cost, of variable renewables.",
       "nuclear": false,
-      "tags": ["market value", "economics"]
+      "tags": [
+        "market value",
+        "economics"
+      ],
+      "doi": "10.1016/j.eneco.2013.02.004",
+      "checked": "summary",
+      "assumptions": [
+        "Uses EMMA, a calibrated model of the European electricity market, to compute long-term equilibrium prices.",
+        "Wind's value falls from about 110% of the average power price at zero share to 50-80% at a 30% share; solar reaches similar levels at about 15%.",
+        "The rest of the power system adjusts in the long run, but with the technologies and flexibility options available around 2012; cheap batteries and large-scale flexible demand are not included.",
+        "Results are tested against changes in policies and prices."
+      ],
+      "group": "Lion Hirth, then at Vattenfall and the Potsdam Institute for Climate Impact Research; now professor at the Hertie School in Berlin and head of the consultancy Neon. EMMA is his open-source model."
     },
     {
       "id": "brown-2018-sector",
@@ -621,7 +1167,25 @@
       "finding": "Coupling power with heat and transport and reinforcing transmission both lower the cost of a highly renewable European system, and partially substitute for each other.",
       "why": "Landmark open-model (PyPSA) study on sector coupling.",
       "nuclear": false,
-      "tags": ["sector coupling", "Europe", "PyPSA"]
+      "tags": [
+        "sector coupling",
+        "Europe",
+        "PyPSA"
+      ],
+      "doi": "10.1016/j.energy.2018.06.222",
+      "open": "https://arxiv.org/abs/1801.05290v2",
+      "checked": "full",
+      "assumptions": [
+        "PyPSA-Eur-Sec-30: 30 European countries, one node each, optimised with perfect foresight.",
+        "Covers electricity, space and water heating, and road and rail transport. Aviation, shipping and non-electric industry are excluded.",
+        "CO2 limit of 95% below 1990 for the modelled sectors (151 MtCO2 per year).",
+        "Technology costs are estimates for 2030. Discount rate 7% for large assets and 4% for household-scale ones.",
+        "One weather year (2011) at hourly resolution.",
+        "Carbon capture and storage is not included; biomass for energy is excluded; nuclear is not among the options discussed.",
+        "Transmission scenarios range from none between countries to cost-optimal expansion; a compromise grid is about four times today's capacity.",
+        "246 million passenger cars, all battery-electric, half of them taking part in smart charging."
+      ],
+      "group": "Tom Brown (Karlsruhe Institute of Technology and Frankfurt Institute for Advanced Studies), David Schlachtberger, Alexander Kies and Stefan Schramm (Frankfurt Institute for Advanced Studies) and Martin Greiner (Aarhus University). The group created the open-source PyPSA framework."
     },
     {
       "id": "victoria-2020",
@@ -634,7 +1198,26 @@
       "finding": "For the same carbon budget, an early, steady decarbonisation path costs about the same or less than a delayed one and avoids stranded assets.",
       "why": "Key study on transition timing, using an open model.",
       "nuclear": false,
-      "tags": ["pathways", "Europe", "timing"]
+      "tags": [
+        "pathways",
+        "Europe",
+        "timing"
+      ],
+      "doi": "10.1038/s41467-020-20015-4",
+      "open": "https://arxiv.org/abs/2004.11009",
+      "checked": "full",
+      "assumptions": [
+        "PyPSA-based model of 30 European countries, one node each, at hourly resolution for a full year.",
+        "Covers electricity, heating and (in an add-on) road and rail transport.",
+        "Carbon budget of 33 GtCO2 for 2020-2050 including transport (21 Gt without), in line with 1.75 °C at better than 66% probability.",
+        "Myopic: the system is re-optimised every 5 years without knowledge of the future.",
+        "Discount rate 7% (4% for household-scale assets); cumulative costs compared with a 2% social discount rate.",
+        "No new nuclear is built in the main paths (it appears only if its cost is 15% lower and transmission cannot expand), and carbon capture and storage is not included.",
+        "Transmission follows the grid operators' ten-year plan to 2030 and is then fixed in the base case.",
+        "Heat demand is constant in the base case; a renovation case cuts space heating by 2% a year.",
+        "Technology costs change over time as fixed inputs; they do not depend on how much is built in the model."
+      ],
+      "group": "Marta Victoria, Kun Zhu, Gorm Andresen and Martin Greiner (Aarhus University, Denmark) and Tom Brown (Karlsruhe Institute of Technology). Part of the PyPSA modelling community."
     },
     {
       "id": "duan-2022",
@@ -647,7 +1230,22 @@
       "finding": "Across many countries' wind and solar resources, nuclear's role in least-cost deep-decarbonised systems depends mostly on its cost relative to wind, solar and storage; added flexibility helps modestly.",
       "why": "Global, resource-aware look at when nuclear earns a place.",
       "nuclear": true,
-      "tags": ["nuclear", "flexibility", "global"]
+      "tags": [
+        "nuclear",
+        "flexibility",
+        "global"
+      ],
+      "doi": "10.1038/s41560-022-00979-x",
+      "checked": "summary",
+      "assumptions": [
+        "A stylised least-cost model of an idealised electricity system for each of 42 country-level regions, using each region's own wind, solar and hourly demand data.",
+        "Considers techno-economic factors only: no politics, siting or supply-chain limits.",
+        "Options are solar, wind, nuclear and storage, including heat storage attached to nuclear plants to make their output flexible.",
+        "Nuclear cost of USD 6,317 per kW (US EIA 2021 figure), with a USD 4,000 per kW case.",
+        "Each region is treated on its own, without the wider grid and flexibility options a real system would have.",
+        "The abstract page read here does not give the discount rate or weather years; see the paper's methods."
+      ],
+      "group": "Lei Duan and Ken Caldeira (Carnegie Institution for Science, Department of Global Ecology), Robert Petroski (TerraPower) and Lowell Wood (Gates Ventures). TerraPower is a reactor developer founded by Bill Gates, so two authors have a commercial interest in nuclear."
     },
     {
       "id": "gjorgiev-2022",
@@ -660,7 +1258,19 @@
       "finding": "ETH Zurich's linked-model platform for the Swiss electricity system, connecting macro-economy, investment, operation and grid models.",
       "why": "Key Swiss modelling framework used to study nuclear phase-out and net-zero options.",
       "nuclear": true,
-      "tags": ["Switzerland", "ETH", "multi-model"]
+      "tags": [
+        "Switzerland",
+        "ETH",
+        "multi-model"
+      ],
+      "doi": "10.1016/j.apenergy.2021.118193",
+      "checked": "outline",
+      "assumptions": [
+        "Describes a platform that links separate models (macro-economy, investment in large and small generators, market dispatch, grid security) by passing results between them.",
+        "Focused on Switzerland, with neighbouring countries represented in less detail.",
+        "Scenario inputs such as demand, fuel and CO2 prices and nuclear phase-out dates are set by the user; the paper documents the framework and a demonstration case."
+      ],
+      "group": "Blazhe Gjorgiev, Jared Garrison, Xuejiao Han and colleagues at ETH Zurich, from the Reliability and Risk Engineering laboratory (Giovanni Sansavini), the Energy Science Center and partner groups, with funding from the Swiss Federal Office of Energy."
     },
     {
       "id": "rff-geo-2026",
@@ -674,7 +1284,22 @@
       "finding": "Harmonises 15 scenarios from 8 organisations. Concludes 1.5 °C is no longer plausible; electricity demand surges, wind and solar lead growth, gas grows in most non-ambitious scenarios.",
       "why": "The best single comparison of industry and agency outlooks on a common basis.",
       "nuclear": true,
-      "tags": ["outlooks", "comparison", "recent"]
+      "tags": [
+        "outlooks",
+        "comparison",
+        "recent"
+      ],
+      "checked": "full",
+      "assumptions": [
+        "Not a model: it harmonises 15 published scenarios from eight organisations (BNEF, bp, Equinor, ExxonMobil, IEA, IEEJ, OPEC, TotalEnergies).",
+        "Sorts scenarios into three groups: reference, evolving policies and ambitious climate.",
+        "Leaves out 1.5 °C scenarios because the authors judge them no longer plausible.",
+        "Converts everything to common units; conversion factors differ by up to 10% between outlooks and the report applies its own.",
+        "Primary-energy accounting for non-fossil sources differs between outlooks and cannot be fully reconciled.",
+        "Each scenario keeps its publisher's own assumptions on policy, prices and technology costs.",
+        "Historical data from 2000 to 2024, projections to 2050."
+      ],
+      "group": "Daniel Raimi, Emily Joiner, Bryan Hubbell, Nafisa Lohawala and Molly Robertson at Resources for the Future, an independent non-profit economics research institute in Washington, DC, founded in 1952."
     },
     {
       "id": "ief-2026",
@@ -688,7 +1313,18 @@
       "finding": "Compares 30+ scenarios from IEA, OPEC, EIA, majors, IRENA and IPCC. 2050 primary energy ranges from ~274 mboe/d (IEA NZE) to ~400 mboe/d (IEA CPS); electricity averages ~40% of final energy across scenarios.",
       "why": "Shows how far apart the main outlooks are and why.",
       "nuclear": true,
-      "tags": ["outlooks", "comparison", "recent"]
+      "tags": [
+        "outlooks",
+        "comparison",
+        "recent"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "A comparison of published outlooks, not a model; each outlook keeps its publisher's own assumptions.",
+        "Harmonises units and baseline data so that the IEA and OPEC outlooks in particular can be set side by side.",
+        "Covers the outlooks' main scenarios; differences in definitions of fuels and regions are only partly reconcilable."
+      ],
+      "group": "The International Energy Forum, an intergovernmental body based in Riyadh whose members include both energy-producing and energy-consuming countries. It prepares the comparison with analytical support from Resources for the Future."
     },
     {
       "id": "unep-egr-2025",
@@ -702,7 +1338,19 @@
       "finding": "Current policies lead to ~2.8 °C, conditional NDCs ~2.3 °C, and NDCs plus all net-zero pledges ~1.9 °C. 1.5 °C is likely to be exceeded within the next decade.",
       "why": "The standard reference for where the world is heading versus the Paris goals.",
       "nuclear": false,
-      "tags": ["policy", "warming", "consensus"]
+      "tags": [
+        "policy",
+        "warming",
+        "consensus"
+      ],
+      "checked": "outline",
+      "assumptions": [
+        "Projects 2030 and 2035 emissions under three cases: current policies, countries' pledges (NDCs), and pledges plus all net-zero targets, then converts each to end-of-century warming.",
+        "Warming figures are given at a stated probability and assume the emission trend continues after the pledge period.",
+        "Pledges are taken at face value up to a cut-off date; the conditional case assumes promised finance arrives.",
+        "UNEP's website could not be read while compiling this entry, so check the report for exact figures and the cut-off date."
+      ],
+      "group": "Published annually by the UN Environment Programme with the UNEP Copenhagen Climate Centre, written by an international team of scientists from modelling institutes and reviewed by a steering committee."
     }
   ]
 }

@@ -1094,6 +1094,62 @@
         "Soft-linking",
         "VRE"
       ]
+    },
+    {
+      "term": "Greenfield",
+      "full": "Greenfield optimisation",
+      "category": "modelling",
+      "level": 2,
+      "definition": "A model run that designs the whole system from a clean slate for a target year, ignoring the plants and grid that exist today. It shows the ideal end state but not the cost or feasibility of getting there.",
+      "related": [
+        "ESOM",
+        "Perfect foresight"
+      ]
+    },
+    {
+      "term": "Discount rate",
+      "full": "",
+      "category": "modelling",
+      "level": 2,
+      "definition": "The rate used to convert future costs into today's money. A high rate penalises technologies with large upfront costs and long lives, such as nuclear, hydro and wind, so it is one of the most influential inputs in any cost comparison.",
+      "related": [
+        "WACC",
+        "LCOE",
+        "Capex"
+      ]
+    },
+    {
+      "term": "Myopic foresight",
+      "full": "",
+      "category": "modelling",
+      "level": 3,
+      "definition": "A model set-up in which decisions are made step by step, knowing only the present and near future, rather than the whole horizon at once. Closer to real decision-making than perfect foresight, and usually gives higher costs.",
+      "related": [
+        "Perfect foresight",
+        "ESOM"
+      ]
+    },
+    {
+      "term": "Unit commitment",
+      "full": "",
+      "category": "modelling",
+      "level": 3,
+      "definition": "The detailed operating rules of power plants: start-up costs, minimum output and how fast they can ramp. Models that include them capture the value of flexibility better than those that treat plants as freely adjustable.",
+      "related": [
+        "Dispatchable",
+        "Temporal resolution"
+      ]
+    },
+    {
+      "term": "Weather year",
+      "full": "",
+      "category": "modelling",
+      "level": 2,
+      "definition": "The historical year whose hourly wind, sun and temperature data a model uses. Results for high-renewable systems can change noticeably with the year chosen, so single-year studies should be read with care.",
+      "related": [
+        "VRE",
+        "Temporal resolution"
+      ]
     }
   ]
 }
