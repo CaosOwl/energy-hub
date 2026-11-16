@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, glossary, scenario comparison and modelling literature.">
+  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, glossary, model and scenario comparison, IPCC reports and modelling literature.">
   <meta name="theme-color" content="#04121f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f2f6f8" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
@@ -45,9 +45,11 @@
     <button data-view="glossary">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h10.5M9 8.5h5.5"/></svg>Glossary</button>
     <button data-view="scenarios">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M7 16V9.5M12 16V5M17 16v-4"/></svg>Scenarios</button>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M7 16V9.5M12 16V5M17 16v-4"/></svg>Models</button>
+    <button data-view="ipcc">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.9 5.2 3.9 8.5s-1.3 6.1-3.9 8.5c-2.6-2.4-3.9-5.2-3.9-8.5S9.400 5.900 12 3.500z"/></svg>IPCC</button>
     <button data-view="literature">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h8l4 4V20.5h-12zM14.5 3.5v4h4M9.5 12h6M9.5 16h6"/></svg>Literature</button>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h8l4 4V20.5h-12zM14.5 3.5v4h4M9.5 12h6M9.5 16h6"/></svg>Studies</button>
     <button data-view="sources">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14"/><circle cx="6" cy="18" r="1.4" class="fill"/></svg>Sources</button>
   </nav>
@@ -113,9 +115,10 @@
     </section>
 
     <!-- SCENARIOS -->
-    <section id="view-scenarios" class="view hidden" data-title="Scenarios">
+    <section id="view-scenarios" class="view hidden" data-title="Models and scenarios">
       <div class="note" id="sc-about"></div>
       <div class="sc-pickers" id="sc-pickers"></div>
+      <div id="sc-chosen" class="sc-chosen"></div>
       <div class="chips"><div class="seg" id="sc-groups" role="group" aria-label="Metric group"></div></div>
       <div id="sc-compare" class="sc-block"></div>
       <h2 class="sc-h">Electricity mix in 2050</h2>
@@ -128,6 +131,22 @@
       <div class="chips" id="sc-type" style="margin-bottom:10px"></div>
       <ul id="sc-list" class="grid"></ul>
       <div id="sc-sources" class="note"></div>
+    </section>
+
+    <!-- IPCC -->
+    <section id="view-ipcc" class="view hidden" data-title="IPCC reports">
+      <p class="note" id="ip-about"></p>
+      <div class="toolbar">
+        <div class="chips" id="ip-kind"></div>
+        <div class="row">
+          <div class="seg" id="ip-order" role="group" aria-label="Order">
+            <button data-order="newest" class="on">Newest first</button>
+            <button data-order="oldest">Oldest first</button>
+          </div>
+        </div>
+      </div>
+      <ol id="ip-list" class="ip-list"></ol>
+      <p class="note" id="ip-foot" style="margin-top:16px"></p>
     </section>
 
     <!-- LITERATURE -->

@@ -1,6 +1,6 @@
 {
   "_about": "Major energy outlooks and pathways, compared on common 2050 metrics. Values come from each publisher's own public summaries (latest edition available). '~' marks approximate or derived values; null means the publisher does not report it publicly. Political achievability and likelihood are editorial judgements (Claude's suggested starting point), not data. Your own likelihood score is stored on your device. Edit this file to add scenarios or correct values.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-16",
   "today": {
     "label": "Today (2024–25)",
     "temp2100": null,
@@ -234,7 +234,19 @@
       "likelihood": {
         "score": 2,
         "why": "A floor rather than a forecast. It freezes policy for 25 years, and ex-post studies show outlooks like this have consistently underestimated how fast solar, wind and batteries spread."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Counts only policies already in force; no new ones are added.",
+        "Electric-car uptake stalls outside China and Europe, and efficiency gains are modest.",
+        "Solar additions stay at about the 2024 level (540 GW a year to 2035) because grid integration slows growth.",
+        "Sanctions on oil and gas producers are assumed to ease later in the period, so output follows economics.",
+        "Leads to about 2 °C of warming in 2050 and 2.9 °C in 2100; no probability is given.",
+        "Run with the IEA's Global Energy and Climate Model: a simulation of 29 world regions (16 of them single countries) with yearly steps and hourly detail for the power sector. It is not a least-cost optimisation; technology shares follow costs plus real-world constraints.",
+        "Population follows the UN medium projection (9.7 billion in 2050) and world GDP grows 2.7% a year on average to 2050; both are the same in every IEA scenario. These figures are from the 2024 model documentation, the latest available when this entry was compiled.",
+        "Fuel prices are not inputs: the model sets them so that supply meets demand in each scenario."
+      ],
+      "group": "The International Energy Agency is an intergovernmental body in Paris, founded in 1974 within the OECD framework and funded by its member governments. The World Energy Outlook team builds the scenarios each year with the agency's own Global Energy and Climate Model. They are the most widely used reference in energy policy; the track-record studies in the Literature tab find that past editions under-projected wind and solar."
     },
     {
       "id": "iea-steps",
@@ -303,7 +315,18 @@
       "likelihood": {
         "score": 4,
         "why": "The closest thing to a consensus central case. Watch for slippage on announced policy and upside on clean-tech deployment."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Counts policies in force plus those governments have announced and are judged likely to carry out, even if not yet law. Aspirational goals are left out.",
+        "Reflects today's technology costs and market conditions; this edition assumes lower electric-car sales in the United States.",
+        "Efficiency improves 2.2% a year, helped by electrification.",
+        "Leads to about 2.5 °C of warming by 2100; no probability is given.",
+        "Run with the IEA's Global Energy and Climate Model: a simulation of 29 world regions (16 of them single countries) with yearly steps and hourly detail for the power sector. It is not a least-cost optimisation; technology shares follow costs plus real-world constraints.",
+        "Population follows the UN medium projection (9.7 billion in 2050) and world GDP grows 2.7% a year on average to 2050; both are the same in every IEA scenario. These figures are from the 2024 model documentation, the latest available when this entry was compiled.",
+        "Fuel prices are not inputs: the model sets them so that supply meets demand in each scenario."
+      ],
+      "group": "The International Energy Agency is an intergovernmental body in Paris, founded in 1974 within the OECD framework and funded by its member governments. The World Energy Outlook team builds the scenarios each year with the agency's own Global Energy and Climate Model. They are the most widely used reference in energy policy; the track-record studies in the Literature tab find that past editions under-projected wind and solar."
     },
     {
       "id": "iea-nze",
@@ -375,7 +398,18 @@
       "likelihood": {
         "score": 1,
         "why": "Useful as a benchmark of what 1.5 °C requires, not as a forecast."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Normative: it starts from net-zero energy CO2 emissions in 2050 and works backwards, so it shows what would be needed, not what the IEA expects.",
+        "Carbon prices are imposed to drive the change: about USD 250 per tonne of CO2 in advanced economies and 200 in emerging economies with net-zero pledges by 2050 (2024 documentation).",
+        "Oil prices fall because demand falls; they are lower than in the other IEA scenarios.",
+        "Assumes all countries act, with advanced economies moving first, and relies on carbon removal later in the century to bring warming back down.",
+        "Run with the IEA's Global Energy and Climate Model: a simulation of 29 world regions (16 of them single countries) with yearly steps and hourly detail for the power sector. It is not a least-cost optimisation; technology shares follow costs plus real-world constraints.",
+        "Population follows the UN medium projection (9.7 billion in 2050) and world GDP grows 2.7% a year on average to 2050; both are the same in every IEA scenario. These figures are from the 2024 model documentation, the latest available when this entry was compiled.",
+        "Fuel prices are not inputs: the model sets them so that supply meets demand in each scenario."
+      ],
+      "group": "The International Energy Agency is an intergovernmental body in Paris, founded in 1974 within the OECD framework and funded by its member governments. The World Energy Outlook team builds the scenarios each year with the agency's own Global Energy and Climate Model. They are the most widely used reference in energy policy; the track-record studies in the Literature tab find that past editions under-projected wind and solar."
     },
     {
       "id": "bnef-ets",
@@ -434,7 +468,15 @@
       "likelihood": {
         "score": 4,
         "why": "Cost-driven and close to observed deployment trends. Its warming estimate is similar to IEA STEPS."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Clean technologies gain share 'based on economics alone': deployment follows cost, with no new climate policy assumed.",
+        "Covers power, industry, buildings and transport to 2050.",
+        "Depends heavily on BNEF's own cost forecasts for solar, wind, batteries and electric vehicles, which are not public in full.",
+        "Compared against a 'no transition' case in which clean-technology build is capped at historical rates and costs are frozen at 2026 levels."
+      ],
+      "group": "BloombergNEF is the energy-research arm of Bloomberg LP, a commercial data and news company. Its analysts cover technology costs and markets in detail and sell the full outlook to subscribers; only an executive summary is public, which limits how far its assumptions can be checked."
     },
     {
       "id": "bnef-nzs",
@@ -490,7 +532,16 @@
       "likelihood": {
         "score": 1,
         "why": "A normative benchmark. Note that it lands at ~1.7 °C, not 1.5 °C."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Normative: adds faster renewables, batteries and electric vehicles plus large-scale hydrogen, carbon capture and sustainable fuels to reach net zero.",
+        "Described by BNEF as a 'well-below-2C' scenario; the public summary does not state the carbon budget or temperature probability.",
+        "Covers power, industry, buildings and transport to 2050.",
+        "Nuclear is counted within 'clean power'; hydrogen and carbon capture are accounted separately.",
+        "The detailed cost and policy inputs are in the subscriber report, not in the public summary."
+      ],
+      "group": "BloombergNEF is the energy-research arm of Bloomberg LP, a commercial data and news company. Its analysts cover technology costs and markets in detail and sell the full outlook to subscribers; only an executive summary is public, which limits how far its assumptions can be checked."
     },
     {
       "id": "dnv-eto",
@@ -546,7 +597,17 @@
       "likelihood": {
         "score": 4,
         "why": "A best-estimate forecast with a good track record on renewables. It is more pessimistic on hydrogen and CCS than the IEA."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "A forecast, not a scenario: one 'most likely' path, explicitly contrasted with scenario approaches.",
+        "Built on system-dynamics principles (feedback loops and inertia), not least-cost optimisation; ten world regions, running to 2060.",
+        "Assumes proven technologies keep developing, not uncertain breakthroughs.",
+        "Includes main policy trends but treats untested commitments with caution.",
+        "GDP growth and technology learning curves are key inputs and are sensitivity-tested; the public pages do not give the values.",
+        "Uses over 100,000 data points from the IEA, UN Comtrade, GlobalData and others."
+      ],
+      "group": "DNV is a Norwegian assurance and risk-management company owned by a foundation; it certifies ships, wind farms, pipelines and grids, so it earns money across both fossil and renewable industries. The outlook is written by a dedicated research team led by Sverre Alvik, with input from over 150 DNV experts and external contributors."
     },
     {
       "id": "exxon-go",
@@ -598,7 +659,17 @@
       "likelihood": {
         "score": 3,
         "why": "Plausible on demand, but likely low on electrification and solar compared with recent trends. Read it with the publisher's interest in oil and gas in mind."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "A projection, not a scenario: it 'starts with current factors such as public policy and commercially available technology' and judges how they may change.",
+        "Population grows by about 1.5 billion and global GDP by about 80% to 2050, almost all in developing countries.",
+        "Assumes carbon capture, low-carbon hydrogen and biofuels grow but stay 'far from full potential', citing cost (sustainable aviation fuel about three times jet fuel).",
+        "Assumes policy is limited by affordability: 'affordability and policy set the pace' of emission cuts.",
+        "Assumes continued investment in oil and gas; without it, output would fall about 15% a year.",
+        "Based on internal analysis plus public data such as the IEA's; the detailed inputs are not published."
+      ],
+      "group": "Prepared in-house by ExxonMobil, one of the largest oil and gas companies, and used to guide its own investment plans. The company has a direct commercial interest in continued oil and gas demand, and its projection of that demand is above most other outlooks."
     },
     {
       "id": "opec-woo",
@@ -649,7 +720,16 @@
       "likelihood": {
         "score": 2,
         "why": "The highest oil path of all outlooks here. It is the producers' view and ignores most of the EV and efficiency trends other outlooks include."
-      }
+      },
+      "checked": "outline",
+      "assumptions": [
+        "A reference case reflecting 'recent energy, economic and policy developments'; it is a forecast, not a climate-target scenario.",
+        "Energy demand rises 23% and oil demand reaches 124 million barrels a day by 2050.",
+        "Assumes USD 17.7 trillion is invested in oil between 2026 and 2050.",
+        "Assumes growth is driven by population and rising incomes in developing countries; announced climate targets are not assumed to be fully met.",
+        "OPEC's site could not be read while compiling this entry, so population and GDP inputs are not listed here; they are in the report's first chapter."
+      ],
+      "group": "Written by the research division of the OPEC Secretariat in Vienna, the organisation of oil-exporting countries. Its members' revenues depend on oil demand, and its outlook has the highest long-term oil demand of the major publishers."
     },
     {
       "id": "bp-ct",
@@ -718,7 +798,14 @@
       "likelihood": {
         "score": 3,
         "why": "Middle of the pack, close to IEA STEPS on emissions. bp itself says neither scenario is a forecast."
-      }
+      },
+      "checked": "outline",
+      "assumptions": [
+        "Designed to show 'the broad pathway along which the global energy system is currently travelling'.",
+        "Sensitivity cases vary it for greater geopolitical fragmentation and for persistently weak efficiency gains.",
+        "bp's web pages give no numeric inputs (GDP, population, prices); those are in the full report and its data tables."
+      ],
+      "group": "Produced by bp's economics team under the company's chief economist, Spencer Dale. bp is an oil and gas major, so the outlook comes from a company with a commercial stake in the result; it states that the scenarios are not predictions of what bp expects or wants to happen."
     },
     {
       "id": "bp-b2",
@@ -784,7 +871,14 @@
       "likelihood": {
         "score": 2,
         "why": "Plausible only with a policy step-change in the late 2020s."
-      }
+      },
+      "checked": "outline",
+      "assumptions": [
+        "Normative: explores how the system might change to achieve 'a substantial reduction in carbon emissions' consistent with staying below 2 °C.",
+        "Assumes much tighter climate policy worldwide and shifts in behaviour compared with the current trajectory.",
+        "bp's web pages give no numeric inputs (carbon budget, GDP, population, prices); those are in the full report and its data tables."
+      ],
+      "group": "Produced by bp's economics team under the company's chief economist, Spencer Dale. bp is an oil and gas major, so the outlook comes from a company with a commercial stake in the result; it states that the scenarios are not predictions of what bp expects or wants to happen."
     },
     {
       "id": "irena-15",
@@ -842,7 +936,17 @@
       "likelihood": {
         "score": 1,
         "why": "Normative benchmark. Its high renewables share is a design choice, not a forecast."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "Normative: built to reach net-zero CO2 by 2050 in line with the 1.5 °C goal.",
+        "Renewable capacity triples to 11.2 TW by 2030 (about 1,044 GW added a year) and supplies 91% of electricity by 2050.",
+        "Electricity reaches 52% of final energy use by 2050; energy intensity improves 4% a year.",
+        "Includes clean hydrogen and carbon capture, including with bioenergy; the summary gives no quantities.",
+        "Needs USD 47 trillion of energy investment by 2030.",
+        "The summary does not state the carbon budget, temperature probability or the role given to nuclear."
+      ],
+      "group": "The International Renewable Energy Agency is an intergovernmental organisation based in Abu Dhabi, founded in 2009, whose mandate is to promote renewable energy. Its pathway reflects that mandate and gives nuclear a small role."
     },
     {
       "id": "ipcc-c1",
@@ -909,7 +1013,20 @@
       "likelihood": {
         "score": 1,
         "why": "Practically out of reach without a large overshoot and CO₂ removal (UNEP 2025)."
-      }
+      },
+      "checked": "full",
+      "assumptions": [
+        "Category C1: pathways that limit warming to 1.5 °C with more than 50% probability and no or limited overshoot.",
+        "A category median, not one scenario: each underlying pathway comes from a different model with its own cost, technology and policy assumptions.",
+        "The ensemble is 'an ensemble of opportunity': teams submitted what they had, so some models and study designs are over-represented and simple statistics can mislead.",
+        "Warming is computed afterwards with a climate emulator (MAGICC) and the pathways sorted into categories.",
+        "Most pathways assume cost-effective global action from the start year, with no extra equity rules between countries.",
+        "Population and economic growth follow the Shared Socioeconomic Pathways, published in 2017.",
+        "Carbon removal is mostly limited to bioenergy with carbon capture, afforestation and direct air capture.",
+        "Climate damages are not fed back into the economy in the vast majority of pathways.",
+        "The scenarios were built around 2019-2021, so they start from older emission levels and older technology costs than today's."
+      ],
+      "group": "The numbers are medians across the scenario ensemble assessed in IPCC AR6 Working Group III, Chapter 3 (coordinating lead authors Keywan Riahi, IIASA, and Roberto Schaeffer, Federal University of Rio de Janeiro). The pathways were produced by dozens of integrated-assessment modelling teams worldwide and collected in a database hosted by IIASA. No single team stands behind a category median."
     },
     {
       "id": "ipcc-c3",
@@ -960,7 +1077,20 @@
       "likelihood": {
         "score": 2,
         "why": "Requires pledges to be fully delivered. Current policies point to ~2.8 °C."
-      }
+      },
+      "checked": "full",
+      "assumptions": [
+        "Category C3: pathways that limit warming to 2 °C with more than 67% probability.",
+        "A category median, not one scenario: each underlying pathway comes from a different model with its own cost, technology and policy assumptions.",
+        "The ensemble is 'an ensemble of opportunity': teams submitted what they had, so some models and study designs are over-represented and simple statistics can mislead.",
+        "Warming is computed afterwards with a climate emulator (MAGICC) and the pathways sorted into categories.",
+        "Most pathways assume cost-effective global action from the start year, with no extra equity rules between countries.",
+        "Population and economic growth follow the Shared Socioeconomic Pathways, published in 2017.",
+        "Carbon removal is mostly limited to bioenergy with carbon capture, afforestation and direct air capture.",
+        "Climate damages are not fed back into the economy in the vast majority of pathways.",
+        "The scenarios were built around 2019-2021, so they start from older emission levels and older technology costs than today's."
+      ],
+      "group": "The numbers are medians across the scenario ensemble assessed in IPCC AR6 Working Group III, Chapter 3 (coordinating lead authors Keywan Riahi, IIASA, and Roberto Schaeffer, Federal University of Rio de Janeiro). The pathways were produced by dozens of integrated-assessment modelling teams worldwide and collected in a database hosted by IIASA. No single team stands behind a category median."
     },
     {
       "id": "lut-100re",
@@ -1031,7 +1161,17 @@
       "likelihood": {
         "score": 1,
         "why": "An important 'proof of possibility' that anchors the 100% RE side of the debate (see the Heard vs Brown papers in Studies)."
-      }
+      },
+      "checked": "summary",
+      "assumptions": [
+        "100% renewable by design: nuclear, fossil fuels and fossil carbon capture are excluded from the 2050 system, and no negative-emission technologies are used.",
+        "Cost-optimised model with full hourly resolution, 145 regions grouped into nine world regions.",
+        "Covers power, heat, transport and desalination, with heavy direct and indirect electrification (power-to-X fuels).",
+        "Carbon budget taken from the IPCC's 1.5 °C special report.",
+        "Results rest on the authors' own assumptions of steep further cost declines for solar PV, batteries and electrolysers.",
+        "Demand for energy services rises substantially; efficiency from electrification cuts primary energy by about half."
+      ],
+      "group": "Dmitrii Bogdanov, Christian Breyer and twelve co-authors at LUT University (Lappeenranta, Finland), in collaboration with the Energy Watch Group, a network that advocates 100% renewable energy. Breyer's group is the most prolific producer of 100%-renewable studies."
     },
     {
       "id": "iaea-low",
@@ -1070,7 +1210,17 @@
       "likelihood": {
         "score": 3,
         "why": "Comparable to the IEA CPS nuclear figure (728 GW)."
-      }
+      },
+      "checked": "full",
+      "assumptions": [
+        "Assumes 'current market, technology and resource trends continue', with few changes in laws, policies and regulations affecting nuclear power.",
+        "Does not assume that national nuclear targets are met; assumes more retirements than the high case.",
+        "Reaches 561 GW(e) in 2050, about 50% above today; small modular reactors are about 5% of the capacity added.",
+        "Built bottom-up, country by country and project by project: experts judge each operating reactor, licence renewal, planned shutdown, uprate and construction project.",
+        "The estimates 'are not intended to be predictive'; they give a plausible range, not the full range of possible futures.",
+        "Method and figures here are from the 2025 edition (45th), the latest available when this entry was compiled: 377 GW(e) operating at the end of 2024."
+      ],
+      "group": "Prepared each year by a group of external experts convened by the International Atomic Energy Agency in Vienna, the UN-family agency whose mandate includes promoting the peaceful use of nuclear energy. The projections are for nuclear only and are published in the agency's Reference Data Series No. 1."
     },
     {
       "id": "iaea-high",
@@ -1109,7 +1259,18 @@
       "likelihood": {
         "score": 2,
         "why": "History of construction delays and cost overruns argues for caution."
-      }
+      },
+      "checked": "full",
+      "assumptions": [
+        "Includes national climate policies and countries' stated intentions to expand nuclear power, while 'remaining plausible and technically feasible'.",
+        "Assumes most reactors have their operating lives extended.",
+        "Needs enabling conditions: investment, grid expansion, supply chains, harmonised regulation (especially for small modular reactors) and workforce.",
+        "Reaches 992 GW(e) in 2050, 2.6 times today; small modular reactors are about 24% of the capacity added.",
+        "Built bottom-up, country by country and project by project: experts judge each operating reactor, licence renewal, planned shutdown, uprate and construction project.",
+        "The estimates 'are not intended to be predictive'; they give a plausible range, not the full range of possible futures.",
+        "Method and figures here are from the 2025 edition (45th), the latest available when this entry was compiled: 377 GW(e) operating at the end of 2024."
+      ],
+      "group": "Prepared each year by a group of external experts convened by the International Atomic Energy Agency in Vienna, the UN-family agency whose mandate includes promoting the peaceful use of nuclear energy. The projections are for nuclear only and are published in the agency's Reference Data Series No. 1."
     }
   ],
   "context": [

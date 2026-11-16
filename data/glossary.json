@@ -1150,6 +1150,39 @@
         "VRE",
         "Temporal resolution"
       ]
+    },
+    {
+      "term": "Climate sensitivity",
+      "full": "Equilibrium climate sensitivity",
+      "category": "transition",
+      "level": 2,
+      "definition": "How much the planet eventually warms if the CO2 concentration in the air doubles. The IPCC's best estimate is about 3 °C, with a likely range of 2.5 to 4 °C. It is the main physical uncertainty behind every warming projection.",
+      "related": [
+        "Carbon budget",
+        "Overshoot"
+      ]
+    },
+    {
+      "term": "SPM",
+      "full": "Summary for Policymakers",
+      "category": "transition",
+      "level": 1,
+      "definition": "The short summary at the front of each IPCC report. Scientists draft it and government delegates approve it line by line, so its wording is both scientifically reviewed and politically negotiated.",
+      "related": [
+        "IAM",
+        "Scenario"
+      ]
+    },
+    {
+      "term": "System dynamics",
+      "full": "",
+      "category": "modelling",
+      "level": 3,
+      "definition": "A modelling approach that simulates how a system evolves through feedback loops, delays and inertia, instead of searching for a least-cost optimum. DNV's forecast is built this way.",
+      "related": [
+        "ESOM",
+        "Scenario"
+      ]
     }
   ]
 }

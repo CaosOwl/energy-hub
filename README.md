@@ -9,7 +9,8 @@ A personal, phone-installable reader for energy news with a nuclear focus, a rea
 | **Feed** | Headlines + short teaser, ranked by recency, source weight and a nuclear boost. Near-duplicate stories are merged ("Also: …"). The coloured bar shows the share of stories per topic; tap a segment to filter. A blue dot marks stories that are new since your last visit. Saved stories are kept on the device even after they leave the feed. Glossary terms are underlined; tap for the definition. | `data/sources.json` (which feeds, weights) |
 | **Builders** | Companies building new fission and fusion reactors, filterable by stage, each with a six-step progress track from concept to operation. "News in feed" searches the feed for that company. | `data/companies.json` |
 | **Glossary** | Terms by category and level, "learned" tracking, flashcards, add/edit on the phone. | `data/glossary.json` |
-| **Scenarios** | Compare up to three major energy outlooks (IEA, BNEF, DNV, IPCC and others) on 2050 metrics, electricity mix, warming and achievability, with your own likelihood score. | `data/scenarios.json` |
+| **Models** | Compare up to three major energy outlooks (IEA, BNEF, DNV, IPCC and others) on 2050 metrics, electricity mix, warming and achievability, with your own likelihood score. Each model links to its original report and has an Assumptions and an Authors tab. | `data/scenarios.json` |
+| **IPCC** | Every IPCC assessment report and the energy-relevant special reports by year, with main messages and a link to the report. | `data/ipcc.json` |
 | **Literature** | Assessments, meta-studies, reviews and landmark papers on energy system modelling, grouped by theme, with a nuclear-relevant filter. | `data/literature.json` |
 | **Sources** | Every source grouped by access (fetched / headlines only / visit directly / paid), with live feed status. | `data/sources.json` |
 
@@ -31,6 +32,8 @@ After that, the workflow runs every 3 hours and on every push.
 - **Companies:** edit `data/companies.json`. `stage` is one of `concept`, `design`, `licensing`, `construction`, `critical`, `experiment`, `operating`. Add `"swiss": true` to tag a Swiss link.
 - **Glossary:** edit `data/glossary.json` directly, or edit in the app and use **Export** to download the merged file, then replace `data/glossary.json` with it.
 - **Literature:** edit `data/literature.json`. Each item needs `category` (one of the ids in `categories`), `type`, `title`, `authors`, `year`, `venue`, `finding`, `why`; always give a `doi` or `url` so the entry links to the original. `assumptions` (a list of sentences), `checked` (`full`, `summary` or `outline`: how closely the assumptions were checked against the study), `group` (a short note on the authors), `open` (link to a free version), `nuclear: true` and `perspective` are optional.
+- **Models:** edit `data/scenarios.json`. `assumptions`, `checked` and `group` work as in the literature file.
+- **IPCC reports:** edit `data/ipcc.json`. Each report has `year`, `released`, `kind` (`assessment`, `synthesis`, `special`, `upcoming`), `title`, `url`, `messages` (a list), and optional `attribution`, `energy` and `impact`.
 - **Failing feeds:** the Feed tab shows "N of M feeds failing" and the Sources tab shows the error. Fix the address, or set `"feed": null` to list the source as visit-directly. A feed that answers but is empty also counts as failing.
 
 ## Run locally

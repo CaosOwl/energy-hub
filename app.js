@@ -17,7 +17,7 @@
   const keyOf = (term) => String(term).trim().toLowerCase();
 
   const PAGE = 40;
-  const VIEWS = ["feed", "companies", "glossary", "scenarios", "literature", "sources"];
+  const VIEWS = ["feed", "companies", "glossary", "scenarios", "ipcc", "literature", "sources"];
   const TOPICS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["general", "General"]];
   const CATS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["modelling", "Modelling"]];
   const LABEL = Object.fromEntries([...TOPICS, ...CATS, ["data", "Data"], ["learning", "Learning"]]);
@@ -60,6 +60,8 @@
     gl: { q: "", cat: "all", level: 0, hideLearned: false },
     lit: { q: "", cat: "all", sort: "category", nuclear: false },
     scen: { scenarios: [], metrics: [] },
+    ipcc: { about: "", updated: "", home: "", reports: [] },
+    ip: { kind: "all", order: "newest" },
     sc: { sel: store.get("scSel", ["iea-steps", "iea-nze", "dnv-eto"]), mine: store.get("scMine", {}), group: "all", type: "all" },
   };
 
@@ -385,6 +387,7 @@
   const SC_TYPE = { exploratory: "Exploratory", normative: "Normative", forecast: "Forecast" };
   const SC_PUB = { agency: "Agencies", analyst: "Analysts", company: "Industry", science: "Science" };
   const sw = (i) => `<span class="sw c${i}"></span>`;
+  const scLinks = (s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">Original report</a><button class="link" data-scinfo="${esc(s.id)}" data-tab="assumptions">Assumptions</button><button class="link" data-scinfo="${esc(s.id)}" data-tab="authors">Authors</button>`;
   function scById(id) { return (state.scen.scenarios || []).find((s) => s.id === id); }
   function scFmt(m, cell) {
     if (!cell) return `<span class="mval na">not published</span>`;
@@ -418,6 +421,7 @@
     $("#sc-groups").innerHTML = SC_GROUPS.map(([k, l]) => `<button data-g="${k}" class="${state.sc.group === k ? "on" : ""}">${l}</button>`).join("");
 
     const chosen = sel.map((id, i) => ({ s: scById(id), i })).filter((x) => x.s);
+    $("#sc-chosen").innerHTML = chosen.map(({ s, i }) => `<div class="sc-chosen-row"><span class="who">${sw(i)}<strong>${esc(s.short)}</strong></span><span class="card-actions">${scLinks(s)}</span></div>`).join("");
     const today = S.today || {};
     $("#sc-compare").innerHTML = (S.metrics || []).filter((m) => state.sc.group === "all" || m.group === state.sc.group).map((m) => {
       const tv = today[m.id];
@@ -455,6 +459,7 @@
         const val = mine ?? s.likelihood?.score ?? 0;
         const stars = [1, 2, 3, 4, 5].map((n) => `<button data-star="${n}" data-sc="${esc(s.id)}" class="${n <= val ? "on" : ""}" aria-label="${n} of 5">★</button>`).join("");
         return `<div class="score-card"><h3>${sw(i)}${esc(s.name)}</h3>
+          <div class="card-actions" style="padding-top:6px">${scLinks(s)}</div>
           <div class="score-line"><span class="k">Political achievability</span><div>${dots(s.political?.score || 0)}<p class="sc-why">${highlight(esc(s.political?.why || ""))}</p></div></div>
           <div class="score-line"><span class="k">Your likelihood</span><div><span class="stars">${stars}</span>
             <p class="sc-why">${mine != null ? `Your score. Suggested ${s.likelihood?.score} of 5. <button class="link small" data-reset="${esc(s.id)}">Reset</button>` : `Suggested ${s.likelihood?.score} of 5.`} ${highlight(esc(s.likelihood?.why || ""))}</p></div></div>
@@ -482,7 +487,8 @@
       <p>${highlight(esc(s.summary))}</p>
       ${s.facts?.length ? `<ul class="facts-list">${s.facts.map((f) => `<li>${highlight(esc(f))}</li>`).join("")}</ul>` : ""}
       <div class="design" style="margin-top:8px">Model: ${esc(s.model)}</div>
-      <div class="cmp-btns">${[0, 1, 2].map((i) => `<button data-set="${i}" data-sc="${esc(s.id)}">${sw(i)}Compare as ${i + 1}</button>`).join("")}</div>
+      <div class="card-actions">${scLinks(s)}</div>
+      <div class="cmp-btns" style="margin-top:0">${[0, 1, 2].map((i) => `<button data-set="${i}" data-sc="${esc(s.id)}">${sw(i)}Compare as ${i + 1}</button>`).join("")}</div>
     </li>`).join("");
 
     $("#sc-sources").innerHTML = `<strong>Sources</strong><ul>${(S.sources || []).map((x) => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></li>`).join("")}</ul>
@@ -494,6 +500,8 @@
   $("#sc-groups").addEventListener("click", (e) => { const b = e.target.closest("[data-g]"); if (b) { state.sc.group = b.dataset.g; renderScenarios(); } });
   $("#sc-type").addEventListener("click", (e) => { const b = e.target.closest("[data-type]"); if (b) { state.sc.type = b.dataset.type; renderScenarios(); } });
   $("#view-scenarios").addEventListener("click", (e) => {
+    const info = e.target.closest("[data-scinfo]");
+    if (info) return openScenario(info.dataset.scinfo, info.dataset.tab);
     const st = e.target.closest("[data-star]");
     if (st) { state.sc.mine[st.dataset.sc] = +st.dataset.star; scSave(); renderScenarios(); return; }
     const rs = e.target.closest("[data-reset]");
@@ -512,6 +520,35 @@
     }
     const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term);
   });
+
+  // ---------- IPCC ----------
+  const IP_KIND = { assessment: "Assessment report", synthesis: "Synthesis report", special: "Special report", upcoming: "In preparation" };
+  function renderIpcc() {
+    const I = state.ipcc, all = I.reports || [], { kind, order } = state.ip;
+    $("#ip-about").textContent = I.about || "";
+    const groups = [["all", "All"], ["assessment", "Assessment reports"], ["special", "Special reports"], ["upcoming", "In preparation"]];
+    const inGroup = (r, k) => k === "all" || r.kind === k || (k === "assessment" && r.kind === "synthesis");
+    $("#ip-kind").innerHTML = groups.map(([k, l]) => chip("data-kind", k, l, kind === k, all.filter((r) => inGroup(r, k)).length)).join("");
+    const list = all.filter((r) => inGroup(r, kind)).sort((a, b) => (order === "newest" ? -1 : 1) * (a.year - b.year || all.indexOf(a) - all.indexOf(b)));
+    $("#ip-list").innerHTML = list.length ? list.map((r) => `<li class="ip-item ${r.status === "planned" ? "planned" : ""}">
+      <div class="ip-year">${esc(r.year)}</div>
+      <div class="ip-body">
+        <div class="meta"><span class="badge type">${esc(IP_KIND[r.kind] || r.kind)}</span><span>${esc(r.released)}</span></div>
+        <h3><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
+        ${r.attribution ? `<p class="ip-attr"><span>On human influence</span>${esc(r.attribution)}</p>` : ""}
+        <ul class="assume">${(r.messages || []).map((m) => `<li>${highlight(esc(m))}</li>`).join("")}</ul>
+        ${r.energy ? `<p class="ip-note"><strong>For energy</strong> ${highlight(esc(r.energy))}</p>` : ""}
+        ${r.impact ? `<p class="ip-note"><strong>${r.status === "planned" ? "Open question" : "What followed"}</strong> ${esc(r.impact)}</p>` : ""}
+        <div class="card-actions"><a href="${esc(r.url)}" target="_blank" rel="noopener">Open the report</a></div>
+      </div></li>`).join("") : empty("No reports loaded", "Add entries to <code>data/ipcc.json</code>.");
+    $("#ip-foot").innerHTML = I.home ? `Main messages are paraphrased from each report's Summary for Policymakers; quotation marks show the IPCC's own words. All reports: <a href="${esc(I.home)}" target="_blank" rel="noopener">ipcc.ch/reports</a>. Updated ${esc(I.updated)}.` : "";
+  }
+  $("#ip-kind").addEventListener("click", (e) => { const b = e.target.closest("[data-kind]"); if (b) { state.ip.kind = b.dataset.kind; renderIpcc(); } });
+  $("#ip-order").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-order]"); if (!b) return;
+    state.ip.order = b.dataset.order; segOn($("#ip-order"), b); renderIpcc();
+  });
+  $("#ip-list").addEventListener("click", (e) => { const t = e.target.closest("[data-term]"); if (t) openTerm(t.dataset.term); });
 
   // ---------- LITERATURE ----------
   const paperLink = (p) => p.doi ? "https://doi.org/" + p.doi : p.url || "https://scholar.google.com/scholar?q=" + encodeURIComponent(p.title);
@@ -563,27 +600,45 @@
 
   // Study details: summary, assumptions and authors, each on its own tab.
   const CHECKED = {
-    full: "Checked against the full text of the study.",
+    full: "Checked against the full text or the publisher's own method description.",
     summary: "Taken from the publisher's summary or abstract; the full text may state more.",
     outline: "Outline only: not yet checked line by line against the original, so treat it as a guide to what to look for.",
   };
-  function openPaper(id, tab = "summary") {
-    const p = state.literature.items.find((x) => x.id === id); if (!p) return;
+  // One detail sheet for studies and for models: Summary, Assumptions, Authors.
+  function detailSheet(o, tab, reopen) {
     const tabs = [["summary", "Summary"], ["assumptions", "Assumptions"], ["authors", "Authors"]];
     const panel = {
-      summary: () => `<p>${highlight(esc(p.finding))}</p><p class="muted">Why it matters: ${esc(p.why)}</p>`,
-      assumptions: () => p.assumptions?.length
-        ? `<ul class="assume">${p.assumptions.map((a) => `<li>${highlight(esc(a))}</li>`).join("")}</ul><p class="basis">${esc(CHECKED[p.checked] || "")}</p>`
-        : `<p class="muted">No assumptions recorded for this study yet. Add an <code>assumptions</code> list to its entry in <code>data/literature.json</code>.</p>`,
-      authors: () => `<p class="muted">${esc(String(p.authors).replace(/\.$/, ""))}</p>${p.group ? `<p>${esc(p.group)}</p>` : `<p class="muted">No author note recorded yet.</p>`}`,
+      summary: () => o.summary,
+      assumptions: () => o.assumptions?.length
+        ? `<ul class="assume">${o.assumptions.map((a) => `<li>${highlight(esc(a))}</li>`).join("")}</ul><p class="basis">${esc(CHECKED[o.checked] || "")}</p>`
+        : `<p class="muted">No assumptions recorded yet. Add an <code>assumptions</code> list to this entry in <code>${o.file}</code>.</p>`,
+      authors: () => `${o.byline ? `<p class="muted">${esc(o.byline)}</p>` : ""}${o.group ? `<p>${esc(o.group)}</p>` : `<p class="muted">No author note recorded yet.</p>`}`,
     };
-    openSheet(`<h2 class="paper-title">${esc(p.title)}</h2>
-      <div class="cite"><em>${esc(p.year)}</em> ${esc(p.venue)}</div>
+    openSheet(`<h2 class="paper-title">${esc(o.title)}</h2>
+      <div class="cite">${o.cite}</div>
       <div class="seg sheet-tabs" role="tablist">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${k === tab}" class="${k === tab ? "on" : ""}" data-ptab="${k}">${l}</button>`).join("")}</div>
       <div class="paper-panel" role="tabpanel">${(panel[tab] || panel.summary)()}</div>
-      <div class="sheet-actions"><span class="row gap"><a class="btn ghost" href="${esc(paperLink(p))}" target="_blank" rel="noopener">Read the original</a>${p.open ? `<a class="link small" href="${esc(p.open)}" target="_blank" rel="noopener">Free version</a>` : ""}</span><button class="btn" data-close>Done</button></div>`);
-    $$("[data-ptab]", body).forEach((b) => (b.onclick = () => openPaper(id, b.dataset.ptab)));
+      <div class="sheet-actions"><span class="row gap"><a class="btn ghost" href="${esc(o.url)}" target="_blank" rel="noopener">${o.linkLabel}</a>${o.open ? `<a class="link small" href="${esc(o.open)}" target="_blank" rel="noopener">Free version</a>` : ""}</span><button class="btn" data-close>Done</button></div>`);
+    $$("[data-ptab]", body).forEach((b) => (b.onclick = () => reopen(b.dataset.ptab)));
     $$("[data-term]", body).forEach((b) => (b.onclick = () => openTerm(b.dataset.term)));
+  }
+  function openPaper(id, tab = "summary") {
+    const p = state.literature.items.find((x) => x.id === id); if (!p) return;
+    detailSheet({
+      title: p.title, cite: `<em>${esc(p.year)}</em> ${esc(p.venue)}`, file: "data/literature.json",
+      summary: `<p>${highlight(esc(p.finding))}</p><p class="muted">Why it matters: ${esc(p.why)}</p>`,
+      assumptions: p.assumptions, checked: p.checked, byline: String(p.authors).replace(/\.$/, ""), group: p.group,
+      url: paperLink(p), open: p.open, linkLabel: "Read the original",
+    }, tab, (t) => openPaper(id, t));
+  }
+  function openScenario(id, tab = "assumptions") {
+    const s = scById(id); if (!s) return;
+    detailSheet({
+      title: s.name, cite: `<em>${esc(SC_TYPE[s.type] || s.type)}</em> ${esc(s.edition)}`, file: "data/scenarios.json",
+      summary: `<p>${highlight(esc(s.summary))}</p>${s.facts?.length ? `<ul class="assume">${s.facts.map((f) => `<li>${highlight(esc(f))}</li>`).join("")}</ul>` : ""}<p class="muted">Model: ${esc(s.model)}</p>`,
+      assumptions: s.assumptions, checked: s.checked, byline: s.publisher, group: s.group,
+      url: s.url, linkLabel: "Open the original report",
+    }, tab, (t) => openScenario(id, t));
   }
 
   // ---------- sheet (popover / editor / export / flashcards) ----------
@@ -663,7 +718,7 @@
       saveLocal(); glossaryChanged(); closeSheet();
     };
   }
-  function glossaryChanged() { buildHighlighter(); renderGlossary(); renderFeed(); renderCompanies(); renderScenarios(); renderLiterature(); }
+  function glossaryChanged() { buildHighlighter(); renderGlossary(); renderFeed(); renderCompanies(); renderScenarios(); renderIpcc(); renderLiterature(); }
 
   function exportJSON() {
     const terms = glossary().map(({ _local, ...t }) => t);
@@ -741,16 +796,17 @@
   // ---------- boot ----------
   async function boot() {
     applyTheme();
-    const [articles, sources, companies, gl, lit, scen] = await Promise.all([
+    const [articles, sources, companies, gl, lit, scen, ipcc] = await Promise.all([
       load("data/articles.json", state.articles),
       load("data/sources.json", { sources: [] }),
       load("data/companies.json", state.companies),
       load("data/glossary.json", state.glossaryBase),
       load("data/literature.json", state.literature),
       load("data/scenarios.json", state.scen),
+      load("data/ipcc.json", state.ipcc),
     ]);
     state.articles = articles; state.sources = sources.sources || []; state.companies = companies;
-    state.glossaryBase = gl; state.literature = { ...state.literature, ...lit }; state.scen = scen;
+    state.glossaryBase = gl; state.literature = { ...state.literature, ...lit }; state.scen = scen; state.ipcc = { ...state.ipcc, ...ipcc };
 
     // Stories saved by an earlier version were stored as links only; give them a full copy.
     const oldSaved = store.get("saved", null);
@@ -762,7 +818,7 @@
 
     buildHighlighter();
     $("#updated").textContent = articles.generated ? "Updated " + relTime(articles.generated) : "";
-    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderScenarios(); renderLiterature(); renderSources();
+    renderHealth(); renderFeed(); renderCompanies(); renderGlossary(); renderScenarios(); renderIpcc(); renderLiterature(); renderSources();
     show(location.hash.slice(1) || store.get("view", "feed"));
   }
   boot();

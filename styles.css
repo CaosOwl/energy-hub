@@ -99,13 +99,13 @@ h1, h2, h3 { font-stretch: 78%; font-weight: 700; letter-spacing: -.005em; line-
 /* ---------- navigation: bottom bar on phones, left rail on wide screens ---------- */
 .tabbar {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;
-  display: grid; grid-template-columns: repeat(6, 1fr);
+  display: grid; grid-template-columns: repeat(7, 1fr);
   background: color-mix(in srgb, var(--surface) 90%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
 }
 .tabbar button {
-  position: relative; border: 0; background: none; padding: 9px 0 9px; font-size: .66rem; font-weight: 500;
+  position: relative; border: 0; background: none; padding: 9px 0 9px; font-size: .62rem; font-stretch: 88%; font-weight: 500;
   color: var(--muted); display: grid; justify-items: center; gap: 3px;
 }
 .tabbar svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
@@ -337,6 +337,29 @@ main { max-width: 760px; margin: 0 auto; padding: 14px 16px 24px; outline: none;
 #sc-about summary { color: var(--accent); cursor: pointer; }
 #sc-about details p { margin: 6px 0 0; }
 
+.sc-chosen { display: grid; gap: 2px; margin: -4px 0 12px; }
+.sc-chosen-row { display: flex; align-items: center; justify-content: space-between; gap: 6px 14px; flex-wrap: wrap; font-size: .84rem; padding: 4px 0; }
+.sc-chosen-row .who { display: inline-flex; align-items: center; gap: 7px; }
+.sc-chosen-row .card-actions { margin: 0; padding: 0; flex-wrap: wrap; gap: 4px 14px; }
+.score-card .card-actions { margin: 0; }
+
+/* IPCC timeline */
+.ip-list { list-style: none; margin: 0; padding: 0; position: relative; }
+.ip-list::before { content: ""; position: absolute; left: 27px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.ip-item { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; padding-bottom: 14px; }
+.ip-year { position: relative; z-index: 1; align-self: start; margin-top: 12px; text-align: center; font-weight: 800; font-stretch: 72%; font-size: 1.05rem; line-height: 1; padding: 7px 0; border-radius: 9px; background: var(--pool); color: var(--pool-ink); box-shadow: 0 0 0 4px var(--bg); }
+.ip-item.planned .ip-year { background: var(--surface); color: var(--muted); border: 1px dashed var(--muted); }
+.ip-body { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+.ip-item.planned .ip-body { border-style: dashed; box-shadow: none; }
+.ip-body h3 { font-size: 1.18rem; margin-top: 8px; }
+.ip-body h3 a { color: var(--ink); text-decoration: none; }
+.ip-body h3 a:hover { text-decoration: underline; }
+.ip-attr { margin: 12px 0 0; padding: 10px 12px; border-left: 3px solid var(--nuclear); background: color-mix(in srgb, var(--nuclear) 10%, transparent); border-radius: 0 8px 8px 0; font: 500 .98rem/1.45 var(--read); }
+.ip-attr span { display: block; font: 600 .74rem/1.3 var(--ui); color: var(--muted); margin-bottom: 3px; }
+.ip-note { margin: 12px 0 0; font-size: .88rem; color: var(--muted); max-width: 70ch; }
+.ip-note strong { color: var(--ink); font-weight: 600; margin-right: 4px; }
+.ip-body .card-actions { margin: 0; }
+
 /* sources */
 .src-group h2 { font-size: 1.15rem; margin: 22px 0 8px; }
 .src-group:first-child h2 { margin-top: 6px; }
@@ -410,7 +433,7 @@ main { max-width: 760px; margin: 0 auto; padding: 14px 16px 24px; outline: none;
   .toolbar { max-width: 760px; }
   #view-feed .rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: hidden; }
   #view-feed .story { border-top: 0; box-shadow: 0 1px 0 var(--line), 1px 0 0 var(--line); }
-  #lit-list, #src-groups, .sc-pickers, #sc-mix, #sc-strip, #sc-scores, #sc-about { max-width: 820px; }
+  .ip-list, #ip-about, #lit-list, #src-groups, .sc-pickers, #sc-mix, #sc-strip, #sc-scores, #sc-about { max-width: 820px; }
   .sc-pickers { grid-template-columns: repeat(3, 1fr); max-width: none; }
   .sc-block { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

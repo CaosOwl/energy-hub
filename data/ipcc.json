@@ -1,0 +1,279 @@
+{
+  "_about": "IPCC reports by year, with their main messages. Messages are paraphrased from each report's Summary for Policymakers and checked against published summaries; quotation marks show the IPCC's own words. Edit freely.",
+  "updated": "2026-11-16",
+  "about": "The Intergovernmental Panel on Climate Change does not publish every year: it works in cycles of six to eight years, each producing three working group reports and a synthesis, with special reports in between. This list has every assessment report and the special reports most relevant to energy.",
+  "home": "https://www.ipcc.ch/reports/",
+  "reports": [
+    {
+      "id": "ar1",
+      "year": 1990,
+      "released": "1990",
+      "kind": "assessment",
+      "title": "First Assessment Report (FAR)",
+      "short": "FAR",
+      "url": "https://www.ipcc.ch/report/ar1/wg1/",
+      "attribution": "Warming so far 'could be largely due to natural variability'; clear detection not expected for a decade or more.",
+      "messages": [
+        "Emissions from human activities are substantially increasing the concentrations of greenhouse gases in the atmosphere, which will warm the Earth's surface.",
+        "Global mean temperature rose 0.3 to 0.6 °C over the previous 100 years.",
+        "With business as usual, warming of about 0.3 °C per decade during the 21st century (range 0.2 to 0.5).",
+        "Sea level would rise about 6 cm per decade, reaching about 65 cm by 2100.",
+        "Stabilising concentrations of long-lived gases at 1990 levels would need emission cuts of more than 60%."
+      ],
+      "energy": "CO2 from fossil fuels is identified as responsible for over half of the enhanced greenhouse effect.",
+      "impact": "The scientific basis for the UN Framework Convention on Climate Change, agreed at Rio in 1992.",
+      "status": "published"
+    },
+    {
+      "id": "ar2",
+      "year": 1995,
+      "released": "1995",
+      "kind": "assessment",
+      "title": "Second Assessment Report (SAR): Climate Change 1995",
+      "short": "SAR",
+      "url": "https://www.ipcc.ch/report/ar2/wg1/",
+      "attribution": "'The balance of evidence suggests a discernible human influence on global climate.'",
+      "messages": [
+        "First statement that a human signal can be seen in the climate record, with the caveat that the ability to quantify it is limited.",
+        "Temperature has risen 0.3 to 0.6 °C since the late 19th century; the trend is unlikely to be entirely natural.",
+        "CO2 remains the most important contributor to human-caused warming.",
+        "Many aspects of climate change are effectively irreversible because of the long timescales involved."
+      ],
+      "energy": "Introduced the question of which concentration level counts as 'dangerous', which later became temperature targets and carbon budgets.",
+      "impact": "Informed the negotiation of the Kyoto Protocol, adopted in 1997.",
+      "status": "published"
+    },
+    {
+      "id": "ar3",
+      "year": 2001,
+      "released": "2001",
+      "kind": "assessment",
+      "title": "Third Assessment Report (TAR): Climate Change 2001",
+      "short": "TAR",
+      "url": "https://www.ipcc.ch/report/ar3/wg1/",
+      "attribution": "'New and stronger evidence that most of the warming observed over the last 50 years is attributable to human activities' (likely, more than 66%).",
+      "messages": [
+        "Global average surface temperature rose about 0.6 °C over the 20th century.",
+        "Projected warming of 1.4 to 5.8 °C between 1990 and 2100, depending on the emissions scenario.",
+        "Projected sea level rise of 0.1 to 0.9 m over the same period."
+      ],
+      "energy": "The wide warming range comes mainly from different emission scenarios (the SRES family), which made energy choices the central uncertainty.",
+      "impact": "Shaped the implementation rules of the Kyoto Protocol and brought the scenario approach into policy debate.",
+      "status": "published"
+    },
+    {
+      "id": "ar4",
+      "year": 2007,
+      "released": "2007",
+      "kind": "assessment",
+      "title": "Fourth Assessment Report (AR4): Climate Change 2007",
+      "short": "AR4",
+      "url": "https://www.ipcc.ch/report/ar4/syr/",
+      "attribution": "Warming is 'unequivocal'; most of the warming since the mid-20th century is 'very likely' (more than 90%) due to human greenhouse gas emissions.",
+      "messages": [
+        "Warming of about 0.74 °C over the last 100 years.",
+        "Projected warming by 2100 from 1.8 °C (range 1.1 to 2.9) in the lowest scenario to 4.0 °C (2.4 to 6.4) in the highest, relative to 1980-1999.",
+        "Climate sensitivity likely between 2 and 4.5 °C per doubling of CO2, best estimate about 3 °C.",
+        "Sea level rise of 18 to 59 cm by 2100, not counting possible rapid changes in ice flow.",
+        "Stabilising at 445 to 535 ppm CO2-equivalent would cost less than 3% of global GDP, slowing annual growth by less than 0.12 percentage points."
+      ],
+      "energy": "First assessment to conclude that deep emission cuts are affordable with known and emerging technologies.",
+      "impact": "The IPCC shared the 2007 Nobel Peace Prize with Al Gore; the report framed the Bali roadmap and the Copenhagen negotiations.",
+      "status": "published"
+    },
+    {
+      "id": "srren",
+      "year": 2011,
+      "released": "May 2011",
+      "kind": "special",
+      "title": "Special Report on Renewable Energy Sources and Climate Change Mitigation (SRREN)",
+      "short": "SRREN",
+      "url": "https://www.ipcc.ch/report/renewable-energy-sources-and-climate-change-mitigation/",
+      "attribution": null,
+      "messages": [
+        "Renewables supplied about 13% of global primary energy in 2008, most of it traditional biomass.",
+        "Reviewed 164 scenarios; in the most ambitious, renewables supply close to 80% of world energy by 2050.",
+        "The technical potential of renewables is far larger than demand; the limits are cost, integration and policy, not resources."
+      ],
+      "energy": "The IPCC's only report devoted to energy supply technologies. Its cost figures for solar and wind are long out of date: both fell far faster than it expected.",
+      "impact": "Established that a mostly renewable energy system is technically possible, which later scenario work built on.",
+      "status": "published"
+    },
+    {
+      "id": "ar5",
+      "year": 2013,
+      "released": "2013-2014",
+      "kind": "assessment",
+      "title": "Fifth Assessment Report (AR5)",
+      "short": "AR5",
+      "url": "https://www.ipcc.ch/report/ar5/syr/",
+      "attribution": "'It is extremely likely (more than 95%) that human influence has been the dominant cause of the observed warming since the mid-20th century.'",
+      "messages": [
+        "Warming depends on cumulative CO2 emissions: this is the origin of the 'carbon budget'. Warming continues to be locked in even if emissions stop.",
+        "CO2 concentrations are at levels unprecedented in at least 800,000 years; the ocean has absorbed about 90% of the added heat.",
+        "Without new policies, warming of 3.7 to 4.8 °C by 2100 (median range).",
+        "Pledges at the time were broadly consistent with staying below 3 °C, not 2 °C.",
+        "Delaying emission cuts makes reaching any target more expensive."
+      ],
+      "energy": "In pathways that hold warming to 2 °C, the share of low-carbon electricity (renewables, nuclear, carbon capture) rises from about 30% to more than 80% by 2050.",
+      "impact": "The scientific foundation of the Paris Agreement (2015) and its 'well below 2 °C' goal.",
+      "status": "published"
+    },
+    {
+      "id": "sr15",
+      "year": 2018,
+      "released": "8 October 2018",
+      "kind": "special",
+      "title": "Special Report: Global Warming of 1.5 °C (SR1.5)",
+      "short": "SR1.5",
+      "url": "https://www.ipcc.ch/sr15/",
+      "attribution": null,
+      "messages": [
+        "Human activities had already caused about 1.0 °C of warming (0.8 to 1.2).",
+        "At the current rate, 1.5 °C is likely to be reached between 2030 and 2052.",
+        "Limiting warming to 1.5 °C needs CO2 emissions to fall about 45% from 2010 levels by 2030 and reach net zero around 2050.",
+        "Half a degree matters: coral reefs decline 70-90% at 1.5 °C and more than 99% at 2 °C; an ice-free Arctic summer once a century versus once a decade.",
+        "Pledges at the time pointed to about 3 °C by 2100."
+      ],
+      "energy": "Made 'net zero by 2050' the organising target for energy policy and for scenarios such as the IEA's Net Zero Emissions pathway.",
+      "impact": "Requested by governments in the Paris Agreement; it triggered the wave of national and corporate net-zero pledges.",
+      "status": "published"
+    },
+    {
+      "id": "srccl",
+      "year": 2019,
+      "released": "8 August 2019",
+      "kind": "special",
+      "title": "Special Report on Climate Change and Land (SRCCL)",
+      "short": "SRCCL",
+      "url": "https://www.ipcc.ch/srccl/",
+      "attribution": null,
+      "messages": [
+        "Human use directly affects more than 70% of the ice-free land surface.",
+        "Agriculture, forestry and other land use account for roughly a quarter of human greenhouse gas emissions.",
+        "25 to 30% of food produced is lost or wasted.",
+        "Land is both a source and a sink of carbon; better land management can help, but land cannot do everything at once."
+      ],
+      "energy": "Warns against relying on very large areas of bioenergy crops (including bioenergy with carbon capture), because they compete with food and ecosystems. This limits a technology many 1.5 °C scenarios lean on.",
+      "impact": "Put food systems and land competition on the climate-policy agenda.",
+      "status": "published"
+    },
+    {
+      "id": "srocc",
+      "year": 2019,
+      "released": "25 September 2019",
+      "kind": "special",
+      "title": "Special Report on the Ocean and Cryosphere in a Changing Climate (SROCC)",
+      "short": "SROCC",
+      "url": "https://www.ipcc.ch/srocc/",
+      "attribution": null,
+      "messages": [
+        "The ocean has taken up more than 90% of the excess heat in the climate system since 1970, and the rate of ocean warming has more than doubled since 1993.",
+        "Sea level could rise about 30-60 cm by 2100 if warming stays well below 2 °C, and about 60-110 cm if emissions keep rising strongly.",
+        "Marine heatwaves have very likely doubled in frequency since 1982.",
+        "About 625 million people live in low-lying coastal areas."
+      ],
+      "energy": "Relevant to energy mainly through infrastructure risk: coastal power plants, ports and grids, and hydropower fed by glaciers and snow.",
+      "impact": "Raised the upper end of sea-level projections compared with AR5.",
+      "status": "published"
+    },
+    {
+      "id": "ar6-wg1",
+      "year": 2021,
+      "released": "9 August 2021",
+      "kind": "assessment",
+      "title": "Sixth Assessment Report (AR6), Working Group I: The Physical Science Basis",
+      "short": "AR6 WG I",
+      "url": "https://www.ipcc.ch/report/ar6/wg1/",
+      "attribution": "'It is unequivocal that human influence has warmed the atmosphere, ocean and land.'",
+      "messages": [
+        "Global surface temperature in 2011-2020 was about 1.1 °C above 1850-1900.",
+        "1.5 °C is likely to be reached before 2040 in all scenarios considered.",
+        "Remaining carbon budget from the start of 2020: about 500 GtCO2 for a 50% chance of staying below 1.5 °C, 400 GtCO2 for a 67% chance.",
+        "Climate sensitivity narrowed to 2.5 to 4.0 °C per doubling of CO2, best estimate 3 °C.",
+        "Sea level likely to rise 0.5 to 1 m by 2100; 2 m cannot be ruled out."
+      ],
+      "energy": "Every tonne of CO2 adds to warming, so the remaining budget translates directly into how much fossil fuel can still be burned.",
+      "impact": "Released ahead of the Glasgow climate conference (COP26); the UN Secretary-General called it a 'code red for humanity'.",
+      "status": "published"
+    },
+    {
+      "id": "ar6-wg2",
+      "year": 2022,
+      "released": "28 February 2022",
+      "kind": "assessment",
+      "title": "AR6, Working Group II: Impacts, Adaptation and Vulnerability",
+      "short": "AR6 WG II",
+      "url": "https://www.ipcc.ch/report/ar6/wg2/",
+      "attribution": null,
+      "messages": [
+        "At least 3.3 billion people, about 40% of the world population, live in conditions highly vulnerable to climate change.",
+        "Some impacts are already irreversible, and some limits to adaptation have been reached.",
+        "About one billion people in low-lying coastal areas face increasing flood risk by mid-century.",
+        "Effective conservation of roughly 30 to 50% of land, freshwater and ocean areas would help ecosystems cope."
+      ],
+      "energy": "Energy systems are themselves exposed: heat and drought reduce output from thermal and hydro plants and raise cooling demand.",
+      "impact": "Strengthened the case for adaptation finance and for the loss-and-damage fund agreed later in 2022.",
+      "status": "published"
+    },
+    {
+      "id": "ar6-wg3",
+      "year": 2022,
+      "released": "4 April 2022",
+      "kind": "assessment",
+      "title": "AR6, Working Group III: Mitigation of Climate Change",
+      "short": "AR6 WG III",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/",
+      "attribution": null,
+      "messages": [
+        "To limit warming to 1.5 °C, global greenhouse gas emissions must peak before 2025 and fall 43% by 2030 compared with 2019.",
+        "From 2010 to 2019 the cost of solar electricity fell 85%, wind 55% and lithium-ion batteries 85%.",
+        "Options costing USD 100 per tonne of CO2 or less could halve global emissions by 2030.",
+        "Demand-side measures could cut emissions 40-70% by 2050.",
+        "Net-zero CO2 is reached around the early 2050s in 1.5 °C pathways and the early 2070s in 2 °C pathways; carbon removal is needed to balance emissions that are hard to eliminate."
+      ],
+      "energy": "The most important IPCC report for energy: chapter 6 covers energy systems and chapter 3 the scenario ensemble (both are in the Literature tab). Nuclear and carbon capture play widely varying roles across pathways.",
+      "impact": "Its finding that low-cost options could halve emissions by 2030 became a standard reference in energy policy.",
+      "status": "published"
+    },
+    {
+      "id": "ar6-syr",
+      "year": 2023,
+      "released": "20 March 2023",
+      "kind": "synthesis",
+      "title": "AR6 Synthesis Report: Climate Change 2023",
+      "short": "AR6 SYR",
+      "url": "https://www.ipcc.ch/report/ar6/syr/",
+      "attribution": "'Human activities, principally through emissions of greenhouse gases, have unequivocally caused global warming.'",
+      "messages": [
+        "Warming has reached 1.1 °C; there is a more than 50% chance of reaching 1.5 °C between 2021 and 2040.",
+        "For 1.5 °C, greenhouse gas emissions must fall 43% by 2030 and 60% by 2035 relative to 2019, with CO2 at net zero in the early 2050s.",
+        "Existing and planned fossil fuel infrastructure would emit about 850 GtCO2, well above the roughly 510 GtCO2 budget for 1.5 °C.",
+        "National pledges would cut emissions only about 7% by 2030.",
+        "Climate finance needs to rise three to six times by 2030; there is a 'rapidly closing window of opportunity'."
+      ],
+      "energy": "States plainly that the fossil plants already built or planned exceed the 1.5 °C budget unless they are retired early or fitted with carbon capture.",
+      "impact": "The scientific input to the first global stocktake under the Paris Agreement (COP28, 2023).",
+      "status": "published"
+    },
+    {
+      "id": "ar7",
+      "year": 2027,
+      "released": "2027-2029 (planned)",
+      "kind": "upcoming",
+      "title": "Seventh Assessment Report (AR7) cycle",
+      "short": "AR7",
+      "url": "https://www.ipcc.ch/assessment-report/ar7/",
+      "attribution": null,
+      "messages": [
+        "Outlines of the three working group reports were agreed in February 2025; release dates are not yet fixed.",
+        "A Special Report on Climate Change and Cities is in preparation.",
+        "Two methodology reports are planned for 2027: one on short-lived climate forcers, one on carbon dioxide removal and carbon capture, utilisation and storage.",
+        "The Synthesis Report is planned for late 2029."
+      ],
+      "energy": "The methodology report on carbon removal and capture will set the accounting rules that decide how much these technologies can count in national inventories.",
+      "impact": "Governments have disagreed on whether the reports should be ready for the second global stocktake in 2028.",
+      "status": "planned"
+    }
+  ]
+}
