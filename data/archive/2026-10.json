@@ -12,5 +12,19 @@
    "markets"
   ],
   "score": 3.54
+ },
+ {
+  "title": "U.S. natural gas production reached a record high in July 2026",
+  "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225",
+  "summary": "U.S. natural gas production hit an all-time high in July 2026, driven primarily by increased output in the Permian Basin, according to our latest Natural Gas Monthly.",
+  "date": "2026-10-02T14:00+00:00",
+  "source": "eia",
+  "sourceName": "EIA – Today in Energy",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "markets"
+  ],
+  "score": 3.53
  }
 ]
