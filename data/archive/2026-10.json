@@ -68,5 +68,19 @@
    "transition"
   ],
   "score": 3.87
+ },
+ {
+  "title": "Mixed outlook for energy expenditures this winter",
+  "link": "https://www.eia.gov/todayinenergy/detail.php?id=68264",
+  "summary": "We expect energy expenditures this winter to vary because of diverging trends in energy prices among fuels and regional variation in forecast temperatures. We expect that lower prices for natural gas and propane will…",
+  "date": "2026-10-07T14:00+00:00",
+  "source": "eia",
+  "sourceName": "EIA – Today in Energy",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "markets"
+  ],
+  "score": 3.53
  }
 ]
