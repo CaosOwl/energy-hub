@@ -28,7 +28,7 @@ After that, the workflow runs every 3 hours and on every push.
 
 ## Updating content
 
-- **Sources:** edit `data/sources.json`. `enabled: false` mutes a source, `weight` (0.5–2.0) ranks it lower/higher. `access: "paid"` entries are listed but never fetched.
+- **Sources:** edit `data/sources.json`. `enabled: false` mutes a source, `weight` (0.5–2.0) ranks it lower/higher. `access: "paid"` entries are listed but never fetched. To follow specific writers inside a big feed, add `"authors": ["Name"]` (matched against the byline) and/or `"mentions": ["Word"]` (matched against title and teaser); `"feeds": [...]` adds more feed URLs to the same source (e.g. several sections of one paper). Filtered sources that find nothing are not counted as failing. Il Foglio section feeds follow the pattern `https://naxos.ilfoglio.it/api/v5/rss/stories/<section>` (`economia`, `politica`, …).
 - **Companies:** edit `data/companies.json`. `stage` is one of `concept`, `design`, `licensing`, `construction`, `critical`, `experiment`, `operating`. Add `"swiss": true` to tag a Swiss link.
 - **Glossary:** edit `data/glossary.json` directly, or edit in the app and use **Export** to download the merged file, then replace `data/glossary.json` with it.
 - **Literature:** edit `data/literature.json`. Each item needs `category` (one of the ids in `categories`), `type`, `title`, `authors`, `year`, `venue`, `finding`, `why`; always give a `doi` or `url` so the entry links to the original. `assumptions` (a list of sentences), `checked` (`full`, `summary` or `outline`: how closely the assumptions were checked against the study), `group` (a short note on the authors), `open` (link to a free version), `nuclear: true` and `perspective` are optional.

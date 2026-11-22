@@ -25,7 +25,7 @@
   const STAGES = ["concept", "design", "licensing", "construction", "critical", "experiment", "operating"];
   const STAGE_STEP = { concept: 1, design: 2, licensing: 3, construction: 4, critical: 5, experiment: 5, operating: 6 };
   const STAGE_LABEL = { concept: "Concept", design: "Design", licensing: "Licensing", construction: "Construction", critical: "Test reactor critical", experiment: "Experiment running", operating: "Operating" };
-  const REGION = { global: "Global", us: "US", eu: "EU", ch: "Switzerland", uk: "UK" };
+  const REGION = { global: "Global", us: "US", eu: "EU", ch: "Switzerland", uk: "UK", it: "Italy" };
   const ICON_SAVE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h11v16.5l-5.5-4-5.5 4z"/></svg>';
 
   // Stories newer than the previous visit get a marker. The threshold stays fixed for the browser session.
@@ -190,7 +190,7 @@
     const saved = state.saved.has(i.link);
     const also = i.also?.length ? `<span class="also">Also covered by ${i.also.map((a) => `<a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.sourceName)}</a>`).join(", ")}</span>` : "";
     const body = `
-      <div class="meta">${isNew(i) ? '<span class="fresh" title="New since your last visit"></span>' : ""}<strong>${esc(i.sourceName)}</strong><span>${relTime(i.date)}</span>${i.access === "partial" ? "<span>may be paywalled</span>" : ""}${(i.tags || []).map(tag).join("")}</div>
+      <div class="meta">${isNew(i) ? '<span class="fresh" title="New since your last visit"></span>' : ""}<strong>${esc(i.sourceName)}</strong>${i.author ? `<span>${esc(i.author)}</span>` : ""}<span>${relTime(i.date)}</span>${i.access === "partial" ? "<span>may be paywalled</span>" : ""}${(i.tags || []).map(tag).join("")}</div>
       <${lead ? "h2" : "h3"}><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></${lead ? "h2" : "h3"}>
       ${i.summary ? `<p>${highlight(esc(i.summary))}</p>` : ""}
       <div class="story-foot">${also}<button class="save ${saved ? "on" : ""}" data-save="${esc(i.link)}" aria-pressed="${saved}" aria-label="${saved ? "Remove from saved" : "Save story"}">${ICON_SAVE}</button></div>`;

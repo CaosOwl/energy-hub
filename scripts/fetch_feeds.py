@@ -112,9 +112,16 @@ def parse_feed(raw):
         if not link:
             link = child_text(el, "guid", "id")
         summary = child_text(el, "description", "summary", "content", "encoded")
+        author = child_text(el, "author", "creator")
+        if not author:  # Atom: <author><name>…</name></author>
+            for c in el:
+                if local(c.tag) == "author":
+                    author = child_text(c, "name")
+                    break
         date = parse_date(child_text(el, "pubdate", "published", "updated", "date", "issued"))
         if title and link.startswith("http"):
-            items.append({"title": title, "link": link, "summary": teaser(summary), "date": date})
+            items.append({"title": title, "link": link, "summary": teaser(summary), "date": date,
+                          "author": strip_html(author)})
     return items
 
 
@@ -125,12 +132,37 @@ def fetch(url):
         return r.read()
 
 
+def wanted(item, s):
+    """Optional per-source filters, for following specific writers inside a big feed.
+    authors: kept if the byline contains one of the names.
+    mentions: kept if the title or teaser contains one of the words.
+    With both set, either one is enough. With neither, everything is kept."""
+    authors = [a.lower() for a in s.get("authors", [])]
+    mentions = [m.lower() for m in s.get("mentions", [])]
+    if not authors and not mentions:
+        return True
+    byline = item.get("author", "").lower()
+    text = (item["title"] + " " + item["summary"]).lower()
+    return any(a in byline for a in authors) or any(m in text for m in mentions)
+
+
 def fetch_source(s):
-    """Returns (items, error). Never raises, so one bad feed cannot stop the run."""
-    try:
-        return parse_feed(fetch(s["feed"]))[:MAX_PER_SOURCE], None
-    except Exception as e:
-        return [], f"{type(e).__name__}: {e}"[:200]
+    """Returns (items, error). Never raises, so one bad feed cannot stop the run.
+    A source can list extra feeds in "feeds" (e.g. several sections of one paper)."""
+    urls = [s["feed"]] + [u for u in s.get("feeds", []) if u != s["feed"]]
+    items, errors, seen = [], [], set()
+    for url in urls:
+        try:
+            for it in parse_feed(fetch(url)):
+                if it["link"] not in seen and wanted(it, s):
+                    seen.add(it["link"])
+                    items.append(it)
+        except Exception as e:
+            errors.append(f"{type(e).__name__}: {e}"[:200])
+    if errors and len(errors) == len(urls):
+        return [], errors[0]
+    items.sort(key=lambda i: i["date"] or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+    return items[:MAX_PER_SOURCE], None
 
 
 def classify(text, source_topic):
@@ -185,7 +217,8 @@ def main():
     fresh, health = [], []
     for s, (items, error) in zip(active, results):
         entry = {"id": s["id"], "name": s["name"], "ok": error is None, "count": len(items), "error": error}
-        if error is None and not items:
+        filtered = bool(s.get("authors") or s.get("mentions"))
+        if error is None and not items and not filtered:
             # A feed that parses but is empty is almost always a moved or blocked feed.
             entry.update(ok=False, error="Feed returned no items")
         for it in items:
@@ -202,6 +235,7 @@ def main():
                 "date": date.isoformat(timespec="minutes"),
                 "source": s["id"], "sourceName": s["name"], "access": s.get("access", "open"),
                 "region": s.get("region", ""), "tags": tags,
+                **({"author": it["author"]} if filtered and it["author"] else {}),
                 "score": 0,  # set below, together with older items
             })
         health.append(entry)

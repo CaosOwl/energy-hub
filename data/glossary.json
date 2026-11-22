@@ -1183,6 +1183,26 @@
         "ESOM",
         "Scenario"
       ]
+    },
+    {
+      "term": "PNIEC",
+      "full": "Piano Nazionale Integrato per l'Energia e il Clima",
+      "category": "transition",
+      "level": 2,
+      "definition": "Italy's National Energy and Climate Plan, the plan every EU country must file with Brussels setting its 2030 targets for emissions, renewables, efficiency and energy security. The 2024 update added a scenario with new nuclear after 2035.",
+      "related": [
+        "ETS"
+      ]
+    },
+    {
+      "term": "Superbonus",
+      "full": "Superbonus 110%",
+      "category": "markets",
+      "level": 2,
+      "definition": "Italian tax credit, introduced in 2020, that refunded more than the full cost (110%) of energy-efficiency and anti-seismic home renovations. Its cost to public finances far exceeded forecasts, making it a reference case in debates on how much subsidies cost per unit of energy saved.",
+      "related": [
+        "PNIEC"
+      ]
     }
   ]
 }
