@@ -193,7 +193,9 @@
           <div><h2 id="en-mix-title">Energy mix over time</h2><p>How the mix changed since 1990. Hover or tap for the numbers.</p></div>
           <div class="en-tools">
             <div class="seg" id="en-kind" role="group" aria-label="Electricity or all energy"><button data-v="elec">Electricity</button><button data-v="primary">All energy</button></div>
+            <div class="seg" id="en-style" role="group" aria-label="Chart style"><button data-v="lines">Lines</button><button data-v="stacked">Stacked</button></div>
             <div class="seg" id="en-unit" role="group" aria-label="Unit"><button data-v="twh">TWh</button><button data-v="pct">%</button></div>
+            <div class="seg" id="en-mixlog" role="group" aria-label="Scale"><button data-v="lin">Linear</button><button data-v="log">Log</button></div>
           </div>
         </header>
         <div id="en-mix-legend"></div><div id="en-mix" class="en-chart"></div><p class="en-foot" id="en-mix-note"></p>
@@ -212,13 +214,13 @@
       </article>
 
       <article class="en-panel">
-        <header class="en-ph"><div><h2>Country ranking</h2><p>One indicator, ranked.</p></div></header>
+        <header class="en-ph"><div><h2>Country ranking</h2><p>One indicator, ranked.</p></div><div class="en-tools"><div class="seg" id="en-rank-log" role="group" aria-label="Scale"><button data-v="lin">Linear</button><button data-v="log">Log</button></div></div></header>
         <div class="en-controls"><select id="en-rank-ind" aria-label="Indicator"></select></div>
         <div id="en-rank" class="en-chart"></div><p class="en-foot" id="en-rank-note"></p>
       </article>
 
       <article class="en-panel">
-        <header class="en-ph"><div><h2>Trends since 1990</h2><p>Compare up to three countries or regions.</p></div></header>
+        <header class="en-ph"><div><h2>Trends since 1990</h2><p>Compare up to three countries or regions.</p></div><div class="en-tools"><div class="seg" id="en-trend-log" role="group" aria-label="Scale"><button data-v="lin">Linear</button><button data-v="log">Log</button></div></div></header>
         <div class="en-controls">
           <select id="en-trend-ind" aria-label="Indicator"></select>
           <div class="en-trio" id="en-trend-ents">
@@ -238,7 +240,7 @@
       <article class="en-panel">
         <header class="en-ph">
           <div><h2 id="en-tech-title">Metric</h2><p>Pick any of 19 metrics from the literature.</p></div>
-          <div class="en-tools"><button id="en-tech-table" class="btn ghost small-btn">Table</button></div>
+          <div class="en-tools"><div class="seg" id="en-tech-log" role="group" aria-label="Scale"><button data-v="auto">Auto</button><button data-v="lin">Linear</button><button data-v="log">Log</button></div><button id="en-tech-table" class="btn ghost small-btn">Table</button></div>
         </header>
         <div class="en-controls"><select id="en-metric" aria-label="Metric"></select></div>
         <div id="en-tech" class="en-chart"></div><p class="en-foot" id="en-tech-note"></p>
@@ -247,14 +249,16 @@
       <article class="en-panel">
         <header class="en-ph"><div><h2>Two metrics against each other</h2><p>Trade-offs at a glance; the corner hint shows where "better" is.</p></div></header>
         <div class="en-controls">
-          <label class="en-lab">X <select id="en-sx" aria-label="Horizontal axis metric"></select></label>
-          <label class="en-lab">Y <select id="en-sy" aria-label="Vertical axis metric"></select></label>
+          <div class="en-axis"><label class="en-lab">X <select id="en-sx" aria-label="Horizontal axis metric"></select></label>
+            <div class="seg" id="en-x-log" role="group" aria-label="X scale"><button data-v="auto">Auto</button><button data-v="lin">Lin</button><button data-v="log">Log</button></div></div>
+          <div class="en-axis"><label class="en-lab">Y <select id="en-sy" aria-label="Vertical axis metric"></select></label>
+            <div class="seg" id="en-y-log" role="group" aria-label="Y scale"><button data-v="auto">Auto</button><button data-v="lin">Lin</button><button data-v="log">Log</button></div></div>
         </div>
         <div id="en-scatter" class="en-chart"></div><p class="en-foot" id="en-scatter-note"></p>
       </article>
 
       <article class="en-panel">
-        <header class="en-ph"><div><h2>Scorecard</h2><p>Each column ranks the sources on one metric; darker is better. A ranking, not a verdict: metrics are unweighted and some (EROI, minerals) are contested.</p></div></header>
+        <header class="en-ph"><div><h2>Scorecard</h2><p>Each column ranks the sources on one metric: yellow is best, dark blue worst. A ranking, not a verdict: metrics are unweighted and some (EROI, minerals) are contested.</p></div></header>
         <div id="en-score"></div>
       </article>
 

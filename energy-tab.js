@@ -41,7 +41,7 @@
     { id: "imports", label: "Net electricity imports (share of demand)", unit: "%", field: "imports" },
   ];
   const REGION_GROUPS = [["all", "All"], ["region", "Regions"], ["europe", "Europe"], ["americas", "Americas"], ["asia", "Asia"], ["africa", "Africa"], ["oceania", "Oceania"]];
-  const TRIO = ["var(--q-1)", "var(--q-2)", "var(--q-3)"];
+  const TRIO = ["var(--q-1)", "var(--q-2)", "var(--q-3)"];   // first, middle and last step of the palette
 
   let T = null, C = null;                 // technology data, country data
   const st = Object.assign({
@@ -49,6 +49,7 @@
     cmpGroup: "europe", cmpSort: "lowcarbon", cmpKind: "elec",
     rankInd: "lowcarbon", trendInd: "lowcarbon", trend: ["world", "ch", "de"],
     metric: "lcoe", tag: "all", sx: "co2", sy: "deaths", table: false,
+    mixStyle: "lines", logMix: false, logTrend: false, logRank: false, logTech: "auto", logX: "auto", logY: "auto",
   }, store.get("state", {}));
   if (st.ent && !store.get("state", {}).country) st.country = st.ent;   // migrate from first version
   const save = () => store.set("state", st);
@@ -164,12 +165,14 @@
   }
 
   // ---------- chart: lines over time ----------
-  function lines(el, { years, series, unit, label, h: hh, area }) {
+  function lines(el, { years, series, unit, label, h: hh, log }) {
     const w = width(el), h = hh || (w < 500 ? 230 : 270), L = 44, Tp = 12, B = 26;
-    const R = Math.min(140, Math.max(...series.map((s) => (s.name.length + 6) * 6.6)) + 14);
+    const narrow = w < 560;   // on phones the end labels show value + colour dot; the legend names them
+    const R = narrow ? 70 : Math.min(170, Math.max(...series.map((s) => (s.name.length + 9) * 6.4)) + 14);
+    if (log) series = series.map((s) => ({ ...s, values: s.values.map((v) => (v != null && v > 0 ? v : null)) }));
     const all = series.flatMap((s) => s.values.filter((v) => v != null));
     if (!all.length) { el.innerHTML = `<p class="en-empty">No data for this selection.</p>`; return; }
-    const ys = linScale(Math.max(...all), h - B, Tp);
+    const ys = log ? logScale(Math.min(...all), Math.max(...all), h - B, Tp) : linScale(Math.max(...all), h - B, Tp);
     const idx = years.map((_, i) => i).filter((i) => series.some((s) => s.values[i] != null));
     const X = (i) => L + (w - L - R) * ((i - idx[0]) / Math.max(1, idx[idx.length - 1] - idx[0]));
     let out = yGrid(ys, L, R, w) + xYears(years, idx, X, w, L, R, h);
@@ -179,19 +182,16 @@
       const segs = []; let cur = [];
       s.values.forEach((v, i) => { if (v == null || i < idx[0]) { if (cur.length) segs.push(cur); cur = []; } else cur.push([X(i), ys.f(v)]); });
       if (cur.length) segs.push(cur);
-      if (area && segs.length) {
-        const gid = "g" + Math.random().toString(36).slice(2, 8);
-        defs += `<linearGradient id="${gid}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${s.color}" stop-opacity=".28"/><stop offset="1" stop-color="${s.color}" stop-opacity="0"/></linearGradient>`;
-        for (const sg of segs) out += `<path d="${curve(sg)}L${sg[sg.length - 1][0]},${h - B}L${sg[0][0]},${h - B}Z" fill="url(#${gid})" class="fade"/>`;
-      }
-      for (const sg of segs) out += `<path class="line" style="--d:${k * 120}ms" pathLength="1" d="${curve(sg)}" fill="none" stroke="${s.color}" stroke-width="2.25" stroke-linejoin="round" stroke-linecap="round"/>`;
+      for (const sg of segs) out += `<path class="line" style="--d:${k * 120}ms" pathLength="1" d="${curve(sg)}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
       const li = s.values.map((v, i) => (v == null ? -1 : i)).filter((i) => i >= 0).pop();
       if (li != null) ends.push({ s, y: ys.f(s.values[li]), x: X(li), v: s.values[li] });
     });
     ends.sort((a, b) => a.y - b.y);
-    for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 15) ends[k].y = ends[k - 1].y + 15;
-    for (const e of ends) out += `<circle cx="${e.x}" cy="${ys.f(e.v)}" r="4" fill="${e.s.color}" stroke="var(--surface)" stroke-width="2"/><text x="${e.x + 9}" y="${e.y + 4}" class="lbl"><tspan class="strong">${fmt(e.v)}${unit === "%" ? "%" : ""}</tspan> ${esc(e.s.name)}</text>`;
-    const dots = series.map((s) => `<circle class="hd hidden" r="4.5" fill="${s.color}" stroke="var(--surface)" stroke-width="2"/>`).join("");
+    for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 14) ends[k].y = ends[k - 1].y + 14;
+    const over = ends.length ? ends[ends.length - 1].y - (h - B + 4) : 0;   // keep labels inside the plot
+    if (over > 0) ends.forEach((e) => (e.y -= over));
+    for (const e of ends) out += `<circle cx="${e.x}" cy="${ys.f(e.v)}" r="4" fill="var(--surface)" stroke="${e.s.color}" stroke-width="2.5"/><text x="${e.x + 9}" y="${e.y + 4}" class="lbl"><tspan class="strong">${fmt(e.v)}${unit === "%" ? "%" : ""}</tspan> <tspan style="fill:${e.s.color}" class="nm">●</tspan>${narrow ? "" : " " + esc(e.s.name)}</text>`;
+    const dots = series.map((s) => `<circle class="hd hidden" r="5" fill="var(--surface)" stroke="${s.color}" stroke-width="2.5"/>`).join("");
     el.innerHTML = svgOpen(w, h, label) + `<defs>${defs}</defs>` + out + `<line class="xh hidden" y1="${Tp}" y2="${h - B}"/>${dots}<rect class="hit" x="${L}" y="${Tp}" width="${w - L - R}" height="${h - B - Tp}" fill="transparent"/></svg>`;
     const svg = $("svg", el), xh = $(".xh", svg), hd = $$(".hd", svg);
     const move = (e) => {
@@ -258,7 +258,8 @@
     const h = Tp + rows.length * (rh + gap) + 20;
     const vals = rows.flatMap((r) => [r.v, r.lo, r.hi]).filter((v) => v != null);
     const pos = vals.filter((v) => v > 0);
-    const neg = vals.some((v) => v < 0);
+    if (log) rows = rows.map((r) => (r.v != null && r.v <= 0 ? { ...r, v: null, note: (r.note ? r.note + "; " : "") + `${fmt(r.v)} (not shown on a log scale)` } : r));
+    const neg = !log && vals.some((v) => v < 0);
     let sc;
     if (log && pos.length) sc = logScale(Math.min(...pos), Math.max(...pos), lw, w - R);
     else if (neg) {
@@ -268,18 +269,18 @@
     const zero = log ? lw : sc.f(0);
     let out = sc.ticks.map((t) => `<line x1="${sc.f(t)}" x2="${sc.f(t)}" y1="${Tp}" y2="${h - 18}" class="grid"/><text x="${sc.f(t)}" y="${h - 4}" text-anchor="middle">${fmt(t)}</text>`).join("");
     rows.forEach((r, k) => {
-      const y = Tp + k * (rh + gap), cy = y + rh / 2, dl = `style="--d:${Math.min(k, 30) * 20}ms"`;
+      const y = Tp + k * (rh + gap), cy = y + rh / 2, dl = `style="--d:${Math.min(k, 30) * 20}ms;--c:${r.color}"`;
       if (r.focus) out += `<rect x="0" y="${y - 6}" width="${w}" height="${rh + 12}" rx="8" class="row-hl"/>`;
       out += `<text x="${lw - 10}" y="${cy + 4}" text-anchor="end" class="lbl${r.dim ? " dim" : ""}${r.focus || r.bold ? " strong" : ""}">${esc(r.label)}</text>`;
       if (track) out += `<rect x="${lw}" y="${y}" width="${w - R - lw}" height="${rh}" rx="${rh / 2}" class="track"/>`;
       const tipH = `<strong>${esc(r.label)}</strong><div class="tr">${r.lo != null ? fmt(r.lo) + "–" + fmt(r.hi) : fmt(r.v)}${unitTxt(unit)}</div>${r.note ? `<div class="tn">${esc(r.note)}</div>` : ""}`;
       if (r.lo != null) {
         const a = sc.f(r.lo), b = sc.f(r.hi);
-        out += `<rect class="bar" ${dl} x="${a}" y="${y}" width="${Math.max(rh, b - a)}" height="${rh}" rx="${rh / 2}" fill="${r.color}" opacity="${r.dim ? 0.5 : 1}" data-tip="${esc(tipH)}"/>`;
+        out += `<rect class="bar o" ${dl} x="${a}" y="${y}" width="${Math.max(rh, b - a)}" height="${rh}" rx="${rh / 2}" opacity="${r.dim ? 0.55 : 1}" data-tip="${esc(tipH)}"/>`;
         out += `<text x="${Math.max(b, a + rh) + 8}" y="${cy + 4}" class="val">${fmt(r.lo)}–${fmt(r.hi)}</text>`;
       } else if (r.v != null) {
         const a = Math.min(zero, sc.f(r.v)), b = Math.max(zero, sc.f(r.v));
-        out += `<rect class="bar" ${dl} x="${a}" y="${y}" width="${Math.max(rh, b - a)}" height="${rh}" rx="${rh / 2}" fill="${r.color}" opacity="${r.dim ? 0.5 : 1}" data-tip="${esc(tipH)}"/>`;
+        out += `<rect class="bar o" ${dl} x="${a}" y="${y}" width="${Math.max(rh, b - a)}" height="${rh}" rx="${rh / 2}" opacity="${r.dim ? 0.55 : 1}" data-tip="${esc(tipH)}"/>`;
         out += `<text x="${Math.max(b, a + rh) + 8}" y="${cy + 4}" class="val">${fmt(r.v)}${unit === "%" ? "%" : ""}</text>`;
       } else {
         out += `<text x="${lw}" y="${cy + 4}" class="val dim" data-tip="${esc(tipH)}">${esc(r.note || "no value")}</text>`;
@@ -307,7 +308,7 @@
     pts.forEach((p, k) => {
       const x = sx.f(p.x), y = sy.f(p.y);
       const tipH = `<strong>${esc(p.label)}</strong><div class="tr">${esc(mx.label)}<b>${fmt(p.x)}${unitTxt(mx.unit)}</b></div><div class="tr">${esc(my.label)}<b>${fmt(p.y)}${unitTxt(my.unit)}</b></div>`;
-      out += `<g class="pt" style="--d:${k * 40}ms"><circle cx="${x}" cy="${y}" r="13" fill="${p.color}" opacity=".16"/><circle cx="${x}" cy="${y}" r="6.5" fill="${p.color}" stroke="var(--surface)" stroke-width="2"/><circle cx="${x}" cy="${y}" r="16" fill="transparent" data-tip="${esc(tipH)}"/></g>`;
+      out += `<g class="pt" style="--d:${k * 40}ms"><circle cx="${x}" cy="${y}" r="7" fill="var(--surface)" stroke="${p.color}" stroke-width="3"/><circle cx="${x}" cy="${y}" r="16" fill="transparent" data-tip="${esc(tipH)}"/></g>`;
       const tw = p.label.length * 6.6;
       const cands = [[x + 12, y + 4, "start"], [x - 12, y + 4, "end"], [x + 10, y - 12, "start"], [x + 10, y + 20, "start"], [x - 10, y - 12, "end"], [x - 10, y + 20, "end"]];
       const box = ([lx, ly, a]) => ({ x0: a === "start" ? lx : lx - tw, x1: a === "start" ? lx + tw : lx, y0: ly - 10, y1: ly + 2 });
@@ -327,7 +328,7 @@
     const mn = Math.min(...pts.map((p) => p[1])), mxv = Math.max(...pts.map((p) => p[1])), span = mxv - mn || 1;
     const P = pts.map(([i, v]) => [2 + ((w - 4) * (i - pts[0][0])) / (pts[pts.length - 1][0] - pts[0][0]), h - 3 - ((h - 8) * (v - mn)) / span]);
     const last = P[P.length - 1];
-    return `<svg class="spark ${cls || ""}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path d="${curve(P)}L${last[0]},${h}L${P[0][0]},${h}Z" class="sa"/><path d="${curve(P)}" class="sl"/><circle cx="${last[0]}" cy="${last[1]}" r="2.8" class="sd"/></svg>`;
+    return `<svg class="spark ${cls || ""}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path d="${curve(P)}" class="sl"/><circle cx="${last[0]}" cy="${last[1]}" r="2.8" class="sd"/></svg>`;
   }
 
   // ---------- data helpers ----------
@@ -403,15 +404,26 @@
   }
 
   function renderMix() {
-    const e = here(), kind = e[st.kind] ? st.kind : "elec";
-    segSet("#en-kind", kind); segSet("#en-unit", st.pct ? "pct" : "twh");
+    const e = here(), kind = e[st.kind] ? st.kind : "elec", stacked = st.mixStyle === "stacked";
+    segSet("#en-kind", kind); segSet("#en-unit", st.pct ? "pct" : "twh"); segSet("#en-style", st.mixStyle); segSet("#en-mixlog", st.logMix ? "log" : "lin");
+    $("#en-mixlog").classList.toggle("off", stacked);
     $("#en-mix-title").textContent = `${kind === "elec" ? "Electricity" : "Primary energy"} by source · ${e.name}`;
-    const layers = SRC.map((k) => ({ id: k, name: SRC_NAME[k], color: `var(--s-${k})`, values: e[kind] ? e[kind][k] : [] }));
-    stackArea($("#en-mix"), { years: C.years, layers, pct: st.pct, unit: "TWh", label: $("#en-mix-title").textContent });
+    const label = $("#en-mix-title").textContent;
+    const raw = SRC.map((k) => ({ id: k, name: SRC_NAME[k], color: `var(--s-${k})`, values: e[kind] ? e[kind][k] : [] }));
+    if (stacked) {
+      stackArea($("#en-mix"), { years: C.years, layers: raw, pct: st.pct, unit: "TWh", label });
+    } else {
+      const tot = C.years.map((_, i) => total(e, kind, i));
+      const series = raw.slice().reverse()
+        .map((l) => ({ ...l, values: l.values.map((v, i) => (v == null || !tot[i] ? null : st.pct ? (100 * v) / tot[i] : v)) }))
+        .filter((l) => l.values.some((v) => v));
+      lines($("#en-mix"), { years: C.years, series, unit: st.pct ? "%" : "TWh", label, h: width($("#en-mix")) < 500 ? 300 : 340, log: st.logMix });
+    }
     $("#en-mix-legend").innerHTML = legend(SRC.slice().reverse());
-    $("#en-mix-note").innerHTML = kind === "elec"
-      ? `${st.pct ? "Share of generation" : "TWh generated"}, ${C.years[0]}–${C.lastElec}. Source: ${refLink("owid-energy")}.`
-      : `${st.pct ? "Share of primary energy" : "TWh of primary energy"} (substitution method: nuclear and renewables counted as the fossil fuel they would replace), ${C.years[0]}–${C.lastPrimary}. Source: ${refLink("owid-energy")}.`;
+    const scale = !stacked && st.logMix ? " Log scale: equal steps are tenfold changes, so small but fast-growing sources stay visible." : "";
+    $("#en-mix-note").innerHTML = (kind === "elec"
+      ? `${st.pct ? "Share of generation" : "TWh generated"}, ${C.years[0]}–${C.lastElec}.`
+      : `${st.pct ? "Share of primary energy" : "TWh of primary energy"} (substitution method: nuclear and renewables counted as the fossil fuel they would replace), ${C.years[0]}–${C.lastPrimary}.`) + scale + ` Source: ${refLink("owid-energy")}.`;
   }
 
   function cmpRows(kind) {
@@ -441,9 +453,10 @@
     const rows = C.entities.filter((e) => st.cmpGroup === "all" || e.group === st.cmpGroup || e.id === st.country || e.id === "world")
       .map((e) => ({ e, v: indVal(e, ind, i) })).filter((r) => r.v != null).sort((a, b) => b.v - a.v)
       .map(({ e, v }) => ({ label: e.name, v, focus: e.id === st.country, bold: e.id === "world",
-        color: e.id === st.country ? "var(--accent)" : e.id === "world" ? "var(--ink)" : "color-mix(in srgb, var(--general) 70%, var(--surface))" }));
-    hbars($("#en-rank"), rows, { unit: ind.unit, label: ind.label, track: true });
-    $("#en-rank-note").innerHTML = `${esc(ind.label)} (${esc(ind.unit)}), ${C.years[i]}. ${esc(here().name)} highlighted; World shown for reference. Region filter is shared with the chart above. Source: ${refLink("owid-energy")}.`;
+        color: e.id === st.country ? "var(--s-gas)" : e.id === "world" ? "var(--s-coal)" : "var(--general)" }));
+    segSet("#en-rank-log", st.logRank ? "log" : "lin");
+    hbars($("#en-rank"), rows, { unit: ind.unit, label: ind.label, track: !st.logRank, log: st.logRank });
+    $("#en-rank-note").innerHTML = `${esc(ind.label)} (${esc(ind.unit)}), ${C.years[i]}. ${isWorld() ? "World highlighted." : `${esc(here().name)} highlighted; World shown for reference.`}${st.logRank ? " Log scale." : ""} Region filter is shared with the chart above. Source: ${refLink("owid-energy")}.`;
   }
 
   function renderTrend() {
@@ -452,7 +465,8 @@
     $$("#en-trend-ents i").forEach((dot, k) => (dot.style.background = TRIO[k]));
     const ind = IND.find((x) => x.id === st.trendInd);
     const series = st.trend.map((id, k) => (id ? { name: ent(id).name, color: TRIO[k], values: C.years.map((_, i) => indVal(ent(id), ind, i)) } : null)).filter(Boolean);
-    lines($("#en-trend"), { years: C.years, series, unit: ind.unit, label: ind.label + " over time" });
+    segSet("#en-trend-log", st.logTrend ? "log" : "lin");
+    lines($("#en-trend"), { years: C.years, series, unit: ind.unit, label: ind.label + " over time", log: st.logTrend });
     $("#en-trend-note").innerHTML = `${esc(ind.label)} (${esc(ind.unit)}). The first slot follows the country picked at the top. Source: ${refLink("owid-energy")}.`;
   }
 
@@ -468,6 +482,9 @@
     const m = metric(mid);
     return rows.sort((a, b) => (m.better === "low" ? key(a) - key(b) : key(b) - key(a)));
   }
+  const autoLog = (m) => !!m.log;
+  const techLog = (m) => (st.logTech === "auto" ? autoLog(m) : st.logTech === "log");
+  const axLog = (flag, m) => (flag === "auto" ? autoLog(m) : flag === "log");
   function renderTags() {
     $("#en-tags").innerHTML = [["all", "All sources"], ...T.tags.map((t) => [t.id, t.label])].map(([id, l]) => `<button class="chip ${st.tag === id ? "on" : ""}" data-tag="${id}" aria-pressed="${st.tag === id}">${esc(l)}</button>`).join("");
   }
@@ -477,17 +494,19 @@
     if (st.table) {
       box.innerHTML = `<div class="en-table-wrap"><table class="en-table"><thead><tr><th>Source</th><th class="num">${esc(m.unit)}</th><th>Note</th></tr></thead><tbody>${rows.map((r) =>
         `<tr><td><i class="sw" style="background:${r.color}"></i>${esc(r.label)}</td><td class="num">${r.lo != null ? fmt(r.lo) + "–" + fmt(r.hi) : fmt(r.v)}</td><td>${esc(r.note || "")}</td></tr>`).join("")}</tbody></table></div>`;
-    } else hbars(box, rows, { log: m.log && rows.every((r) => (r.v ?? r.lo ?? 1) > 0), unit: m.unit, label: m.label });
+    } else hbars(box, rows, { log: techLog(m), unit: m.unit, label: m.label });
+    segSet("#en-tech-log", st.logTech);
     $("#en-tech-table").textContent = st.table ? "Chart" : "Table";
     $("#en-tech-title").textContent = metricLabel(m);
     const better = { low: "Lower is better.", high: "Higher is better.", info: "" }[m.better];
     const where = countryMetric && !isWorld() ? ` Values for ${here().name}, ${C.lastElec} (${refLink("owid-energy")}); geothermal is inside “Bio & other renewables”.` : "";
-    $("#en-tech-note").innerHTML = `${esc(m.unit)}${m.log ? ", log scale" : ""}. ${better} ${EH.highlight(esc(m.desc))}${where}<br>Source: ${countryMetric && !isWorld() ? refLink("owid-energy") : refLink(m.source)}.`;
+    $("#en-tech-note").innerHTML = `${esc(m.unit)}${techLog(m) ? ", log scale" : ""}. ${better} ${EH.highlight(esc(m.desc))}${where}<br>Source: ${countryMetric && !isWorld() ? refLink("owid-energy") : refLink(m.source)}.`;
   }
 
   function renderScatter() {
     $("#en-sx").innerHTML = metricOpts(st.sx); $("#en-sy").innerHTML = metricOpts(st.sy);
-    const mx = metric(st.sx), my = metric(st.sy);
+    const mx = { ...metric(st.sx), log: axLog(st.logX, metric(st.sx)) }, my = { ...metric(st.sy), log: axLog(st.logY, metric(st.sy)) };
+    segSet("#en-x-log", st.logX); segSet("#en-y-log", st.logY);
     const pts = T.items.filter(tagOk).map((it) => ({ label: it.name, x: primary(it, mx.id), y: primary(it, my.id), color: col(it.id) }))
       .filter((p) => p.x != null && p.y != null && (!mx.log || p.x > 0) && (!my.log || p.y > 0));
     scatter($("#en-scatter"), pts, { mx: { ...mx, label: metricLabel(mx) }, my: { ...my, label: metricLabel(my) } });
@@ -559,7 +578,7 @@
     const body = $("#sheet-body");
     const series = [{ name: "World", color: "var(--q-1)", values: shareOf(w) }];
     if (!isWorld() && e.elec) series.push({ name: e.name, color: "var(--q-2)", values: shareOf(e) });
-    lines($("#en-spark", body), { years: C.years, series, unit: "%", label: "Share of electricity", h: 190, area: series.length === 1 });
+    lines($("#en-spark", body), { years: C.years, series, unit: "%", label: "Share of electricity", h: 190 });
     $$("[data-rel]", body).forEach((b) => (b.onclick = () => EH.openTerm(b.dataset.rel)));
     $$("[data-news]", body).forEach((b) => (b.onclick = () => EH.searchFeed(b.dataset.news)));
   }
@@ -591,6 +610,14 @@
     $("#en-country").addEventListener("change", (e) => setCountry(e.target.value));
     $("#en-kind").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.kind = b.dataset.v; save(); renderMix(); } });
     $("#en-unit").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.pct = b.dataset.v === "pct"; save(); renderMix(); } });
+    const tog = (sel, fn) => $(sel).addEventListener("click", (e) => { const b = e.target.closest("button[data-v]"); if (b) { fn(b.dataset.v); save(); } });
+    tog("#en-style", (v) => { st.mixStyle = v; renderMix(); });
+    tog("#en-mixlog", (v) => { st.logMix = v === "log"; renderMix(); });
+    tog("#en-trend-log", (v) => { st.logTrend = v === "log"; renderTrend(); });
+    tog("#en-rank-log", (v) => { st.logRank = v === "log"; renderRank(); });
+    tog("#en-tech-log", (v) => { st.logTech = v; renderTech(); });
+    tog("#en-x-log", (v) => { st.logX = v; renderScatter(); });
+    tog("#en-y-log", (v) => { st.logY = v; renderScatter(); });
     $("#en-cmp-group").addEventListener("click", (e) => { const b = e.target.closest("[data-g]"); if (b) { st.cmpGroup = b.dataset.g; save(); renderCompare(); renderRank(); } });
     $("#en-cmp-sort").addEventListener("change", (e) => { st.cmpSort = e.target.value; save(); renderCompare(); });
     $("#en-cmp-kind").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.cmpKind = b.dataset.v; save(); renderCompare(); } });
