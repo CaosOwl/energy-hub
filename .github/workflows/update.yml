@@ -34,6 +34,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3; do
             python scripts/fetch_feeds.py
+            python scripts/build_energy_data.py || echo "Energy data refresh failed; keeping the previous file"
             git add data/
             if git diff --cached --quiet; then
               echo "No changes"; break

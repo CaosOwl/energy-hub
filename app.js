@@ -17,7 +17,7 @@
   const keyOf = (term) => String(term).trim().toLowerCase();
 
   const PAGE = 40;
-  const VIEWS = ["feed", "companies", "glossary", "scenarios", "ipcc", "literature", "sources"];
+  const VIEWS = ["feed", "companies", "energy", "glossary", "scenarios", "ipcc", "literature", "sources"];
   const TOPICS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["general", "General"]];
   const CATS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["modelling", "Modelling"]];
   const LABEL = Object.fromEntries([...TOPICS, ...CATS, ["data", "Data"], ["learning", "Learning"]]);
@@ -792,6 +792,16 @@
       }).join("")}</div></section>`;
     }).join("");
   }
+
+  // ---------- small API for tabs that live in their own file (energy-tab.js) ----------
+  function searchFeed(q) {
+    closeSheet();
+    Object.assign(state.feed, { q, topic: "all", sort: "date", shown: PAGE });
+    $("#feed-search").value = q;
+    segOn($("#feed-sort"), $('#feed-sort [data-sort="date"]'));
+    renderFeed(); show("feed");
+  }
+  window.EH = { esc, highlight: (s) => highlight(s), openSheet, closeSheet, openTerm, findTerm, searchFeed };
 
   // ---------- boot ----------
   async function boot() {

@@ -1203,6 +1203,144 @@
       "related": [
         "PNIEC"
       ]
+    },
+    {
+      "term": "Life-cycle emissions",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "Greenhouse gases emitted over a power source's whole life per kWh: mining, manufacturing, construction, operation, fuel and decommissioning. Measured in g CO₂eq/kWh; lets fossil and non-combustion sources be compared fairly.",
+      "related": [
+        "Decarbonization",
+        "Carbon budget"
+      ]
+    },
+    {
+      "term": "Land-use intensity",
+      "full": "LUIE",
+      "category": "transition",
+      "level": 2,
+      "definition": "Land occupied per unit of electricity, usually in hectares per TWh per year, including land for fuel extraction. Varies by four orders of magnitude between nuclear and dedicated biomass.",
+      "related": [
+        "Power density"
+      ]
+    },
+    {
+      "term": "Power density",
+      "full": "",
+      "category": "tech",
+      "level": 2,
+      "definition": "Electrical power produced per square metre of land (W/m²). High for gas and nuclear, low for wind, hydro reservoirs and biomass. The inverse of land-use intensity.",
+      "related": [
+        "Land-use intensity"
+      ]
+    },
+    {
+      "term": "EROI",
+      "full": "Energy Return on Investment",
+      "category": "tech",
+      "level": 3,
+      "definition": "Energy a source delivers over its life divided by the energy needed to build, fuel and run it. Values and methods are contested, especially for solar and wind with or without storage ('buffered').",
+      "related": [
+        "Primary energy"
+      ]
+    },
+    {
+      "term": "OPEX",
+      "full": "Operating Expenditure",
+      "category": "markets",
+      "level": 1,
+      "definition": "Running costs of a plant: fixed O&M (staff, insurance, maintenance per kW per year) and variable O&M and fuel (per MWh). Low for wind and solar, fuel-dominated for gas and coal.",
+      "related": [
+        "Capex",
+        "LCOE"
+      ]
+    },
+    {
+      "term": "Overnight cost",
+      "full": "",
+      "category": "markets",
+      "level": 2,
+      "definition": "Capital cost of a plant as if built overnight, in $/kW, excluding interest during construction. Long builds such as nuclear add substantial financing cost on top.",
+      "related": [
+        "Capex",
+        "WACC"
+      ]
+    },
+    {
+      "term": "Run-of-river hydro",
+      "full": "",
+      "category": "tech",
+      "level": 1,
+      "definition": "Hydropower that uses a river's natural flow with little or no storage, so output follows the water available. Contrasts with storage (reservoir) and pumped hydro plants.",
+      "related": [
+        "Pumped hydro",
+        "Storage"
+      ]
+    },
+    {
+      "term": "EGS",
+      "full": "Enhanced Geothermal System",
+      "category": "tech",
+      "level": 2,
+      "definition": "Geothermal power from hot dry rock that is fractured so water can circulate and pick up heat, widening geothermal beyond volcanic regions. Can induce earthquakes, as in Basel (2006).",
+      "related": [
+        "Firm low-carbon power"
+      ]
+    },
+    {
+      "term": "CCGT",
+      "full": "Combined-Cycle Gas Turbine",
+      "category": "tech",
+      "level": 1,
+      "definition": "A gas plant that runs a gas turbine and uses its hot exhaust to drive a steam turbine, reaching about 60% efficiency. The most common new fossil plant.",
+      "related": [
+        "Peak load",
+        "Dispatchable"
+      ]
+    },
+    {
+      "term": "Bioenergy",
+      "full": "",
+      "category": "transition",
+      "level": 1,
+      "definition": "Energy from biomass: wood, crop residues, energy crops, biogas and the organic part of waste. Renewable and dispatchable, but its climate benefit depends on feedstock and land use.",
+      "related": [
+        "BECCS"
+      ]
+    },
+    {
+      "term": "Low-carbon electricity",
+      "full": "Clean electricity",
+      "category": "transition",
+      "level": 1,
+      "definition": "Electricity from nuclear and renewables. Ember and Our World in Data count bioenergy in it; reached about 43% of world generation in 2025.",
+      "related": [
+        "Decarbonization",
+        "Firm low-carbon power"
+      ]
+    },
+    {
+      "term": "Substitution method",
+      "full": "",
+      "category": "modelling",
+      "level": 3,
+      "definition": "A way to count primary energy that credits nuclear and renewable electricity with the fossil fuel needed to generate the same power, so their share is not understated next to fossil fuels.",
+      "related": [
+        "Primary energy",
+        "Final energy"
+      ]
+    },
+    {
+      "term": "Total energy supply",
+      "full": "TES",
+      "category": "modelling",
+      "level": 2,
+      "definition": "All energy entering an economy (production plus imports minus exports and stock changes). The Energy Institute switched to it in 2025; fossil fuels were 86% of the world's TES in 2025.",
+      "related": [
+        "Primary energy",
+        "Exajoule"
+      ]
     }
   ]
 }

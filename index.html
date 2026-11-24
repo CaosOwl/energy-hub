@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, glossary, model and scenario comparison, IPCC reports and modelling literature.">
+  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, energy sources compared, glossary, model and scenario comparison, IPCC reports and modelling literature.">
   <meta name="theme-color" content="#04121f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f2f6f8" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
@@ -44,6 +44,8 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="1.6" class="fill"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/></svg>Builders</button>
     <button data-view="glossary">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h10.5M9 8.5h5.5"/></svg>Glossary</button>
+    <button data-view="energy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3 5.5 13.5h6L10.5 21l8-10.5h-6z"/></svg>Energy</button>
     <button data-view="scenarios">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M7 16V9.5M12 16V5M17 16v-4"/></svg>Models</button>
     <button data-view="ipcc">
@@ -167,6 +169,66 @@
       <div id="lit-list"></div>
     </section>
 
+    <!-- ENERGY SOURCES -->
+    <section id="view-energy" class="view hidden" data-title="Energy sources">
+      <p class="note" id="en-about">Loading energy sources…</p>
+      <div class="en-kpis" id="en-kpis"></div>
+
+      <h2 class="sc-h">Energy mix over time</h2>
+      <div class="en-controls">
+        <select id="en-ent" aria-label="Country or region"></select>
+        <div class="seg" id="en-kind" role="group" aria-label="Electricity or all energy"><button data-v="elec">Electricity</button><button data-v="primary">Primary energy</button></div>
+        <div class="seg" id="en-unit" role="group" aria-label="Unit"><button data-v="twh">TWh</button><button data-v="pct">Share</button></div>
+      </div>
+      <div class="sc-panel en-panel"><div id="en-mix-legend"></div><div id="en-mix" class="en-chart"></div><p class="note" id="en-mix-note"></p></div>
+
+      <h2 class="sc-h">Countries compared</h2>
+      <div class="chips" id="en-cmp-group"></div>
+      <div class="en-controls">
+        <select id="en-cmp-sort" aria-label="Sort countries by"></select>
+        <div class="seg" id="en-cmp-kind" role="group" aria-label="Electricity or all energy"><button data-v="elec">Electricity</button><button data-v="primary">Primary energy</button></div>
+      </div>
+      <div class="sc-panel en-panel"><div id="en-cmp-legend"></div><div id="en-cmp" class="en-chart"></div><p class="note" id="en-cmp-note"></p></div>
+
+      <h2 class="sc-h">Country ranking</h2>
+      <div class="en-controls"><select id="en-rank-ind" aria-label="Indicator"></select></div>
+      <div class="sc-panel en-panel"><div id="en-rank" class="en-chart"></div><p class="note" id="en-rank-note"></p></div>
+
+      <h2 class="sc-h">Trends since 1990</h2>
+      <div class="en-controls">
+        <select id="en-trend-ind" aria-label="Indicator"></select>
+        <div class="en-trio" id="en-trend-ents">
+          <label><i></i><select aria-label="First country"></select></label>
+          <label><i></i><select aria-label="Second country"></select></label>
+          <label><i></i><select aria-label="Third country"></select></label>
+        </div>
+      </div>
+      <div class="sc-panel en-panel"><div id="en-trend" class="en-chart"></div><p class="note" id="en-trend-note"></p></div>
+
+      <h2 class="sc-h">Technologies compared</h2>
+      <p class="note">Filter by tag. "Clean" means low-carbon: renewables plus nuclear; bioenergy is renewable but its life-cycle emissions depend on the feedstock, so it is not tagged clean.</p>
+      <div class="chips" id="en-tags"></div>
+      <div class="en-controls"><select id="en-metric" aria-label="Metric"></select><button id="en-tech-table" class="btn ghost">Show table</button></div>
+      <div class="sc-panel en-panel"><div id="en-tech" class="en-chart"></div><p class="note" id="en-tech-note"></p></div>
+
+      <h2 class="sc-h">Two metrics against each other</h2>
+      <div class="en-controls">
+        <label class="en-lab">X <select id="en-sx" aria-label="Horizontal axis metric"></select></label>
+        <label class="en-lab">Y <select id="en-sy" aria-label="Vertical axis metric"></select></label>
+      </div>
+      <div class="sc-panel en-panel"><div id="en-scatter" class="en-chart"></div><p class="note" id="en-scatter-note"></p></div>
+
+      <h2 class="sc-h">Scorecard</h2>
+      <p class="note">Each column ranks the sources shown on one metric; darker means better on that metric. A ranking, not a verdict: the metrics are not weighted and some (EROI, minerals) are contested.</p>
+      <div id="en-score"></div>
+
+      <h2 class="sc-h">The sources</h2>
+      <ul id="en-cards" class="grid"></ul>
+
+      <h2 class="sc-h">References</h2>
+      <div id="en-refs" class="note"></div>
+    </section>
+
     <!-- SOURCES -->
     <section id="view-sources" class="view hidden" data-title="Sources">
       <p class="note">What the feed reads. Open sources are fetched; partly paywalled ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change the list.</p>
@@ -181,5 +243,6 @@
   </div>
 
   <script src="app.js"></script>
+  <script src="energy-tab.js"></script>
 </body>
 </html>

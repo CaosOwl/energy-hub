@@ -2,9 +2,9 @@
 // App shell: served from cache at once, refreshed in the background, so a new version
 //            reaches the phone on the next open without anyone bumping a version number.
 // Data:      network first, falling back to the last copy when offline.
-const CACHE = "eh-v6";
+const CACHE = "eh-v7";
 const SHELL = [
-  "./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
+  "./", "index.html", "styles.css", "app.js", "energy-tab.js", "manifest.webmanifest",
   "assets/icon.svg", "assets/icon-192.png", "assets/fonts/archivo.woff2", "assets/fonts/source-serif.woff2",
 ];
 

@@ -1,0 +1,1550 @@
+{
+ "title": "Energy sources",
+ "updated": "2026-11-24",
+ "about": "The main energy sources compared on the yardsticks the literature uses: market share and output in 55 countries and regions, cost (LCOE, CAPEX, OPEX), emissions, safety, land, materials, water, net energy, build time and learning rates. Every number names its source and year. Ranges and context matter more than single values; the notes say where studies disagree.",
+ "metrics": [
+  {
+   "id": "share",
+   "group": "Scale",
+   "label": "Share of world electricity, 2025",
+   "unit": "%",
+   "better": "info",
+   "source": "ember-ger-2026",
+   "desc": "Share of global electricity generation in 2025. Bioenergy and oil are Ember's 'other' categories (bio includes geothermal and other renewables)."
+  },
+  {
+   "id": "twh",
+   "group": "Scale",
+   "label": "Electricity generated, 2025",
+   "unit": "TWh",
+   "better": "info",
+   "log": true,
+   "source": "ember-ger-2026",
+   "desc": "Global generation by source in 2025."
+  },
+  {
+   "id": "growth",
+   "group": "Scale",
+   "label": "Change in generation, 2024→2025",
+   "unit": "TWh",
+   "better": "info",
+   "source": "ember-ger-2026",
+   "desc": "Absolute year-on-year change in global generation. Solar's +636 TWh was the largest annual increase of any source outside the post-Covid coal rebound."
+  },
+  {
+   "id": "lcoe",
+   "group": "Cost",
+   "label": "LCOE, new plants (US)",
+   "unit": "$/MWh",
+   "better": "low",
+   "source": "lazard-2026",
+   "terms": [
+    "LCOE",
+    "System LCOE",
+    "WACC"
+   ],
+   "desc": "Unsubsidised levelised cost of new-build plants, Lazard LCOE+ 2026 (v19, US). Plant-level only: excludes grid, balancing and firming costs, which grow with variable shares (see System LCOE). Existing paid-off plants shown separately."
+  },
+  {
+   "id": "lcoeGlobal",
+   "group": "Cost",
+   "label": "LCOE, global average (renewables, 2024)",
+   "unit": "$/MWh",
+   "better": "low",
+   "source": "irena-2024",
+   "desc": "IRENA global weighted-average LCOE of renewable projects commissioned in 2024. Lower than Lazard's US figures mainly because of China and India."
+  },
+  {
+   "id": "capex",
+   "group": "Cost",
+   "label": "CAPEX (overnight capital cost)",
+   "unit": "$/kW",
+   "better": "low",
+   "source": "eia-aeo-cost",
+   "terms": [
+    "Capex"
+   ],
+   "desc": "Overnight cost to build 1 kW, excluding interest during construction. EIA AEO2023 (2022 $, US reference plants); IRENA 2024 global averages for solar and wind. Per kW of capacity, not per MWh produced: divide by capacity factor to compare output."
+  },
+  {
+   "id": "fom",
+   "group": "Cost",
+   "label": "Fixed OPEX",
+   "unit": "$/kW-yr",
+   "better": "low",
+   "source": "eia-aeo-cost",
+   "terms": [
+    "OPEX"
+   ],
+   "desc": "Fixed operation & maintenance per kW per year (staff, insurance, routine maintenance), EIA AEO2023, 2022 $."
+  },
+  {
+   "id": "vom",
+   "group": "Cost",
+   "label": "Variable OPEX (excl. fuel)",
+   "unit": "$/MWh",
+   "better": "low",
+   "source": "eia-aeo-cost",
+   "terms": [
+    "OPEX"
+   ],
+   "desc": "Variable O&M per MWh, EIA AEO2023. Fuel is extra: for gas and coal it is usually the largest operating cost; nuclear fuel is roughly $5–10/MWh."
+  },
+  {
+   "id": "learning",
+   "group": "Cost",
+   "label": "Learning rate",
+   "unit": "% per doubling",
+   "better": "high",
+   "source": "rubin-2015",
+   "terms": [
+    "Learning rate"
+   ],
+   "desc": "Average cost decline per doubling of cumulative installed capacity (one-factor learning curves), Rubin et al. 2015 review. Nuclear's rate was negative in the US and France: costs rose with experience."
+  },
+  {
+   "id": "co2",
+   "group": "Environment",
+   "label": "Life-cycle emissions",
+   "unit": "g CO₂eq/kWh",
+   "better": "low",
+   "log": true,
+   "source": "ipcc-ar5-lca",
+   "terms": [
+    "Life-cycle emissions"
+   ],
+   "desc": "Median life-cycle greenhouse-gas emissions from mining to decommissioning (IPCC AR5 Annex III; oil from the NREL harmonisation review). UNECE 2021 ranges in the notes."
+  },
+  {
+   "id": "land",
+   "group": "Environment",
+   "label": "Land-use intensity",
+   "unit": "ha/TWh/yr",
+   "better": "low",
+   "log": true,
+   "source": "lovering-2022",
+   "terms": [
+    "Land-use intensity"
+   ],
+   "desc": "Median land occupied per TWh per year for real-world sites, including fuel extraction (Lovering et al. 2022). Wind is the direct footprint; with turbine spacing about 12,000."
+  },
+  {
+   "id": "density",
+   "group": "Environment",
+   "label": "Power density",
+   "unit": "W/m²",
+   "better": "high",
+   "log": true,
+   "source": "vanzalk-2018",
+   "terms": [
+    "Power density"
+   ],
+   "desc": "Median electrical power per square metre of land, US literature meta-analysis (van Zalk & Behrens 2018). The inverse view of land use, from a different study."
+  },
+  {
+   "id": "water",
+   "group": "Environment",
+   "label": "Water consumption",
+   "unit": "L/MWh",
+   "better": "low",
+   "source": "macknick-2012",
+   "desc": "Median operational water consumed (evaporated) per MWh with recirculating cooling (Macknick et al. 2012). Once-through cooling withdraws far more but consumes less. Hydro reservoir evaporation is excluded."
+  },
+  {
+   "id": "minerals",
+   "group": "Environment",
+   "label": "Mineral intensity",
+   "unit": "kg/MW",
+   "better": "low",
+   "source": "iea-minerals-2021",
+   "desc": "Critical minerals (copper, nickel, rare earths, silicon, zinc…) per MW of capacity, approximate values read from IEA (2021). Excludes steel, concrete and fuel. Per MW, so low-capacity-factor sources look better than per MWh."
+  },
+  {
+   "id": "deaths",
+   "group": "Safety",
+   "label": "Deaths per TWh",
+   "unit": "deaths/TWh",
+   "better": "low",
+   "log": true,
+   "source": "owid-safety",
+   "desc": "Deaths from accidents and air pollution per TWh, including Chernobyl, Fukushima and dam failures (Markandya & Wilkinson 2007; Sovacool et al. 2016; via Our World in Data). Nuclear, wind and solar overlap within uncertainty."
+  },
+  {
+   "id": "cf",
+   "group": "Performance",
+   "label": "Capacity factor",
+   "unit": "%",
+   "better": "high",
+   "source": "eia-cf-2024",
+   "terms": [
+    "Capacity factor",
+    "Dispatchable"
+   ],
+   "desc": "Actual output as a share of maximum, US utility-scale fleet 2024 (EIA). Gas and coal are low partly because they are dispatched to follow demand."
+  },
+  {
+   "id": "eroi",
+   "group": "Performance",
+   "label": "EROI (energy return on investment)",
+   "unit": "ratio",
+   "better": "high",
+   "log": true,
+   "source": "weissbach-2013",
+   "terms": [
+    "EROI"
+   ],
+   "desc": "Electricity delivered over a plant's life divided by the energy needed to build, fuel and run it (Weißbach et al. 2013, German conditions, unbuffered). Contested: later studies (e.g. Raugei) find several-fold higher values for solar and wind; with storage buffering wind and solar fall further."
+  },
+  {
+   "id": "lead",
+   "group": "Performance",
+   "label": "Construction lead time",
+   "unit": "years",
+   "better": "low",
+   "source": "eia-aeo-cost",
+   "desc": "Typical lead time from order to operation assumed by EIA (AEO2023). Real nuclear projects in Europe and the US have often taken 10–15+ years."
+  },
+  {
+   "id": "life",
+   "group": "Performance",
+   "label": "Economic lifetime",
+   "unit": "years",
+   "better": "high",
+   "source": "iea-nea-2020",
+   "terms": [
+    "LTO"
+   ],
+   "desc": "Lifetime assumed in IEA/NEA Projected Costs of Generating Electricity 2020. Many nuclear plants are licensed for 60–80 years; hydro dams often run 100."
+  }
+ ],
+ "items": [
+  {
+   "id": "nuclear",
+   "name": "Nuclear fission",
+   "group": "firm",
+   "colour": "nuclear",
+   "dispatch": "Firm",
+   "summary": "Splitting uranium nuclei heats water to drive a steam turbine. A small amount of fuel gives steady, low-carbon power around the clock; the challenge is the high upfront cost and long construction time of new plants.",
+   "how": "In a PWR or BWR, enriched uranium fuel (LEU, about 3–5% U-235) sustains a controlled chain reaction. The heat makes steam that turns a turbine. Spent fuel is stored on site, then in interim storage, and eventually in a deep geological repository.",
+   "facts": [
+    "About 400 GWe operable worldwide at end-2025 (World Nuclear Association).",
+    "76 reactors under construction in 16 countries, almost 80 GW (IAEA, Nov 2026); China builds about half.",
+    "Mean age of the world fleet: 33 years (Aug 2026); long-term operation (LTO) to 60–80 years is the cheapest low-carbon power available."
+   ],
+   "pros": [
+    "Very low emissions and land use",
+    "Runs ~90% of the time, independent of weather",
+    "Small fuel volumes, easy to stockpile"
+   ],
+   "cons": [
+    "High capex and long builds make it sensitive to interest rates",
+    "Waste repositories still mostly in planning",
+    "Public acceptance and licensing take years"
+   ],
+   "ch": "27% of Swiss production from four reactors at three sites (Beznau I & II, Gösgen, Leibstadt). Parliament lifted the 2017 ban on new plants in June 2026; opponents announced a referendum, so voters will likely have the last word.",
+   "terms": [
+    "LWR",
+    "PWR",
+    "BWR",
+    "LEU",
+    "SMR",
+    "LTO",
+    "Spent fuel",
+    "Deep geological repository",
+    "Capacity factor",
+    "Firm low-carbon power"
+   ],
+   "news": "nuclear",
+   "links": [
+    {
+     "label": "IAEA PRIS reactor database",
+     "url": "https://pris.iaea.org/PRIS/home.aspx"
+    },
+    {
+     "label": "WNA: Nuclear power in the world today",
+     "url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-power-in-the-world-today"
+    }
+   ],
+   "tags": [
+    "clean"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 8.9,
+      "note": "2,812 TWh, +1.3% in 2025"
+     }
+    ],
+    "twh": [
+     {
+      "v": 2812
+     }
+    ],
+    "growth": [
+     {
+      "v": 35
+     }
+    ],
+    "lcoe": [
+     {
+      "label": "New build",
+      "lo": 175,
+      "hi": 255
+     },
+     {
+      "label": "Existing plant",
+      "lo": 26,
+      "hi": 36,
+      "existing": true
+     }
+    ],
+    "lcoeGlobal": null,
+    "capex": [
+     {
+      "label": "Large LWR",
+      "v": 7777
+     },
+     {
+      "label": "SMR",
+      "v": 8349
+     }
+    ],
+    "fom": [
+     {
+      "v": 136.91
+     }
+    ],
+    "vom": [
+     {
+      "v": 2.67
+     }
+    ],
+    "learning": [
+     {
+      "v": null,
+      "note": "Negative in the US and France"
+     }
+    ],
+    "co2": [
+     {
+      "v": 12,
+      "note": "UNECE 2021: 5.1–6.4"
+     }
+    ],
+    "land": [
+     {
+      "v": 7.1
+     }
+    ],
+    "density": [
+     {
+      "v": 240.8
+     }
+    ],
+    "water": [
+     {
+      "v": 2544
+     }
+    ],
+    "minerals": [
+     {
+      "v": 5300
+     }
+    ],
+    "deaths": [
+     {
+      "v": 0.03,
+      "note": "Includes Chernobyl and Fukushima"
+     }
+    ],
+    "cf": [
+     {
+      "v": 92.3
+     }
+    ],
+    "eroi": [
+     {
+      "v": 75
+     }
+    ],
+    "lead": [
+     {
+      "v": 6
+     }
+    ],
+    "life": [
+     {
+      "v": 60
+     }
+    ]
+   }
+  },
+  {
+   "id": "hydro",
+   "name": "Hydropower",
+   "group": "firm",
+   "colour": "transition",
+   "dispatch": "Firm / flexible (storage), seasonal",
+   "summary": "Falling water drives turbines. Still the largest low-carbon source of electricity worldwide, and reservoirs make it one of the most flexible: it can follow demand and, as pumped hydro, store energy.",
+   "how": "Run-of-river plants use the river's flow as it comes. Storage plants hold water in reservoirs and release it when power is worth most. Pumped hydro pumps water uphill when power is cheap and generates when it is expensive.",
+   "facts": [
+    "Output depends on rainfall and snowmelt, so dry years cut generation.",
+    "Best large sites in Europe and North America are already used; most growth is in Asia, Africa and South America.",
+    "Not in Lazard's LCOE comparison: costs are highly site-specific."
+   ],
+   "pros": [
+    "Low emissions, very long plant life",
+    "Reservoirs and pumped storage balance wind and solar",
+    "Fast ramping and grid inertia"
+   ],
+   "cons": [
+    "Few new sites, big ecological impact on rivers",
+    "Drought exposure",
+    "Large reservoirs can emit methane and displace people"
+   ],
+   "ch": "Backbone of the Swiss system: 55.5% of production in 2025 (24.2% run-of-river, 31.3% storage). Storage lakes are the main tool against the winter gap.",
+   "terms": [
+    "Run-of-river hydro",
+    "Pumped hydro",
+    "Storage",
+    "Winter gap",
+    "Grid inertia",
+    "Dispatchable"
+   ],
+   "news": "hydro",
+   "links": [
+    {
+     "label": "BFE: Wasserkraft",
+     "url": "https://www.bfe.admin.ch/bfe/de/home/versorgung/erneuerbare-energien/wasserkraft.html"
+    }
+   ],
+   "tags": [
+    "clean",
+    "renewable"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 14.0,
+      "note": "4,437 TWh, flat in 2025"
+     }
+    ],
+    "twh": [
+     {
+      "v": 4437
+     }
+    ],
+    "growth": [
+     {
+      "v": 3
+     }
+    ],
+    "lcoe": null,
+    "lcoeGlobal": [
+     {
+      "v": 57
+     }
+    ],
+    "capex": [
+     {
+      "v": 3421
+     }
+    ],
+    "fom": [
+     {
+      "v": 47.06
+     }
+    ],
+    "vom": [
+     {
+      "v": 1.57
+     }
+    ],
+    "learning": [
+     {
+      "v": 1.4
+     }
+    ],
+    "co2": [
+     {
+      "v": 24,
+      "note": "UNECE 2021: 6–147, depending on reservoir methane"
+     }
+    ],
+    "land": null,
+    "density": [
+     {
+      "v": 0.14,
+      "note": "Reservoirs flood large areas; run-of-river much denser"
+     }
+    ],
+    "water": null,
+    "minerals": null,
+    "deaths": [
+     {
+      "v": 1.3,
+      "note": "Dominated by a few dam failures since 1965"
+     }
+    ],
+    "cf": [
+     {
+      "v": 34.5
+     }
+    ],
+    "eroi": [
+     {
+      "v": 50,
+      "note": "Run-of-river"
+     }
+    ],
+    "lead": [
+     {
+      "v": 4
+     }
+    ],
+    "life": [
+     {
+      "v": 80
+     }
+    ]
+   }
+  },
+  {
+   "id": "solar",
+   "name": "Solar PV",
+   "group": "variable",
+   "colour": "nuclear",
+   "dispatch": "Variable (daily, seasonal)",
+   "summary": "Photovoltaic panels turn sunlight directly into electricity. The fastest-growing power source in history: cheap, modular and quick to build, but it produces nothing at night and little in winter at Swiss latitudes.",
+   "how": "Silicon cells release electrons when hit by light, producing direct current; inverters convert it to grid AC. Utility-scale plants, rooftops and façades all use the same panels. Pairing with batteries shifts midday output into the evening.",
+   "facts": [
+    "Met three-quarters of global electricity demand growth in 2025 and overtook wind for the first time (Ember).",
+    "Expected to overtake nuclear in 2026.",
+    "As its share rises, midday prices fall and its market value drops (cannibalisation)."
+   ],
+   "pros": [
+    "Lowest cost of new generation in most places",
+    "Built in months, scales from a roof to GW",
+    "No fuel, no emissions in operation"
+   ],
+   "cons": [
+    "No output at night, low in winter",
+    "Market value falls as shares grow",
+    "Supply chain concentrated in China"
+   ],
+   "ch": "11.8% of Swiss production in 2025 and the main driver of new renewables. Winter output is low, so it adds less to winter security than its annual share suggests.",
+   "terms": [
+    "VRE",
+    "Intermittency",
+    "Curtailment",
+    "Market value",
+    "Negative prices",
+    "BESS",
+    "Learning rate"
+   ],
+   "news": "solar",
+   "links": [
+    {
+     "label": "Ember: Global Electricity Review 2026",
+     "url": "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+    }
+   ],
+   "tags": [
+    "clean",
+    "renewable"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 8.7,
+      "note": "2,778 TWh, +636 TWh (+30%) in 2025; 647 GW added"
+     }
+    ],
+    "twh": [
+     {
+      "v": 2778
+     }
+    ],
+    "growth": [
+     {
+      "v": 636
+     }
+    ],
+    "lcoe": [
+     {
+      "label": "Utility-scale",
+      "lo": 40,
+      "hi": 98
+     },
+     {
+      "label": "Utility-scale + storage",
+      "lo": 61,
+      "hi": 156
+     }
+    ],
+    "lcoeGlobal": [
+     {
+      "v": 43
+     }
+    ],
+    "capex": [
+     {
+      "label": "US, tracking (EIA)",
+      "v": 1448
+     },
+     {
+      "label": "Global avg (IRENA)",
+      "v": 691
+     }
+    ],
+    "fom": [
+     {
+      "v": 17.16
+     }
+    ],
+    "vom": [
+     {
+      "v": 0
+     }
+    ],
+    "learning": [
+     {
+      "v": 23
+     }
+    ],
+    "co2": [
+     {
+      "v": 48,
+      "note": "IPCC median utility-scale 48, rooftop 41; UNECE 2021: 8–83"
+     }
+    ],
+    "land": [
+     {
+      "v": 2000,
+      "note": "Ground-mounted; rooftop uses almost no extra land"
+     }
+    ],
+    "density": [
+     {
+      "v": 6.6
+     }
+    ],
+    "water": [
+     {
+      "v": 98,
+      "note": "Panel cleaning"
+     }
+    ],
+    "minerals": [
+     {
+      "v": 6800
+     }
+    ],
+    "deaths": [
+     {
+      "v": 0.02
+     }
+    ],
+    "cf": [
+     {
+      "v": 23.4,
+      "note": "US fleet; Swiss rooftop PV is closer to 11–12%"
+     }
+    ],
+    "eroi": [
+     {
+      "v": 3.9,
+      "note": "Buffered with storage: 1.6. Contested"
+     }
+    ],
+    "lead": [
+     {
+      "v": 2
+     }
+    ],
+    "life": [
+     {
+      "v": 25
+     }
+    ]
+   }
+  },
+  {
+   "id": "wind",
+   "name": "Wind",
+   "group": "variable",
+   "colour": "tech",
+   "dispatch": "Variable (weather)",
+   "summary": "Turbines turn the wind's kinetic energy into electricity. Onshore wind is among the cheapest new power; offshore wind is steadier but costs roughly twice as much. Output follows the weather, often stronger in winter.",
+   "how": "Blades drive a generator in the nacelle, typically 3–7 MW onshore and 10–15 MW offshore. Output rises with the cube of wind speed, so siting matters a lot. Wind often complements solar: windier in winter and at night.",
+   "facts": [
+    "Lazard's 2026 report shows onshore wind as the cheapest new-build source at the low end ($37/MWh).",
+    "Offshore costs rose sharply after 2022 with interest rates and supply chains.",
+    "Grid connections and permitting, not turbines, are now the main bottleneck in Europe."
+   ],
+   "pros": [
+    "Cheap onshore power, low emissions",
+    "Produces more in winter, complementing solar",
+    "Land between turbines stays usable"
+   ],
+   "cons": [
+    "Variable and hard to forecast days ahead",
+    "Local opposition and long permitting",
+    "Offshore is expensive and rate-sensitive"
+   ],
+   "ch": "Only 0.2% of Swiss production in 2025, held back by permitting and objections, though winter output makes it valuable here.",
+   "terms": [
+    "VRE",
+    "Intermittency",
+    "Curtailment",
+    "Grid congestion",
+    "CfD",
+    "Winter gap"
+   ],
+   "news": "wind",
+   "links": [],
+   "tags": [
+    "clean",
+    "renewable"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 8.5,
+      "note": "2,715 TWh, +8.2% in 2025; 167 GW added"
+     }
+    ],
+    "twh": [
+     {
+      "v": 2715
+     }
+    ],
+    "growth": [
+     {
+      "v": 205
+     }
+    ],
+    "lcoe": [
+     {
+      "label": "Onshore",
+      "lo": 37,
+      "hi": 99
+     },
+     {
+      "label": "Offshore",
+      "lo": 105,
+      "hi": 167
+     }
+    ],
+    "lcoeGlobal": [
+     {
+      "label": "Onshore",
+      "v": 34
+     },
+     {
+      "label": "Offshore",
+      "v": 79
+     }
+    ],
+    "capex": [
+     {
+      "label": "Onshore, US (EIA)",
+      "v": 2098
+     },
+     {
+      "label": "Offshore, US (EIA)",
+      "v": 6672
+     },
+     {
+      "label": "Onshore, global (IRENA)",
+      "v": 1041
+     },
+     {
+      "label": "Offshore, global (IRENA)",
+      "v": 2852
+     }
+    ],
+    "fom": [
+     {
+      "label": "Onshore",
+      "v": 29.64
+     },
+     {
+      "label": "Offshore",
+      "v": 123.81
+     }
+    ],
+    "vom": [
+     {
+      "v": 0
+     }
+    ],
+    "learning": [
+     {
+      "label": "Onshore",
+      "v": 12
+     },
+     {
+      "label": "Offshore",
+      "v": 5
+     }
+    ],
+    "co2": [
+     {
+      "v": 11,
+      "note": "IPCC median onshore 11, offshore 12; UNECE 2021: 7.8–16 onshore, 12–23 offshore"
+     }
+    ],
+    "land": [
+     {
+      "v": 130,
+      "note": "Direct footprint; about 12,000 including turbine spacing (land in between stays usable)"
+     }
+    ],
+    "density": [
+     {
+      "v": 1.8
+     }
+    ],
+    "water": [
+     {
+      "v": 0
+     }
+    ],
+    "minerals": [
+     {
+      "label": "Onshore",
+      "v": 10200
+     },
+     {
+      "label": "Offshore",
+      "v": 15400
+     }
+    ],
+    "deaths": [
+     {
+      "v": 0.04
+     }
+    ],
+    "cf": [
+     {
+      "v": 34.3,
+      "note": "US fleet; offshore around 40–50%"
+     }
+    ],
+    "eroi": [
+     {
+      "v": 16,
+      "note": "Buffered with storage: 3.9. Contested"
+     }
+    ],
+    "lead": [
+     {
+      "label": "Onshore",
+      "v": 3
+     },
+     {
+      "label": "Offshore",
+      "v": 4
+     }
+    ],
+    "life": [
+     {
+      "v": 25
+     }
+    ]
+   }
+  },
+  {
+   "id": "gas",
+   "name": "Natural gas",
+   "group": "fossil",
+   "colour": "markets",
+   "dispatch": "Dispatchable, flexible",
+   "summary": "Burning methane in gas turbines. The flexible workhorse of many grids and the price-setter in European power markets, emitting about half as much CO₂ as coal per kWh, but exposed to volatile, often imported fuel.",
+   "how": "A combined-cycle plant (CCGT) burns gas in a turbine and uses the hot exhaust to raise steam for a second turbine, reaching about 60% efficiency. Open-cycle peakers are cheaper to build, start in minutes, and run only at peak demand.",
+   "facts": [
+    "The only fossil fuel whose power output grew in 2025, and solar's growth was 18 times larger (Ember).",
+    "Methane leaks upstream can erase much of its climate advantage over coal.",
+    "In marginal pricing, gas plants often set the European wholesale price."
+   ],
+   "pros": [
+    "Flexible: follows demand and backs up renewables",
+    "Moderate capex, fast to build",
+    "About half coal's emissions"
+   ],
+   "cons": [
+    "Fossil CO₂ and methane leaks",
+    "Fuel price volatility and import dependence",
+    "Risk of stranded assets under net zero"
+   ],
+   "ch": "Hardly used for Swiss power; the Federal Council has planned reserve gas/oil power plants for winter emergencies.",
+   "terms": [
+    "CCS",
+    "Merit order",
+    "Marginal pricing",
+    "Peak load",
+    "Carbon price",
+    "Dispatchable"
+   ],
+   "news": "gas",
+   "links": [],
+   "tags": [
+    "fossil"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 21.8,
+      "note": "6,919 TWh, +0.5% in 2025"
+     }
+    ],
+    "twh": [
+     {
+      "v": 6919
+     }
+    ],
+    "growth": [
+     {
+      "v": 36
+     }
+    ],
+    "lcoe": [
+     {
+      "label": "Combined cycle",
+      "lo": 51,
+      "hi": 129
+     },
+     {
+      "label": "Peaker",
+      "lo": 144,
+      "hi": 276
+     },
+     {
+      "label": "Existing CCGT",
+      "lo": 32,
+      "hi": 51,
+      "existing": true
+     }
+    ],
+    "lcoeGlobal": null,
+    "capex": [
+     {
+      "label": "Combined cycle",
+      "v": 1176
+     },
+     {
+      "label": "Peaker (frame CT)",
+      "v": 867
+     }
+    ],
+    "fom": [
+     {
+      "label": "Combined cycle",
+      "v": 13.73
+     }
+    ],
+    "vom": [
+     {
+      "label": "Combined cycle",
+      "v": 2.1
+     }
+    ],
+    "learning": [
+     {
+      "label": "Combined cycle",
+      "v": 14
+     }
+    ],
+    "co2": [
+     {
+      "v": 490,
+      "note": "UNECE 2021 combined cycle: 403–513; with CCS about 130"
+     }
+    ],
+    "land": [
+     {
+      "v": 410,
+      "note": "Mostly gas fields; about 1,900 including well spacing"
+     }
+    ],
+    "density": [
+     {
+      "v": 482.1
+     }
+    ],
+    "water": [
+     {
+      "label": "Combined cycle",
+      "v": 749
+     }
+    ],
+    "minerals": [
+     {
+      "v": 1100
+     }
+    ],
+    "deaths": [
+     {
+      "v": 2.8
+     }
+    ],
+    "cf": [
+     {
+      "v": 59.7,
+      "note": "US combined cycle"
+     }
+    ],
+    "eroi": [
+     {
+      "v": 28,
+      "note": "CCGT"
+     }
+    ],
+    "lead": [
+     {
+      "label": "Combined cycle",
+      "v": 3
+     },
+     {
+      "label": "Peaker",
+      "v": 2
+     }
+    ],
+    "life": [
+     {
+      "v": 30
+     }
+    ]
+   }
+  },
+  {
+   "id": "coal",
+   "name": "Coal",
+   "group": "fossil",
+   "colour": "general",
+   "dispatch": "Dispatchable",
+   "summary": "Burning coal to raise steam. Still the single largest source of electricity and of energy CO₂ worldwide, concentrated in China and India, but in 2025 renewables overtook it for the first time in a century.",
+   "how": "Pulverised coal is burned in a boiler; steam drives a turbine. Supercritical plants reach about 45% efficiency. Lignite (brown coal) is dirtier still.",
+   "facts": [
+    "China produced 55% of the world's coal power in 2025; coal's share of its mix fell from 70% (2015) to 54%.",
+    "Lazard's new-build coal figure is an inflation-adjusted 2020 estimate: almost no new plants are built in the West.",
+    "Air pollution, not accidents, causes most of the deaths."
+   ],
+   "pros": [
+    "Cheap, abundant domestic fuel in many countries",
+    "Dispatchable, existing plants are paid off"
+   ],
+   "cons": [
+    "Highest CO₂ per kWh",
+    "Deadliest source through air pollution",
+    "Mining damage and stranded-asset risk"
+   ],
+   "ch": "No coal power in Switzerland.",
+   "terms": [
+    "Decarbonization",
+    "Carbon price",
+    "ETS",
+    "CCS"
+   ],
+   "news": "coal",
+   "links": [],
+   "tags": [
+    "fossil"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 33.0,
+      "note": "10,476 TWh, −0.6% in 2025"
+     }
+    ],
+    "twh": [
+     {
+      "v": 10476
+     }
+    ],
+    "growth": [
+     {
+      "v": -63
+     }
+    ],
+    "lcoe": [
+     {
+      "label": "New build",
+      "lo": 72,
+      "hi": 177
+     },
+     {
+      "label": "Existing plant",
+      "lo": 34,
+      "hi": 69,
+      "existing": true
+     }
+    ],
+    "lcoeGlobal": null,
+    "capex": [
+     {
+      "label": "Ultra-supercritical",
+      "v": 4507
+     }
+    ],
+    "fom": [
+     {
+      "v": 45.68
+     }
+    ],
+    "vom": [
+     {
+      "v": 5.06
+     }
+    ],
+    "learning": [
+     {
+      "v": 8.3
+     }
+    ],
+    "co2": [
+     {
+      "v": 820,
+      "note": "UNECE 2021: 751–1,095"
+     }
+    ],
+    "land": [
+     {
+      "v": 1000
+     }
+    ],
+    "density": [
+     {
+      "v": 135.1
+     }
+    ],
+    "water": [
+     {
+      "v": 2600
+     }
+    ],
+    "minerals": [
+     {
+      "v": 2500
+     }
+    ],
+    "deaths": [
+     {
+      "v": 24.6,
+      "note": "Brown coal: 32.7"
+     }
+    ],
+    "cf": [
+     {
+      "v": 42.6,
+      "note": "US fleet, falling as plants run less"
+     }
+    ],
+    "eroi": [
+     {
+      "v": 30
+     }
+    ],
+    "lead": [
+     {
+      "v": 4
+     }
+    ],
+    "life": [
+     {
+      "v": 40
+     }
+    ]
+   }
+  },
+  {
+   "id": "oil",
+   "name": "Oil",
+   "group": "fossil",
+   "colour": "general",
+   "dispatch": "Dispatchable",
+   "summary": "The largest source of primary energy, but mainly for transport, petrochemicals and heating. In power it is a niche fuel for islands, backup and some oil exporters.",
+   "how": "Refined into petrol, diesel, jet fuel and heating oil; burned in engines or boilers. Electrification of transport (EVs) and heating (heat pumps) is the main way it is displaced.",
+   "facts": [
+    "Global oil consumption grew 1.3% in 2025 to about 103 mb/d (Energy Institute).",
+    "Fossil fuels together still supply 86% of the world's total energy.",
+    "Prices are set on a global market and swing with geopolitics."
+   ],
+   "pros": [
+    "Very high energy density, easy to store and move",
+    "Huge existing infrastructure"
+   ],
+   "cons": [
+    "High emissions and air pollution",
+    "Price shocks and supply risks",
+    "Being displaced by electrification"
+   ],
+   "ch": "Switzerland imports all its oil; heating oil and motor fuels are still its largest energy carriers.",
+   "terms": [
+    "mb/d",
+    "Primary energy",
+    "Final energy",
+    "Electrification",
+    "Heat pump"
+   ],
+   "news": "oil",
+   "links": [],
+   "tags": [
+    "fossil"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 2.6,
+      "note": "Oil & other fossil, derived; global use about 103 mb/d in 2025"
+     }
+    ],
+    "twh": [
+     {
+      "v": 842,
+      "note": "Oil & other fossil, derived from Ember totals"
+     }
+    ],
+    "growth": null,
+    "lcoe": null,
+    "lcoeGlobal": null,
+    "capex": null,
+    "fom": null,
+    "vom": null,
+    "learning": null,
+    "co2": [
+     {
+      "v": 840,
+      "note": "NREL review median, power generation"
+     }
+    ],
+    "land": null,
+    "density": [
+     {
+      "v": 194.6
+     }
+    ],
+    "water": null,
+    "minerals": null,
+    "deaths": [
+     {
+      "v": 18.4
+     }
+    ],
+    "cf": null,
+    "eroi": null,
+    "lead": null,
+    "life": null
+   }
+  },
+  {
+   "id": "bio",
+   "name": "Bioenergy",
+   "group": "firm",
+   "colour": "transition",
+   "dispatch": "Dispatchable",
+   "summary": "Burning wood, crop residues, biogas or waste for power and heat. Dispatchable and potentially low-carbon, but only if the biomass regrows and is not taken from forests or food land.",
+   "how": "Solid biomass is burned like coal (often in CHP plants); biogas from digesters or landfills runs engines. Combined with CCS (BECCS) it can in theory remove CO₂ from the air.",
+   "facts": [
+    "By far the most land-hungry source per unit of electricity.",
+    "Most valuable where it uses waste or replaces fuels that are hard to electrify.",
+    "Key input to BECCS in many IPCC pathways."
+   ],
+   "pros": [
+    "Dispatchable renewable",
+    "Uses waste streams, gives heat too",
+    "Enables negative emissions with CCS"
+   ],
+   "cons": [
+    "Enormous land need for crops",
+    "Air pollution from combustion",
+    "Carbon neutrality depends on accounting"
+   ],
+   "ch": "Wood, biogas and waste incineration provide a small, steady share of Swiss power and district heat.",
+   "terms": [
+    "BECCS",
+    "CDR",
+    "CCS",
+    "Carbon budget"
+   ],
+   "news": "biomass",
+   "links": [],
+   "tags": [
+    "renewable"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": 2.5,
+      "note": "Bio & other renewables together, derived from Ember"
+     }
+    ],
+    "twh": [
+     {
+      "v": 800,
+      "note": "Bio & other renewables, derived from Ember totals"
+     }
+    ],
+    "growth": null,
+    "lcoe": null,
+    "lcoeGlobal": [
+     {
+      "v": 87
+     }
+    ],
+    "capex": [
+     {
+      "v": 4998
+     }
+    ],
+    "fom": [
+     {
+      "v": 141.5
+     }
+    ],
+    "vom": [
+     {
+      "v": 5.44
+     }
+    ],
+    "learning": [
+     {
+      "v": 11
+     }
+    ],
+    "co2": [
+     {
+      "v": 230,
+      "note": "IPCC dedicated biomass; strongly depends on feedstock and carbon accounting"
+     }
+    ],
+    "land": [
+     {
+      "v": 58000,
+      "note": "Dedicated energy crops; waste and residues need almost no extra land"
+     }
+    ],
+    "density": [
+     {
+      "v": 0.08
+     }
+    ],
+    "water": [
+     {
+      "v": 2093,
+      "note": "Steam plant, cooling tower"
+     }
+    ],
+    "minerals": null,
+    "deaths": [
+     {
+      "v": 4.6
+     }
+    ],
+    "cf": [
+     {
+      "v": 55.6,
+      "note": "US wood-fired plants"
+     }
+    ],
+    "eroi": [
+     {
+      "v": 3.5,
+      "note": "Maize biogas"
+     }
+    ],
+    "lead": [
+     {
+      "v": 4
+     }
+    ],
+    "life": null
+   }
+  },
+  {
+   "id": "geothermal",
+   "name": "Geothermal",
+   "group": "firm",
+   "colour": "transition",
+   "dispatch": "Firm",
+   "summary": "Heat from deep underground drives turbines or heats buildings directly. Firm, low-carbon and small today; new drilling techniques (enhanced geothermal) could widen where it works.",
+   "how": "Conventional plants tap natural hot-water reservoirs in volcanic regions. Enhanced geothermal systems (EGS) fracture hot dry rock and circulate water through it, borrowing drilling methods from the oil and gas industry.",
+   "facts": [
+    "The highest capacity factor of any renewable source in the US.",
+    "Lazard's 2026 report added illustrative costs for next-generation geothermal.",
+    "Induced earthquakes stopped deep projects in Basel (2006) and St. Gallen (2013)."
+   ],
+   "pros": [
+    "Firm, weather-independent, low-carbon",
+    "Small surface footprint",
+    "Can supply heat directly"
+   ],
+   "cons": [
+    "Few good conventional sites",
+    "Drilling risk and high upfront cost",
+    "Induced seismicity"
+   ],
+   "ch": "Used for heat with shallow heat pumps; deep electricity projects were halted after induced quakes in Basel and St. Gallen.",
+   "terms": [
+    "EGS",
+    "Firm low-carbon power",
+    "Heat pump"
+   ],
+   "news": "geothermal",
+   "links": [],
+   "tags": [
+    "clean",
+    "renewable"
+   ],
+   "values": {
+    "share": [
+     {
+      "v": null,
+      "note": "Part of the 'other renewables' share; well under 1% worldwide"
+     }
+    ],
+    "twh": null,
+    "growth": null,
+    "lcoe": null,
+    "lcoeGlobal": null,
+    "capex": [
+     {
+      "v": 3403
+     }
+    ],
+    "fom": [
+     {
+      "v": 153.98
+     }
+    ],
+    "vom": [
+     {
+      "v": 1.31
+     }
+    ],
+    "learning": null,
+    "co2": [
+     {
+      "v": 38,
+      "note": "IPCC median"
+     }
+    ],
+    "land": null,
+    "density": [
+     {
+      "v": 2.2
+     }
+    ],
+    "water": [
+     {
+      "v": 38,
+      "note": "Flash plant"
+     }
+    ],
+    "minerals": null,
+    "deaths": null,
+    "cf": [
+     {
+      "v": 65.0
+     }
+    ],
+    "eroi": null,
+    "lead": [
+     {
+      "v": 4
+     }
+    ],
+    "life": null
+   }
+  }
+ ],
+ "refs": {
+  "ember-ger-2026": {
+   "label": "Ember, Global Electricity Review 2026",
+   "url": "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+  },
+  "bfe-2025": {
+   "label": "BFE, Elektrizitätsbilanz und Gesamtenergiestatistik 2025",
+   "url": "https://www.bfe.admin.ch/bfe/de/home/versorgung/statistik-und-geodaten/energiestatistiken/elektrizitaetsstatistik.html"
+  },
+  "ei-sr-2026": {
+   "label": "Energy Institute, Statistical Review of World Energy 2026",
+   "url": "https://www.energyinst.org/statistical-review"
+  },
+  "lazard-2026": {
+   "label": "Lazard, Levelized Cost of Energy+ 2026 (v19)",
+   "url": "https://www.lazard.com/research-insights/levelized-cost-of-energyplus-lcoeplus/"
+  },
+  "ipcc-ar5-lca": {
+   "label": "IPCC AR5 WG3 Annex III; UNECE Life Cycle Assessment of Electricity Generation Options (2021); NREL LCA harmonization",
+   "url": "https://unece.org/sed/documents/2021/10/reports/life-cycle-assessment-electricity-generation-options"
+  },
+  "owid-safety": {
+   "label": "Our World in Data, What are the safest and cleanest sources of energy?",
+   "url": "https://ourworldindata.org/safest-sources-of-energy"
+  },
+  "lovering-2022": {
+   "label": "Lovering et al. (2022), Land-use intensity of electricity production and tomorrow's energy landscape, PLOS ONE",
+   "url": "https://doi.org/10.1371/journal.pone.0270155"
+  },
+  "eia-cf-2024": {
+   "label": "US EIA, Electric Power Annual: capacity factors",
+   "url": "https://www.eia.gov/electricity/annual/"
+  },
+  "irena-2024": {
+   "label": "IRENA, Renewable Power Generation Costs in 2024 (2025)",
+   "url": "https://www.irena.org/Publications/2025/Jun/Renewable-Power-Generation-Costs-in-2024"
+  },
+  "eia-aeo-cost": {
+   "label": "US EIA, Cost and Performance Characteristics of New Generating Technologies (AEO2023, 2022 $)",
+   "url": "https://www.eia.gov/outlooks/aeo/assumptions/pdf/elec_cost_perf.pdf"
+  },
+  "rubin-2015": {
+   "label": "Rubin, Azevedo, Jaramillo & Yeh (2015), A review of learning rates for electricity supply technologies, Energy Policy 86",
+   "url": "https://doi.org/10.1016/j.enpol.2015.06.011"
+  },
+  "vanzalk-2018": {
+   "label": "van Zalk & Behrens (2018), The spatial extent of renewable and non-renewable power generation, Energy Policy 123",
+   "url": "https://doi.org/10.1016/j.enpol.2018.08.023"
+  },
+  "macknick-2012": {
+   "label": "Macknick et al. (2012), Operational water consumption and withdrawal factors for electricity generating technologies, ERL 7",
+   "url": "https://doi.org/10.1088/1748-9326/7/4/045802"
+  },
+  "iea-minerals-2021": {
+   "label": "IEA (2021), The Role of Critical Minerals in Clean Energy Transitions",
+   "url": "https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-energy-transitions"
+  },
+  "weissbach-2013": {
+   "label": "Weißbach et al. (2013), Energy intensities, EROIs and energy payback times of electricity generating power plants, Energy 52",
+   "url": "https://doi.org/10.1016/j.energy.2013.01.029"
+  },
+  "iea-nea-2020": {
+   "label": "IEA/NEA (2020), Projected Costs of Generating Electricity, 2020 Edition",
+   "url": "https://www.oecd-nea.org/jcms/pl_51110/projected-costs-of-generating-electricity-2020-edition"
+  },
+  "owid-energy": {
+   "label": "Our World in Data energy dataset (Ember; Energy Institute Statistical Review)",
+   "url": "https://github.com/owid/energy-data"
+  }
+ },
+ "tags": [
+  {
+   "id": "clean",
+   "label": "Clean (low-carbon)",
+   "desc": "Renewables plus nuclear: life-cycle emissions under ~50 g CO₂eq/kWh."
+  },
+  {
+   "id": "renewable",
+   "label": "Renewable",
+   "desc": "Uses a naturally replenished flow: sun, wind, water, heat, biomass."
+  },
+  {
+   "id": "fossil",
+   "label": "Fossil",
+   "desc": "Coal, oil and gas."
+  }
+ ]
+}
