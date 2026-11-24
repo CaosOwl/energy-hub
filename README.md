@@ -54,7 +54,7 @@ python3 -m http.server 8000         # open http://localhost:8000
 
 - Colours follow a reactor pool: deep water, Cherenkov blue, yellowcake. Light and dark themes; the button in the top bar cycles device / dark / light.
 - Fonts are bundled in `assets/fonts` (Archivo and Source Serif 4, both SIL Open Font License), so the app works offline and loads nothing from third parties.
-- `sw.js` serves the app from cache and refreshes it in the background: after a deploy, the new version shows on the second open.
+- `sw.js` always asks the network first (bypassing the browser cache), so a new deploy shows on the next open when online; offline it falls back to the last saved copy.
 
 ## Ideas for later
 
