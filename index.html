@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Energy Hub</title>
-  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, energy sources compared, glossary, model and scenario comparison, IPCC reports and modelling literature.">
+  <meta name="description" content="Personal energy news with a nuclear focus, reactor builders, energy sources compared, CO₂ footprints of everyday things and AI, glossary, model and scenario comparison, IPCC reports and modelling literature.">
   <meta name="theme-color" content="#04121f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f2f6f8" media="(prefers-color-scheme: light)">
   <link rel="manifest" href="manifest.webmanifest">
@@ -42,6 +42,8 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Feed</button>
     <button data-view="companies">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="1.6" class="fill"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/></svg>Builders</button>
+    <button data-view="footprint">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.5 4.5 0 0 1-.5 8.97z"/><path d="M10 14.2h1.6M14 13.2h1.5v1.2H14v1.2h1.5"/></svg>CO₂</button>
     <button data-view="glossary">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h10.5M9 8.5h5.5"/></svg>Glossary</button>
     <button data-view="energy">
@@ -271,6 +273,52 @@
       </article>
     </section>
 
+    <!-- CO2 FOOTPRINT -->
+    <section id="view-footprint" class="view hidden" data-title="CO₂ footprint">
+      <div class="fp-hero">
+        <span class="eyebrow">Carbon footprint</span>
+        <h2>How much does it emit?</h2>
+        <p>Type anything: a food, a trip, a gadget, an AI prompt, a whole industry. You get a full card with the CO₂e, what is counted, comparisons and the original study.</p>
+        <div class="fp-search">
+          <input id="fp-q" type="search" placeholder="e.g. AI video, beef, flight to Tokyo, heat pump" aria-label="Search for an item" autocomplete="off" role="combobox" aria-controls="fp-results" aria-expanded="false">
+          <ul id="fp-results" class="fp-results hidden" role="listbox"></ul>
+        </div>
+        <div class="fp-examples" id="fp-examples">
+          <button data-q="ChatGPT">ChatGPT</button><button data-q="AI video">AI video</button><button data-q="Grok">Training a frontier model</button><button data-q="data centres">Data centres</button><button data-q="beef">Beef</button><button data-q="Tokyo">Flight to Tokyo</button>
+        </div>
+        <div class="fp-kpis" id="fp-kpis"></div>
+      </div>
+      <p class="note" id="fp-about">Loading footprints…</p>
+
+      <article class="en-panel">
+        <header class="en-ph">
+          <div><h2 id="fp-pie-title">Main offenders</h2><p>Where the world's greenhouse gases come from. Tap a slice for its cards.</p></div>
+          <div class="en-tools"><div class="seg" id="fp-pie-kind" role="group" aria-label="Split"><button data-v="sector">By sector</button><button data-v="country">By country</button></div></div>
+        </header>
+        <div class="fp-pie-wrap" id="fp-pie-wrap"><div id="fp-pie"></div><div><div class="fp-legend" id="fp-legend"></div><div id="fp-slice-items"></div></div></div>
+        <p class="en-foot" id="fp-pie-note"></p>
+      </article>
+
+      <article class="en-panel">
+        <header class="en-ph"><div><h2>AI in context</h2><p>The biggest single sources per year, with all data centres (AI included) and Bitcoin highlighted. Faint bars show the upper estimate.</p></div></header>
+        <div class="fp-context" id="fp-context"></div>
+      </article>
+
+      <div class="en-divider"><span class="eyebrow">Everything</span><h2>The carbon ladder</h2>
+        <p id="fp-cat-blurb"></p>
+        <div class="chips" id="fp-cats"></div>
+      </div>
+      <article class="en-panel"><div class="fp-ladder" id="fp-ladder"></div></article>
+
+      <div class="en-divider"><div class="row"><h2>Cards</h2><button class="btn ghost" id="fp-add">Add your own</button></div><p>Tap a card for what is counted, comparisons, how to cut it and the sources. The category above also filters these.</p></div>
+      <ul id="fp-cards" class="fp-cards"></ul>
+
+      <article class="en-panel en-refs-panel">
+        <header class="en-ph"><div><h2>References</h2></div></header>
+        <div id="fp-refs"></div>
+      </article>
+    </section>
+
     <!-- SOURCES -->
     <section id="view-sources" class="view hidden" data-title="Sources">
       <p class="note">What the feed reads. Open sources are fetched; partly paywalled ones give headlines with a link; paid ones are listed for reference and never fetched. Edit <code>data/sources.json</code> to change the list.</p>
@@ -286,5 +334,6 @@
 
   <script src="app.js"></script>
   <script src="energy-tab.js"></script>
+  <script src="footprint-tab.js"></script>
 </body>
 </html>

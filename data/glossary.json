@@ -1341,6 +1341,139 @@
         "Primary energy",
         "Exajoule"
       ]
+    },
+    {
+      "term": "CO₂e",
+      "full": "Carbon dioxide equivalent",
+      "category": "transition",
+      "level": 1,
+      "definition": "A way to add different greenhouse gases into one number: each gas is converted to the amount of CO₂ that would cause the same warming over a set period, usually 100 years (GWP100). 1 t of methane ≈ 28–30 t CO₂e.",
+      "related": [
+        "GWP",
+        "Life-cycle assessment",
+        "Carbon budget"
+      ]
+    },
+    {
+      "term": "GWP",
+      "full": "Global warming potential",
+      "category": "transition",
+      "level": 2,
+      "definition": "How much heat a gas traps compared with the same mass of CO₂ over a time horizon. Methane: about 80 over 20 years but about 30 over 100 years, because it breaks down in roughly a decade. The choice of horizon changes how important methane looks.",
+      "related": [
+        "CO₂e",
+        "Methane"
+      ]
+    },
+    {
+      "term": "Methane",
+      "full": "CH₄",
+      "category": "transition",
+      "level": 1,
+      "definition": "The second-largest contributor to warming after CO₂. Main sources: cattle and manure, rice paddies, landfills, and leaks and venting from oil, gas and coal. Short-lived but potent, so cutting it slows warming within decades.",
+      "related": [
+        "GWP",
+        "CO₂e"
+      ]
+    },
+    {
+      "term": "Life-cycle assessment",
+      "full": "LCA",
+      "category": "transition",
+      "level": 2,
+      "definition": "A standard method (ISO 14040/44) to count a product's impacts from raw materials to disposal: extraction, manufacturing, transport, use and end of life. Results depend heavily on the boundary chosen, so always check what is included.",
+      "related": [
+        "Life-cycle emissions",
+        "Embodied carbon",
+        "CO₂e"
+      ]
+    },
+    {
+      "term": "Embodied carbon",
+      "full": "",
+      "category": "transition",
+      "level": 2,
+      "definition": "Emissions from making a product or building before it is used: materials, manufacturing, construction. For phones, laptops and AI chips it is most of the life-cycle footprint; for cars and power plants the use phase usually dominates.",
+      "related": [
+        "Life-cycle assessment",
+        "Scope 3"
+      ]
+    },
+    {
+      "term": "Scope 1, 2, 3",
+      "full": "GHG Protocol emission scopes",
+      "category": "transition",
+      "level": 2,
+      "definition": "How companies split their emissions. Scope 1: burned on site. Scope 2: from purchased electricity and heat. Scope 3: everything in the value chain, such as suppliers, products in use and business travel; often over 80% of the total and the hardest to measure.",
+      "related": [
+        "Market-based emissions",
+        "Embodied carbon"
+      ]
+    },
+    {
+      "term": "Market-based emissions",
+      "full": "vs location-based",
+      "category": "transition",
+      "level": 3,
+      "definition": "Two ways to count emissions from electricity. Location-based uses the average carbon intensity of the local grid. Market-based subtracts the clean power a company has bought through contracts or certificates. Tech companies' AI figures are often market-based and can look much lower than what the grid actually emitted.",
+      "related": [
+        "Scope 1, 2, 3",
+        "PPA"
+      ]
+    },
+    {
+      "term": "Consumption-based emissions",
+      "full": "vs territorial emissions",
+      "category": "transition",
+      "level": 2,
+      "definition": "Territorial accounting counts what is emitted inside a country's borders (as in UN inventories). Consumption-based accounting assigns the emissions of imported goods to the country that consumes them. Switzerland: about 4 t per person territorial, about 13 t consumption-based.",
+      "related": [
+        "NDC",
+        "CO₂e"
+      ]
+    },
+    {
+      "term": "LULUCF",
+      "full": "Land use, land-use change and forestry",
+      "category": "transition",
+      "level": 3,
+      "definition": "The inventory sector for emissions and removals by land: deforestation releases CO₂, growing forests absorb it. Estimates differ a lot between national inventories and scientific bookkeeping models, so global totals are often given with and without it.",
+      "related": [
+        "CO₂e",
+        "CDR"
+      ]
+    },
+    {
+      "term": "Radiative forcing (aviation)",
+      "full": "Non-CO₂ effects of flying",
+      "category": "transition",
+      "level": 3,
+      "definition": "Planes warm the climate beyond their CO₂ through contrails, contrail cirrus and nitrogen oxides at altitude. Over a 100-year horizon this roughly doubles aviation's effect; carbon calculators apply a multiplier (about 1.7–1.9 in UK government factors).",
+      "related": [
+        "CO₂e",
+        "GWP"
+      ]
+    },
+    {
+      "term": "PUE",
+      "full": "Power usage effectiveness",
+      "category": "tech",
+      "level": 2,
+      "definition": "A data centre's total electricity divided by what its IT equipment uses. 1.0 would mean zero overhead for cooling and power conversion; hyperscale sites reach about 1.1, older enterprise sites 1.5–2.",
+      "related": [
+        "Inference"
+      ]
+    },
+    {
+      "term": "Inference",
+      "full": "AI inference",
+      "category": "tech",
+      "level": 1,
+      "definition": "Running a trained AI model to answer a request, as opposed to training it. One inference is cheap (a text prompt is a few tenths of a watt-hour), but billions a day can exceed the energy of training. Reasoning models and agents use far more energy per request.",
+      "related": [
+        "PUE",
+        "Embodied carbon"
+      ]
     }
   ]
 }

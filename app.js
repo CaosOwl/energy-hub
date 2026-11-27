@@ -17,7 +17,7 @@
   const keyOf = (term) => String(term).trim().toLowerCase();
 
   const PAGE = 40;
-  const VIEWS = ["feed", "companies", "energy", "glossary", "scenarios", "ipcc", "literature", "sources"];
+  const VIEWS = ["feed", "companies", "energy", "footprint", "glossary", "scenarios", "ipcc", "literature", "sources"];
   const TOPICS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["general", "General"]];
   const CATS = [["nuclear", "Nuclear"], ["markets", "Markets"], ["transition", "Transition"], ["tech", "Tech"], ["modelling", "Modelling"]];
   const LABEL = Object.fromEntries([...TOPICS, ...CATS, ["data", "Data"], ["learning", "Learning"]]);

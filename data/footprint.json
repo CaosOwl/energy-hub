@@ -1,0 +1,2886 @@
+{
+  "about": "How much greenhouse gas things emit, in CO₂-equivalent (CO₂e, 100-year GWP). Values are typical figures from life-cycle studies and official inventories; every card says what is included and links the original study. Where a source gives only energy, CO₂e is computed with the grid factor stated on the card.",
+  "updated": "2026-11-26",
+  "gridFactor": 0.4,
+  "gridNote": "AI and data-centre energy is converted at 0.4 kg CO₂e per kWh, roughly the average grid where most data centres run (US/China mix), unless the source gives CO₂e itself.",
+  "totals": {
+    "year": 2025,
+    "gt": 54.1,
+    "gtNote": "Excluding land use and forestry (JRC/IEA). Including land use, UNEP puts 2025 at about 58.4 Gt CO₂e.",
+    "gtWithLand": 58.4,
+    "population": 8.2,
+    "ref": [
+      "edgar26",
+      "unep26"
+    ]
+  },
+  "pies": [
+    {
+      "id": "sector",
+      "label": "By sector",
+      "title": "Global emissions by sector, 2025",
+      "note": "Direct emissions by where they happen (JRC/IEA, 54.1 Gt CO₂e excluding land use). Electricity counts under power, not under the buildings or factories that use it. Shares are rounded; power is given as “nearly 30%”.",
+      "ref": [
+        "edgar26"
+      ],
+      "slices": [
+        {
+          "id": "power",
+          "label": "Power (electricity and heat)",
+          "pct": 29.8,
+          "items": [
+            "coal-power-global",
+            "coal-plant-year",
+            "gas-plant-year",
+            "nuclear-plant-year",
+            "datacentres-global",
+            "ai-campus-year",
+            "cooling-global",
+            "bitcoin-year",
+            "kwh"
+          ]
+        },
+        {
+          "id": "industry",
+          "label": "Industry (manufacturing, mining)",
+          "pct": 21,
+          "items": [
+            "steel-industry",
+            "cement-industry",
+            "plastics-global",
+            "fashion-global",
+            "steel-t",
+            "cement-t",
+            "aluminium-t",
+            "plastic-t"
+          ]
+        },
+        {
+          "id": "transport",
+          "label": "Transport",
+          "pct": 16,
+          "items": [
+            "road-global",
+            "aviation-global",
+            "shipping-global",
+            "car-petrol-km",
+            "flight-zrh-nyc",
+            "cruise-week"
+          ]
+        },
+        {
+          "id": "agriculture",
+          "label": "Agriculture",
+          "pct": 12,
+          "items": [
+            "livestock-global",
+            "cattle-global",
+            "rice-global",
+            "beef-kg",
+            "lamb-kg",
+            "cheese-kg",
+            "rice-kg"
+          ]
+        },
+        {
+          "id": "fuel",
+          "label": "Coal, oil and gas extraction",
+          "pct": 11,
+          "items": [
+            "methane-fossil"
+          ]
+        },
+        {
+          "id": "buildings",
+          "label": "Buildings (heating, cooking)",
+          "pct": 6.6,
+          "items": [
+            "heat-oil-year",
+            "heat-gas-year",
+            "heat-pump-year",
+            "shower"
+          ]
+        },
+        {
+          "id": "waste",
+          "label": "Waste",
+          "pct": 3.6,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "country",
+      "label": "By country",
+      "title": "Global emissions by country, 2025",
+      "note": "Territorial emissions excluding land use (JRC/IEA). International shipping and aviation belong to no country. Rest of world is the remainder.",
+      "ref": [
+        "edgar26"
+      ],
+      "slices": [
+        {
+          "id": "cn",
+          "label": "China",
+          "pct": 29.5,
+          "items": [
+            "person-cn"
+          ]
+        },
+        {
+          "id": "us",
+          "label": "United States",
+          "pct": 11.1,
+          "items": [
+            "person-us"
+          ]
+        },
+        {
+          "id": "in",
+          "label": "India",
+          "pct": 8.3,
+          "items": [
+            "person-in"
+          ]
+        },
+        {
+          "id": "eu",
+          "label": "European Union",
+          "pct": 5.8,
+          "items": []
+        },
+        {
+          "id": "ru",
+          "label": "Russia",
+          "pct": 4.8,
+          "items": []
+        },
+        {
+          "id": "intl",
+          "label": "International shipping & aviation",
+          "pct": 2.6,
+          "items": [
+            "aviation-global",
+            "shipping-global"
+          ]
+        },
+        {
+          "id": "id",
+          "label": "Indonesia",
+          "pct": 2.5,
+          "items": []
+        },
+        {
+          "id": "br",
+          "label": "Brazil",
+          "pct": 2.4,
+          "items": []
+        },
+        {
+          "id": "ir",
+          "label": "Iran",
+          "pct": 2.1,
+          "items": []
+        },
+        {
+          "id": "rest",
+          "label": "Rest of the world",
+          "pct": 30.9,
+          "items": [
+            "person-ch",
+            "person-world"
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "offender",
+      "label": "Major offenders",
+      "blurb": "Whole sectors and industries, per year. These are the slices of the pie."
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "blurb": "Prompts, images, video, agents, training runs and the data centres behind them. Figures move fast: companies only began disclosing in 2025."
+    },
+    {
+      "id": "digital",
+      "label": "Digital",
+      "blurb": "Devices, streaming, search, email and crypto."
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "blurb": "Per kilometre, per trip and per vehicle."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Per kilogram of product, farm to retail (Poore & Nemecek 2018, the largest meta-analysis: about 38,700 farms)."
+    },
+    {
+      "id": "home",
+      "label": "Home & energy",
+      "blurb": "Electricity, heating and everyday appliances."
+    },
+    {
+      "id": "goods",
+      "label": "Goods & materials",
+      "blurb": "Things you buy and the bulk materials they are made of."
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "blurb": "Average footprint of one person per year, and the 1.5 °C reference."
+    }
+  ],
+  "equivalents": [
+    {
+      "id": "microwave",
+      "label": "seconds of a microwave",
+      "kg": 0.00011,
+      "fmt": "{n} seconds of a 1 kW microwave",
+      "one": "one second of a 1 kW microwave"
+    },
+    {
+      "id": "prompt",
+      "label": "AI text prompts",
+      "kg": 0.00015,
+      "fmt": "{n} AI text prompts",
+      "one": "one AI text prompt"
+    },
+    {
+      "id": "phone",
+      "label": "phone charges",
+      "kg": 0.006,
+      "fmt": "{n} full smartphone charges",
+      "one": "one full smartphone charge"
+    },
+    {
+      "id": "kettle",
+      "label": "kettles boiled",
+      "kg": 0.045,
+      "fmt": "boiling {n} litres of water",
+      "one": "boiling one litre of water"
+    },
+    {
+      "id": "stream",
+      "label": "hours of video streaming",
+      "kg": 0.055,
+      "fmt": "{n} hours of video streaming",
+      "one": "one hour of video streaming"
+    },
+    {
+      "id": "car",
+      "label": "km in a petrol car",
+      "kg": 0.2,
+      "fmt": "driving {n} km in a petrol car",
+      "one": "one km in a petrol car"
+    },
+    {
+      "id": "beef",
+      "label": "kg of beef",
+      "kg": 60,
+      "fmt": "{n} kg of beef",
+      "one": "one kg of beef"
+    },
+    {
+      "id": "nyc",
+      "label": "Zürich–New York return flights",
+      "kg": 1900,
+      "fmt": "{n} Zürich–New York return flights",
+      "one": "one Zürich–New York return flight"
+    },
+    {
+      "id": "swiss",
+      "label": "years of a Swiss resident's footprint",
+      "kg": 13000,
+      "fmt": "{n} years of one Swiss resident's footprint",
+      "one": "one Swiss resident's yearly footprint"
+    },
+    {
+      "id": "town",
+      "label": "years of a town of 10,000 Swiss residents",
+      "kg": 130000000,
+      "fmt": "{n} years of a Swiss town of 10,000 people",
+      "one": "a year of a Swiss town of 10,000 people"
+    },
+    {
+      "id": "ch",
+      "label": "years of Switzerland's domestic emissions",
+      "kg": 40000000000,
+      "fmt": "{n} years of Switzerland's domestic emissions",
+      "one": "a year of Switzerland's domestic emissions"
+    }
+  ],
+  "items": [
+    {
+      "id": "ai-text-prompt",
+      "cat": "ai",
+      "name": "AI chatbot text prompt (typical)",
+      "aliases": [
+        "chatgpt",
+        "claude",
+        "gemini",
+        "llm",
+        "ai query",
+        "ai question",
+        "prompt",
+        "chatbot",
+        "ai"
+      ],
+      "unit": "per prompt",
+      "kg": 0.00015,
+      "lo": 3e-05,
+      "hi": 0.0011,
+      "conf": "med",
+      "energy": "≈0.3 Wh (0.24–0.34 Wh disclosed; 0.16–0.6 Wh modelled)",
+      "water": "0.26–0.32 mL disclosed by Google and OpenAI; 45 mL in Mistral's full life cycle",
+      "scope": "Data-centre side of one ordinary text answer: chips, servers, idle capacity, cooling. Not your phone or the network. The high end (Mistral, 1.1 g) also spreads training and hardware manufacturing over every answer.",
+      "summary": "A few tenths of a watt-hour: about a microwave running for one second. Three independent numbers now agree (Google measured, OpenAI stated, Microsoft modelled).",
+      "context": "Google's median Gemini prompt fell 33-fold in energy and 44-fold in CO₂e in one year, mostly through software efficiency and clean-power contracts. The 0.03 g Google figure is market-based (counts its clean-energy purchases); on an average grid the same 0.24 Wh is about 0.1 g.",
+      "phases": [
+        [
+          "Model training & inference (Mistral LCA)",
+          85.5
+        ],
+        [
+          "Hardware, buildings, end of life",
+          14.5
+        ]
+      ],
+      "tips": [
+        "Use a small/fast model for simple questions; reasoning modes cost 10–100× more.",
+        "Ask once with full context rather than many short retries.",
+        "Per prompt it is tiny; what matters is billions of prompts and ever-larger models."
+      ],
+      "refs": [
+        "google25",
+        "altman25",
+        "joule26",
+        "mistral25"
+      ]
+    },
+    {
+      "id": "ai-gemini-prompt",
+      "cat": "ai",
+      "name": "Gemini text prompt (Google, measured)",
+      "aliases": [
+        "gemini",
+        "google ai",
+        "bard"
+      ],
+      "unit": "per median prompt",
+      "kg": 3e-05,
+      "lo": 3e-05,
+      "hi": 0.0001,
+      "conf": "high",
+      "energy": "0.24 Wh (0.10 Wh for the AI chips alone)",
+      "water": "0.26 mL (about five drops)",
+      "scope": "Measured in Google's production fleet: active TPUs, host CPU and memory, idle reserve machines and data-centre overhead. Excludes network, your device and training. Market-based emissions.",
+      "summary": "The first detailed, measured per-prompt figure from a major provider (Aug 2025). Less energy than nine seconds of television.",
+      "context": "Location-based (actual grid), the same energy is about 0.1 g CO₂e. The AI chips are only 58% of the energy; the rest is servers, idle capacity and cooling, which earlier chip-only estimates missed.",
+      "tips": [
+        "Image and video prompts are not covered by this figure and cost far more."
+      ],
+      "refs": [
+        "google25"
+      ]
+    },
+    {
+      "id": "ai-chatgpt-query",
+      "cat": "ai",
+      "name": "ChatGPT query (OpenAI, stated)",
+      "aliases": [
+        "chatgpt",
+        "openai",
+        "gpt",
+        "gpt-4o",
+        "gpt-5"
+      ],
+      "unit": "per average query",
+      "kg": 0.00014,
+      "lo": 0.0001,
+      "hi": 0.0002,
+      "conf": "med",
+      "energy": "0.34 Wh",
+      "water": "0.32 mL",
+      "scope": "Figure stated by OpenAI's CEO in June 2025, without published method. CO₂e computed here at 0.4 kg/kWh.",
+      "summary": "About what a high-efficiency light bulb uses in a couple of minutes. Earlier widely quoted '3 Wh per query' (2023) was about ten times too high for today's systems.",
+      "context": "Independent bottom-up estimates (Epoch AI ≈0.3 Wh) agree for short answers. Long, reasoning-heavy GPT-5-class answers have been benchmarked at 18 Wh on average and up to about 40 Wh.",
+      "tips": [
+        "Pick the non-reasoning mode for lookups and rewording."
+      ],
+      "refs": [
+        "altman25",
+        "jegham25"
+      ]
+    },
+    {
+      "id": "ai-mistral-response",
+      "cat": "ai",
+      "name": "Le Chat answer, full life cycle (Mistral)",
+      "aliases": [
+        "mistral",
+        "le chat",
+        "lifecycle ai"
+      ],
+      "unit": "per 400-token answer",
+      "kg": 0.00114,
+      "lo": 0.00114,
+      "hi": 0.00114,
+      "conf": "high",
+      "water": "45 mL",
+      "scope": "Peer-reviewed life-cycle analysis (with Carbone 4 and ADEME, AFNOR Frugal AI method): includes training, inference and manufacturing of servers and buildings, allocated per answer. Excludes your device.",
+      "summary": "The most complete per-answer figure published (July 2025), and why it is about ten times Google's: it includes the model's training and the hardware's manufacturing.",
+      "context": "Training plus 18 months of use of Mistral Large 2 totalled 20.4 kt CO₂e and 281,000 m³ of water. Mistral runs mostly in France, on a low-carbon grid.",
+      "phases": [
+        [
+          "Training & inference",
+          85.5
+        ],
+        [
+          "Hardware & buildings",
+          14.5
+        ]
+      ],
+      "tips": [
+        "This boundary is the honest one to compare with other products' life cycles."
+      ],
+      "refs": [
+        "mistral25"
+      ]
+    },
+    {
+      "id": "ai-reasoning-prompt",
+      "cat": "ai",
+      "name": "AI reasoning / long-answer prompt",
+      "aliases": [
+        "reasoning",
+        "o3",
+        "thinking mode",
+        "deep think",
+        "deepseek r1",
+        "long prompt"
+      ],
+      "unit": "per prompt",
+      "kg": 0.0016,
+      "lo": 0.0004,
+      "hi": 0.0135,
+      "conf": "low",
+      "energy": "≈3.9 Wh median (≈5,000 output tokens); 33 Wh or more for long prompts on the heaviest models",
+      "scope": "Data-centre energy modelled from model size, hardware and measured API speed. CO₂e at 0.4 kg/kWh.",
+      "summary": "Thinking models write thousands of hidden tokens before answering, so one prompt costs 10–100 ordinary ones.",
+      "context": "In a 30-model benchmark, reasoning models used over 33 Wh on a long prompt, 70× the smallest model on the same task. Even so, a 10-minute hot shower takes about 2–3 kWh of heat, so a heavy reasoning prompt is roughly 1% of one shower.",
+      "tips": [
+        "Turn reasoning on only when the task needs it.",
+        "Reasoning is where AI's energy growth per user comes from."
+      ],
+      "refs": [
+        "joule26",
+        "jegham25"
+      ]
+    },
+    {
+      "id": "ai-agent-task",
+      "cat": "ai",
+      "name": "AI agent task (coding agent, deep research)",
+      "aliases": [
+        "agent",
+        "agentic",
+        "deep research",
+        "coding agent",
+        "claude code",
+        "codex",
+        "manus",
+        "computer use"
+      ],
+      "unit": "per task",
+      "kg": 0.016,
+      "lo": 0.004,
+      "hi": 0.15,
+      "conf": "low",
+      "energy": "≈10–400 Wh: dozens to hundreds of model calls, each re-reading a long context",
+      "scope": "Estimate built from per-token energy of long, high-reasoning prompts (≈34 Wh for 10,000 input + 1,500 output tokens) times typical agent step counts. No provider discloses agent energy yet.",
+      "summary": "One multi-step agent job can equal hundreds of chat prompts, because every step re-reads the growing context.",
+      "context": "Still small next to physical activities: a heavy agent task is around a kilometre in a petrol car. But agents run unattended and at scale, which is why research on carbon-aware agent scheduling started in 2026.",
+      "tips": [
+        "Give agents tight scope and the files they need, so they loop less.",
+        "Prefer providers that publish energy and run on clean grids."
+      ],
+      "refs": [
+        "jegham25",
+        "agentdecarb26"
+      ]
+    },
+    {
+      "id": "ai-image",
+      "cat": "ai",
+      "name": "AI image generation",
+      "aliases": [
+        "image generation",
+        "midjourney",
+        "dall-e",
+        "stable diffusion",
+        "ai picture",
+        "ai art",
+        "nano banana"
+      ],
+      "unit": "per image",
+      "kg": 0.0004,
+      "lo": 0.00025,
+      "hi": 0.0012,
+      "conf": "med",
+      "energy": "≈0.6–1.2 Wh (1024×1024, Stable Diffusion 3, incl. server overhead); 2.9 Wh average across older models",
+      "scope": "Data-centre energy for one image on open models, measured. CO₂e at 0.4 kg/kWh.",
+      "summary": "A few times a text prompt: about five seconds of a microwave.",
+      "context": "Image models cost roughly the same regardless of prompt length; resolution and step count drive energy. Doubling quality roughly doubled energy in MIT Technology Review's tests.",
+      "tips": [
+        "Generate at the size you need; upscale only the keeper."
+      ],
+      "refs": [
+        "mittr25",
+        "luccioni24"
+      ]
+    },
+    {
+      "id": "ai-video",
+      "cat": "ai",
+      "name": "AI video, 5 seconds",
+      "aliases": [
+        "sora",
+        "veo",
+        "ai video",
+        "video generation",
+        "runway",
+        "kling"
+      ],
+      "unit": "per 5-second clip",
+      "kg": 0.38,
+      "lo": 0.003,
+      "hi": 0.38,
+      "conf": "low",
+      "energy": "≈944 Wh (3.4 MJ) measured on an open model; 7–214 Wh reported for other open models",
+      "scope": "Data-centre energy measured on open models; frontier closed models (Sora, Veo) do not disclose. CO₂e at 0.4 kg/kWh.",
+      "summary": "The heavy end of consumer AI: one short clip can equal a thousand or more text prompts, roughly a microwave running for an hour.",
+      "context": "Energy grows faster than clip length: a six-second clip used four times a three-second one in one study. Estimates span 100×, so treat the central value as an upper-range indication.",
+      "tips": [
+        "Draft with images or storyboards, render video last.",
+        "Shorter clips at lower resolution cut energy more than proportionally."
+      ],
+      "refs": [
+        "mittr25"
+      ]
+    },
+    {
+      "id": "ai-user-year",
+      "cat": "ai",
+      "name": "A heavy AI user for a year",
+      "aliases": [
+        "my ai use",
+        "daily ai",
+        "ai per year",
+        "ai per person"
+      ],
+      "unit": "per person per year",
+      "kg": 4.2,
+      "lo": 1,
+      "hi": 20,
+      "conf": "low",
+      "energy": "≈10 kWh/year",
+      "scope": "Worked example: 30 text prompts and 5 reasoning prompts every day, plus a few images a week. CO₂e at 0.4 kg/kWh, data-centre side only.",
+      "summary": "About 20 km in a petrol car, or 0.03% of a Swiss resident's yearly footprint. Individually small; collectively it is what drives data-centre growth.",
+      "context": "Add agents and video and the figure can rise several-fold. The device you use (its manufacture especially) usually outweighs your prompts.",
+      "tips": [
+        "Keeping your phone or laptop one extra year saves more than a year of prompts."
+      ],
+      "refs": [
+        "google25",
+        "joule26"
+      ]
+    },
+    {
+      "id": "ai-train-gpt3",
+      "cat": "ai",
+      "name": "Training GPT-3 (2020)",
+      "aliases": [
+        "gpt-3",
+        "gpt3",
+        "training",
+        "model training"
+      ],
+      "unit": "one training run",
+      "kg": 552000,
+      "lo": 552000,
+      "hi": 552000,
+      "conf": "high",
+      "energy": "1,287 MWh",
+      "scope": "Electricity of the final training run only (Patterson et al. 2021, with Google). Excludes experiments, failed runs, hardware manufacturing.",
+      "summary": "552 t CO₂e: about 290 Zürich–New York return flights. Small by today's standards.",
+      "context": "Training runs have grown roughly 4–5× in compute per year since; the largest 2025 run (Grok 4) is estimated at about 270× GPT-3's emissions.",
+      "refs": [
+        "patterson21"
+      ]
+    },
+    {
+      "id": "ai-train-gpt4",
+      "cat": "ai",
+      "name": "Training GPT-4 (2023, estimated)",
+      "aliases": [
+        "gpt-4",
+        "gpt4",
+        "openai training"
+      ],
+      "unit": "one training run",
+      "kg": 10000000,
+      "lo": 5000000,
+      "hi": 20000000,
+      "conf": "low",
+      "energy": "≈25–50 GWh (≈57 million A100 GPU-hours, estimated)",
+      "scope": "Outside estimate from leaked/estimated GPU-hours; OpenAI has not disclosed. CO₂e at 0.4 kg/kWh.",
+      "summary": "Around 10,000 t CO₂e, roughly 20 times GPT-3.",
+      "context": "Treat as order of magnitude. Researchers stress that what labs disclose is shrinking even as the runs grow.",
+      "refs": [
+        "luccioni25"
+      ]
+    },
+    {
+      "id": "ai-train-llama",
+      "cat": "ai",
+      "name": "Training Llama 3.1 405B (Meta, 2024)",
+      "aliases": [
+        "llama",
+        "meta ai",
+        "llama 3",
+        "open source model"
+      ],
+      "unit": "one training run",
+      "kg": 8930000,
+      "lo": 8930000,
+      "hi": 8930000,
+      "conf": "high",
+      "energy": "≈30 GWh (39.3 million H100-hours for the whole 3.1 family)",
+      "scope": "Location-based, from Meta's model card (the 405B model alone). Meta reports zero market-based emissions because it matches its use with renewable purchases.",
+      "summary": "8,930 t CO₂e: about 690 Swiss residents' yearly footprint, for one model.",
+      "context": "Open models get fine-tuned thousands of times by others; those derivative footprints are not counted anywhere yet.",
+      "refs": [
+        "meta24"
+      ]
+    },
+    {
+      "id": "ai-train-mistral",
+      "cat": "ai",
+      "name": "Mistral Large 2: training + 18 months of use",
+      "aliases": [
+        "mistral large",
+        "mistral training"
+      ],
+      "unit": "model life cycle to Jan 2025",
+      "kg": 20400000,
+      "lo": 20400000,
+      "hi": 20400000,
+      "conf": "high",
+      "water": "281,000 m³ (about 112 Olympic pools)",
+      "scope": "Full life-cycle analysis: training, inference, servers, buildings, end of life. Training and inference are reported together (85.5% of the total).",
+      "summary": "20.4 kt CO₂e for a 123-billion-parameter model, including all its use for a year and a half.",
+      "phases": [
+        [
+          "Training & inference",
+          85.5
+        ],
+        [
+          "Hardware, buildings, other",
+          14.5
+        ]
+      ],
+      "refs": [
+        "mistral25"
+      ]
+    },
+    {
+      "id": "ai-train-grok4",
+      "cat": "ai",
+      "name": "Training Grok 4 (xAI, 2025, estimated)",
+      "aliases": [
+        "grok",
+        "xai",
+        "colossus",
+        "frontier model",
+        "largest training run"
+      ],
+      "unit": "one training run",
+      "kg": 150000000,
+      "lo": 140000000,
+      "hi": 160000000,
+      "conf": "med",
+      "energy": "≈310 GWh (≈246 million H100-hours)",
+      "water": "≈750 million litres",
+      "scope": "Epoch AI estimate for the final run, assuming the on-site gas turbines that power the Colossus cluster in Memphis. Excludes experiments and serving.",
+      "summary": "≈150 kt CO₂e: the electricity of a town of 4,000 Americans for a year, or a large passenger jet flying for three years.",
+      "context": "The largest disclosed-or-estimated training run to date, about 270× GPT-3. Gas-fired power makes it several times dirtier than the same run on a clean grid.",
+      "tips": [
+        "Location matters: the same run on Swiss or French power would emit about a tenth."
+      ],
+      "refs": [
+        "epoch25"
+      ]
+    },
+    {
+      "id": "ai-gpu-board",
+      "cat": "ai",
+      "name": "AI GPU board, manufacture (NVIDIA HGX B200)",
+      "aliases": [
+        "gpu",
+        "nvidia",
+        "h100",
+        "b200",
+        "ai chip",
+        "accelerator"
+      ],
+      "unit": "one 8-GPU baseboard",
+      "kg": 2274,
+      "lo": 2274,
+      "hi": 2274,
+      "conf": "high",
+      "scope": "Cradle-to-gate product carbon footprint (ISO 14067, by WSP): materials, assembly and transport of the baseboard with 8 GPUs. Excludes the rest of the server (CPUs, memory, power supplies), the data centre and use.",
+      "summary": "2.3 t CO₂e, about 285 kg per GPU before it ever runs. Memory and chips dominate.",
+      "context": "Running it is far bigger: at about 8–10 kW for a few years, use-phase electricity is typically 50–150 t CO₂e on an average grid. NVIDIA reports 24% lower embodied carbon per unit of compute than the H100 generation.",
+      "phases": [
+        [
+          "Materials",
+          94.1
+        ],
+        [
+          "Assembly",
+          5.6
+        ],
+        [
+          "Transport",
+          0.3
+        ]
+      ],
+      "refs": [
+        "nvidia25"
+      ]
+    },
+    {
+      "id": "datacentres-global",
+      "cat": "offender",
+      "name": "All data centres in the world",
+      "aliases": [
+        "data centres",
+        "data centers",
+        "cloud",
+        "ai emissions",
+        "internet",
+        "servers"
+      ],
+      "unit": "per year (2024)",
+      "kg": 180000000000,
+      "lo": 180000000000,
+      "hi": 300000000000,
+      "conf": "med",
+      "sector": "power",
+      "energy": "415 TWh in 2024 (1.5% of world electricity); ≈945 TWh projected for 2030",
+      "scope": "Indirect CO₂ from electricity, all workloads (AI is a fast-growing subset). Excludes backup generators and building/hardware manufacture.",
+      "summary": "≈180 Mt CO₂: about 0.5% of energy CO₂, a fifth of aviation. Growing about 15% a year, rising to roughly 300 Mt by 2035 in the IEA base case.",
+      "context": "Small globally but concentrated: in the US data centres account for nearly half of electricity demand growth to 2030, and AI servers grow about 30% a year. Gas and renewables supply most new demand; several tech firms are contracting nuclear, including restarts and SMRs.",
+      "tips": [
+        "The climate effect depends on the grid: siting and clean firm power matter more than per-prompt efficiency."
+      ],
+      "refs": [
+        "ieaai25"
+      ]
+    },
+    {
+      "id": "ai-campus-year",
+      "cat": "ai",
+      "name": "A 1 GW AI data-centre campus for a year",
+      "aliases": [
+        "gigawatt data center",
+        "stargate",
+        "hyperscale",
+        "ai campus",
+        "ai factory"
+      ],
+      "unit": "per year at full load",
+      "kg": 3500000000,
+      "lo": 100000000,
+      "hi": 8300000000,
+      "conf": "med",
+      "energy": "8.8 TWh/year (Switzerland uses about 57 TWh)",
+      "scope": "Computed: 1 GW × 8,760 h × emission factor. Central at 0.4 kg/kWh; low end on nuclear/hydro (≈0.012 kg/kWh life cycle), high end on coal (≈0.95).",
+      "summary": "≈3.5 Mt CO₂e a year: the domestic emissions of about 900,000 Swiss residents. Several such campuses are being built.",
+      "context": "The fuel choice changes the result 80-fold, which is why the power deals behind AI campuses matter more than chip efficiency claims.",
+      "refs": [
+        "ieaai25",
+        "unece21"
+      ]
+    },
+    {
+      "id": "web-search",
+      "cat": "digital",
+      "name": "Web search",
+      "aliases": [
+        "google search",
+        "search engine",
+        "googling",
+        "bing"
+      ],
+      "unit": "per search",
+      "kg": 0.0002,
+      "lo": 3e-05,
+      "hi": 0.0002,
+      "conf": "low",
+      "energy": "≈0.3 Wh (Google's 2009 figure; likely lower today)",
+      "scope": "Data-centre side only. Google has not updated its 2009 disclosure; searches with AI overviews add an AI prompt.",
+      "summary": "Similar to an AI text prompt, contrary to the early claim that chatbots cost ten times a search.",
+      "refs": [
+        "google25"
+      ]
+    },
+    {
+      "id": "email",
+      "cat": "digital",
+      "name": "Email",
+      "aliases": [
+        "e-mail",
+        "mail",
+        "spam",
+        "newsletter"
+      ],
+      "unit": "per email",
+      "kg": 0.0003,
+      "lo": 3e-05,
+      "hi": 0.026,
+      "conf": "low",
+      "scope": "Typing, sending and storing, including a share of devices (Berners-Lee). Spam ≈0.03 g, a short email ≈0.3 g, one with a large attachment up to ≈26 g.",
+      "summary": "Tiny per message; the device you write it on is most of it.",
+      "tips": [
+        "Unsubscribing from newsletters is fine housekeeping, but not a climate lever."
+      ],
+      "refs": [
+        "bernerslee20"
+      ]
+    },
+    {
+      "id": "streaming-hour",
+      "cat": "digital",
+      "name": "Video streaming, one hour",
+      "aliases": [
+        "netflix",
+        "youtube",
+        "streaming",
+        "tv",
+        "watching video",
+        "spotify"
+      ],
+      "unit": "per hour",
+      "kg": 0.055,
+      "lo": 0.02,
+      "hi": 0.1,
+      "conf": "med",
+      "scope": "Data centre, networks and viewing device (European average, Carbon Trust). A large TV dominates; a phone is far lower.",
+      "summary": "About 55 g per hour, mostly your screen. Early claims of several kg per hour were off by about 50×.",
+      "tips": [
+        "Watch on the smallest screen that is comfortable; Wi-Fi over mobile data."
+      ],
+      "refs": [
+        "carbontrust21"
+      ]
+    },
+    {
+      "id": "smartphone",
+      "cat": "digital",
+      "name": "Smartphone, whole life",
+      "aliases": [
+        "phone",
+        "iphone",
+        "android",
+        "samsung",
+        "mobile",
+        "fairphone"
+      ],
+      "unit": "per phone (3–4 years)",
+      "kg": 60,
+      "lo": 40,
+      "hi": 90,
+      "conf": "med",
+      "scope": "Life cycle from manufacturer reports (e.g. Apple product environmental reports): production, transport, charging over 3–4 years, end of life.",
+      "summary": "About 60 kg, and around 80% of it is spent before you switch it on.",
+      "phases": [
+        [
+          "Production",
+          80
+        ],
+        [
+          "Use (charging)",
+          15
+        ],
+        [
+          "Transport",
+          4
+        ],
+        [
+          "End of life",
+          1
+        ]
+      ],
+      "context": "Charging a phone every day for a year is about 4–5 kWh, a couple of kg CO₂ even on a dirty grid.",
+      "tips": [
+        "Keep it longer: going from 3 to 5 years cuts its yearly footprint by about 40%.",
+        "Buy refurbished; repairable models (Fairphone) report ≈40 kg."
+      ],
+      "refs": [
+        "apple25"
+      ]
+    },
+    {
+      "id": "laptop",
+      "cat": "digital",
+      "name": "Laptop, whole life",
+      "aliases": [
+        "notebook",
+        "macbook",
+        "computer",
+        "pc",
+        "thinkpad"
+      ],
+      "unit": "per laptop (4 years)",
+      "kg": 250,
+      "lo": 150,
+      "hi": 400,
+      "conf": "med",
+      "scope": "Manufacturer life-cycle reports (Apple, Dell, Lenovo): production, transport, 4 years of use, end of life.",
+      "summary": "A few hundred kg, mostly from making the chips, screen and memory.",
+      "phases": [
+        [
+          "Production",
+          75
+        ],
+        [
+          "Use",
+          20
+        ],
+        [
+          "Transport",
+          4
+        ],
+        [
+          "End of life",
+          1
+        ]
+      ],
+      "tips": [
+        "Extend its life with a battery swap; buy refurbished."
+      ],
+      "refs": [
+        "apple25"
+      ]
+    },
+    {
+      "id": "bitcoin-year",
+      "cat": "offender",
+      "name": "Bitcoin network",
+      "aliases": [
+        "bitcoin",
+        "crypto",
+        "cryptocurrency",
+        "mining",
+        "btc",
+        "blockchain"
+      ],
+      "unit": "per year (2024–25)",
+      "kg": 39800000000,
+      "lo": 39800000000,
+      "hi": 80000000000,
+      "conf": "med",
+      "sector": "power",
+      "energy": "≈138 TWh/year",
+      "scope": "Electricity of mining, from the Cambridge industry survey (2025), which found about half the power from sustainable sources. Other trackers estimate up to about twice the emissions.",
+      "summary": "≈40 Mt CO₂e a year: about Switzerland's entire domestic emissions, for one payment network. Per data-centre energy, roughly a third of all data centres.",
+      "context": "Ethereum cut its energy by over 99% in 2022 by switching to proof-of-stake; Bitcoin's design ties security to energy spent.",
+      "refs": [
+        "cbeci25"
+      ]
+    },
+    {
+      "id": "car-petrol-km",
+      "cat": "transport",
+      "name": "Petrol car, per km",
+      "aliases": [
+        "car",
+        "driving",
+        "petrol",
+        "gasoline",
+        "diesel",
+        "auto",
+        "drive"
+      ],
+      "unit": "per km (one person)",
+      "kg": 0.2,
+      "lo": 0.15,
+      "hi": 0.28,
+      "conf": "high",
+      "sector": "transport",
+      "scope": "Fuel burned plus fuel production (UK government factors, average car). The high end adds the car's manufacture spread over its life (ICCT).",
+      "summary": "About 200 g per km. Two people in the car halves it per person.",
+      "phases": [
+        [
+          "Fuel burned",
+          72
+        ],
+        [
+          "Fuel production",
+          13
+        ],
+        [
+          "Vehicle manufacture",
+          15
+        ]
+      ],
+      "tips": [
+        "Share rides; switch to train or e-bike for trips under 10 km.",
+        "An EV on the Swiss grid cuts this by about two-thirds."
+      ],
+      "refs": [
+        "defra25",
+        "icct21"
+      ]
+    },
+    {
+      "id": "car-ev-km",
+      "cat": "transport",
+      "name": "Electric car, per km",
+      "aliases": [
+        "ev",
+        "tesla",
+        "electric vehicle",
+        "electric car",
+        "bev"
+      ],
+      "unit": "per km, life cycle",
+      "kg": 0.07,
+      "lo": 0.03,
+      "hi": 0.15,
+      "conf": "med",
+      "scope": "Life cycle incl. battery manufacture. Low end on a hydro/nuclear grid like Switzerland's, high end on a coal-heavy grid (ICCT global comparison).",
+      "summary": "Lower than a petrol car on every major grid; on Swiss power about a third.",
+      "context": "The battery adds 3–5 t at the factory, paid back after roughly 15,000–25,000 km in Europe.",
+      "refs": [
+        "icct21"
+      ]
+    },
+    {
+      "id": "car-make-petrol",
+      "cat": "transport",
+      "name": "Making a petrol car",
+      "aliases": [
+        "new car",
+        "buying a car",
+        "car manufacture"
+      ],
+      "unit": "per mid-size car",
+      "kg": 7000,
+      "lo": 5000,
+      "hi": 10000,
+      "conf": "med",
+      "scope": "Cradle-to-gate: steel, aluminium, plastics, assembly (ICCT and manufacturer LCAs).",
+      "summary": "About 7 t before the first kilometre, roughly half a Swiss resident's yearly footprint.",
+      "refs": [
+        "icct21"
+      ]
+    },
+    {
+      "id": "car-make-ev",
+      "cat": "transport",
+      "name": "Making an electric car",
+      "aliases": [
+        "new ev",
+        "battery",
+        "ev battery",
+        "tesla model 3"
+      ],
+      "unit": "per mid-size EV (≈60 kWh battery)",
+      "kg": 11000,
+      "lo": 8000,
+      "hi": 15000,
+      "conf": "med",
+      "scope": "Cradle-to-gate incl. battery; battery cells made with coal power sit at the high end.",
+      "summary": "About 4 t more than a petrol car at the factory, recovered within two to three years of normal driving in Europe.",
+      "refs": [
+        "icct21"
+      ]
+    },
+    {
+      "id": "flight-short-km",
+      "cat": "transport",
+      "name": "Short-haul flight, per km",
+      "aliases": [
+        "flight",
+        "flying",
+        "plane",
+        "airplane",
+        "easyjet"
+      ],
+      "unit": "per passenger-km",
+      "kg": 0.15,
+      "lo": 0.09,
+      "hi": 0.25,
+      "conf": "med",
+      "scope": "Economy, incl. the extra warming of contrails and NOx at altitude (UK government factors with radiative forcing). Without it, about half.",
+      "summary": "Per km a bit below driving alone, but flights cover distances you would never drive.",
+      "tips": [
+        "Zürich–Paris, Milan or Munich by train cuts emissions by over 90%."
+      ],
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "flight-zrh-lon",
+      "cat": "transport",
+      "name": "Flight Zürich–London return",
+      "aliases": [
+        "london",
+        "weekend flight",
+        "city trip"
+      ],
+      "unit": "per passenger, return, economy",
+      "kg": 240,
+      "lo": 150,
+      "hi": 350,
+      "conf": "med",
+      "scope": "≈1,580 km × short-haul factor incl. non-CO₂ effects.",
+      "summary": "About a quarter of a tonne: what a year of driving 1,200 km produces.",
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "flight-zrh-nyc",
+      "cat": "transport",
+      "name": "Flight Zürich–New York return",
+      "aliases": [
+        "new york",
+        "long haul",
+        "transatlantic",
+        "us flight",
+        "intercontinental"
+      ],
+      "unit": "per passenger, return, economy",
+      "kg": 1900,
+      "lo": 1000,
+      "hi": 5500,
+      "conf": "med",
+      "sector": "transport",
+      "scope": "≈12,600 km × long-haul economy factor incl. non-CO₂ effects. Low end: CO₂ only. High end: business class (≈3× the floor space).",
+      "summary": "About 1.9 t: one flight is roughly 15% of a Swiss resident's whole year, and close to the 2.5 t per-person 1.5 °C budget for 2030.",
+      "tips": [
+        "Fewer, longer trips; economy; direct routes (take-off is fuel-heavy)."
+      ],
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "flight-zrh-tyo",
+      "cat": "transport",
+      "name": "Flight Zürich–Tokyo return",
+      "aliases": [
+        "tokyo",
+        "japan",
+        "asia flight",
+        "narita",
+        "haneda"
+      ],
+      "unit": "per passenger, return, economy",
+      "kg": 2800,
+      "lo": 1500,
+      "hi": 8000,
+      "conf": "med",
+      "scope": "≈19,200 km × long-haul economy factor incl. non-CO₂ effects. Low end CO₂ only; high end business class.",
+      "summary": "About 2.8 t, more than an Indian resident's whole year.",
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "train-km",
+      "cat": "transport",
+      "name": "Train, per km",
+      "aliases": [
+        "train",
+        "sbb",
+        "rail",
+        "railway",
+        "tram",
+        "eurostar"
+      ],
+      "unit": "per passenger-km",
+      "kg": 0.01,
+      "lo": 0.004,
+      "hi": 0.04,
+      "conf": "med",
+      "scope": "Operation plus a share of infrastructure. Swiss and French electric rail sit at the low end; diesel-heavy networks at the high end (UK government factors: national rail ≈35 g).",
+      "summary": "About 20 times lower than driving alone in Switzerland.",
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "bus-km",
+      "cat": "transport",
+      "name": "Bus or coach, per km",
+      "aliases": [
+        "bus",
+        "coach",
+        "flixbus",
+        "postbus"
+      ],
+      "unit": "per passenger-km",
+      "kg": 0.05,
+      "lo": 0.027,
+      "hi": 0.1,
+      "conf": "med",
+      "scope": "Diesel coach ≈27 g, average city bus ≈100 g (UK government factors). Electric buses far lower.",
+      "summary": "A long-distance coach is one of the lowest-carbon ways to travel after the train.",
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "ebike-km",
+      "cat": "transport",
+      "name": "E-bike, per km",
+      "aliases": [
+        "ebike",
+        "e-bike",
+        "bicycle",
+        "bike",
+        "cycling",
+        "velo"
+      ],
+      "unit": "per km, life cycle",
+      "kg": 0.015,
+      "lo": 0.008,
+      "hi": 0.025,
+      "conf": "med",
+      "scope": "Manufacture of bike and battery spread over its life, plus charging (European Cyclists' Federation method). A normal bike is similar once the rider's extra food is counted.",
+      "summary": "Around 15 g per km, a tenth of a petrol car.",
+      "refs": [
+        "ecf11"
+      ]
+    },
+    {
+      "id": "cruise-week",
+      "cat": "transport",
+      "name": "One-week cruise",
+      "aliases": [
+        "cruise",
+        "cruise ship",
+        "ship holiday"
+      ],
+      "unit": "per passenger",
+      "kg": 1200,
+      "lo": 700,
+      "hi": 2000,
+      "conf": "low",
+      "scope": "Ship fuel per passenger (heavy fuel oil or LNG incl. methane slip), excluding flights to the port.",
+      "summary": "Roughly a transatlantic return flight, per person.",
+      "refs": [
+        "icct-cruise"
+      ]
+    },
+    {
+      "id": "beef-kg",
+      "cat": "food",
+      "name": "Beef (beef herd)",
+      "aliases": [
+        "beef",
+        "steak",
+        "burger",
+        "hamburger",
+        "meat",
+        "cow",
+        "red meat"
+      ],
+      "unit": "per kg",
+      "kg": 99.5,
+      "lo": 30,
+      "hi": 210,
+      "conf": "high",
+      "sector": "agriculture",
+      "scope": "Farm to retail: land-use change, methane from digestion, manure, feed, processing, transport, packaging. Global mean of the meta-analysis; the range is between producers.",
+      "summary": "The single most carbon-intensive common food: about 100 kg per kg, 30× tofu.",
+      "phases": [
+        [
+          "Land-use change",
+          16
+        ],
+        [
+          "Farm (methane, manure, feed)",
+          79
+        ],
+        [
+          "Processing, transport, retail, packaging",
+          5
+        ]
+      ],
+      "context": "Beef from dairy herds averages 33 kg per kg, because the cow also produces milk. Transport is under 1% of beef's footprint: what you eat matters far more than local.",
+      "tips": [
+        "Swap half your beef for chicken, pork or legumes.",
+        "If you buy beef, dairy-herd beef has about a third of the footprint."
+      ],
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "beef-dairy-kg",
+      "cat": "food",
+      "name": "Beef (dairy herd)",
+      "aliases": [
+        "veal",
+        "dairy beef"
+      ],
+      "unit": "per kg",
+      "kg": 33.3,
+      "lo": 15,
+      "hi": 60,
+      "conf": "high",
+      "scope": "Farm to retail; emissions shared with milk.",
+      "summary": "A third of beef-herd beef.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "lamb-kg",
+      "cat": "food",
+      "name": "Lamb and mutton",
+      "aliases": [
+        "lamb",
+        "mutton",
+        "sheep"
+      ],
+      "unit": "per kg",
+      "kg": 39.7,
+      "lo": 20,
+      "hi": 60,
+      "conf": "high",
+      "sector": "agriculture",
+      "scope": "Farm to retail.",
+      "summary": "Second only to beef among meats: sheep are ruminants too.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "cheese-kg",
+      "cat": "food",
+      "name": "Cheese",
+      "aliases": [
+        "cheese",
+        "gruyere",
+        "emmental",
+        "parmesan",
+        "fondue",
+        "raclette"
+      ],
+      "unit": "per kg",
+      "kg": 23.9,
+      "lo": 9,
+      "hi": 40,
+      "conf": "high",
+      "sector": "agriculture",
+      "scope": "Farm to retail. About 10 litres of milk go into 1 kg of hard cheese.",
+      "summary": "More than pork or chicken per kg, though eaten in smaller amounts.",
+      "tips": [
+        "Fresh cheeses (mozzarella, ricotta) use less milk per kg than hard cheeses."
+      ],
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "chocolate-kg",
+      "cat": "food",
+      "name": "Dark chocolate",
+      "aliases": [
+        "chocolate",
+        "cocoa",
+        "cacao",
+        "lindt"
+      ],
+      "unit": "per kg",
+      "kg": 46.7,
+      "lo": 5,
+      "hi": 90,
+      "conf": "med",
+      "scope": "Farm to retail. Driven by forest clearing for cocoa in West Africa and Latin America; the spread is huge.",
+      "summary": "Surprisingly high on average, entirely because of deforestation. Deforestation-free cocoa is a fraction.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "coffee-kg",
+      "cat": "food",
+      "name": "Coffee beans",
+      "aliases": [
+        "coffee",
+        "espresso",
+        "beans"
+      ],
+      "unit": "per kg of beans",
+      "kg": 28.5,
+      "lo": 4,
+      "hi": 60,
+      "conf": "med",
+      "scope": "Farm to retail, as for chocolate driven by land-use change.",
+      "summary": "High per kg, but a cup uses only about 7–10 g of beans.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "coffee-cup",
+      "cat": "food",
+      "name": "Cup of coffee",
+      "aliases": [
+        "cup of coffee",
+        "latte",
+        "cappuccino",
+        "espresso shot"
+      ],
+      "unit": "per cup",
+      "kg": 0.25,
+      "lo": 0.05,
+      "hi": 0.55,
+      "conf": "low",
+      "scope": "Computed: about 8 g beans at the mean bean footprint, plus brewing. Milk drinks add ≈0.2–0.3 kg for a 200 mL latte.",
+      "summary": "A black coffee is roughly a kilometre in a car; a latte roughly two.",
+      "tips": [
+        "The milk in a latte is often more than the coffee; oat milk cuts it by about two-thirds."
+      ],
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "shrimp-kg",
+      "cat": "food",
+      "name": "Prawns (farmed)",
+      "aliases": [
+        "shrimp",
+        "prawns",
+        "seafood"
+      ],
+      "unit": "per kg",
+      "kg": 26.9,
+      "lo": 10,
+      "hi": 50,
+      "conf": "med",
+      "scope": "Farm to retail; mangrove clearing for ponds drives the high end.",
+      "summary": "Close to cheese, and well above chicken or farmed fish.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "pork-kg",
+      "cat": "food",
+      "name": "Pork",
+      "aliases": [
+        "pork",
+        "pig",
+        "ham",
+        "bacon",
+        "sausage"
+      ],
+      "unit": "per kg",
+      "kg": 12.3,
+      "lo": 6,
+      "hi": 20,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "An eighth of beef.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "chicken-kg",
+      "cat": "food",
+      "name": "Chicken",
+      "aliases": [
+        "chicken",
+        "poultry",
+        "turkey"
+      ],
+      "unit": "per kg",
+      "kg": 9.87,
+      "lo": 4,
+      "hi": 17,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "A tenth of beef; most of it is feed.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "fish-farmed-kg",
+      "cat": "food",
+      "name": "Farmed fish",
+      "aliases": [
+        "fish",
+        "salmon",
+        "trout",
+        "tilapia"
+      ],
+      "unit": "per kg",
+      "kg": 13.6,
+      "lo": 5,
+      "hi": 25,
+      "conf": "med",
+      "scope": "Farm to retail.",
+      "summary": "Similar to pork.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "eggs-kg",
+      "cat": "food",
+      "name": "Eggs",
+      "aliases": [
+        "egg",
+        "eggs"
+      ],
+      "unit": "per kg (≈17 eggs)",
+      "kg": 4.67,
+      "lo": 2.5,
+      "hi": 7,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "About 0.3 kg per egg.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "milk-l",
+      "cat": "food",
+      "name": "Cow's milk",
+      "aliases": [
+        "milk",
+        "dairy"
+      ],
+      "unit": "per litre",
+      "kg": 3.15,
+      "lo": 1.5,
+      "hi": 5,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "About three times plant milks (oat ≈0.9, soy ≈1.0).",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "rice-kg",
+      "cat": "food",
+      "name": "Rice",
+      "aliases": [
+        "rice",
+        "risotto"
+      ],
+      "unit": "per kg",
+      "kg": 4.45,
+      "lo": 1.5,
+      "hi": 9,
+      "conf": "high",
+      "sector": "agriculture",
+      "scope": "Farm to retail. Flooded paddies release methane.",
+      "summary": "The highest-carbon staple grain, about three times wheat, because of paddy methane.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "tofu-kg",
+      "cat": "food",
+      "name": "Tofu",
+      "aliases": [
+        "tofu",
+        "soy",
+        "plant protein"
+      ],
+      "unit": "per kg",
+      "kg": 3.16,
+      "lo": 1.5,
+      "hi": 5,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "About a thirtieth of beef for similar protein.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "bread-kg",
+      "cat": "food",
+      "name": "Wheat and bread",
+      "aliases": [
+        "bread",
+        "wheat",
+        "pasta",
+        "flour"
+      ],
+      "unit": "per kg",
+      "kg": 1.57,
+      "lo": 0.8,
+      "hi": 3,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "Low.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "peas-kg",
+      "cat": "food",
+      "name": "Peas and beans",
+      "aliases": [
+        "peas",
+        "beans",
+        "lentils",
+        "chickpeas",
+        "legumes"
+      ],
+      "unit": "per kg",
+      "kg": 0.98,
+      "lo": 0.5,
+      "hi": 2,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "Among the lowest-carbon proteins: they fix their own nitrogen.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "banana-kg",
+      "cat": "food",
+      "name": "Bananas",
+      "aliases": [
+        "banana",
+        "fruit"
+      ],
+      "unit": "per kg",
+      "kg": 0.86,
+      "lo": 0.5,
+      "hi": 1.5,
+      "conf": "high",
+      "scope": "Farm to retail, incl. shipping from the tropics.",
+      "summary": "Low even after crossing an ocean: shipping by sea is efficient.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "potatoes-kg",
+      "cat": "food",
+      "name": "Potatoes",
+      "aliases": [
+        "potato",
+        "potatoes",
+        "fries",
+        "rösti"
+      ],
+      "unit": "per kg",
+      "kg": 0.46,
+      "lo": 0.2,
+      "hi": 0.8,
+      "conf": "high",
+      "scope": "Farm to retail.",
+      "summary": "One of the lowest-carbon foods.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "wine-l",
+      "cat": "food",
+      "name": "Wine",
+      "aliases": [
+        "wine",
+        "glass of wine"
+      ],
+      "unit": "per litre",
+      "kg": 1.79,
+      "lo": 1,
+      "hi": 3,
+      "conf": "med",
+      "scope": "Farm to retail; glass bottles are a large share.",
+      "summary": "About 0.27 kg per 150 mL glass.",
+      "refs": [
+        "poore18"
+      ]
+    },
+    {
+      "id": "kwh",
+      "cat": "home",
+      "name": "1 kWh of electricity",
+      "aliases": [
+        "electricity",
+        "kwh",
+        "power",
+        "grid",
+        "strom"
+      ],
+      "unit": "per kWh",
+      "kg": 0.47,
+      "lo": 0.012,
+      "hi": 1.0,
+      "conf": "high",
+      "sector": "power",
+      "scope": "World average generation (≈470 g). Swiss production ≈30 g; Swiss consumption mix incl. imports ≈100–130 g; EU ≈240 g; coal ≈950–1,000 g; nuclear and wind ≈5–13 g life cycle.",
+      "summary": "The grid you plug into changes the answer 80-fold. This one number drives every electricity-based figure here.",
+      "context": "Life-cycle (UNECE) per kWh: coal ≈1,000 g, gas ≈430–490 g, solar ≈8–83 g, hydro ≈6–147 g, wind ≈8–16 g, nuclear ≈5–6 g.",
+      "refs": [
+        "ember25",
+        "unece21"
+      ]
+    },
+    {
+      "id": "kettle",
+      "cat": "home",
+      "name": "Boiling 1 litre of water",
+      "aliases": [
+        "kettle",
+        "tea",
+        "boil water"
+      ],
+      "unit": "per litre",
+      "kg": 0.045,
+      "lo": 0.001,
+      "hi": 0.1,
+      "conf": "high",
+      "energy": "≈0.1 kWh",
+      "scope": "Computed from the energy to heat 1 L from 15 °C plus losses, on the world-average grid; Swiss mix ≈0.01 kg.",
+      "summary": "One kettle is roughly 300 ordinary AI prompts.",
+      "refs": [
+        "ember25"
+      ]
+    },
+    {
+      "id": "shower",
+      "cat": "home",
+      "name": "Hot shower, 10 minutes",
+      "aliases": [
+        "shower",
+        "hot water",
+        "bath"
+      ],
+      "unit": "per shower",
+      "kg": 0.4,
+      "lo": 0.05,
+      "hi": 0.9,
+      "conf": "med",
+      "energy": "≈2–3 kWh of heat (≈80 L warmed by 25 °C)",
+      "scope": "Computed: gas boiler ≈0.5 kg; oil ≈0.7; heat pump on Swiss power ≈0.05.",
+      "summary": "One hot shower ≈ thousands of AI prompts. Hot water is one of the bigger household items.",
+      "tips": [
+        "A low-flow head (6 L/min) and one minute less saves about a third."
+      ],
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "laundry",
+      "cat": "home",
+      "name": "Washing machine load (40 °C)",
+      "aliases": [
+        "laundry",
+        "washing",
+        "washing machine"
+      ],
+      "unit": "per load",
+      "kg": 0.15,
+      "lo": 0.02,
+      "hi": 0.6,
+      "conf": "med",
+      "energy": "≈0.4–0.8 kWh",
+      "scope": "Electricity only, computed; Swiss mix at the low end. Detergent and machine manufacture add a little.",
+      "summary": "Small: heating the water is most of it.",
+      "tips": [
+        "Wash at 30 °C and line-dry: a tumble dryer load is several times a wash."
+      ],
+      "refs": [
+        "ember25"
+      ]
+    },
+    {
+      "id": "dryer",
+      "cat": "home",
+      "name": "Tumble dryer load",
+      "aliases": [
+        "dryer",
+        "tumble dryer",
+        "tumbler"
+      ],
+      "unit": "per load",
+      "kg": 1.0,
+      "lo": 0.1,
+      "hi": 2.5,
+      "conf": "med",
+      "energy": "≈2–4 kWh (heat-pump dryers ≈1 kWh)",
+      "scope": "Electricity only, computed.",
+      "summary": "One of the hungriest appliances per use.",
+      "refs": [
+        "ember25"
+      ]
+    },
+    {
+      "id": "heat-oil-year",
+      "cat": "home",
+      "name": "Heating a house with oil, one year",
+      "aliases": [
+        "oil heating",
+        "heizöl",
+        "oil boiler",
+        "heating"
+      ],
+      "unit": "per single-family house per year",
+      "kg": 6300,
+      "lo": 4000,
+      "hi": 9000,
+      "conf": "med",
+      "sector": "buildings",
+      "scope": "≈2,000 L of heating oil (150 m², older Swiss house) × ≈3.2 kg per litre incl. fuel production.",
+      "summary": "About 6 t a year: half a Swiss resident's whole footprint, just for heat.",
+      "tips": [
+        "Replacing an oil boiler with a heat pump is usually the single largest cut a Swiss household can make (≈90%)."
+      ],
+      "refs": [
+        "defra25",
+        "foen25"
+      ]
+    },
+    {
+      "id": "heat-gas-year",
+      "cat": "home",
+      "name": "Heating a house with gas, one year",
+      "aliases": [
+        "gas heating",
+        "gas boiler",
+        "erdgas"
+      ],
+      "unit": "per single-family house per year",
+      "kg": 4600,
+      "lo": 3000,
+      "hi": 6500,
+      "conf": "med",
+      "sector": "buildings",
+      "scope": "≈20,000 kWh of gas × ≈0.23 kg/kWh incl. upstream methane leaks.",
+      "summary": "About a quarter less than oil, still a few tonnes.",
+      "refs": [
+        "defra25"
+      ]
+    },
+    {
+      "id": "heat-pump-year",
+      "cat": "home",
+      "name": "Heating a house with a heat pump, one year",
+      "aliases": [
+        "heat pump",
+        "wärmepumpe",
+        "heatpump"
+      ],
+      "unit": "per single-family house per year",
+      "kg": 600,
+      "lo": 150,
+      "hi": 2500,
+      "conf": "med",
+      "sector": "buildings",
+      "scope": "≈20,000 kWh of heat ÷ coefficient of performance ≈3.5 ≈ 5,700 kWh of electricity. Low end on Swiss production mix, central on Swiss consumption mix, high end on a coal-heavy grid.",
+      "summary": "About a tenth of oil on Swiss power.",
+      "refs": [
+        "foen25",
+        "ember25"
+      ]
+    },
+    {
+      "id": "tshirt",
+      "cat": "goods",
+      "name": "Cotton T-shirt",
+      "aliases": [
+        "t-shirt",
+        "tshirt",
+        "shirt",
+        "clothes",
+        "clothing"
+      ],
+      "unit": "per shirt, life cycle",
+      "kg": 7,
+      "lo": 2,
+      "hi": 15,
+      "conf": "low",
+      "scope": "Cotton growing, spinning, dyeing, sewing, transport, washing over its life.",
+      "summary": "A few kg; textile mills run largely on coal in Asia.",
+      "tips": [
+        "Wear it more often: doubling the wears halves the footprint per wear."
+      ],
+      "refs": [
+        "mckinsey20"
+      ]
+    },
+    {
+      "id": "jeans",
+      "cat": "goods",
+      "name": "Pair of jeans",
+      "aliases": [
+        "jeans",
+        "denim",
+        "levis",
+        "trousers"
+      ],
+      "unit": "per pair, life cycle",
+      "kg": 33,
+      "lo": 15,
+      "hi": 40,
+      "conf": "med",
+      "scope": "Levi's 501 life-cycle study: cotton, fabric, manufacture, transport, and washing and drying over its life.",
+      "summary": "About 33 kg, over a third of it from washing and drying.",
+      "phases": [
+        [
+          "Fibre & fabric",
+          52
+        ],
+        [
+          "Consumer care (washing, drying)",
+          37
+        ],
+        [
+          "Manufacture, transport, retail",
+          11
+        ]
+      ],
+      "tips": [
+        "Wash jeans every ten wears, cold, and skip the dryer."
+      ],
+      "refs": [
+        "levis15"
+      ]
+    },
+    {
+      "id": "shoes",
+      "cat": "goods",
+      "name": "Running shoes",
+      "aliases": [
+        "shoes",
+        "sneakers",
+        "trainers",
+        "nike"
+      ],
+      "unit": "per pair",
+      "kg": 14,
+      "lo": 10,
+      "hi": 18,
+      "conf": "med",
+      "scope": "Cradle-to-grave (MIT study of a typical synthetic running shoe); manufacturing energy is most of it.",
+      "summary": "About 14 kg, two-thirds from the factory.",
+      "refs": [
+        "cheah13"
+      ]
+    },
+    {
+      "id": "book",
+      "cat": "goods",
+      "name": "Paperback book",
+      "aliases": [
+        "book",
+        "paper",
+        "printing"
+      ],
+      "unit": "per book",
+      "kg": 1.2,
+      "lo": 0.5,
+      "hi": 2.7,
+      "conf": "low",
+      "scope": "Paper, printing, distribution; higher if unsold copies are pulped.",
+      "summary": "About a kilo, roughly 20 hours of video streaming.",
+      "refs": [
+        "bernerslee20"
+      ]
+    },
+    {
+      "id": "pet-bottle",
+      "cat": "goods",
+      "name": "Plastic bottle (0.5 L PET)",
+      "aliases": [
+        "bottle",
+        "plastic bottle",
+        "water bottle",
+        "pet"
+      ],
+      "unit": "per empty bottle",
+      "kg": 0.08,
+      "lo": 0.05,
+      "hi": 0.15,
+      "conf": "med",
+      "scope": "Plastic production and bottle forming; disposal adds a little (more if burned).",
+      "summary": "About 80 g, compared with almost nothing for tap water.",
+      "refs": [
+        "bernerslee20"
+      ]
+    },
+    {
+      "id": "xmas-tree-real",
+      "cat": "goods",
+      "name": "Christmas tree (real)",
+      "aliases": [
+        "christmas tree",
+        "tree",
+        "weihnachtsbaum",
+        "xmas"
+      ],
+      "unit": "per tree (2 m)",
+      "kg": 3.5,
+      "lo": 3.5,
+      "hi": 16,
+      "conf": "low",
+      "scope": "Growing, transport and disposal. Burned or chipped ≈3.5 kg; sent to landfill, where it rots to methane, ≈16 kg.",
+      "summary": "A few kg if it is chipped or burned afterwards.",
+      "refs": [
+        "carbontrust-tree"
+      ]
+    },
+    {
+      "id": "xmas-tree-plastic",
+      "cat": "goods",
+      "name": "Christmas tree (artificial)",
+      "aliases": [
+        "artificial tree",
+        "plastic tree",
+        "fake tree"
+      ],
+      "unit": "per tree (2 m)",
+      "kg": 40,
+      "lo": 30,
+      "hi": 50,
+      "conf": "low",
+      "scope": "Plastic and metal manufacture in Asia and shipping.",
+      "summary": "Needs about 10 years of reuse to beat a real tree that is chipped afterwards.",
+      "refs": [
+        "carbontrust-tree"
+      ]
+    },
+    {
+      "id": "steel-t",
+      "cat": "goods",
+      "name": "1 tonne of steel",
+      "aliases": [
+        "steel",
+        "iron"
+      ],
+      "unit": "per tonne",
+      "kg": 1920,
+      "lo": 400,
+      "hi": 2300,
+      "conf": "high",
+      "sector": "industry",
+      "scope": "World average, cradle-to-gate (worldsteel). Low end: recycled scrap in an electric arc furnace on clean power; high end: coal blast furnace.",
+      "summary": "About 1.9 t of CO₂ per tonne: steel weighs about its own weight in CO₂.",
+      "refs": [
+        "worldsteel25"
+      ]
+    },
+    {
+      "id": "cement-t",
+      "cat": "goods",
+      "name": "1 tonne of cement",
+      "aliases": [
+        "cement",
+        "concrete",
+        "beton",
+        "clinker"
+      ],
+      "unit": "per tonne",
+      "kg": 600,
+      "lo": 450,
+      "hi": 900,
+      "conf": "high",
+      "sector": "industry",
+      "scope": "Cradle-to-gate. About 60% comes from the chemistry itself (limestone releasing CO₂), not fuel, so clean energy alone cannot fix it.",
+      "summary": "About 0.6 t per tonne. A cubic metre of concrete is roughly 0.25–0.35 t.",
+      "refs": [
+        "iea-cement"
+      ]
+    },
+    {
+      "id": "aluminium-t",
+      "cat": "goods",
+      "name": "1 tonne of primary aluminium",
+      "aliases": [
+        "aluminium",
+        "aluminum",
+        "can",
+        "alu"
+      ],
+      "unit": "per tonne",
+      "kg": 16000,
+      "lo": 4000,
+      "hi": 20000,
+      "conf": "high",
+      "sector": "industry",
+      "scope": "Mine to ingot, global average (International Aluminium Institute). Hydro-powered smelters ≈4 t; coal-powered ≈20 t. Recycled aluminium needs about 5% of the energy.",
+      "summary": "About 16 t of CO₂e per tonne: the most carbon-intensive common metal, and the case for recycling cans.",
+      "refs": [
+        "iai25"
+      ]
+    },
+    {
+      "id": "plastic-t",
+      "cat": "goods",
+      "name": "1 tonne of plastic",
+      "aliases": [
+        "plastic",
+        "plastics",
+        "polyethylene",
+        "packaging"
+      ],
+      "unit": "per tonne",
+      "kg": 2500,
+      "lo": 1500,
+      "hi": 5000,
+      "conf": "med",
+      "sector": "industry",
+      "scope": "Cradle-to-gate for common polymers. Incineration at end of life adds up to about 2.7 t more.",
+      "summary": "About 2.5 t per tonne, more if it is burned afterwards.",
+      "refs": [
+        "oecd22"
+      ]
+    },
+    {
+      "id": "coal-power-global",
+      "cat": "offender",
+      "name": "Coal power, worldwide",
+      "aliases": [
+        "coal",
+        "coal power",
+        "coal plants",
+        "kohle"
+      ],
+      "unit": "per year",
+      "kg": 10500000000000,
+      "lo": 10000000000000,
+      "hi": 11000000000000,
+      "conf": "high",
+      "sector": "power",
+      "scope": "Direct CO₂ from burning coal for electricity and heat (IEA).",
+      "summary": "≈10.5 Gt: about a fifth of all greenhouse gases, the largest single source on the planet.",
+      "context": "Coal still makes about a third of the world's electricity, mostly in China and India. Every coal plant replaced by nuclear, wind or solar is the fastest-acting cut available.",
+      "refs": [
+        "iea-ger25"
+      ]
+    },
+    {
+      "id": "coal-plant-year",
+      "cat": "offender",
+      "name": "A 1 GW coal plant for a year",
+      "aliases": [
+        "coal plant",
+        "power station"
+      ],
+      "unit": "per year (≈75% load)",
+      "kg": 6200000000,
+      "lo": 5000000000,
+      "hi": 8000000000,
+      "conf": "high",
+      "sector": "power",
+      "energy": "≈6.6 TWh/year",
+      "scope": "Generation × ≈950 g CO₂/kWh life cycle.",
+      "summary": "≈6 Mt a year: the domestic emissions of about 1.5 million Swiss residents, from one plant.",
+      "refs": [
+        "unece21"
+      ]
+    },
+    {
+      "id": "gas-plant-year",
+      "cat": "offender",
+      "name": "A 1 GW gas plant for a year",
+      "aliases": [
+        "gas plant",
+        "gas power",
+        "ccgt"
+      ],
+      "unit": "per year (≈75% load)",
+      "kg": 3000000000,
+      "lo": 2600000000,
+      "hi": 3500000000,
+      "conf": "high",
+      "sector": "power",
+      "energy": "≈6.6 TWh/year",
+      "scope": "Generation × ≈430–490 g CO₂e/kWh life cycle incl. upstream methane (UNECE).",
+      "summary": "About half of coal, still about 3 Mt a year.",
+      "refs": [
+        "unece21"
+      ]
+    },
+    {
+      "id": "nuclear-plant-year",
+      "cat": "home",
+      "name": "A 1 GW nuclear plant for a year",
+      "aliases": [
+        "nuclear",
+        "nuclear plant",
+        "reactor",
+        "gösgen",
+        "leibstadt",
+        "kernkraft"
+      ],
+      "unit": "per year (≈90% load)",
+      "kg": 47000000,
+      "lo": 40000000,
+      "hi": 52000000,
+      "conf": "high",
+      "energy": "≈7.9 TWh/year",
+      "scope": "Life cycle incl. mining, enrichment, construction and decommissioning (UNECE ≈5.1–6.4 g/kWh).",
+      "summary": "≈0.05 Mt a year: about 130 times less than the same coal plant, for more electricity.",
+      "context": "Gösgen alone makes roughly 8 TWh a year, about 14% of Swiss electricity.",
+      "refs": [
+        "unece21"
+      ]
+    },
+    {
+      "id": "road-global",
+      "cat": "offender",
+      "name": "Road transport, worldwide",
+      "aliases": [
+        "cars",
+        "trucks",
+        "road transport",
+        "traffic"
+      ],
+      "unit": "per year",
+      "kg": 6000000000000,
+      "lo": 5800000000000,
+      "hi": 6200000000000,
+      "conf": "high",
+      "sector": "transport",
+      "scope": "Direct CO₂ from cars, trucks, buses and two-wheelers (IEA).",
+      "summary": "≈6 Gt: about three-quarters of transport emissions, and over 10% of the total.",
+      "refs": [
+        "iea-transport"
+      ]
+    },
+    {
+      "id": "aviation-global",
+      "cat": "offender",
+      "name": "Aviation, worldwide",
+      "aliases": [
+        "aviation",
+        "airlines",
+        "air travel",
+        "planes"
+      ],
+      "unit": "per year",
+      "kg": 950000000000,
+      "lo": 950000000000,
+      "hi": 2000000000000,
+      "conf": "med",
+      "sector": "transport",
+      "scope": "CO₂ from jet fuel ≈0.95 Gt (≈2.5% of energy CO₂). Including contrails and NOx, aviation's warming effect is roughly 2–3× its CO₂ (high end).",
+      "summary": "≈1 Gt of CO₂, and among the fastest-growing sources (international aviation +6% in 2024).",
+      "context": "About 1% of people cause about half of aviation's emissions.",
+      "refs": [
+        "iea-aviation",
+        "unep25"
+      ]
+    },
+    {
+      "id": "shipping-global",
+      "cat": "offender",
+      "name": "Shipping, worldwide",
+      "aliases": [
+        "shipping",
+        "ships",
+        "container ships",
+        "freight"
+      ],
+      "unit": "per year",
+      "kg": 1000000000000,
+      "lo": 850000000000,
+      "hi": 1100000000000,
+      "conf": "med",
+      "sector": "transport",
+      "scope": "International and domestic shipping, CO₂e (IMO 4th GHG study).",
+      "summary": "≈1 Gt, about 2–3% of the total, carrying around 80% of world trade by volume.",
+      "refs": [
+        "imo20"
+      ]
+    },
+    {
+      "id": "steel-industry",
+      "cat": "offender",
+      "name": "Steel industry, worldwide",
+      "aliases": [
+        "steel industry",
+        "iron and steel"
+      ],
+      "unit": "per year",
+      "kg": 3600000000000,
+      "lo": 2600000000000,
+      "hi": 3700000000000,
+      "conf": "high",
+      "sector": "industry",
+      "scope": "≈1.9 Gt of steel × ≈1.9 t CO₂ per tonne (worldsteel), direct plus electricity.",
+      "summary": "≈3.6 Gt: about 7% of the total, more than all the world's aviation and shipping together.",
+      "refs": [
+        "worldsteel25"
+      ]
+    },
+    {
+      "id": "cement-industry",
+      "cat": "offender",
+      "name": "Cement industry, worldwide",
+      "aliases": [
+        "cement industry",
+        "concrete industry"
+      ],
+      "unit": "per year",
+      "kg": 2500000000000,
+      "lo": 2300000000000,
+      "hi": 2900000000000,
+      "conf": "high",
+      "sector": "industry",
+      "scope": "Direct CO₂ from clinker chemistry and kiln fuel (IEA).",
+      "summary": "≈2.5 Gt: if cement were a country it would rank fourth, after China, the US and India.",
+      "refs": [
+        "iea-cement"
+      ]
+    },
+    {
+      "id": "plastics-global",
+      "cat": "offender",
+      "name": "Plastics, whole life cycle, worldwide",
+      "aliases": [
+        "plastics industry",
+        "plastic pollution"
+      ],
+      "unit": "per year",
+      "kg": 1800000000000,
+      "lo": 1700000000000,
+      "hi": 2000000000000,
+      "conf": "med",
+      "sector": "industry",
+      "scope": "Production, conversion and end of life (OECD Global Plastics Outlook, 2019 data); 90% from production.",
+      "summary": "≈1.8 Gt, about 3.4% of the total, and on course to double by 2060 without policy.",
+      "refs": [
+        "oecd22"
+      ]
+    },
+    {
+      "id": "fashion-global",
+      "cat": "offender",
+      "name": "Fashion and textiles, worldwide",
+      "aliases": [
+        "fashion",
+        "textiles",
+        "fast fashion",
+        "clothing industry"
+      ],
+      "unit": "per year",
+      "kg": 1700000000000,
+      "lo": 1200000000000,
+      "hi": 2100000000000,
+      "conf": "low",
+      "sector": "industry",
+      "scope": "Fibre to retail; estimates range from 1.2 Gt (Ellen MacArthur Foundation) to 2.1 Gt (McKinsey, ≈4%).",
+      "summary": "Roughly 1–2 Gt, similar to aviation or shipping.",
+      "refs": [
+        "mckinsey20"
+      ]
+    },
+    {
+      "id": "livestock-global",
+      "cat": "offender",
+      "name": "Livestock, worldwide",
+      "aliases": [
+        "livestock",
+        "animal farming",
+        "meat industry",
+        "dairy industry"
+      ],
+      "unit": "per year",
+      "kg": 6200000000000,
+      "lo": 5000000000000,
+      "hi": 7100000000000,
+      "conf": "med",
+      "sector": "agriculture",
+      "scope": "Whole supply chains incl. feed, land-use change, methane from digestion and manure (FAO GLEAM, 2015 reference year).",
+      "summary": "≈6.2 Gt CO₂e: about 12% of human emissions, as much as all road transport.",
+      "context": "Methane is short-lived but strong (≈80× CO₂ over 20 years), so cutting it slows warming quickly.",
+      "refs": [
+        "fao23"
+      ]
+    },
+    {
+      "id": "cattle-global",
+      "cat": "offender",
+      "name": "Cattle (beef and dairy), worldwide",
+      "aliases": [
+        "cattle",
+        "cows",
+        "beef industry"
+      ],
+      "unit": "per year",
+      "kg": 3800000000000,
+      "lo": 3400000000000,
+      "hi": 4200000000000,
+      "conf": "med",
+      "sector": "agriculture",
+      "scope": "Cattle share (≈62%) of FAO livestock supply-chain emissions.",
+      "summary": "≈3.8 Gt: cattle alone emit more than the whole steel industry.",
+      "refs": [
+        "fao23"
+      ]
+    },
+    {
+      "id": "rice-global",
+      "cat": "offender",
+      "name": "Rice paddies, worldwide",
+      "aliases": [
+        "rice farming",
+        "paddies",
+        "rice methane"
+      ],
+      "unit": "per year",
+      "kg": 1000000000000,
+      "lo": 800000000000,
+      "hi": 1500000000000,
+      "conf": "low",
+      "sector": "agriculture",
+      "scope": "Mostly methane from flooded fields; estimates vary with the inventory used.",
+      "summary": "Around 1 Gt CO₂e, about 2% of the total, similar to all shipping.",
+      "tips": [
+        "Alternate wetting and drying of paddies cuts methane by roughly a third to a half."
+      ],
+      "refs": [
+        "gcb25"
+      ]
+    },
+    {
+      "id": "methane-fossil",
+      "cat": "offender",
+      "name": "Methane from oil, gas and coal",
+      "aliases": [
+        "methane",
+        "gas leaks",
+        "flaring",
+        "venting",
+        "fugitive emissions"
+      ],
+      "unit": "per year",
+      "kg": 3600000000000,
+      "lo": 3000000000000,
+      "hi": 4000000000000,
+      "conf": "med",
+      "sector": "fuel",
+      "scope": "≈120 Mt of methane from fossil-fuel operations (IEA Global Methane Tracker) × ≈30 (100-year GWP).",
+      "summary": "≈3.6 Gt CO₂e, much of it avoidable at low or negative cost because captured gas can be sold.",
+      "context": "About 40% of these emissions could be avoided at no net cost, according to the IEA; satellites now detect large leaks directly.",
+      "refs": [
+        "iea-methane25"
+      ]
+    },
+    {
+      "id": "landuse-global",
+      "cat": "offender",
+      "name": "Deforestation and land-use change",
+      "aliases": [
+        "deforestation",
+        "forests",
+        "amazon",
+        "land use",
+        "palm oil"
+      ],
+      "unit": "per year",
+      "kg": 4100000000000,
+      "lo": 3000000000000,
+      "hi": 5000000000000,
+      "conf": "med",
+      "scope": "Net CO₂ from land-use change (Global Carbon Budget bookkeeping method). Not in the sector pie, which excludes land use.",
+      "summary": "≈4 Gt: mostly tropical forest cleared for cattle, soy, palm oil and cocoa.",
+      "refs": [
+        "gcb25"
+      ]
+    },
+    {
+      "id": "cooling-global",
+      "cat": "offender",
+      "name": "Air conditioning, worldwide",
+      "aliases": [
+        "air conditioning",
+        "ac",
+        "cooling",
+        "klimaanlage"
+      ],
+      "unit": "per year",
+      "kg": 1000000000000,
+      "lo": 1000000000000,
+      "hi": 1500000000000,
+      "conf": "med",
+      "sector": "power",
+      "scope": "CO₂ from electricity for space cooling (IEA); refrigerant leaks add more.",
+      "summary": "≈1 Gt and rising fast in hot, growing economies: more than all data centres five times over.",
+      "refs": [
+        "iea-cooling"
+      ]
+    },
+    {
+      "id": "military-global",
+      "cat": "offender",
+      "name": "Militaries, worldwide (estimated)",
+      "aliases": [
+        "military",
+        "army",
+        "defence",
+        "war"
+      ],
+      "unit": "per year",
+      "kg": 2750000000000,
+      "lo": 1500000000000,
+      "hi": 3500000000000,
+      "conf": "low",
+      "scope": "Estimated at about 5.5% of global emissions incl. supply chains (Scientists for Global Responsibility); military emissions are largely exempt from UN reporting, so the uncertainty is large.",
+      "summary": "Possibly the size of a large industrial sector, and the least reported.",
+      "refs": [
+        "sgr22"
+      ]
+    },
+    {
+      "id": "person-world",
+      "cat": "people",
+      "name": "Average person, world",
+      "aliases": [
+        "person",
+        "per capita",
+        "average person",
+        "human",
+        "me"
+      ],
+      "unit": "per person per year",
+      "kg": 6600,
+      "lo": 6600,
+      "hi": 6600,
+      "conf": "high",
+      "scope": "Computed: 54.1 Gt (excl. land use) ÷ 8.2 billion people.",
+      "summary": "About 6.6 t, but very unequal: the richest 10% cause about half of emissions.",
+      "refs": [
+        "edgar26"
+      ]
+    },
+    {
+      "id": "person-ch",
+      "cat": "people",
+      "name": "Average Swiss resident",
+      "aliases": [
+        "swiss",
+        "switzerland",
+        "schweiz",
+        "suisse",
+        "my footprint"
+      ],
+      "unit": "per person per year",
+      "kg": 13000,
+      "lo": 4000,
+      "hi": 14000,
+      "conf": "med",
+      "scope": "Consumption-based footprint incl. imported goods (Federal Office for the Environment). Counting only emissions inside Switzerland gives about 4 t, among the lowest in Europe thanks to hydro and nuclear power.",
+      "summary": "About 13 t once imports are counted: two-thirds of a Swiss footprint is emitted abroad.",
+      "context": "Typical big items: heating (if fossil), flights, cars, meat and dairy, and imported goods.",
+      "refs": [
+        "foen25"
+      ]
+    },
+    {
+      "id": "person-us",
+      "cat": "people",
+      "name": "Average US resident",
+      "aliases": [
+        "usa",
+        "american",
+        "united states"
+      ],
+      "unit": "per person per year",
+      "kg": 17700,
+      "lo": 17700,
+      "hi": 17700,
+      "conf": "high",
+      "scope": "Computed: 6.02 Gt territorial ÷ ≈340 million people.",
+      "summary": "About 18 t, nearly three times the world average.",
+      "refs": [
+        "edgar26"
+      ]
+    },
+    {
+      "id": "person-cn",
+      "cat": "people",
+      "name": "Average Chinese resident",
+      "aliases": [
+        "china",
+        "chinese"
+      ],
+      "unit": "per person per year",
+      "kg": 11300,
+      "lo": 11300,
+      "hi": 11300,
+      "conf": "high",
+      "scope": "Computed: ≈16 Gt territorial ÷ 1.41 billion. Includes making goods exported to other countries.",
+      "summary": "About 11 t, above the EU average; part of it is manufacturing for export.",
+      "refs": [
+        "edgar26"
+      ]
+    },
+    {
+      "id": "person-in",
+      "cat": "people",
+      "name": "Average Indian resident",
+      "aliases": [
+        "india",
+        "indian"
+      ],
+      "unit": "per person per year",
+      "kg": 3100,
+      "lo": 3100,
+      "hi": 3100,
+      "conf": "high",
+      "scope": "Computed: 4.51 Gt ÷ ≈1.45 billion.",
+      "summary": "About 3 t, under half the world average, but India had the largest absolute rise in 2024.",
+      "refs": [
+        "edgar26",
+        "unep25"
+      ]
+    },
+    {
+      "id": "budget-15",
+      "cat": "people",
+      "name": "1.5 °C-compatible lifestyle, 2030",
+      "aliases": [
+        "carbon budget",
+        "target",
+        "1.5",
+        "paris",
+        "fair share"
+      ],
+      "unit": "per person per year",
+      "kg": 2500,
+      "lo": 2500,
+      "hi": 2500,
+      "conf": "med",
+      "scope": "Per-person lifestyle footprint target for 2030 consistent with 1.5 °C (Hot or Cool Institute 1.5-Degree Lifestyles); falling to 0.7 t by 2050.",
+      "summary": "About 2.5 t: one long-haul return flight nearly uses it up.",
+      "refs": [
+        "hotorcool21"
+      ]
+    }
+  ],
+  "refs": {
+    "edgar26": {
+      "label": "JRC/IEA (2026): GHG emissions of all world countries, 2025 data",
+      "url": "https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/six-16-major-emitters-reduced-their-emissions-2025-2026-09-07_en"
+    },
+    "unep26": {
+      "label": "UNEP (2026): Emissions Gap Report 2026",
+      "url": "https://www.unep.org/en/publications/report/emissions-gap-report-2026"
+    },
+    "unep25": {
+      "label": "UNEP (2025): Emissions Gap Report 2025, Off target",
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025"
+    },
+    "google25": {
+      "label": "Elsworth et al. / Google (2025): Measuring the environmental impact of delivering AI at Google scale",
+      "url": "https://arxiv.org/abs/2508.15734"
+    },
+    "altman25": {
+      "label": "Altman (2025): The Gentle Singularity (0.34 Wh per ChatGPT query)",
+      "url": "https://blog.samaltman.com/the-gentle-singularity"
+    },
+    "joule26": {
+      "label": "Microsoft Research (2026, Joule): energy per chatbot query, 0.31 Wh typical, 3.91 Wh reasoning",
+      "url": "https://scholar.google.com/scholar?q=Joule+2026+energy+per+query+large+language+model+inference+Microsoft"
+    },
+    "jegham25": {
+      "label": "Jegham et al. (2025): How Hungry is AI? Benchmarking energy, water and carbon of LLM inference",
+      "url": "https://arxiv.org/abs/2505.09598"
+    },
+    "agentdecarb26": {
+      "label": "AgentDecarbonizer (2026): Carbon-aware execution for AI agents",
+      "url": "https://arxiv.org/abs/2608.20566"
+    },
+    "mistral25": {
+      "label": "Mistral AI (2025): Life-cycle analysis of Mistral Large 2 (with Carbone 4, ADEME)",
+      "url": "https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai"
+    },
+    "mittr25": {
+      "label": "O'Donnell & Crownhart, MIT Technology Review (2025): We did the math on AI's energy footprint",
+      "url": "https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/"
+    },
+    "luccioni24": {
+      "label": "Luccioni, Jernite & Strubell (2024): Power hungry processing",
+      "url": "https://arxiv.org/abs/2311.16863"
+    },
+    "luccioni25": {
+      "label": "Luccioni et al. (2025): The environmental impacts of language model training keep rising",
+      "url": "https://arxiv.org/abs/2510.09022"
+    },
+    "patterson21": {
+      "label": "Patterson et al. (2021): Carbon emissions and large neural network training",
+      "url": "https://arxiv.org/abs/2104.10350"
+    },
+    "meta24": {
+      "label": "Meta (2024): Llama 3.1 model card, training energy and emissions",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-405B"
+    },
+    "epoch25": {
+      "label": "Epoch AI (2025): Grok 4 training resource footprint",
+      "url": "https://epoch.ai/data-insights/grok-4-training-resources"
+    },
+    "nvidia25": {
+      "label": "NVIDIA (2025): Product carbon footprint summary, HGX B200",
+      "url": "https://images.nvidia.com/aem-dam/Solutions/documents/HGX-B200-PCF-Summary.pdf"
+    },
+    "ieaai25": {
+      "label": "IEA (2025): Energy and AI",
+      "url": "https://www.iea.org/reports/energy-and-ai"
+    },
+    "cbeci25": {
+      "label": "Cambridge Centre for Alternative Finance (2025): Digital mining industry report",
+      "url": "https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/"
+    },
+    "carbontrust21": {
+      "label": "Carbon Trust (2021): Carbon impact of video streaming",
+      "url": "https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/carbon-impact-of-video-streaming"
+    },
+    "bernerslee20": {
+      "label": "Berners-Lee (2020): How Bad Are Bananas? The carbon footprint of everything",
+      "url": "https://scholar.google.com/scholar?q=Berners-Lee+How+Bad+Are+Bananas+2020"
+    },
+    "apple25": {
+      "label": "Apple: Product environmental reports (iPhone, MacBook)",
+      "url": "https://www.apple.com/environment/"
+    },
+    "defra25": {
+      "label": "UK Government: Greenhouse gas conversion factors for company reporting",
+      "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"
+    },
+    "icct21": {
+      "label": "ICCT (2021): Global comparison of life-cycle GHG emissions of combustion and electric cars",
+      "url": "https://theicct.org/publication/a-global-comparison-of-the-life-cycle-greenhouse-gas-emissions-of-combustion-engine-and-electric-passenger-cars/"
+    },
+    "ecf11": {
+      "label": "European Cyclists' Federation (2011): Quantifying CO₂ savings of cycling",
+      "url": "https://scholar.google.com/scholar?q=European+Cyclists+Federation+2011+cycle+more+often+2+cool+down+the+planet"
+    },
+    "icct-cruise": {
+      "label": "ICCT: Cruise ship emissions and per-passenger estimates",
+      "url": "https://scholar.google.com/scholar?q=ICCT+cruise+ship+greenhouse+gas+emissions+per+passenger"
+    },
+    "poore18": {
+      "label": "Poore & Nemecek (2018, Science): Reducing food's environmental impacts; via Our World in Data",
+      "url": "https://ourworldindata.org/environmental-impacts-of-food"
+    },
+    "ember25": {
+      "label": "Ember: Electricity data explorer (carbon intensity by country)",
+      "url": "https://ember-energy.org/data/"
+    },
+    "unece21": {
+      "label": "UNECE (2021): Life cycle assessment of electricity generation options",
+      "url": "https://unece.org/sed/documents/2021/10/reports/life-cycle-assessment-electricity-generation-options"
+    },
+    "foen25": {
+      "label": "Swiss Federal Office for the Environment: Switzerland's climate footprint",
+      "url": "https://www.bafu.admin.ch/bafu/en/home/topics/climate/state/data/climate-footprint.html"
+    },
+    "mckinsey20": {
+      "label": "McKinsey & Global Fashion Agenda (2020): Fashion on climate",
+      "url": "https://www.mckinsey.com/industries/retail/our-insights/fashion-on-climate"
+    },
+    "levis15": {
+      "label": "Levi Strauss & Co. (2015): Life cycle assessment of the 501 jean",
+      "url": "https://scholar.google.com/scholar?q=Levi+Strauss+2015+life+cycle+assessment+501+jean"
+    },
+    "cheah13": {
+      "label": "Cheah et al. (2013, J. Cleaner Production): Manufacturing-focused emissions reductions in footwear",
+      "url": "https://doi.org/10.1016/j.jclepro.2012.11.037"
+    },
+    "carbontrust-tree": {
+      "label": "Carbon Trust: real vs artificial Christmas tree footprint",
+      "url": "https://scholar.google.com/scholar?q=Carbon+Trust+real+artificial+Christmas+tree+carbon+footprint"
+    },
+    "worldsteel25": {
+      "label": "worldsteel: Sustainability indicators and CO₂ intensity of steel",
+      "url": "https://worldsteel.org/climate-action/sustainability-indicators/"
+    },
+    "iea-cement": {
+      "label": "IEA: Cement (tracking)",
+      "url": "https://www.iea.org/energy-system/industry/cement"
+    },
+    "iai25": {
+      "label": "International Aluminium Institute: GHG intensity of primary aluminium",
+      "url": "https://international-aluminium.org/statistics/greenhouse-gas-emissions-intensity-primary-aluminium/"
+    },
+    "oecd22": {
+      "label": "OECD (2022): Global Plastics Outlook",
+      "url": "https://www.oecd.org/environment/plastics/"
+    },
+    "iea-ger25": {
+      "label": "IEA (2025): Global Energy Review 2025",
+      "url": "https://www.iea.org/reports/global-energy-review-2025"
+    },
+    "iea-transport": {
+      "label": "IEA: Transport (tracking)",
+      "url": "https://www.iea.org/energy-system/transport"
+    },
+    "iea-aviation": {
+      "label": "IEA: Aviation (tracking)",
+      "url": "https://www.iea.org/energy-system/transport/aviation"
+    },
+    "imo20": {
+      "label": "IMO (2020): Fourth IMO greenhouse gas study",
+      "url": "https://www.imo.org/en/OurWork/Environment/Pages/Fourth-IMO-Greenhouse-Gas-Study-2020.aspx"
+    },
+    "fao23": {
+      "label": "FAO (2023): Pathways towards lower emissions, livestock (GLEAM)",
+      "url": "https://www.fao.org/documents/card/en/c/cc9029en"
+    },
+    "gcb25": {
+      "label": "Global Carbon Project: Global Carbon Budget",
+      "url": "https://globalcarbonbudget.org/"
+    },
+    "iea-methane25": {
+      "label": "IEA (2025): Global Methane Tracker 2025",
+      "url": "https://www.iea.org/reports/global-methane-tracker-2025"
+    },
+    "iea-cooling": {
+      "label": "IEA (2018): The Future of Cooling",
+      "url": "https://www.iea.org/reports/the-future-of-cooling"
+    },
+    "sgr22": {
+      "label": "Scientists for Global Responsibility (2022): Estimating the military's share of global emissions",
+      "url": "https://www.sgr.org.uk/resources/estimating-military-s-share-global-greenhouse-gas-emissions"
+    },
+    "hotorcool21": {
+      "label": "Hot or Cool Institute (2021): 1.5-Degree Lifestyles",
+      "url": "https://hotorcool.org/1-5-degree-lifestyles-report/"
+    }
+  }
+}

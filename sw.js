@@ -3,9 +3,9 @@
 // (requests bypass the browser's HTTP cache, which GitHub Pages sets to 10 minutes).
 // Offline, or if the network is slow, the last saved copy is used.
 // Fonts and icons never change, so they come straight from the cache.
-const CACHE = "eh-v10";
+const CACHE = "eh-v11";
 const SHELL = [
-  "./", "index.html", "styles.css", "app.js", "energy-tab.js", "manifest.webmanifest",
+  "./", "index.html", "styles.css", "app.js", "energy-tab.js", "footprint-tab.js", "manifest.webmanifest",
   "assets/icon.svg", "assets/icon-192.png", "assets/fonts/archivo.woff2", "assets/fonts/source-serif.woff2",
 ];
 const NETWORK_TIMEOUT = 4000;   // ms before falling back to the saved copy
