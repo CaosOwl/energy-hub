@@ -124,5 +124,76 @@
    "transition"
   ],
   "score": 3.86
+ },
+ {
+  "title": "NRC Updates AP1000 Design Certification, Streamlines Future Reactor Licensing",
+  "link": "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-080.pdf",
+  "summary": "",
+  "date": "2026-10-14T08:00+00:00",
+  "source": "nrc",
+  "sourceName": "US NRC News Releases",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "nuclear"
+  ],
+  "score": 5.6
+ },
+ {
+  "title": "NRC Begins Special Inspection at Dresden Nuclear Power Plant",
+  "link": "https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-015-iii.pdf",
+  "summary": "",
+  "date": "2026-10-14T08:00+00:00",
+  "source": "nrc",
+  "sourceName": "US NRC News Releases",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "nuclear"
+  ],
+  "score": 4.8
+ },
+ {
+  "title": "Checking back in with Greenlight America",
+  "link": "https://www.volts.wtf/p/checking-back-in-with-greenlight",
+  "summary": "A conversation with Matt Traldi.",
+  "date": "2026-10-14T10:07+00:00",
+  "source": "volts",
+  "sourceName": "Volts (newsletter, David Roberts)",
+  "access": "open",
+  "region": "global",
+  "tags": [
+   "transition"
+  ],
+  "score": 3.85
+ },
+ {
+  "title": "Monthly wind generation in ISO-NE is about 68% higher than last year",
+  "link": "https://www.eia.gov/todayinenergy/detail.php?id=68304",
+  "summary": "Monthly wind generation in the first nine months of 2026 was an average of 68% higher compared with the same period in 2025 in ISO New England (ISO-NE).",
+  "date": "2026-10-14T14:00+00:00",
+  "source": "eia",
+  "sourceName": "EIA – Today in Energy",
+  "access": "open",
+  "region": "us",
+  "tags": [
+   "transition",
+   "markets"
+  ],
+  "score": 3.54
+ },
+ {
+  "title": "Diesel of Discontent",
+  "link": "https://newsletter.doomberg.com/p/diesel-of-discontent",
+  "summary": "The solution to the West’s self-inflicted pain is hidden in plain sight.",
+  "date": "2026-10-14T09:02+00:00",
+  "source": "doomberg",
+  "sourceName": "Doomberg (newsletter)",
+  "access": "partial",
+  "region": "global",
+  "tags": [
+   "markets"
+  ],
+  "score": 3.2
  }
 ]
